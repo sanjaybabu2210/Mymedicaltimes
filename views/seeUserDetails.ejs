@@ -24,8 +24,10 @@
  font-family: 'Poppins', sans-serif;	
 	
 }	
-body{
-    background-color: #ffe9ec
+body,html{
+    background-color: #ffe9ec;
+     overflow-x: hidden;
+
 }
 .sidebar{
 	position: scroll;
@@ -178,7 +180,11 @@ nav ul li a span.rotate{
 	transform:translateY(-50%) rotate(-180deg);
 }
 footer{
-	background: #1c2331
+	background: #1c2331;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -70%;
 }
 .dropdown-submenu{
     position: relative;
@@ -246,6 +252,7 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 80%;
+  overflow-x:scroll;
 }
 
 td{
@@ -327,7 +334,7 @@ tr:nth-child(odd) {
 
 <h2 style="margin-left:40%;margin-top:2%"><b>User Details</b></h2>
 
-<table style="margin:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:2%;margin-bottom:15%">
+<table style="margin:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:2%;margin-bottom:15%;overflow: scroll;">
   <tr>
     <th>Email</th>
     <th>Full Name</th>
