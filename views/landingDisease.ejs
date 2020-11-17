@@ -1,9 +1,10 @@
 <%- include('partials/header.ejs'); -%>
 
 
-<div class="col-lg-7 col-md-7 col-sm-9">
+<div class="col-lg-7 col-md-7 col-sm-9" id="main">
 	
-	<div class="btn-group" role="group" aria-label="Basic example" style="border-radius:20px;margin-left:30%;margin-top:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div class="btn-group" role="group" aria-label="Basic example"
+	style="border-radius:20px;margin:5% 20%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <button type="button" class="btn btn-light"><a href="/home" style="text-decoration:None;color:#000000">New Articles</a></button>
   <button type="button" class="btn btn-info"><a href="/home/disease" style="text-decoration:None;color:#ffffff">New Disease Articles</a></button>
      <button type="button" class="btn btn-light"><a href="/home/medicalNews" style="text-decoration:None;color:#000000">Medical News</a></button>
@@ -270,23 +271,32 @@ $('.ant-btn').click(function(){
    $(this).addClass("active").siblings().removeClass("active");
   });
   // --------------------new ------------------------
-    function openNav() {
-      document.getElementById("sidenav").style.width = "130%";
-      document.getElementById("sidenav").style.left = "0px";
-      $('#filter').hide();
-      // document.getElementById("main").style.marginLeft = "300px";
-      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    }
+	function openNav() {
+		document.getElementById("sidenav").style.width = "75vw";
+		document.getElementById("sidenav").style.left = "0px";
+		$('#filter').hide();
+		// document.getElementById("main").style.marginLeft = "300px";
+		document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		$('#main').css({ "filter": "blur(8px)" });
+		// $('#main').css({"opacity":"0.3"});
+		$('#sidenav').css({ "opacity": "1" });
 
-    function closeNav() {
-      document.getElementById("sidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
-      document.getElementById("sidenav").style.left = "-30px";
-      $('#filter').show();
+		document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
 
-      document.body.style.backgroundColor = "white";
-    }
+	function closeNav() {
+		document.getElementById("sidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft = "0";
+		document.getElementById("sidenav").style.left = "-30px";
+		$('#filter').show();
+		$('button a').css({ "font-size": "12px" });
+		$('#main').css({ "filter": "blur(0px)" });
 
+
+		document.body.style.backgroundColor = "white";
+		$('#main').css({ "margin-left": "10%" });
+
+	}
 
     $('#sidenav ul li a[href="#"]').click(function () {
       closeNav();

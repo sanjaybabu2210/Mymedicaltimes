@@ -184,7 +184,7 @@ footer{
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -70%;
+  bottom: -80%;
 }
 .dropdown-submenu{
     position: relative;
@@ -264,6 +264,7 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  min-width: 200px;
 background:#ffffff;
 }
 
@@ -326,15 +327,15 @@ tr:nth-child(odd) {
   </div>
 </nav>
 
-  <% if(error.length>0){%>
-<div class="alert alert-danger container" style="margin-top:0px;"><%=error%></div>
+<% if(error.length>0){%>
+<div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
 <% }if(success.length>0){%>
-<div class="alert alert-success container" style="margin-top:0px;"><%=success%></div>
-<% } %> 
+<div class="alert alert-success container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=success%></div>
+<% } %>
 
-<h2 style="margin-left:40%;margin-top:2%"><b>User Details</b></h2>
+<h2 style="text-align:center;margin-top:2%"><b>User Details</b></h2>
 
-<table style="margin:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:2%;margin-bottom:15%;overflow: scroll;">
+<table style="margin:5% 7%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);overflow: auto;display:inline-block;background-color: transparent;">
   <tr>
     <th>Email</th>
     <th>Full Name</th>

@@ -179,7 +179,23 @@ nav ul li a span.rotate{
 	transform:translateY(-50%) rotate(-180deg);
 }
 footer{
-	background: #1c2331
+	background: #1c2331;
+  /* position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -40%; */
+}
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2){
+  footer{
+	background: #1c2331;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -10% !important;
+}
 }
 .dropdown-submenu{
     position: relative;
@@ -232,8 +248,10 @@ footer{
 }
 .flip-card {
   background-color: transparent;
-  width: 450px;
-  height: 470px;
+  max-width: 375px;
+  max-height: 470px;
+  width: 60vw;
+  height: 65vh;
   perspective: 1000px;
 }
 
@@ -275,6 +293,20 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(115,191,140,1) 100
 }
 .icc:hover{
  opacity:0.6;
+}
+
+#email{
+    font-size:2vw;
+
+}
+
+@media screen and (min-width: 990px){
+   #email{
+       font-size:1vw !important;
+
+
+   }
+   
 }
 
     </style>
@@ -343,13 +375,13 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(115,191,140,1) 100
 <% } %> 
 
 
-<div class="flip-card" style="margin-left:35%;margin-top:5%;margin-bottom:15%">
+<div class="flip-card mx-auto " style="margin-top:5%;margin-bottom: 17%;" >
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" style="width:60%;height:250px">
+      <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" style="width:60%;height:250px;">
       <hr style="width:80%;margin-left:10%;background:#000000">
             <h2 style="margin-top:10px"><b><%= foundUser.fullName %></b></h2>
-            <h3 style="font-size:28px;margin-top:10px"><%= foundUser.email %></h3>
+            <h3 style="margin-top:10px" id="email"><%= foundUser.email %></h3>
             <p style="opacity:0.8;font-size:20px"><%= foundUser.college %></p>
             <h4 style="color:#ff1a1a;margin-leftt:50%;text-decoration:underline;opacity:0.8"><strong>Edit Profile</strong></h4>
         

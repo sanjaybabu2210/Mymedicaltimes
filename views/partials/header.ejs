@@ -20,8 +20,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-        body {
-            background: #f1f1f1;
+        body,html {
+            overflow-x: hidden;
+            background: #eee;
         }
 
         * {
@@ -53,17 +54,20 @@
             letter-spacing: 1px;
             margin: 0px
         }
+        nav{
+                        padding: 0px 60px;
 
+        }
         nav ul {
-            background: #1b1b1b;
-            height: 100%;
+            /* background: #1b1b1b; */
+            height: 80%;
             width: 100%;
             list-style: none;
 
         }
 
         nav ul li {
-            line-height: 60px;
+            line-height: 50px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         }
@@ -250,7 +254,14 @@
             }
         }
 
+     @media screen and (max-width: 992px) {
 
+        nav ul li a {
+            font-size: 15px !important;
+        }
+
+
+     }
         .fa {
             padding: 20px;
             font-size: 30px;
@@ -449,8 +460,12 @@
 
             }
 
-
-
+/* 
+            #cred{
+                margin-top:20px;
+                text-align: center;
+                justify-content: space-evenly;
+            } */
 
 
 
@@ -474,8 +489,16 @@
                 font-size: 36px;
                 margin-left: 95%;
             }
-
-
+            
+            #dclose{
+                color:white !important;
+                position: absolute;
+                left:85%;
+                text-decoration: none !important;
+                top:-2%;
+                margin-bottom:8%;
+                /* background-color: tomato; */
+            }
         }
 
         /* -------------------------------------newly added-------------------------------------------- */
@@ -492,7 +515,7 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:40px;">
         <a class="navbar-brand" href="/home">MMT</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -501,11 +524,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item active" style="line-height: 40px;margin-top:5px;">
                     <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
 
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style="line-height: 40px;margin-top:5px;">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Medical News
@@ -517,25 +540,26 @@
                     </div>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" style="line-height: 40px;margin-top:5px;">
                     <a class="nav-link" href="/maindisease">Disease</a>
                 </li>
 
 
             </ul>
+            
             <form class="form-inline my-2 my-lg-0 ">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
             </form>
-
+<!-- <span id="cred"> -->
             <% if(!currentUser){ %>
-            <a class="btn btn-primary" href="/login" role="button">Login</a>
+            <a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;">Login</a>
             <%} else{ %>
-            <a href="/profilenav" style="color:#ffffff;margin-right:18px"> <%= currentUser.username %></a>
-            <a class="btn btn-info" href="/logout" role="button">Logout</a>
+            <a href="/profilenav" style="color:#ffffff;margin:5px 4%;" > <%= currentUser.username %></a>
+            <a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
 
             <% } %>
-
+            <!-- </span> -->
         </div>
     </nav>
 
@@ -559,9 +583,9 @@
         </div>
 
 
-        <nav class=" sidebar col-lg-3 col-md-4 col-sm-5 col-xs-12 col-7" id="sidenav" style="overflow-x: hidden;">
+        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10" id="sidenav" style="overflow-x: hidden;">
             <a href="javascript:void(0)" class="closebtn" id="dclose" onclick="closeNav()"
-                style="width: 50px;height: 50px;position: absolute;top: 5px;right: 5px;font-size: 50px;color:honeydew;margin-bottom:10px;">&times;</a>
+                style="width: 500px;height: 50px;position: absolute;top: -5px;right: 5px;font-size: 50px;color:white;margin-bottom:30px;">&times;</a>
             <div class="text"> My Medical Times </div>
             <ul>
                 <!-- --------------------------------newly added--------------------------------------     -->
