@@ -1,331 +1,440 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<script src = "https://code.jquery.com/jquery-3.4.1.js"></script>
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- Bootstrap CSS -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<!DOCTYPE html>
+<html>
 
-    <title>My Medical Times</title>
+<head>
+  <title>Apply Internship</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- Bootstrap CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-    	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
- margin: 0;
- padding:0; 
- box-sizing: border-box;
- font-family: 'Poppins', sans-serif;	
-	
-}	
-body,html{
-    background-color: #ffe9ec;
-     overflow-x: hidden;
-
-}
-.sidebar{
-	position: scroll;
-	width: 350px;
-	left: 0;
-	background: #1b1b1b;
-	height: 100%;
-	margin: 0px;
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 
-}
-.sidebar .text{
-	color: white;
-	font-size: 25px;
-	font-weight: 600;
-	line-height: 65px;
-	text-align: center;
-	background: #1e1e1e;
-	letter-spacing: 1px;
-	margin: 0px
-}
- nav ul{
-	background : #1b1b1b;
-	height: 100%;
-	width: 100%;
-	list-style: none;
-	
-} 
-nav ul li{
-	line-height: 60px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+    }
 
-}
+    .wave-container {
+      position: relative;
+      background: #09F;
+      color: #FFF;
+      text-align: center;
+      overflow: hidden;
+    }
 
-nav ul li a{
-	position: relative;
-	color: white;
-	text-decoration: none;
-	font-size: 18px;
-	padding-left: 40px;
-	font-weight: 500;
-	display: block;
-	width: 100%;
-	border-left: 3px solid transparent;
-}
-nav ul li.active a{
-	color:cyan;
-	background: #1e1e1e;
-	border-left-color: cyan;
-	
-}
-nav ul ul{
-	position: static;
-	display:none;
-}
-nav ul .feat-show.show{
-	display: block;
-}
-nav ul .an-show.show2{
-	display: block;
-}
-nav ul .ant-show.show3{
-	display: block;
-}
-nav ul .bi-show.show4{
-	display: block;
-}
-nav ul .bio-show.show5{
-	display: block;
-}
-nav ul .bip-show.show6{
-	display: block;
-}
-nav ul .co-show.show7{
-	display: block;
-}
-nav ul .den-show.show8{
-	display: block;
-}
-nav ul .med-show.show9{
-	display: block;
-}
-nav ul .mib-show.show10{
-	display: block;
-}
-nav ul .mir-show.show11{
-	display: block;
-}
-nav ul .oc-show.show12{
-	display: block;
-}
-nav ul .pat-show.show13{
-	display: block;
-}
-nav ul .pha-show.show14{
-	display: block;
-}
-nav ul .phm-show.show15{
-	display: block;
-}
-nav ul .phs-show.show16{
-	display: block;
-}
-nav ul .phsi-show.show17{
-	display: block;
-}
-nav ul .psy-show.show18{
-	display: block;
-}
-nav ul .sur-show.show19{
-	display: block;
-}
-nav ul .the-show.show20{
-	display: block;
-}
-nav ul .yg-show.show21{
-	display: block;
-}
-nav ul .ve-show.show22{
-	display: block;
-}
-nav ul ul li{
-	line-height: 42px;
-	border-bottom: none;
-}
-nav ul ul li a{
-	font-size: 17px;
-	color: #e6e6e6;
-	padding-left: 80px;
-}
-nav ul li.active ul li a{
-	color:#e6e6e6;
-	background: #1b1b1b;
-	border-left-color: transparent;
-	
-}
-nav ul ul li a:hover{
-	color:cyan!important;
-	background:1e1e1e!important;
-}
-nav ul li a span{
-	position: absolute;
-	top: 50%;
-	right: 20px;
-	transform: translateY(-50%);
-	font-size: 22px;
-	transition: transform 0.4s;
-}
-nav ul li a span.rotate{
-	transform:translateY(-50%) rotate(-180deg);
-}
-footer{
-	background: #1c2331;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -80%;
-}
-.dropdown-submenu{
-    position: relative;
-}
-.dropdown-submenu a::after{
-    transform: rotate(-90deg);
-    position: relative;
-    right: 3px;
-    top: 40%;
-}
-.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
-    display: flex;
-    flex-direction: column;
-    position: scroll !important;
-    margin-top: -30px;
-    left: 100%;
-}
-@media (max-width: 992px) {
-    .dropdown-menu{
+    h2 {
+      font-size: 2rem;
+      margin: 3rem 1.25rem 1rem 1.25rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0 1.25rem 2rem 1.25rem;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    .sidebar {
+      position: scroll;
+      width: 350px;
+      left: 0;
+      background: #1b1b1b;
+      height: 100%;
+      margin: 0px;
+
+
+    }
+
+    .sidebar .text {
+      color: white;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 65px;
+      text-align: center;
+      background: #1e1e1e;
+      letter-spacing: 1px;
+      margin: 0px
+    }
+
+    nav ul {
+      /* background : #1b1b1b; */
+      height: 100%;
+      width: 100%;
+      list-style: none;
+
+    }
+
+    nav ul li {
+      line-height: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    }
+
+    nav ul li a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding-left: 40px;
+      font-weight: 500;
+      display: block;
+      width: 100%;
+      border-left: 3px solid transparent;
+    }
+
+    nav ul li.active a {
+      color: cyan;
+      background: #1e1e1e;
+      border-left-color: cyan;
+
+    }
+
+    nav ul ul {
+      position: static;
+      display: none;
+    }
+
+    nav ul .feat-show.show {
+      display: block;
+    }
+
+    nav ul .an-show.show2 {
+      display: block;
+    }
+
+    nav ul .ant-show.show3 {
+      display: block;
+    }
+
+    nav ul .bi-show.show4 {
+      display: block;
+    }
+
+    nav ul .bio-show.show5 {
+      display: block;
+    }
+
+    nav ul .bip-show.show6 {
+      display: block;
+    }
+
+    nav ul .co-show.show7 {
+      display: block;
+    }
+
+    nav ul .den-show.show8 {
+      display: block;
+    }
+
+    nav ul .med-show.show9 {
+      display: block;
+    }
+
+    nav ul .mib-show.show10 {
+      display: block;
+    }
+
+    nav ul .mir-show.show11 {
+      display: block;
+    }
+
+    nav ul .oc-show.show12 {
+      display: block;
+    }
+
+    nav ul .pat-show.show13 {
+      display: block;
+    }
+
+    nav ul .pha-show.show14 {
+      display: block;
+    }
+
+    nav ul .phm-show.show15 {
+      display: block;
+    }
+
+    nav ul .phs-show.show16 {
+      display: block;
+    }
+
+    nav ul .phsi-show.show17 {
+      display: block;
+    }
+
+    nav ul .psy-show.show18 {
+      display: block;
+    }
+
+    nav ul .sur-show.show19 {
+      display: block;
+    }
+
+    nav ul .the-show.show20 {
+      display: block;
+    }
+
+    nav ul .yg-show.show21 {
+      display: block;
+    }
+
+    nav ul .ve-show.show22 {
+      display: block;
+    }
+
+    nav ul ul li {
+      line-height: 42px;
+      border-bottom: none;
+    }
+
+    nav ul ul li a {
+      font-size: 17px;
+      color: #e6e6e6;
+      padding-left: 80px;
+    }
+
+    nav ul li.active ul li a {
+      color: #e6e6e6;
+      background: #1b1b1b;
+      border-left-color: transparent;
+
+    }
+
+    nav ul ul li a:hover {
+      color: cyan !important;
+      background: 1e1e1e !important;
+    }
+
+    nav ul li a span {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-size: 22px;
+      transition: transform 0.4s;
+    }
+
+    nav ul li a span.rotate {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+
+    footer {
+      background: #1c2331
+    }
+
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu a::after {
+      transform: rotate(-90deg);
+      position: relative;
+      right: 3px;
+      top: 40%;
+    }
+
+    .dropdown-submenu:hover .dropdown-menu,
+    .dropdown-submenu:focus .dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      position: scroll !important;
+      margin-top: -30px;
+      left: 100%;
+    }
+
+    @media (max-width: 992px) {
+      .dropdown-menu {
         width: 50%;
-    }
-    .dropdown-menu .dropdown-submenu{
+      }
+
+      .dropdown-menu .dropdown-submenu {
         width: auto;
+      }
     }
-}
 
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px 10px;
-}
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-.fa:hover {
-    opacity: 0.7;
-}
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-.icc{
- width:35px;height:35px;
-}
-.icc:hover{
- opacity:0.6;
-}
-.sBlog:hover{
-        box-shadow: 6px 8px 8px 6px rgba(0,0,0,0.9);   
-       }
-       .mainNew:hover{
-           
-           background:rgba(255,255,255,0.9);
-       }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 80%;
-  overflow-x:scroll;
-}
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 10px 10px;
+    }
 
-td{
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-  min-width: 200px;
-background:#ffffff;
-}
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
 
-tr:nth-child(even) {
-  background-color: #f1f1f1;
-}
-tr:nth-child(odd) {
-  background-color: #ffffff;
-}
+    .fa:hover {
+      opacity: 0.7;
+    }
 
-    </style>
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
 
-  </head>
-  <body>
-   
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+
+    #snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 17px;
+    }
+
+    #snackbar.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    }
+
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
+    }
+
+    .icc {
+      width: 35px;
+      height: 35px;
+    }
+
+    .icc:hover {
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home">MMT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Medical News
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/home/medicalNews">Latest Medical News</a>
+            <a class="dropdown-item" href="/writemedicalnews">Write Medical News</a>
+
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/maindisease">Disease</a>
+        </li>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/home">MMT</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 ">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-      </li>
-	  
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Medical News
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/home/medicalNews">Latest Medical News</a>
-          <a class="dropdown-item" href="/writemedicalnews">Write Medical News</a>
-		  
-        </div>
-      </li>
-	 
-	 <li class="nav-item">
-        <a class="nav-link" href="/maindisease">Disease</a>
-      </li>
+      </form>
 
-	  
-    </ul>
-    <form class="form-inline my-2 my-lg-0 " >
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	  
-    </form>
-	
-	<% if(!currentUser){ %>
-            <a class="btn btn-primary" href="/login" role="button">Login</a>
-            <%} else{ %>
-            <a href="/profilenav"  style="color:#ffffff;margin-right:18px"> <%= currentUser.username %></a>
-            <a class="btn btn-info" href="/logout" role="button">Logout</a>
-            
-            <% } %>
-	
-  </div>
-</nav>
+      <% if(!currentUser){ %>
+      <a class="btn btn-primary" href="/login" role="button">Login</a>
+      <%} else{ %>
+      <a href="/profilenav" style="color:#ffffff;margin-right:18px"> <%= currentUser.username %></a>
+      <a class="btn btn-info" href="/logout" role="button">Logout</a>
+
+      <% } %>
+
+    </div>
+  </nav>
 
 <% if(error.length>0){%>
 <div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
