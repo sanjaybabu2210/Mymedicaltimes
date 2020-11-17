@@ -1,0 +1,736 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+    }
+  }
+</style>
+
+<div class="col-lg-7 col-md-7 col-sm-7 col-sm-xs-12">
+<h3><center> Skin disease:</center> </h3><br>
+<ol class = "ml-5" >
+   <li><a href="/main_disease/skin/aagnaes"> Aagenaes syndrome </a></li>
+   <li><a href="/main_disease/skin/aarshok"> Aarshok syndrome </a></li>
+   <li><a href="/main_disease/skin/abdominal_chemodectomas"> Abdominal chemodectomas with cutaneous angiolipomas </a></li>
+   <li><a href="/main_disease/skin/absence_of_fingerprints"> Absence of fingerprints congenital milia </a></li>
+   <li><a href="/main_disease/skin/acanthosis_nigrican"> Acanthosis nigrican </a></li>
+   <li><a href="/main_disease/skin/acquired_generalized_lipodystrophy"> Acquired generalised lipodystrophy </a></li>
+   <li><a href="/main_disease/skin/acral_peeling_skin"> Acral peeling skin syndrome </a></li>
+   <li><a href="/main_disease/skin/acrodermatitis"> Acrodermatitis </a></li>
+   <li><a href="/main_disease/skin/acrodermatitis_enteropathica "> Acrodermatitis enteropathica </a></li>
+   <li><a href="/main_disease/skin/acrogeria_gottron"> Acrogeria, Gottron type </a></li>
+   <li><a href="/main_disease/skin/acrokeratoelastoidosis"> Acrokeratoelastoidosis of Costa </a></li>
+   <li><a href="/main_disease/skin/actinic_lichen"> Actinic Lichen planus </a></li>
+   <li><a href="/main_disease/skin/acute_febrile"> Acute febrile neutrophilic dermatosis </a></li>
+   <li><a href="/main_disease/skin/acute_intermittent"> Acute intermittent porphyria </a></li>
+   <li><a href="/main_disease/skin/adams_oliver"> Adams- Oliver syndrome </a></li>
+   <li><a href="/main_disease/skin/adioposis"> Adioposis dolorosa </a></li>
+   <li><a href="/main_disease/skin/adult"> ADULT syndrome </a></li>
+   <li><a href="/main_disease/skin/adult_tcell"> Adult T-cell leukemia\ lymphoma </a></li>
+   <li><a href="/main_disease/skin/ainhum"> Ainhum </a></li>
+   <li><a href="/main_disease/skin/al-gazali-donnal-mueller"> Al-Gazali-Donnal-Mueller syndrome </a></li>
+   <li><a href="/main_disease/skin/albinism_deafness"> Albinism deafness syndrome </a></li>
+   <li><a href="/main_disease/skin/alkaptonuria"> Alkaptonuria </a></li>
+   <li><a href="/main_disease/skin/alopecia_epilepsy_oligophrenia"> Alopecia epilepsy oligophrenia syndrome of Moynahan </a></li>
+   <li><a href="/main_disease/skin/alopecia_totalis"> Alopecia totalis </a></li>
+   <li><a href="/main_disease/skin/alopecia_universalis"> Alopecia universalis </a></li>
+   <li><a href="/main_disease/skin/alopecia_epilepsy_pyorrhea"> Alopecia, epilepsy, pyorrhea, mental subnormality </a></li>
+   <li><a href="/main_disease/skin/alopecia_contractures_dwarfism_intellectual"> Alopecia-contractures-dwarfism-intellectual disability syndrome </a></li>
+   <li><a href="/main_disease/skin/alopecia_intellectual"> Alopecia-intellectual disability syndrome </a></li>
+   <li><a href="/main_disease/skin/ambras"> Ambras syndrome </a></li>
+   <li><a href="/main_disease/skin/ameloonychohypohidrotic"> Ameloonychohypohidrotic syndrome </a></li>
+   <li><a href="/main_disease/skin/aminolevulinate"> Aminolevulinate dehydratase deficiency porphyria </a></li>
+   <li><a href="/main_disease/skin/amyopathic"> Amyopathic dermatomyositis </a></li>
+   <li><a href="/main_disease/skin/angioma"> Angioma serpiginosum </a></li>
+   <li><a href="/main_disease/skin/ankyloblepharon"> Ankyloblepharon-ectodermal defects-cleft lip/ palate syndrome </a></li>
+   <li><a href="/main_disease/skin/annular_atrophic"> Annular atrophic lichen planus </a></li>
+   <li><a href="/main_disease/skin/annular_lichen"> Annular lichen planus </a></li>
+   <li><a href="/main_disease/skin/anonychia_onychostrophy"> Anonychia-onychostrophy with hypoplasia or absence of distal phalanges </a></li>
+   <li><a href="/main_disease/skin/antecubital_pterygium"> Antecubital pterygium </a></li>
+   <li><a href="/main_disease/skin/aplasia_intestinal"> Aplasisa cutis congenitia intestinal lymhangiectasia </a></li>
+   <li><a href="/main_disease/skin/aplasia_limbs"> Aplasia cutis congenita of limbs recessive </a></li>
+   <li><a href="/main_disease/skin/aredyld"> AREDYLD </a></li>
+   <li><a href="/main_disease/skin/arterial"> Arterial tortuosity syndrome </a></li>
+   <li><a href="/main_disease/skin/arthrochalasia"> Arthrochalasia Ehlers-Danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/arhtrogryposis_ectodermal"> Arhtrogryposis and ectodermal dysplasia  </a></li>
+   <li><a href="/main_disease/skin/arhtrogryposis_renal_dysfunction"> Arhtrogryposis renal dysfunction cholestasis syndrome </a></li>
+   <li><a href="/main_disease/skin/arhtrogryposis_ectodermal_dysplasia"> Arhtrogryposis, ectodermal dysplasia, cleft llip/ palate, and developmental delay </a></li>
+   <li><a href="/main_disease/skin/ataxia"> Ataxia talangiectasia </a></li>
+   <li><a href="/main_disease/skin/atrophic"> Atrophic lichen planus </a></li>
+   <li><a href="/main_disease/skin/atrophoderma_pasini"> Atrophoderma of Pasini and Pierini </a></li>
+   <li><a href="/main_disease/skin/atrophoderma_vermiculata"> Atrophoderma vermiculata </a></li>
+   <li><a href="/main_disease/skin/autoimmune_progesterone"> Autoimmune progesterone dermatitis </a></li>
+   <li><a href="/main_disease/skin/autosomal_dominant_deafness"> Autosomal dominant deafness - onychodystrophy syndrome </a></li>
+   <li><a href="/main_disease/skin/autosomal_dominant_hyperige"> Autosomal dominant hyper IgE syndrome </a></li>
+   <li><a href="/main_disease/skin/autosomal_dominant_palmoplantar"> Autosomal dominant palmoplantar keratoderma and congenital alopecia </a></li>
+   <li><a href="/main_disease/skin/autosomal_erythropoietic"> Autosomal erythropoietic protoporphyria </a></li>
+   <li><a href="/main_disease/skin/autosomal_recessive_candidiasis"> Autosomal recessive candidiasis familial chronic mucocutaneous </a></li>
+   <li><a href="/main_disease/skin/autosomal_recessive_palmoplantar"> Autosomal recessive palmoplantar keratoderma and congenital alopecia </a></li>
+   <li><a href="/main_disease/skin/bannayan_riley"> Bannayan-Riley-Ruvalcaba syndrome </a></li>
+   <li><a href="/main_disease/skin/barber_say"> Barber Say syndrome </a></li>
+   <li><a href="/main_disease/skin/barraquer_simons"> Barraquer-Simons syndrome </a></li>
+   <li><a href="/main_disease/skin/basaran_yilmaz"> Basaran Yilmaz syndrome </a></li>
+   <li><a href="/main_disease/skin/bazex_dupre_christol"> Bazex-Dupre-Christol syndrome </a></li>
+   <li><a href="/main_disease/skin/beare_stevenson"> Beare-Stevenson cutis gyrata syndrome </a></li>
+   <li><a href="/main_disease/skin/becker_nevus"> Becker nevus syndrome </a></li>
+   <li><a href="/main_disease/skin/beckers_nevus"> Becker's nevus </a></li>
+   <li><a href="/main_disease/skin/bechet"> Bechet disease </a></li>
+   <li><a href="/main_disease/skin/benign"> Benign eccrine spiradenoma </a></li>
+   <li><a href="/main_disease/skin/biotinidase"> Biotinidase deficiency </a></li>
+   <li><a href="/main_disease/skin/birt_hogg"> Birt-Hogg-Dube syndrome </a></li>
+   <li><a href="/main_disease/skin/bjornstad"> Bjornstad syndrome </a></li>
+   <li><a href="/main_disease/skin/blau"> Blau syndrome </a></li>
+   <li><a href="/main_disease/skin/blephardo"> Blepharo-cheilo-odontic syndrome </a></li>
+   <li><a href="/main_disease/skin/bloom"> Bloom syndrome </a></li>
+   <li><a href="/main_disease/skin/blue"> Blue rubber bleb nevus syndrome </a></li>
+   <li><a href="/main_disease/skin/book"> Book syndrome </a></li>
+   <li><a href="/main_disease/skin/bork"> Bork Stender Schmidt syndrome </a></li>
+   <li><a href="/main_disease/skin/brittle"> Brittle cornea syndrome </a></li>
+   <li><a href="/main_disease/skin/brunsting"> Brunsting-Perry syndrome </a></li>
+   <li><a href="/main_disease/skin/bullous"> Bullous dystrophy hereditary macular type </a></li>
+   <li><a href="/main_disease/skin/buschke"> Buschke-Ollendorff syndrome </a></li>
+   <li><a href="/main_disease/skin/campomelia"> Campomelia Cumming type </a></li>
+   <li><a href="/main_disease/skin/cantu"> Cantu syndrome </a></li>
+   <li><a href="/main_disease/skin/cardiac_valvular"> Cardiac- Valvular Ehlers-Danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/cardiofaciocutaneous"> Cardiofaciocutaneous syndrome </a></li>
+   <li><a href="/main_disease/skin/cardiomyopathy"> Cardiomyopathy dilated with woolly hair and keratoderma </a></li>
+   <li><a href="/main_disease/skin/carney"> Carney complex </a></li>
+   <li><a href="/main_disease/skin/cartilage_hair"> Cartilage-hair hypoplasia </a></li>
+   <li><a href="/main_disease/skin/cerebellar_ataxia"> Cerebellar ataxia ectodermal dysplasia </a></li>
+   <li><a href="/main_disease/skin/cerebral_dysgenesis"> Cerebral dysgenesis, neuropathy, icthyosis and palamoplantar keratoderma syndrome </a></li>
+   <li><a href="/main_disease/skin/cerebro_oculo"> Cerebro-oculo-facio-skeletal syndrome </a></li>
+   <li><a href="/main_disease/skin/cerebrotendinous"> Cerebrotendinous xanthomatosis </a></li>
+   <li><a href="/main_disease/skin/cervical"> Cervical hypertrichosis peripheral neuropathy </a></li>
+   <li><a href="/main_disease/skin/chanarian"> Chanarian-Dorfman syndrome </a></li>
+   <li><a href="/main_disease/skin/chediak"> Chediak-Higashi syndrome </a></li>
+   <li><a href="/main_disease/skin/chelitis"> Chelitis glandularis </a></li>
+   <li><a href="/main_disease/skin/child"> CHILD syndrome </a></li>
+   <li><a href="/main_disease/skin/chorea"> Chorea-acanthocytosis </a></li>
+   <li><a href="/main_disease/skin/chromhidrosis"> Chromhidrosis </a></li>
+   <li><a href="/main_disease/skin/chromosome_17q11.2"> Chromosome 17q11.2 deletion syndrome </a></li>
+   <li><a href="/main_disease/skin/chronic_atypical"> Chronic atypical neutrophilic dermatosis with lipodystrophy and elevated temprature </a></li>
+   <li><a href="/main_disease/skin/chronic_granulomatous"> Chronic granulomatous disease </a></li>
+   <li><a href="/main_disease/skin/chronic_recurrent"> Chronic recurrent multifocal osteomylitis </a></li>
+   <li><a href="/main_disease/skin/circumferential"> Circumferential skin creases Kunze type </a></li>
+   <li><a href="/main_disease/skin/classical_like"> Classical-like Ehlers-Danlos syndrome   </a></li>
+   <li><a href="/main_disease/skin/clouston"> Clouston syndrome </a></li>
+   <li><a href="/main_disease/skin/cloves"> CLOVES syndrome </a></li>
+   <li><a href="/main_disease/skin/cobb"> Cobb syndrome </a></li>
+   <li><a href="/main_disease/skin/cockayne1"> Cockayne syndrome type I </a></li>
+   <li><a href="/main_disease/skin/cockayne2"> Cockayne syndrome type II </a></li>
+   <li><a href="/main_disease/skin/cockayne3"> Cockayne syndrome type III </a></li>
+   <li><a href="/main_disease/skin/cog7_cdg"> COG7-CDG (CDG-IIe) </a></li>
+   <li><a href="/main_disease/skin/combined_immunodeficiency"> Combined immunodeficiency with skin granulomas </a></li>
+   <li><a href="/main_disease/skin/congenital_erythropoietic"> Congenital erythropoietic porphyria </a></li>
+   <li><a href="/main_disease/skin/congenital_generalise_1"> Congenital generalise lipodystrophy </a></li>
+   <li><a href="/main_disease/skin/congenital_generalise_2"> Congenital generalise lipodystrophy 2 </a></li>
+   <li><a href="/main_disease/skin/congenital_generalise_3"> Congenital generalise lipodystrophy 4 </a></li>
+   <li><a href="/main_disease/skin/corneodermatoosseous"> Corneodermatoosseous syndrome </a></li> 
+   <li><a href="/main_disease/skin/corticosteroid"> Corticosteroid-sensetive aseptic abscesses </a></li>
+   <li><a href="/main_disease/skin/costello"> Costello syndrome </a></li>
+   <li><a href="/main_disease/skin/cowden"> Cowden syndrome </a></li>
+   <li><a href="/main_disease/skin/crandall"> Crandall syndrome </a></li>
+   <li><a href="/main_disease/skin/cranioectodermal"> Cranioectodermal dysplasia </a></li>
+   <li><a href="/main_disease/skin/cronkhite_canada"> Cronkhite-Canada disease </a></li>
+   <li><a href="/main_disease/skin/cutaneous_collagenous"> Cutaneous collagenous vasculopathy </a></li>
+   <li><a href="/main_disease/skin/cutaneous_mastocytoma"> Cutaneous mastocytoma </a></li>
+   <li><a href="/main_disease/skin/cutaneous_polyarteritis"> Cutaneous polyarteritis nodosa </a></li>
+   <li><a href="/main_disease/skin/cutaneous_sclerosis"> Cutaneous sclerosis </a></li>
+   <li><a href="/main_disease/skin/cutis_laxa1"> Cutis laxa, autosomal dominant </a></li>
+   <li><a href="/main_disease/skin/cutis_laxa2"> Cutis laxa, autosomal recessive type 1 </a></li>
+   <li><a href="/main_disease/skin/cutis_marmorata"> Cutis marmorata telangiectatica congenita </a></li>
+   <li><a href="/main_disease/skin/cutis_verticis"> Cutis verticis gyrata </a></li>
+   <li><a href="/main_disease/skin/dahlberg"> Dahlberg Borer Newcomer syndrome </a></li>
+   <li><a href="/main_disease/skin/drier"> Drier disease </a></li>
+   <li><a href="/main_disease/skin/deafness_conductive"> Deafness conductive ptosis skeletal anomalies </a></li>
+   <li><a href="/main_disease/skin/deafness_enamel"> Deafness enamel hypoplasia nail defects </a></li>
+   <li><a href="/main_disease/skin/deafness_lymphedema"> Deafness-lymphedema-leukemia syndrome </a></li>
+   <li><a href="/main_disease/skin/deficiency_of_interleukin"> Deficiency of interleukin-1 receptor antagonist </a></li>
+   <li><a href="/main_disease/skin/dermal"> Dermal eccrine cylindroma </a></li>
+   <li><a href="/main_disease/skin/dermatitis"> Dermatitis herpteformis </a></li>
+   <li><a href="/main_disease/skin/dermatofibroma"> Dermatofibroma </a></li>
+   <li><a href="/main_disease/skin/dermatofibrosarcoma"> Dermatofibrosarcoma protuberans </a></li>
+   <li><a href="/main_disease/skin/dermatomyositis "> Dermatomyositis </a></li>
+   <li><a href="/main_disease/skin/dermatoosteolysis"> Dermatoosteolysis Kirghizian type </a></li>
+   <li><a href="/main_disease/skin/dermatopathia"> Dermatopathia pigmentosa reticularis </a></li>
+   <li><a href="/main_disease/skin/dermatosparaxis"> Dermatosparaxis Ehlers-Danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/dermochondrocorneal"> Dermochondrocorneal dystrophhy of Francois </a></li>
+   <li><a href="/main_disease/skin/dermoodontodysplasia"> Dermoodontodysplasia </a></li>
+   <li><a href="/main_disease/skin/diffuse_cutaneous"> Diffuse cutaneous systemic sclerosis </a></li>
+   <li><a href="/main_disease/skin/diffuse_dermal"> Diffuse dermal angiomatosis </a></li>
+   <li><a href="/main_disease/skin/disseminated"> Disseminated superficial  actinic porokeratosis </a></li>
+   <li><a href="/main_disease/skin/dolk_cdg"> DOLK-CDG (CDG-lm) </a></li>
+   <li><a href="/main_disease/skin/dominant"> Dominant dystrophic epidermolysis bullosa </a></li>
+   <li><a href="/main_disease/skin/door"> DOOR syndrome </a></li>
+   <li><a href="/main_disease/skin/dowling"> Dowling-Degos disease </a></li>
+   <li><a href="/main_disease/skin/dubowitz"> Dubowitz syndrome </a></li>
+   <li><a href="/main_disease/skin/dykes_markes"> Dykes Markes Harper syndrome </a></li>
+   <li><a href="/main_disease/skin/dyschromatosis_symmetrica"> Dyschromatosis symmetrica hereditaria 1 </a></li>
+   <li><a href="/main_disease/skin/dyschromatosis_universalis"> Dyschromatosis universalis hereditaria </a></li>
+   <li><a href="/main_disease/skin/dyskeratosis_congenita"> Dyskeratosis congenita </a></li>
+   <li><a href="/main_disease/skin/dyskeratosis_congenita_dominant"> Dyskeratosis congenita autosomal dominant </a></li>
+   <li><a href="/main_disease/skin/dyskeratosis_congenita_recessive"> Dyskeratosis congenita autosomal recessive </a></li>
+   <li><a href="/main_disease/skin/dyskeratosis_congenita_xlinked"> Dyskeratosis congenita X-linked </a></li>
+   <li><a href="/main_disease/skin/dystrophic_epidermolysis"> Dystrophic epidermolysis bullosa </a></li>
+   <li><a href="/main_disease/skin/ectodermal_dysplasia_skin"> Ectodermal dysplasia skin fragility syndrome </a></li>
+   <li><a href="/main_disease/skin/ectodermal_dysplasia_trichoodontoonychial"> Ectodermal dysplasia trichoodontoonychial type </a></li>
+   <li><a href="/main_disease/skin/ectodermal_dysplasia_natal_teeth"> Ectodermal dysplasia with natal teeth turnpenny type </a></li>
+   <li><a href="/main_disease/skin/ectodermal_dysplasia_hidrotic"> Ectodermal dysplasia, hidrotic, christian-fourie type </a></li>
+   <li><a href="/main_disease/skin/eec"> EEC syndrome </a></li>
+   <li><a href="/main_disease/skin/eem"> EEM syndrome </a></li>
+   <li><a href="/main_disease/skin/ehlers_danlos"> Ehlers- danlos syndrome, dysfibronectinemic type </a></li>
+   <li><a href="/main_disease/skin/elastoderma"> Elastoderma </a></li>
+   <li><a href="/main_disease/skin/elastosis"> Elastosis perforans serpiginosa </a></li>
+   <li><a href="/main_disease/skin/ellis_van"> Ellis- van creveld syndrome </a></li>
+   <li><a href="/main_disease/skin/encephalocraniocutaneous"> Encephalocraniocutaneous lipomatosis </a></li>
+   <li><a href="/main_disease/skin/eosinophillic"> Eosinophillic pustular folliculitis </a></li>
+   <li><a href="/main_disease/skin/epidermodysplasia"> Epidermodysplasia verruciformis </a></li>
+   <li><a href="/main_disease/skin/epidermolysa_bullosa_simplex"> Epidermolysa bullosa simplex with muscular dystrophy </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa"> Epidermolysis bullosa </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_acqisita"> Epidermolysis bullosa acquisita </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_simplex"> Epidermolysis bullosa simplex </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_simplex_pigmentation"> Epidermolysis bullosa simplex with mottled pigmentation </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_simplex_dowling"> Epidermolysis bullosa simplex, dowling-meara type </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_simplex_generalized"> Epidermolysis bullosa simplex, generalised </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_simplex_localized"> Epidermolysis bullosa simplex, localised </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_simplex_ogna"> Epidermolysis bullosa simplex, ogna type </a></li>
+   <li><a href="/main_disease/skin/epidermolysis_bullosa_lrthal"> Epidermolysis bullosa, lrthal acantholytic </a></li>
+   <li><a href="/main_disease/skin/epidermolytic_ichthyosis"> Epidermolytic ichthyosis </a></li>
+   <li><a href="/main_disease/skin/epidermolytic_palmoplantar"> Epidermolytic palmoplantar keratoderma </a></li>
+   <li><a href="/main_disease/skin/erdheim"> Erdheim- chester disease </a></li>
+   <li><a href="/main_disease/skin/erythema_elevatum"> Erythema elevatum diutinum </a></li>
+   <li><a href="/main_disease/skin/erythema_multiforme"> Erythema multiforme </a></li>
+   <li><a href="/main_disease/skin/erythema_nodosum"> Erythema nodosum, idiopathic </a></li>
+   <li><a href="/main_disease/skin/erythrokeratoderma"> Erythrokeratoderma "en cocardes" </a></li>
+   <li><a href="/main_disease/skin/erythrokeratoderma_variabilis"> Erythrokeratoderma variabilis et progressiva </a></li>
+   <li><a href="/main_disease/skin/erythromelalgia"> Erythromelalgia </a></li>
+   <li><a href="/main_disease/skin/erythropoietic"> Erythropoietic uroporphyria associated with myeloid malignancy </a></li>
+   <li><a href="/main_disease/skin/extranoda_nasal"> Extranodal nasal NK/T cell lymphoma </a></li>
+   <li><a href="/main_disease/skin/fabry"> Fabry disease </a></li>
+   <li><a href="/main_disease/skin/facial_ectodermal"> Facial ectodermal dysplasia </a></li>
+   <li><a href="/main_disease/skin/familial_atypical"> Familial atypical multiple mole melanoma syndrome </a></li>
+   <li><a href="/main_disease/skin/familial_cold"> Familial cold autoinflammatory syndrome </a></li>
+   <li><a href="/main_disease/skin/familial_cutaneous"> Familial cutaneous collagenoma </a></li>
+   <li><a href="/main_disease/skin/familial_dermographism"> Familial dermographism </a></li>
+   <li><a href="/main_disease/skin/familial_dupuytren"> Familial dupuytren contracture </a></li>
+   <li><a href="/main_disease/skin/familial_dysautonomia"> Familial dysautonomia </a></li>
+   <li><a href="/main_disease/skin/familial_joint_instability"> Familial joint instability syndrome </a></li>
+   <li><a href="/main_disease/skin/familial_multiple_lipomatosis"> Familial multiple lipomatosis </a></li>
+   <li><a href="/main_disease/skin/familial_multiple_trichodiscomas"> Familial multiple trichodiscomas </a></li>
+   <li><a href="/main_disease/skin/familial_partial_lipodystrophy_plin1"> Familial partial lipodystrophy associated with PLIN1 mutations </a></li>
+   <li><a href="/main_disease/skin/familial_partial_lipodystrophy_pparg"> Familial partial lipodystrophy associated with PPARG mutations </a></li>
+   <li><a href="/main_disease/skin/familial_partial_lipodystrophy_akt2"> Familial partial lipodystrophy due to AKT2 mutations </a></li>
+   <li><a href="/main_disease/skin/familial_partial_lipodystrophy_2"> Familial partial lipodystrophy type2 </a></li>
+   <li><a href="/main_disease/skin/familial_partial_lipodystrophy_kobberling"> Familial partial lipodystrophy type kobberling </a></li>
+   <li><a href="/main_disease/skin/familial_reactive_perforating"> Familial reactive perforating collagenous </a></li>
+   <li><a href="/main_disease/skin/familial_chronic"> Familial chronic mucocutaneous candidiasis </a></li>
+   <li><a href="/main_disease/skin/fanconi"> Fanconi anemia </a></li>
+   <li><a href="/main_disease/skin/farber"> Farber disease </a></li>
+   <li><a href="/main_disease/skin/febrile"> Febrile ulceronecrotic mucha- habermann disease </a></li>
+   <li><a href="/main_disease/skin/fibrodysplasia"> Fibrodysplasia ossificans progressiva </a></li>
+   <li><a href="/main_disease/skin/flynn"> Flynn Aird syndrome </a></li>
+   <li><a href="/main_disease/skin/focal_dermal"> Focal dermal hypoplasia </a></li>
+   <li><a href="/main_disease/skin/focal_facial_dermal"> Focal facial dermal dysplasia </a></li>
+   <li><a href="/main_disease/skin/fox"> Fox- fordyce disease </a></li>
+   <li><a href="/main_disease/skin/frontal"> Frontal fibrosing alopecia </a></li>
+   <li><a href="/main_disease/skin/frontonasal"> Frontonasal dysplasia with alopecia and genital anomaly </a></li>
+   <li><a href="/main_disease/skin/gapo"> GAPO Syndrome </a></li>
+   <li><a href="/main_disease/skin/gardner"> Gardner- syndrome </a></li>
+   <li><a href="/main_disease/skin/gardner_diamond"> Gardner-diamond syndrome </a></li>
+   <li><a href="/main_disease/skin/gstrocutaneous"> Gstrocutaneous syndrome </a></li>
+   <li><a href="/main_disease/skin/gaucher"> Gaucher disease perinatal lethal </a></li>
+   <li><a href="/main_disease/skin/generalised_junctional"> Generalized junctional epidermolysis bullosa, non-herlitz type </a></li>
+   <li><a href="/main_disease/skin/generalised_pustular"> Generalized pustular psoriasis </a></li>
+   <li><a href="/main_disease/skin/genuine"> Genuine diffuse phlebectasia </a></li>
+   <li><a href="/main_disease/skin/geroderma"> Geroderma osteodysplastica </a></li>
+   <li><a href="/main_disease/skin/giant"> Giant congential nevus </a></li>
+   <li><a href="/main_disease/skin/gingival"> Gingival fibromatosis with hypertrichosis </a></li>
+   <li><a href="/main_disease/skin/gm3_synthase"> GM3 synthase deficiency </a></li>
+   <li><a href="/main_disease/skin/gorlin"> Gorlin chaudhry moss syndrome </a></li>
+   <li><a href="/main_disease/skin/graham_little"> Graham-little-piccardi-lassueur syndrome </a></li>
+   <li><a href="/main_disease/skin/granuloma"> Granuloma annulare </a></li>
+   <li><a href="/main_disease/skin/granulomatous"> Granulomatous slack skin disease </a></li>
+   <li><a href="/main_disease/skin/griscelli1"> Griscelli syndrome type1 </a></li>
+   <li><a href="/main_disease/skin/griscelli2"> Griscelli syndrome type2 </a></li>
+   <li><a href="/main_disease/skin/griscelli3"> Griscelli syndrome type3 </a></li>
+   <li><a href="/main_disease/skin/grover"> Grover's disease </a></li>
+   <li><a href="/main_disease/skin/guttate"> Guttate psoriasis </a></li>
+   <li><a href="/main_disease/skin/hailey_hailey"> Hailey-hailey disease  </a></li>
+   <li><a href="/main_disease/skin/haim"> Haim - munk syndrome </a></li>
+   <li><a href="/main_disease/skin/hair_defect"> Hair defect-photosensitivity-intellectual disability syndrome </a></li>
+   <li><a href="/main_disease/skin/hairy_elbows"> Hairy elbows </a></li>
+   <li><a href="/main_disease/skin/halal"> Halal setton wang syndrome </a></li>
+   <li><a href="/main_disease/skin/hallermann"> Hallermann-streiff syndrome </a></li>
+   <li><a href="/main_disease/skin/halo_nevus"> Halo nevus </a></li>
+   <li><a href="/main_disease/skin/hard_skin"> Hard skin syndrome parana type </a></li>
+   <li><a href="/main_disease/skin/harlequin"> Harlequin ichthyosis </a></li>
+   <li><a href="/main_disease/skin/hartnup"> Hartnup disease </a></li>
+   <li><a href="/main_disease/skin/hennekam"> Hennekam syndrome </a></li>
+   <li><a href="/main_disease/skin/hepatoerythropoietic"> Hepatoerythropoietic porphyria </a></li>
+   <li><a href="/main_disease/skin/hereditary_coproporphyria"> Hereditary coproporphyria </a></li>
+   <li><a href="/main_disease/skin/hereditary_fibrosing"> Hereditary fibrosing poikiloderma with tendon contractures, myopathy and pulmonary fibrosis </a></li>
+   <li><a href="/main_disease/skin/hereditary_hemorrhagic_telangiectasia"> Hereditary hemorrhagic telangiectasia</a></li>
+   <li><a href="/main_disease/skin/hereditary_hemorrhagic_telangiectasia2"> Hereditary hemorrhagic telangiectasia type2</a></li>
+   <li><a href="/main_disease/skin/hereditary_hemorrhagic_telangiectasia3"> Hereditary hemorrhagic telangiectasia type3</a></li>
+   <li><a href="/main_disease/skin/hereditary_hemorrhagic_telangiectasia4"> Hereditary hemorrhagic telangiectasia type4</a></li>
+   <li><a href="/main_disease/skin/hereditary_leiomyomatosis"> Hereditary leiomyomatosis and renal cell cancer</a></li>
+   <li><a href="/main_disease/skin/hereditary_lymphedema"> Hereditary lymphedema type II</a></li>
+   <li><a href="/main_disease/skin/hereditary_mucoepithelial"> Hereditary mucoepithelial dysplasia </a></li>
+   <li><a href="/main_disease/skin/hereditary_pancreatitis"> Hereditary pancreatitis </a></li>
+   <li><a href="/main_disease/skin/hermansky_pudlak"> Hermansky pudlak syndrome 2 </a></li>
+   <li><a href="/main_disease/skin/hidradenitis_suppurativa"> Hidradenitis suppurativa </a></li>
+   <li><a href="/main_disease/skin/histiocytosis"> Histiocytosis-lymphadenopathy plus syndrome </a></li>
+   <li><a href="/main_disease/skin/holocarboxylase"> Holocarboxylase synthetase deficiency</a></li>
+   <li><a href="/main_disease/skin/hyaline"> Hyaline fibromatosis syndrome </a></li> 
+   <li><a href="/main_disease/skin/hydroa"> Hydroa vacciniforme </a></li>
+   <li><a href="/main_disease/skin/hydroa_familial"> Hydroa vacciniforme, familial </a></li>
+   <li><a href="/main_disease/skin/hyper_igd"> Hyper Igd syndrome </a></li>
+   <li><a href="/main_disease/skin/hyperkeratosis"> Hyperkeratosis lenticularis perstans </a></li>
+   <li><a href="/main_disease/skin/hypermobile"> Hypermobile ehlers-danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/hypertrichosis_lanuginosa"> Hypertrichosis lanuginosa, acquired </a></li>
+   <li><a href="/main_disease/skin/hypohidrotic_ectodermal"> Hypohidrotic ectodermal dysplasia  </a></li>
+   <li><a href="/main_disease/skin/hypohidrotic_ectodermal_dysplasia_autosomal_recessive"> Hypohidrotic ectodermal dysplasia autosomal recessive </a></li>
+   <li><a href="/main_disease/skin/hypohidrotic_ectodermal_dysplasia_hypothyroidism"> Hypohidrotic ectodermal dysplasia with hypothyroidism and ciliary dyskinesia </a></li>
+   <li><a href="/main_disease/skin/hypomelanosis"> Hypomelanosis of ito </a></li>
+   <li><a href="/main_disease/skin/hypotrichosis_simplex"> Hypotrichosis simplex </a></li>
+   <li><a href="/main_disease/skin/hypotrichosis-lymphedema"> Hypotrichosis-lymphedema-telangiectasia syndrome </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_alopecia"> Ichthyosis alopecia eclabion ectropion mental retardation </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_bullosa"> Ichthyosis bullosa of siemens </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_cheeck_eyebrow"> Ichthyosis cheek eyebrow syndrome </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_follicularis"> Ichthyosis follicularis atrichia photophobia syndrome </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_hystrix"> Ichthyosis hystrix, curth macklin type </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_lamellar"> Ichthyosis lamellar 1 </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_lamellar_dominant"> Ichthyosis lamellar, autosomal dominant </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_prematurity"> Ichthyosis prematurity syndrome </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_tapered_fingers"> Ichthyosis tapered fingers midline groove up </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_vulgaris"> Ichthyosis vulgaris </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_cquired"> Ichthyosis, acquired  </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_leukocyte"> Ichthyosis, leukocyte vacuoles, alopecia and sclerosing cholangitis  </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_renal"> Ichthyosis, mental retardation, dwarfism and renal impairment  </a></li>
+   <li><a href="/main_disease/skin/ichthyosis_keratohyalin"> Ichthyosis-mental retardation syndrome with large keratohyalin granules in the skin  </a></li>
+   <li><a href="/main_disease/skin/incontinentia"> Incontinentia pigmenti </a></li>
+   <li><a href="/main_disease/skin/infantile"> Infantile myofibromatosis </a></li>
+   <li><a href="/main_disease/skin/inflammatory"> Inflammatory linear verrucous epidermal nevus </a></li>
+   <li><a href="/main_disease/skin/iridogoniodysgenesis"> Iridogoniodysgenesis type-1 </a></li>
+   <li><a href="/main_disease/skin/isolated"> Isolated anterior cervical hypertrichosis </a></li>
+   <li><a href="/main_disease/skin/johanson_blizzard"> Johanson-blizzard syndrome </a></li>
+   <li><a href="/main_disease/skin/johanson_neuroectodermal"> Johanson neuroectodermal syndrome </a></li>
+   <li><a href="/main_disease/skin/junctional_epidermolysis_bullosa_generalized"> Junctional epidermolysis bullosa generalised intermediate </a></li>
+   <li><a href="/main_disease/skin/junctional_epidermolysis_bullosa_inversa"> Junctional epidermolysis bullosa inversa</a></li>
+   <li><a href="/main_disease/skin/junctional_epidermolysis_bullosa_herlitz"> Junctional epidermolysis bullosa, herlitz type </a></li>
+   <li><a href="/main_disease/skin/juvenile_dermatomyositis"> Juvenile dermatomyositis </a></li>
+   <li><a href="/main_disease/skin/juvenile_polyposis"> Juvenile polyposis syndrome </a></li>
+   <li><a href="/main_disease/skin/keratoderma_palmoplantar_deafness"> Keratoderma palmoplantar deafness</a></li>
+   <li><a href="/main_disease/skin/keratoderma_palmoplantar_spastic"> Keratoderma palmoplantar spastic paralysis</a></li>
+   <li><a href="/main_disease/skin/keratoderma_palmoplantar_transgrediens"> Keratoderma palmoplantar transgrediens</a></li>
+   <li><a href="/main_disease/skin/keratolytic_winter"> Keratolytic winter erythema </a></li>
+   <li><a href="/main_disease/skin/keratosis_dwarfism"> Keratosis follicularis dwarfism and cerebral atrophy</a></li>
+   <li><a href="/main_disease/skin/keratosis_spinulosa"> Keratosis follicularis spinulosa decalvans</a></li>
+   <li><a href="/main_disease/skin/keratosis1"> Keratosis palmoplantaris striata 1 </a></li>
+   <li><a href="/main_disease/skin/keratosis2"> Keratosis palmoplantaris striata 3 </a></li>
+   <li><a href="/main_disease/skin/kid"> KID Syndrome </a></li>
+   <li><a href="/main_disease/skin/kindler"> Kindler syndrome </a></li>
+   <li><a href="/main_disease/skin/klippel_trenaunay"> Klippel-trenaunay syndrome </a></li>
+   <li><a href="/main_disease/skin/knuckle"> Knuckle pads, leuconychia and sensorineural deafness </a></li>
+   <li><a href="/main_disease/skin/kohlschutter"> Kohlschutter tonz syndrome </a></li>
+   <li><a href="/main_disease/skin/kyphoscoliotic"> Kyphoscoliotic ehlers- danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/kyrle"> Kyrle disease </a></li>
+   <li><a href="/main_disease/skin/lacrimo"> Lacrimo-auriculo-dento-digital syndrome </a></li>
+   <li><a href="/main_disease/skin/lamellar"> Lamellar ichthyosis </a></li>
+   <li><a href="/main_disease/skin/laryngoonychocutaneous"> Laryngoonychocutaneous syndrome </a></li>
+   <li><a href="/main_disease/skin/ledderhose"> Ledderhose disease </a></li>
+   <li><a href="/main_disease/skin/legius"> Legius syndrome </a></li>
+   <li><a href="/main_disease/skin/lelis"> Lelis syndrome </a></li>
+   <li><a href="/main_disease/skin/leopard"> LEOPARD syndrome </a></li>
+   <li><a href="/main_disease/skin/leprechaunism"> Leprechaunism </a></li>
+   <li><a href="/main_disease/skin/leukoencephalopathy"> Leukoencephalopathy palmoplantar keratoderma </a></li>
+   <li><a href="/main_disease/skin/leukonychia"> Leukonychia totalis </a></li>
+   <li><a href="/main_disease/skin/lichen_planopilaris"> Lichen planopilaris </a></li>
+   <li><a href="/main_disease/skin/lichen_planus_pemphigoides"> Lichen planus pemphigoides </a></li>
+   <li><a href="/main_disease/skin/lichen_planus_pigmentosus"> Lichen planus pigmentosus </a></li>
+   <li><a href="/main_disease/skin/lichen"> Lichen sclerosus </a></li>
+   <li><a href="/main_disease/skin/limb"> Limb mammary syndrome </a></li>
+   <li><a href="/main_disease/skin/limited_cutaneous"> Limited cutaneous systemic sclerosis </a></li>
+   <li><a href="/main_disease/skin/limited_systemic"> Limited systemic sclerosis </a></li>
+   <li><a href="/main_disease/skin/linear_whroled"> Linear and whorled nevoid hypermelanosis </a></li>
+   <li><a href="/main_disease/skin/linear_iga"> Linear IgA disease </a></li>
+   <li><a href="/main_disease/skin/linear_lichen"> Linear lichen planus </a></li>
+   <li><a href="/main_disease/skin/linear_nevus"> Linear nevus sebaceous syndrome </a></li>
+   <li><a href="/main_disease/skin/linear_scleroderma"> Linear scleroderma </a></li>
+   <li><a href="/main_disease/skin/lipe_related"> LIPE-related familial partial lipodystrophy </a></li>
+   <li><a href="/main_disease/skin/lipedema"> Lipedema </a></li>
+   <li><a href="/main_disease/skin/lipodystrophy"> Lipodystrophy, familial partial, type5 </a></li>
+   <li><a href="/main_disease/skin/lipoid"> Lipoid proteinosis of Urbach and Wiethe </a></li>
+   <li><a href="/main_disease/skin/lissencephaly2"> Lissencephaly2 </a></li>
+   <li><a href="/main_disease/skin/localised"> Localized scleroderma </a></li>
+   <li><a href="/main_disease/skin/loose"> Loose anagen hair syndrome </a></li>
+   <li><a href="/main_disease/skin/lupus"> Lupus erythematosus tumidus </a></li>
+   <li><a href="/main_disease/skin/lymphedema_cerebral"> Lymphedema and cerebral arteriovenous anomaly </a></li>
+   <li><a href="/main_disease/skin/lymphedema_distichiasis"> Lymphedema-distichiasis syndrome </a></li>
+   <li><a href="/main_disease/skin/lymphocytic"> Lymphocytic infiltrate of Jessner </a></li>
+   <li><a href="/main_disease/skin/lymphomatoid"> Lymphomatoid papulosis </a></li>
+   <li><a href="/main_disease/skin/macules"> Macules hereditary congenital hypopigmented and hyperpigmented </a></li>
+   <li><a href="/main_disease/skin/maffucci"> Maffucci syndrome </a></li>
+   <li><a href="/main_disease/skin/majeed"> Majeed syndrome </a></li>
+   <li><a href="/main_disease/skin/malignant"> Malignant atrophic papulosis </a></li>
+   <li><a href="/main_disease/skin/mandibuloacral_a"> Mandibuloacral dysplasia with type A lipodystrophy </a></li>
+   <li><a href="/main_disease/skin/mandibuloacral_b"> Mandibuloacral dysplasia with type B lipodystrophy </a></li>
+   <li><a href="/main_disease/skin/marie"> Marie unna congenital hypotrichosis </a></li>
+   <li><a href="/main_disease/skin/marshall"> Marshall syndrome </a></li>
+   <li><a href="/main_disease/skin/mccune"> McCune-Albright syndrome </a></li>
+   <li><a href="/main_disease/skin/megalencephaly"> Megalencephaly-capillary malformation syndrome </a></li>
+   <li><a href="/main_disease/skin/meleda"> Meleda disease </a></li>
+   <li><a href="/main_disease/skin/melkersson"> Melkersson-Rosenthal syndrome </a></li>
+   <li><a href="/main_disease/skin/menkes"> Menkes disease </a></li>
+   <li><a href="/main_disease/skin/merkel"> Merkel cell carcinoma </a></li>
+   <li><a href="/main_disease/skin/mevalonic"> Mevalonic aciduria </a></li>
+   <li><a href="/main_disease/skin/microcystic"> Microcystic lymphatic malformation </a></li>
+   <li><a href="/main_disease/skin/microphthalmia"> Microphthalmia with linear skin defects syndrome </a></li>
+   <li><a href="/main_disease/skin/milroy"> Milroy disease </a></li>
+   <li><a href="/main_disease/skin/monilethrix"> Monilethrix </a></li>
+   <li><a href="/main_disease/skin/morphea"> Morphea </a></li>
+   <li><a href="/main_disease/skin/mpdu1"> MPDU1-CDG (CDG-lf) </a></li>
+   <li><a href="/main_disease/skin/mpi"> MPI-CDG (CDG-lb) </a></li>
+   <li><a href="/main_disease/skin/muckle"> Muckle-Wells syndrome </a></li>
+   <li><a href="/main_disease/skin/mucopolysaccharidosis"> Mucopolysaccharidosis type III </a></li>
+   <li><a href="/main_disease/skin/mucous"> Mucous membrane pemphigoid </a></li>
+   <li><a href="/main_disease/skin/muir-torre"> Muir-Torre syndrome </a></li>
+   <li><a href="/main_disease/skin/multicentric"> Multicentric reticulohistiocytosis </a></li>
+   <li><a href="/main_disease/skin/multiple_cafe"> Multiple cafe-au-lait spots </a></li>
+   <li><a href="/main_disease/skin/multiple_fibrofolliculoma"> Multiple fibrofolliculoma familial </a></li>
+   <li><a href="/main_disease/skin/multiple_sulfatase"> Multiple sulfatase deficiency </a></li>
+   <li><a href="/main_disease/skin/multiple_symmetric"> Multiple symmetric lipomatosis </a></li>
+   <li><a href="/main_disease/skin/musculocontractural"> Musculocontractural ehlers-danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/naegeli"> Naegeli syndrome </a></li>
+   <li><a href="/main_disease/skin/nail-patella"> Nail-patella syndrome </a></li>
+   <li><a href="/main_disease/skin/nakajo"> Nakajo nishimura syndrome </a></li>
+   <li><a href="/main_disease/skin/naxos"> Naxos disease </a></li>
+   <li><a href="/main_disease/skin/necrobiotic"> Necrobiotic xanthogranuloma </a></li>
+   <li><a href="/main_disease/skin/nelson"> Nelson syndrome </a></li>
+   <li><a href="/main_disease/skin/neonatal_onset"> Neonatal onset multisystem inflammatory disease </a></li>
+   <li><a href="/main_disease/skin/neonatal_progeroid"> Neonatal progeroid syndrome </a></li>
+   <li><a href="/main_disease/skin/nephrogenic"> Nephrogenic systemic fibrosis </a></li>
+   <li><a href="/main_disease/skin/nestor"> Nestor-guillermo progeria syndrome </a></li>
+   <li><a href="/main_disease/skin/netherton"> Netherton syndrome </a></li>
+   <li><a href="/main_disease/skin/neu"> Neu laxova syndrome </a></li>
+   <li><a href="/main_disease/skin/neurocutaneous"> Neurocutaneous melanosis </a></li>
+   <li><a href="/main_disease/skin/neurofibromatosis"> Neurofibromatosis-Noonan syndrome </a></li>
+   <li><a href="/main_disease/skin/nevoid"> Nevoid basal cell carcinoma syndrome </a></li>
+   <li><a href="/main_disease/skin/nevus"> Nevus comedonicus syndrome </a></li>
+   <li><a href="/main_disease/skin/nevus_ito"> Nevus of Ito </a></li>
+   <li><a href="/main_disease/skin/nodular"> Nodular nonsuppurative panniculitis </a></li>
+   <li><a href="/main_disease/skin/nonbullous"> Nonbullous congenital ichthyosiform erythroderma </a></li>
+   <li><a href="/main_disease/skin/noonan"> Noonan syndrome </a></li>
+   <li><a href="/main_disease/skin/noonan_like"> Noonan-like syndrome with loose anagen hair </a></li>
+   <li><a href="/main_disease/skin/occipital"> Occipital horn syndrome </a></li>
+   <li><a href="/main_disease/skin/oculocerebral"> Oculocerebral syndrome with hypopigmentation </a></li>
+   <li><a href="/main_disease/skin/oculocutaneous1"> Oculocutaneous albinism type 1 </a></li>
+   <li><a href="/main_disease/skin/oculocutaneous1b"> Oculocutaneous albinism type 1B </a></li>
+   <li><a href="/main_disease/skin/oculocutaneous2"> Oculocutaneous albinism type 2 </a></li>
+   <li><a href="/main_disease/skin/oculocutaneous3"> Oculocutaneous albinism type 3 </a></li>
+   <li><a href="/main_disease/skin/oculodentodigital"> Oculodentodigital dysplasia </a></li>
+   <li><a href="/main_disease/skin/oculoectodermal"> Oculoectodermal syndrome </a></li>
+   <li><a href="/main_disease/skin/odonto"> Odonto onycho dysplasia with alopecia </a></li>
+   <li><a href="/main_disease/skin/odontomicronychial"> Odontomicronychial dysplasia </a></li>
+   <li><a href="/main_disease/skin/odontoonychodermal"> Odontoonychodermal dysplasia </a></li>
+   <li><a href="/main_disease/skin/odontotrichomelic"> Odontotrichomelic syndrome </a></li>
+   <li><a href="/main_disease/skin/oliver"> Oliver syndrome </a></li>
+   <li><a href="/main_disease/skin/olmsted"> Olmsted syndrome </a></li>
+   <li><a href="/main_disease/skin/onychocytic"> Onychocytic matricoma </a></li>
+   <li><a href="/main_disease/skin/onychodystrophy"> Onychodystrophy-anonychia </a></li>
+   <li><a href="/main_disease/skin/orofaciodigital"> Orofaciodigital syndrome1 </a></li>
+   <li><a href="/main_disease/skin/pachydermoperiostosiis"> Pachydermoperiostosiis </a></li>
+   <li><a href="/main_disease/skin/pachyonychia"> Pachyonychia congenita </a></li>
+   <li><a href="/main_disease/skin/palmoplantar_keratoderma"> Palmoplantar keratoderma </a></li>
+   <li><a href="/main_disease/skin/palmoplantar_keratoderma_sclerodactyly"> Palmoplantar keratoderma-sclerodactyly syndrome </a></li>
+   <li><a href="/main_disease/skin/papillon"> Papillon Lefevre syndrome </a></li>
+   <li><a href="/main_disease/skin/parapsoriasis"> Parapsoriasis </a></li>
+   <li><a href="/main_disease/skin/parkes"> Parkes Weber syndrome </a></li>
+   <li><a href="/main_disease/skin/peeling_skin"> Peeling skin syndrome </a></li>
+   <li><a href="/main_disease/skin/peho"> PEHO syndrome </a></li>
+   <li><a href="/main_disease/skin/pemphigus"> Pemphigus vulgaris </a></li>
+   <li><a href="/main_disease/skin/periodontal"> Periodontal ehlers-danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/peutz"> Peutz-jeghers syndrome </a></li>
+   <li><a href="/main_disease/skin/piebaldism"> Piebaldism </a></li>
+   <li><a href="/main_disease/skin/pigmented"> Pigmented purpuric dermatosis </a></li>
+   <li><a href="/main_disease/skin/pili"> Pili annulati </a></li>
+   <li><a href="/main_disease/skin/pili_torti"> Pili torti </a></li>
+   <li><a href="/main_disease/skin/pili_torti_abnormalities"> Pili torti developmental delay neurological abnormalities </a></li>
+   <li><a href="/main_disease/skin/pilodental"> Pilodental dysplasia with refractive errors </a></li>
+   <li><a href="/main_disease/skin/pilomatrixoma"> Pilomatrixoma </a></li>
+   <li><a href="/main_disease/skin/pinheiro"> Pinheiro Freire-Maia Miranda syndrome </a></li>
+   <li><a href="/main_disease/skin/pityriasis_lichenoides"> Pityriasis lichenoides </a></li>
+   <li><a href="/main_disease/skin/pityriasis_lichenoides_chronica"> Pityriasis lichenoides chronica </a></li>
+   <li><a href="/main_disease/skin/pityriasis_lichenoides_et"> Pityriasis lichenoides et varioliformis acuta </a></li>
+   <li><a href="/main_disease/skin/pityriasis_rubra"> Pityriasis rubra pilaris </a></li>
+   <li><a href="/main_disease/skin/pmm2"> PMM2-CDG (CDG-la) </a></li>
+   <li><a href="/main_disease/skin/poikiloderma"> Poikiloderma with neutropenia </a></li>
+   <li><a href="/main_disease/skin/popliteal"> Popliteal pterygium syndrome, Bartsocas-Papas type </a></li>
+   <li><a href="/main_disease/skin/porokeratosis_mibelli"> Porokeratosis of Mibelli </a></li>
+   <li><a href="/main_disease/skin/porokeratosis_actinic1"> Porokeratosis, disseminated superficial actinic 1 </a></li>
+   <li><a href="/main_disease/skin/porokeratosis_actinic2"> Porokeratosis, disseminated superficial actinic 2 </a></li>
+   <li><a href="/main_disease/skin/porphyria"> Porphyria cutanea tarda </a></li>
+   <li><a href="/main_disease/skin/pretibial"> Pretibial epidermolysis bullosa </a></li>
+   <li><a href="/main_disease/skin/primary"> Primary cutaneous amyloidosis </a></li>
+   <li><a href="/main_disease/skin/progeria"> Progeria </a></li>
+   <li><a href="/main_disease/skin/progeroid_short"> Progeroid short stature with pigmented nevi </a></li>
+   <li><a href="/main_disease/skin/progeroid_petty"> Progeroid syndrome petty type </a></li>
+   <li><a href="/main_disease/skin/progressive"> Progressive osseous heteroplasia </a></li>
+   <li><a href="/main_disease/skin/prolidase"> Prolidase deficiency </a></li>
+   <li><a href="/main_disease/skin/proliferating"> Proliferating trichilemmal cyst </a></li>
+   <li><a href="/main_disease/skin/proteus"> Proteus syndrome </a></li>
+   <li><a href="/main_disease/skin/proteus_like"> Proteus-like syndrome </a></li>
+   <li><a href="/main_disease/skin/pruritic"> Pruritic urticarial papules plaques of pregnancy </a></li>
+   <li><a href="/main_disease/skin/pseudoainhum"> Pseudoainhum </a></li>
+   <li><a href="/main_disease/skin/pseudohypoparathyroidisma "> Pseudohypoparathyroidism type 1A </a></li>
+   <li><a href="/main_disease/skin/pseudohypoparathyroidismc"> Pseudohypoparathyroidism type 1C </a></li>
+   <li><a href="/main_disease/skin/pseudopelade"> Pseudopelade of Brocq </a></li>
+   <li><a href="/main_disease/skin/pseudopseudohypoparathyroidism"> Pseudopseudohypoparathyroidism </a></li>
+   <li><a href="/main_disease/skin/pseudoxanthoma"> Pseudoxanthoma elasticum </a></li>
+   <li><a href="/main_disease/skin/punctuate2"> Punctate palmoplantar keratoderma type2 </a></li>
+   <li><a href="/main_disease/skin/punctuate1"> Punctate palmoplantar keratoderma type1 </a></li>
+   <li><a href="/main_disease/skin/pustulosis"> Pustulosis palmaris et plantaris </a></li>
+   <li><a href="/main_disease/skin/pyoderma"> Pyoderma gangrenosum </a></li>
+   <li><a href="/main_disease/skin/pyogenic_arthritis"> Pyogenic arthritis, pyoderma gangrenosum and acne </a></li>
+   <li><a href="/main_disease/skin/pyogenic"> Pyogenic granuloma </a></li>
+   <li><a href="/main_disease/skin/pyramidal"> Pyramidal molars-abnormal upper lip syndrome </a></li>
+   <li><a href="/main_disease/skin/quinquaud"> Quinquaud folliculitis decalvans </a></li>
+   <li><a href="/main_disease/skin/rabson"> Rabson-Mendenhall syndrome </a></li>
+   <li><a href="/main_disease/skin/recessive"> Recessive dystrophic epidermolysis bullosa-generalised other </a></li>
+   <li><a href="/main_disease/skin/redskin"> Red skin pigment anomaly of New Guinea </a></li>
+   <li><a href="/main_disease/skin/refsum"> Refsum disease </a></li>
+   <li><a href="/main_disease/skin/reynolds"> Reynolds syndrome </a></li>
+   <li><a href="/main_disease/skin/rhabdomyomatous"> Rhabdomyomatous mesenchymal hamartoma </a></li>
+   <li><a href="/main_disease/skin/roch"> Roch-leri mesosomatous lipomatosis </a></li>
+   <li><a href="/main_disease/skin/rombo"> Rombo syndrome </a></li>
+   <li><a href="/main_disease/skin/rosai"> Rosai-Dorfman disease </a></li>
+   <li><a href="/main_disease/skin/sapho"> SAPHO syndrome </a></li>
+   <li><a href="/main_disease/skin/satoyoshi"> Satoyoshi syndrome </a></li>
+   <li><a href="/main_disease/skin/scalp_defect"> Scalp defects postaxial polydactyly </a></li>
+   <li><a href="/main_disease/skin/scalp_ear_nipple"> Scalp ear nipple syndrome </a></li>
+   <li><a href="/main_disease/skin/scarf"> SCARF syndrome </a></li>
+   <li><a href="/main_disease/skin/schinzel"> Schinzel Giedion syndrome </a></li>
+   <li><a href="/main_disease/skin/schwannomatosis"> Schwannomatosis </a></li>
+   <li><a href="/main_disease/skin/scleromyxedema"> Scleromyxedema </a></li>
+   <li><a href="/main_disease/skin/seborrheic"> Seborrheic keratosis </a></li>
+   <li><a href="/main_disease/skin/severe_generalized"> Severe generalized recessive dystrophic epidermolysis bullosa </a></li>
+   <li><a href="/main_disease/skin/sezary"> Sezary syndrome </a></li>
+   <li><a href="/main_disease/skin/short"> SHORT syndrome </a></li>
+   <li><a href="/main_disease/skin/sjogren_larsson"> Sjogren-Larsson syndrome </a></li>
+   <li><a href="/main_disease/skin/sjogren_larsson_like"> Sjogren-Larsson-like syndrome </a></li>
+   <li><a href="/main_disease/skin/slow_channel"> Slow-channel congenital myasthenic syndrome </a></li>
+   <li><a href="/main_disease/skin/sneddon"> Sneddon syndrome </a></li>
+   <li><a href="/main_disease/skin/spinocerebellar"> Spinocerebellar ataxia 34 </a></li>
+   <li><a href="/main_disease/skin/spitz"> Spitz nevus </a></li>
+   <li><a href="/main_disease/skin/spondylodysplastic"> Spondylodysplastic Ehlers-Danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/spondyloepimetaphyseal"> Spondyloepimetaphyseal dysplasia joint laxity </a></li>
+   <li><a href="/main_disease/skin/srd5a3"> SRD5A3-CDG (CDG-lq) </a></li>
+   <li><a href="/main_disease/skin/steatocystoma_multiplex"> Steatocystoma multiplex </a></li>
+   <li><a href="/main_disease/skin/steatocystoma_multiplex_natal_teeth"> Steatocystoma multiplex with natal teeth </a></li>
+   <li><a href="/main_disease/skin/stevens"> Stevens-Johnson syndrome/Toxic epidermal necrolysis </a></li>
+   <li><a href="/main_disease/skin/stiff"> Stiff skin syndrome </a></li>
+   <li><a href="/main_disease/skin/stoll"> Stoll Alembik Finck syndrome </a></li>
+   <li><a href="/main_disease/skin/sturge"> Sturge-Weber syndrome </a></li>
+   <li><a href="/main_disease/skin/subcorneal"> Subcorneal pustular dermatosis </a></li>
+   <li><a href="/main_disease/skin/swyer"> Swyer syndrome </a></li>
+   <li><a href="/main_disease/skin/syringocystadenoma"> Syringocystadenoma papilliferum </a></li>
+   <li><a href="/main_disease/skin/systemic"> Systemic scleroderma </a></li>
+   <li><a href="/main_disease/skin/tarp"> TARP syndrome </a></li>
+   <li><a href="/main_disease/skin/taurodontia"> Taurodontia, absent teeth, sparse hair syndrome </a></li>
+   <li><a href="/main_disease/skin/telfer"> Telfer Sugar Jaeger syndrome </a></li>
+   <li><a href="/main_disease/skin/temple"> Temple-Baraitser syndrome </a></li>
+   <li><a href="/main_disease/skin/tiez"> Tiez syndrome </a></li>
+   <li><a href="/main_disease/skin/transient"> Transient bullous dermolysis of the newborn </a></li>
+   <li><a href="/main_disease/skin/tricho_dento"> Tricho-dento-osseous syndrome </a></li>
+   <li><a href="/main_disease/skin/trichodental"> Trichodental syndrome </a></li>
+   <li><a href="/main_disease/skin/trichorhinophalangeal"> Trichorhinophalangeal syndrome </a></li>
+   <li><a href="/main_disease/skin/trichostasis"> Trichostasis spinulosa </a></li>
+   <li><a href="/main_disease/skin/trichothiodystrophy"> Trichothiodystrophy </a></li>
+   <li><a href="/main_disease/skin/tuberous"> Tuberous sclerosis complex </a></li>
+   <li><a href="/main_disease/skin/tumor"> Tumor necrosis factor receptor-associated periodic syndrome </a></li>
+   <li><a href="/main_disease/skin/twenty-nail"> Twenty-nail dystrophy </a></li>
+   <li><a href="/main_disease/skin/tylosis"> Tylosis with esophageal cancer </a></li>
+   <li><a href="/main_disease/skin/tyrosinemia"> Tyrosinemia type2 </a></li>
+   <li><a href="/main_disease/skin/ulerythema"> Ulerythema ophryogenesis </a></li>
+   <li><a href="/main_disease/skin/uncombable"> Uncombable hair syndrome </a></li>
+   <li><a href="/main_disease/skin/uv_sensitive"> UV sensitive syndrome </a></li>
+   <li><a href="/main_disease/skin/van_den"> Van Den Bosch syndrome </a></li>
+   <li><a href="/main_disease/skin/variegate"> Variegate porphyria </a></li>
+   <li><a href="/main_disease/skin/vascular"> Vascular Ehlers-Danlos syndrome </a></li>
+   <li><a href="/main_disease/skin/verrucous"> Verrucous nevus acanthokeratolytic </a></li>
+   <li><a href="/main_disease/skin/vici"> Vici syndrome </a></li>
+   <li><a href="/main_disease/skin/citiligo"> Vitiligo </a></li>
+   <li><a href="/main_disease/skin/vohwinkel"> Vohwinkel syndrome </a></li>
+   <li><a href="/main_disease/skin/waardenburg"> Waardenburg syndrome </a></li>
+   <li><a href="/main_disease/skin/wells"> Wells syndrome </a></li>
+   <li><a href="/main_disease/skin/werner"> Werner syndrome </a></li>
+   <li><a href="/main_disease/skin/weyers"> Weyers acrofacial dysostosis </a></li>
+   <li><a href="/main_disease/skin/white_sponge"> White sponge nevus of cannon </a></li>
+   <li><a href="/main_disease/skin/wiskott"> Wiskott Aldrich syndrome </a></li>
+   <li><a href="/main_disease/skin/witkop"> Witkop syndrome </a></li>
+   <li><a href="/main_disease/skin/woolly_hair_hypotrichosis"> Woolly hair hypotrichosis everted lower lip and outstanding ears </a></li>
+   <li><a href="/main_disease/skin/woolly_hair"> Woolly hair syndrome </a></li>
+   <li><a href="/main_disease/skin/wrinkly_skin"> Wrinkly skin syndrome </a></li>
+   <li><a href="/main_disease/skin/wyburn"> Wyburn-Mason syndrome </a></li>
+   <li><a href="/main_disease/skin/xlinked_congential"> X-linked congenital generalized hypertrichosis </a></li>
+   <li><a href="/main_disease/skin/xlinked_dominant"> X-linked dominant chondrodysplasia punctata 2 </a></li>
+   <li><a href="/main_disease/skin/xlinked_hypohidrotic"> X-linked hypohidrotic ectodermal dysplasia</a></li>
+   <li><a href="/main_disease/skin/xlinked_ichthyosis"> X-linked ichthyosis</a></li>
+   <li><a href="/main_disease/skin/xlinked_intellectual"> X-linked intellectual disability-short stature- obesity</a></li>
+   <li><a href="/main_disease/skin/xanthoma"> Xanthoma disseminatum </a></li>
+   <li><a href="/main_disease/skin/xeroderma"> Xeroderma pigmentosum </a></li>
+   <li><a href="/main_disease/skin/xeroderma_variant"> Xeroderma pigmentosum, variant type </a></li>
+   <li><a href="/main_disease/skin/yellow_nail"> Yellow nail syndrome </a></li>
+   <li><a href="/main_disease/skin/yemenite"> Yemenite deaf-blind hypopigmentation syndrome </a></li>
+   <li><a href="/main_disease/skin/zlotogora"> Zlotogora syndrome </a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

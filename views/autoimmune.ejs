@@ -1,0 +1,312 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+	#filter {
+		display: none;
+	}
+
+
+	@media screen and (min-width: 540px) and (max-width: 820px) {
+		#mbody {
+			text-align: left;
+			margin: 5% auto;
+		}
+	}
+</style>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+<h3><center> Autoimmune Disease:</center> </h3><br>
+<ol class = "ml-5" >
+    <li><a href="/main_disease/autoimmune/achalasia">Achalasia</a></li>
+    <li><a href="/main_disease/autoimmune/addison">Addison's Disease</a></li>
+	<li><a href="/main_disease/autoimmune/adult">Adult still's disease </a></li>
+	<li><a href="/main_disease/autoimmune/agammaglobulinemia"> Agammaglobulinemia</a></li>
+	<li><a href="/main_disease/autoimmune/alopecia">Alopecia areata </a></li>
+	<li><a href="/main_disease/autoimmune/amyloidosis"> Amyloidosis </a></li>
+	<li><a href="/main_disease/autoimmune/ankylosing">Ankylosing spondylitis </a></li>
+	<li><a href="/main_disease/autoimmune/antigbm">Anti- GBM/ Anti-TBM nephritis </a></li>
+	<li><a href="/main_disease/autoimmune/antispholipid">Antiphospholipid syndrome </a></li>
+	<li><a href="/main_disease/autoimmune/aangioedema">Autoimmune angioedema </a></li>
+	<li><a href="/main_disease/autoimmune/adysautonomia"> Autoimmune dysautonomia </a></li>
+	<li><a href="/main_disease/autoimmune/aencephalomyelitis"> Autoimmune encephalomyelitis </a></li>
+	<li><a href="/main_disease/autoimmune/ahepatitis">Autoimmune hepatitis </a></li>
+	<li><a href="/main_disease/autoimmune/ainnerear"> Autoimmune inner ear disease (AIED) </a></li>
+	<li><a href="/main_disease/autoimmune/amyocarditis">Autoimmune myocarditis </a></li>
+	<li><a href="/main_disease/autoimmune/aoophoritis">Autoimmune oophoritis </a></li>
+	<li><a href="/main_disease/autoimmune/aorchitis">Autoimmune orchitis </a></li>
+	<li><a href="/main_disease/autoimmune/apancreatic">Autoimmune pancreatitis </a></li>
+	<li><a href="/main_disease/autoimmune/arentinopathy">Autoimmune retinopathy </a></li>
+	<li><a href="/main_disease/autoimmune/auriticaria"> Autoimmune urticaria </a></li>
+	<li><a href="/main_disease/autoimmune/axonal">Axonal & neuronal neuropathy(AMAN) </a></li>
+	<li><a href="/main_disease/autoimmune/balo"> Balo disease</a></li>
+	<li><a href="/main_disease/autoimmune/behcet">Behcet's disease </a></li>
+	<li><a href="/main_disease/autoimmune/benign">Benign mucosal pemphigoid </a></li>
+	<li><a href="/main_disease/autoimmune/bullous">Bullous pemphigoid </a></li>
+	<li><a href="/main_disease/autoimmune/castleman">Castleman disease(CD) </a></li>
+	<li><a href="/main_disease/autoimmune/celiac">Celiac disease </a></li>
+	<li><a href="/main_disease/autoimmune/chagas">Chagas disease </a></li>
+	<li><a href="/main_disease/autoimmune/chronici">Chronic inflammatory demyelinating polyneuropathy(CIDP) </a></li>
+	<li><a href="/main_disease/autoimmune/chronicr">Chronic recurrent multifocal osteomyelitis(CRMO) </a></li>
+	<li><a href="/main_disease/autoimmune/churg"> Churg- strauss syndrome (CSS) or Eosinophilic Granulomatosis (EGPA) </a></li>
+	<li><a href="/main_disease/autoimmune/cicatricial">Cicatricial pemphigoid </a></li>
+	<li><a href="/main_disease/autoimmune/cogan">Cogan's syndrome </a></li>
+	<li><a href="/main_disease/autoimmune/cold">Cold agglutinin disease </a></li>
+	<li><a href="/main_disease/autoimmune/congential">Congential heart block </a></li>
+	<li><a href="/main_disease/autoimmune/coxsackle">Coxsackle myocarditis </a></li>
+	<li><a href="/main_disease/autoimmune/crest"> CREST syndrome </a></li>
+	<li><a href="/main_disease/autoimmune/crohn">Crohn's disease </a></li>
+	<li><a href="/main_disease/autoimmune/dermatitis">Dermatitis herpetiformis </a></li>
+	<li><a href="/main_disease/autoimmune/dermatomyositis"> Dermatomyositis </a></li>
+	<li><a href="/main_disease/autoimmune/devic"> Devic's disease(neuromyelitis optica) </a></li>
+	<li><a href="/main_disease/autoimmune/discoid"> Discoid lupus </a></li>
+	<li><a href="/main_disease/autoimmune/dressler"> Dressler's syndrome </a></li>
+	<li><a href="/main_disease/autoimmune/endomertriosis"> Endometriosis </a></li>
+	<li><a href="/main_disease/autoimmune/eosinophilice"> Eosinophilic esophagitis (EoE) </a></li>
+	<li><a href="/main_disease/autoimmune/eosinophilicf"> Eosinophilic fasciitis </a></li>
+	<li><a href="/main_disease/autoimmune/erythema"> Erythema nodosum</a></li>
+	<li><a href="/main_disease/autoimmune/essential"> Essential mixed cryoglobulinemia </a></li>
+	<li><a href="/main_disease/autoimmune/evans"> Evans syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/fibromyalgia"> Fibromyalgia</a></li>
+	<li><a href="/main_disease/autoimmune/fibrosing"> Fibrosing alveolitis</a></li>
+	<li><a href="/main_disease/autoimmune/giantcella"> Giant cell arteritis(temporal arteritis)</a></li>
+	<li><a href="/main_disease/autoimmune/giantcellm"> Giant cell myocarditis</a></li>
+	<li><a href="/main_disease/autoimmune/glomerulonephritis"> Glomerulonephritis</a></li>
+	<li><a href="/main_disease/autoimmune/goodpasture"> Goodpasture's syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/granulomatosis"> Granulomatosis with polyangiitis</a></li>
+	<li><a href="/main_disease/autoimmune/grave"> Grave's disease</a></li>
+	<li><a href="/main_disease/autoimmune/guillian"> Guillian-Barre syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/hashimoto"> Hashimoto's thyroiditis</a></li>
+	<li><a href="/main_disease/autoimmune/hemolytic"> Hemolytic anemia</a></li>
+	<li><a href="/main_disease/autoimmune/henoch"> Henoch- schonlein purpura(HSP)</a></li>
+	<li><a href="/main_disease/autoimmune/herpes"> Herpes gestationis or pemphigoidgestationis(PG)</a></li>
+	<li><a href="/main_disease/autoimmune/hidradenitis"> Hidradenitis suppurativa(HS) (Acne Inversa)</a></li>
+	<li><a href="/main_disease/autoimmune/hypogammalglobulinemia"> Hypogammalglobulinemia</a></li>
+	<li><a href="/main_disease/autoimmune/igan"> IgA Nephropathy</a></li>
+	<li><a href="/main_disease/autoimmune/ig4r"> Ig4- related sclerosing disease</a></li>
+	<li><a href="/main_disease/autoimmune/immune"> Immune thrombocytopenic purpura (ITP)</a></li>
+	<li><a href="/main_disease/autoimmune/inclusion"> Inclusion body myositis</a></li>
+	<li><a href="/main_disease/autoimmune/interstitial"> Interstitial cystitis</a></li>
+	<li><a href="/main_disease/autoimmune/juvenilea"> Juvenile arthritis</a></li>
+	<li><a href="/main_disease/autoimmune/juveniled"> Juvenile diabetes</a></li>
+	<li><a href="/main_disease/autoimmune/juvenilem"> Juvenile myositis</a></li>
+	<li><a href="/main_disease/autoimmune/kawasaki"> Kawasaki disease</a></li>
+	<li><a href="/main_disease/autoimmune/lambert"> Lambert - Eaton syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/leukocytoclastic"> Leukocytoclastic vasculitis</a></li>
+	<li><a href="/main_disease/autoimmune/lichenp"> Lichen planus</a></li>
+	<li><a href="/main_disease/autoimmune/lichens"> Lichen sclerosus</a></li>
+	<li><a href="/main_disease/autoimmune/ligneous"> Ligneous conjunctivitis</a></li>
+	<li><a href="/main_disease/autoimmune/linear"> Linear IgA disease</a></li>
+	<li><a href="/main_disease/autoimmune/lupus"> Lupus</a></li>
+	<li><a href="/main_disease/autoimmune/lyme"> Lyme disease chromic</a></li>
+	<li><a href="/main_disease/autoimmune/meniere"> Meniere's disease</a></li>
+	<li><a href="/main_disease/autoimmune/microscopic"> Microscopic polyangiitis</a></li>
+	<li><a href="/main_disease/autoimmune/mixed"> Mixed Connective Tissue Disease</a></li>
+	<li><a href="/main_disease/autoimmune/mooren"> Mooren's ulcer</a></li>
+	<li><a href="/main_disease/autoimmune/mucha"> Mucha-Hambermann disease</a></li>
+	<li><a href="/main_disease/autoimmune/multifocal"> Multifocal motor neuropathy</a></li>
+	<li><a href="/main_disease/autoimmune/multiple"> Multiple scleriosis</a></li>
+	<li><a href="/main_disease/autoimmune/myasthenia"> Myasthenia Gravis </a></li>
+	<li><a href="/main_disease/autoimmune/myositis"> Myositis</a></li>
+	<li><a href="/main_disease/autoimmune/narcolepsy"> Narcolepsy</a></li>
+	<li><a href="/main_disease/autoimmune/neonatal"> Neonatal Lupus</a></li>
+	<li><a href="/main_disease/autoimmune/neuromyelitis"> Neuromyelitis optica</a></li>
+	<li><a href="/main_disease/autoimmune/neutropenia"> Neutropenia</a></li>
+	<li><a href="/main_disease/autoimmune/ocular"> Ocular cicatricial pemphigoid</a></li>
+	<li><a href="/main_disease/autoimmune/optic"> Optic neuritis</a></li>
+	<li><a href="/main_disease/autoimmune/palindromic"> Palindromic rehumatism</a></li>
+	<li><a href="/main_disease/autoimmune/pandas"> PANDAS</a></li>
+	<li><a href="/main_disease/autoimmune/paraneoplastic"> Paraneoplastic cerebellar degeneration</a></li>
+	<li><a href="/main_disease/autoimmune/proxysmal"> Proxysmal nocturnal hemoglobinuria</a></li>
+	<li><a href="/main_disease/autoimmune/parry"> Parry Romberg syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/pars"> Pars planitis</a></li>
+	<li><a href="/main_disease/autoimmune/parsonage"> Parsonage-turner syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/pemphigus"> Pemphigus</a></li>
+	<li><a href="/main_disease/autoimmune/peripheral"> Peripheral neuropathy</a></li>
+	<li><a href="/main_disease/autoimmune/perivenous"> Perivenous encephalomyelitis</a></li>
+	<li><a href="/main_disease/autoimmune/pernicious"> Pernicious Anemia</a></li>
+	<li><a href="/main_disease/autoimmune/poems"> POEMS syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/polyarteritis"> Polyarteritis nodosa</a></li>
+	<li><a href="/main_disease/autoimmune/polyglandular"> Polyglandular syndrome type I, II, III</a></li>
+	<li><a href="/main_disease/autoimmune/polymyaglia"> Polymyaglia rheumatica</a></li>
+	<li><a href="/main_disease/autoimmune/polymyositis"> Polymyositis</a></li>
+	<li><a href="/main_disease/autoimmune/postmyocardial"> Postmyocardial infraction syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/postpericardiotomy"> Postpericardiotomy syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/primaryb"> Primary biliary cirrhosis</a></li>
+	<li><a href="/main_disease/autoimmune/primarys"> Primary sclerosing cholangitis</a></li>
+	<li><a href="/main_disease/autoimmune/progesterone"> Progesterone dermatitis</a></li>
+	<li><a href="/main_disease/autoimmune/psoriasis"> Psoriasis</a></li>
+	<li><a href="/main_disease/autoimmune/psoriatic"> Psoriatic arthritis</a></li>
+	<li><a href="/main_disease/autoimmune/pure"> Pure red cell aplasia</a></li>
+	<li><a href="/main_disease/autoimmune/pyoderma"> Pyoderma gangrenosum</a></li>
+	<li><a href="/main_disease/autoimmune/raynaud"> Raynaud's phenomenon</a></li>
+	<li><a href="/main_disease/autoimmune/reactive"> Reactive arthritis</a></li>
+	<li><a href="/main_disease/autoimmune/reflex"> Reflex sympathetic dystrophy</a></li>
+	<li><a href="/main_disease/autoimmune/relapsing"> Relapsing polychondritis</a></li>
+	<li><a href="/main_disease/autoimmune/restless"> Restless legs syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/retroperitoneal"> Retroperitoneal fibrosis</a></li>
+	<li><a href="/main_disease/autoimmune/rheumatic"> Rheumatic fever</a></li>
+	<li><a href="/main_disease/autoimmune/rheumatoid"> Rheumatoid arthritis</a></li>
+	<li><a href="/main_disease/autoimmune/sarcoidosis"> Sarcoidosis </a></li>
+	<li><a href="/main_disease/autoimmune/schmidt"> Schmidt syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/scleritis"> Scleritis</a></li>
+	<li><a href="/main_disease/autoimmune/sclerodermna"> Scleroderma</a></li>
+	<li><a href="/main_disease/autoimmune/sperm"> Sperm and testicular autoimmunity</a></li>
+	<li><a href="/main_disease/autoimmune/stiff"> Stiff person syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/saubacute"> Saubacute bacterial endocarditis</a></li>
+	<li><a href="/main_disease/autoimmune/susac"> Susac's Syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/sympathetic"> Sympathetic opthalmia</a></li>
+	<li><a href="/main_disease/autoimmune/takayasu"> Takayasu's arteritis</a></li>
+	<li><a href="/main_disease/autoimmune/temporal"> Temporal arteritis/Giant cell arteritis</a></li>
+	<li><a href="/main_disease/autoimmune/thrombocytopenic"> Thrombocytopenic purpura</a></li>
+	<li><a href="/main_disease/autoimmune/thyroid"> Thyroid eye disease</a></li>
+	<li><a href="/main_disease/autoimmune/tolosa"> Tolosa Hunt syndrome</a></li>
+	<li><a href="/main_disease/autoimmune/transverse"> Transverse myelitis</a></li>
+	<li><a href="/main_disease/autoimmune/type1diabetes"> Type 1 diabetes</a></li>
+	<li><a href="/main_disease/autoimmune/ulceractive"> Ulcerative colitis</a></li>
+	<li><a href="/main_disease/autoimmune/undiffrentiated"> Undiffrentiated connective tissue disease</a></li>
+	<li><a href="/main_disease/autoimmune/uveitis"> Uveitis</a></li>
+	<li><a href="/main_disease/autoimmune/vasculitis"> Vasculitis</a></li>
+	<li><a href="/main_disease/autoimmune/vitiligo"> Vitiligo </a></li>
+	<li><a href="/main_disease/autoimmune/vogt"> Vogt-Koyanagi-Harada Disease</a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

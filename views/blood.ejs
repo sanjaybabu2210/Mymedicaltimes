@@ -1,0 +1,470 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+    }
+  }
+</style>
+
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+<h3><center> Blood disease:</center> </h3><br>
+<ol class = "ml-5" >
+  <li><a href="/main_disease/blood/5q"> 5q syndrome </a></li>
+  <li><a href="/main_disease/blood/aagenaes"> Aagenaes syndrome </a></li>
+  <li><a href="/main_disease/blood/abdominal"> Abdominal aortic aneurysm </a></li>
+  <li><a href="/main_disease/blood/abetalipoproteinemia"> Abetalipoproteinemia </a></li>
+  <li><a href="/main_disease/blood/acatalasemia"> Acatalasemia </a></li>
+  <li><a href="/main_disease/blood/aceruloplasminemia"> Aceruloplasminemia </a></li>
+  <li><a href="/main_disease/blood/agranulocytosis"> Acquired agranulocytosis</a></li>
+  <li><a href="/main_disease/blood/hemophilia"> Acquired hemophilia</a></li>
+  <li><a href="/main_disease/blood/hemophilia_a"> Acquired hemophilia A</a></li>
+  <li><a href="/main_disease/blood/aplasia"> Acquired pure red cell aplasia</a></li>
+  <li><a href="/main_disease/blood/von_willebrand"> Acquired von willebrand syndrome </a></li>
+  <li><a href="/main_disease/blood/erythroid_leukemia"> Acute erythroid leukemia </a></li>
+  <li><a href="/main_disease/blood/graftvshost"> Acute graft Vs Host disease</a></li>
+  <li><a href="/main_disease/blood/monoblastic_leukemia"> Acute monoblastic leukemia</a></li>
+  <li><a href="/main_disease/blood/monoblastic_leukemia_maturation"> Acute monoblastic leukemia with maturation</a></li>
+  <li><a href="/main_disease/blood/monoblastic_leukemia_without_maturation"> Acute monoblastic leukemia without maturation</a></li>
+  <li><a href="/main_disease/blood/myeloid_leukemia"> Acute myeloid leukemia</a></li>
+  <li><a href="/main_disease/blood/myelomonocytic_leukemia"> Acute myelomonocytic leukemia</a></li>
+  <li><a href="/main_disease/blood/panmyelosis_with_myelofibrosis"> Acute panmyelosis with myelofibrosis</a></li>
+  <li><a href="/main_disease/blood/panmyelocytic_leukemia"> Acute panmyelocytic leukemia</a></li>
+  <li><a href="/main_disease/blood/adenosine"> Adenosine deaminase 2 deficiency </a></li>
+  <li><a href="/main_disease/blood/adrenocortical"> Adrenocortical carcinoma </a></li>
+  <li><a href="/main_disease/blood/adulttcell"> Adult T-CELL leukemia/lymphoma </a></li>
+  <li><a href="/main_disease/blood/afibrinogenemia"> Afibrinogenemia </a></li>
+  <li><a href="/main_disease/blood/alk"> ALK+ histiocytosis </a></li>
+  <li><a href="/main_disease/blood/alpha_thalassemia"> Alpha-thalassemia x-linked intellectual disability syndrome </a></li>
+  <li><a href="/main_disease/blood/aml"> AML with myelodysplasia-related features </a></li>
+  <li><a href="/main_disease/blood/anemiaatd"> Anemia due to adenosine triphosphatase deficiency </a></li>
+  <li><a href="/main_disease/blood/anemiassa"> Anemia sideroblastic and spinocerebellar ataxia </a></li>
+  <li><a href="/main_disease/blood/aneurysm"> Aneurysm of sinus of valsalva </a></li>
+  <li><a href="/main_disease/blood/angioimmunoblastic"> Angioimmunoblastic T-cell lymphoma </a></li>
+  <li><a href="/main_disease/blood/angioma_hereditary"> Angioma hereditary neurocutaneous </a></li>
+  <li><a href="/main_disease/blood/angioma_serpiginosum"> Angioma serpiginosum </a></li>
+  <li><a href="/main_disease/blood/antiphospholipid"> Antiphospholipid syndrome </a></li>
+  <li><a href="/main_disease/blood/aplasia"> Aplasia cutis congenita intestinal lymhangiectasia </a></li>
+  <li><a href="/main_disease/blood/aplastic"> Aplastic anemia </a></li>
+  <li><a href="/main_disease/blood/arterial_calcification"> Arterial calcification of infancy </a></li>
+  <li><a href="/main_disease/blood/arterial_tortuosity"> Arterial tortuosity syndrome </a></li>
+  <li><a href="/main_disease/blood/atransferrinemia"> Atransferrinemia </a></li>
+  <li><a href="/main_disease/blood/atypical"> Atypical hemolytic uremic syndrome </a></li>
+  <li><a href="/main_disease/blood/autosomal"> Autosomal recessive protein C deficiency </a></li>
+  <li><a href="/main_disease/blood/bannayan"> Bannayan-Riley-Ruvalcaba syndrome </a></li>
+  <li><a href="/main_disease/blood/behcet"> Behcet disease </a></li>
+  <li><a href="/main_disease/blood/beta_thalassemia"> Beta-thalassemia </a></li>
+  <li><a href="/main_disease/blood/blastic"> Blastic plasmacytoid dendritic cell </a></li>
+  <li><a href="/main_disease/blood/bleeding"> Bleeding disorder due to P2RY12 defect </a></li>
+  <li><a href="/main_disease/blood/bloom"> Bloom syndrome </a></li>
+  <li><a href="/main_disease/blood/blue"> Blue rubber bleb nevus syndrome </a></li>
+  <li><a href="/main_disease/blood/buerger"> Buerger disease </a></li>
+  <li><a href="/main_disease/blood/burkitt"> Burkitt lymphoma </a></li>
+  <li><a href="/main_disease/blood/campomelia"> Campomelia cumming type </a></li>
+  <li><a href="/main_disease/blood/castleman"> Castleman disease </a></li>
+  <li><a href="/main_disease/blood/cerebral"> Cerebral cavernous malformation </a></li>
+  <li><a href="/main_disease/blood/chediak"> Chediak-Higashi syndrome </a></li>
+  <li><a href="/main_disease/blood/chromosome"> Chromosome 17q11.2 deletion syndrome </a></li>
+  <li><a href="/main_disease/blood/chronic"> Chronic myeloid leukemia </a></li>
+  <li><a href="/main_disease/blood/chylous"> Chylous ascites </a></li>
+  <li><a href="/main_disease/blood/cloves"> CLOVES syndrome </a></li>
+  <li><a href="/main_disease/blood/cobb"> Cobb syndrome </a></li>
+  <li><a href="/main_disease/blood/cold"> Cold agglutinin disease </a></li>
+  <li><a href="/main_disease/blood/congenitalam"> Congenital amegakaryocytic thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/congenitalan"> Congenital analbuminemia </a></li>
+  <li><a href="/main_disease/blood/congenitaldy"> Congenital dyserthropoietic anemia </a></li>
+  <li><a href="/main_disease/blood/congenitaler"> Congenital erythropoietic porphyria </a></li>
+  <li><a href="/main_disease/blood/congenitalmy"> Congenital myasthenic syndrome with episodic apnea </a></li>
+  <li><a href="/main_disease/blood/congenitalpu"> Congenital pulmonary lymhangiectasia </a></li>
+  <li><a href="/main_disease/blood/congenitalth"> Congenital thrombotic thrombocytopenic purpura </a></li>
+  <li><a href="/main_disease/blood/cutaneous"> Cutaneous mastocytoma </a></li>
+  <li><a href="/main_disease/blood/cutis_laxa"> Cutis laxa, autosomal recessive type 1 </a></li>
+  <li><a href="/main_disease/blood/cutis_marmorata"> Cutis marmorata telangiectatica congenita </a></li>
+  <li><a href="/main_disease/blood/cyclicn"> Cyclic neutropenia </a></li>
+  <li><a href="/main_disease/blood/cyclicth"> Cyclic thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/cystic"> Cystic medial necrosis of aorta </a></li>
+  <li><a href="/main_disease/blood/dahlberg"> Dahlberg borer newcomer syndrome </a></li>
+  <li><a href="/main_disease/blood/deafness"> Deafness-lymphedema-leukemia syndrome </a></li>
+  <li><a href="/main_disease/blood/dehydrated"> Dehydrated hereditary stomatocytosis </a></li>
+  <li><a href="/main_disease/blood/diamonda1"> Diamond-blackfan anemia </a></li>
+  <li><a href="/main_disease/blood/diamonda2"> Diamond-blackfan anemia 2</a></li>
+  <li><a href="/main_disease/blood/diamond3"> Diamond-blackfan anemia 3</a></li>
+  <li><a href="/main_disease/blood/dysfibrinogenemia"> Dysfibrinogenemia </a></li>
+  <li><a href="/main_disease/blood/dyskeratosis"> Dyskeratosis congenita </a></li>
+  <li><a href="/main_disease/blood/dyskeratosiscad"> Dyskeratosis congenita autosonal domonianat </a></li>
+  <li><a href="/main_disease/blood/dyskeratosiscar"> Dyskeratosis congenita autosonal recessive </a></li>
+  <li><a href="/main_disease/blood/dyskeratosiscxl"> Dyskeratosis congenita X-linked </a></li>
+  <li><a href="/main_disease/blood/ehlers"> Ehlers -Danlos syndrome, dysfibronectinemic type </a></li>
+  <li><a href="/main_disease/blood/eosinophilic"> Eosinophilic granulomatosis with polyangiitis </a></li>
+  <li><a href="/main_disease/blood/erythema"> Erythema elevatum diutinum </a></li>
+  <li><a href="/main_disease/blood/essential"> Essential thromocytothemia </a></li>
+  <li><a href="/main_disease/blood/evans"> Evans syndrome </a></li>
+  <li><a href="/main_disease/blood/extranodal"> Extra nodal nasal NK/T cell lymphoma  </a></li>
+  <li><a href="/main_disease/blood/fabry"> Fabry disease </a></li>
+  <li><a href="/main_disease/blood/factorv"> Factor deficiency V </a></li>
+  <li><a href="/main_disease/blood/factorvlt"> Factor V ledien thrombophilia </a></li>
+  <li><a href="/main_disease/blood/factorevii"> Factor VII deficiency </a></li>
+  <li><a href="/main_disease/blood/factorx"> Factor X deficiency  </a></li>
+  <li><a href="/main_disease/blood/factorxi"> Factor XI deficiency </a></li>
+  <li><a href="/main_disease/blood/factorexii"> Factor XII deficiency </a></li>
+  <li><a href="/main_disease/blood/factorxiii"> Factor XIII deficiency </a></li>
+  <li><a href="/main_disease/blood/familialh"> Familial hyperthyroidism due to mutations in TSH receptor </a></li>
+  <li><a href="/main_disease/blood/familiall"> Famailial LCAT deficiency </a></li>
+  <li><a href="/main_disease/blood/familialp"> Familial platelet disorder with associated myeloid maligancy </a></li>
+  <li><a href="/main_disease/blood/familialt"> Familial thoracic aortic aneurysm and aortic dissection </a></li>
+  <li><a href="/main_disease/blood/fanconi"> Fanconi anemia </a></li>
+  <li><a href="/main_disease/blood/fetal"> Fetal and neonatal alloimmune thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/fibromuscular"> Fibromuscular dysplasia </a></li>
+  <li><a href="/main_disease/blood/follicular"> Follicular lymphoma </a></li>
+  <li><a href="/main_disease/blood/genuine"> Genuine diffuse phlebectasia </a></li>
+  <li><a href="/main_disease/blood/giantcell"> Giant cell arterities </a></li>
+  <li><a href="/main_disease/blood/giantplatelet"> Giant platelet syndrome </a></li>
+  <li><a href="/main_disease/blood/glanzmann"> Glanzmann thrombesthenia </a></li>
+  <li><a href="/main_disease/blood/glucocorticoid"> Glucocorticoid-remediable aldosteronism </a></li>
+  <li><a href="/main_disease/blood/glutamate"> Glutamate forminiotransferase deficiency </a></li>
+  <li><a href="/main_disease/blood/glycogen12"> Glycogen storage disease type 12 </a></li>
+  <li><a href="/main_disease/blood/glycogen7"> Glycogen storage disease type 7 </a></li>
+  <li><a href="/main_disease/blood/glycoproteiin"> Glycoprotein 6 deficiency </a></li>
+  <li><a href="/main_disease/blood/goodpasture"> Good pasture syndrome </a></li>
+  <li><a href="/main_disease/blood/gorhman"> Gorham's disease </a></li>
+  <li><a href="/main_disease/blood/granulomatosisp"> Granulomatosis with polyangiitis </a></li>
+  <li><a href="/main_disease/blood/granulomatosisssd"> Granulomatous slack skin disease </a></li>
+  <li><a href="/main_disease/blood/gray"> Gray platelet syndrome </a></li>
+  <li><a href="/main_disease/blood/hairy"> Hairy cell leukemia </a></li>
+  <li><a href="/main_disease/blood/hashimoto"> Hashimoto-Pritzker syndrome </a></li>
+  <li><a href="/main_disease/blood/heinz"> Heinz body anemias </a></li>
+  <li><a href="/main_disease/blood/haemangioma"> Haemangioma thrombocytopenia syndrome </a></li>
+  <li><a href="/main_disease/blood/haemochromatosis"> Haemochromatosis </a></li>
+  <li><a href="/main_disease/blood/haemoglobinc"> Haemoglobin C disease </a></li>
+  <li><a href="/main_disease/blood/haemoglobine"> Haemoglobin E disease </a></li>
+  <li><a href="/main_disease/blood/haemoglobinsc"> Haemoglobin SC disease </a></li>
+  <li><a href="/main_disease/bloodhaemoglobincse"> Haemoglobin SE disease </a></li>
+  <li><a href="/main_disease/blood/haemolytic"> Haemolytic uremic syndrome </a></li>
+  <li><a href="/main_disease/blood/hemophiliaa"> Hemophilia A </a></li>
+  <li><a href="/main_disease/blood/hemophiliab"> Hemophilia B </a></li>
+  <li><a href="/main_disease/blood/hemorrhagic"> Hemorrhagic shock and encephalopathy syndrome </a></li>
+  <li><a href="/main_disease/blood/hennekam"> Hennekam syndrome </a></li>
+  <li><a href="/main_disease/blood/henoch"> Henoch-Schonlein purpura </a></li>
+  <li><a href="/main_disease/blood/heparin"> Heparin-induced thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/hereditarya"> Hereditary antithromboin deficiency </a></li>
+  <li><a href="/main_disease/blood/hereditarye"> Hereditary elliptocytosis </a></li>
+  <li><a href="/main_disease/blood/hereditaryf"> Hereditary folate malabsorption </a></li>
+  <li><a href="/main_disease/blood/hereditaryh"> Hereditary hemorrhagic telangiectasia </a></li>
+  <li><a href="/main_disease/blood/hereditaryl"> Hereditary lymphedema type II </a></li>
+  <li><a href="/main_disease/blood/hereditarym"> Hereditary metehmoglobinemia </a></li>
+  <li><a href="/main_disease/blood/hereditaryp"> Hereditary paraganglioma - pheochromocytoma </a></li>
+  <li><a href="/main_disease/blood/hereditarys"> Hereditary spherecytosis </a></li>
+  <li><a href="/main_disease/blood/hermansky"> Hermansky Pudlak syndrome 2 </a></li>
+  <li><a href="/main_disease/blood/high_molecular"> High molecular weight kininogen deficiency </a></li>
+  <li><a href="/main_disease/blood/histiocytosis"> Histiocytosis-lymphadenopathy plus syndrome </a></li>
+  <li><a href="/main_disease/blood/hoyerall"> Hoyeraal Hreidarsson syndrome </a></li>
+  <li><a href="/main_disease/blood/hypersensitivity"> Hypersensitivity vasculitis </a></li>
+  <li><a href="/main_disease/blood/hypocomplemetemic"> Hypocomplemetemic urticarial vasculitis </a></li>
+  <li><a href="/main_disease/blood/hypofibrinogenemia"> Hypofibrinogenemia, familial </a></li>
+  <li><a href="/main_disease/blood/hypotrichosis"> Hypotrichosis-lymphedema-telangiectasia syndrome </a></li>
+  <li><a href="/main_disease/blood/idiopathicn"> Idiopathic neutropenia </a></li>
+  <li><a href="/main_disease/blood/idiopathict"> Idiopathic thrombocytopenic purpura </a></li>
+  <li><a href="/main_disease/blood/imerslund"> Imerslund-Grasbeck syndrome </a></li>
+  <li><a href="/main_disease/blood/inclusion"> Inclusion body myopathy 2 </a></li>
+  <li><a href="/main_disease/blood/inherited"> Inherited bone marrow failure syndrome </a></li>
+  <li><a href="/main_disease/blood/internalc"> Internal carotid agenesis </a></li>
+  <li><a href="/main_disease/blood/internalf"> Internal factor deficiency </a></li>
+  <li><a href="/main_disease/blood/iron"> Iron-refractory iron deficiency anemia </a></li>
+  <li><a href="/main_disease/blood/jacobsen"> Jacobsen syndrome </a></li>
+  <li><a href="/main_disease/blood/juvenilem"> Juvenile myelomonocytic leukemia </a></li>
+  <li><a href="/main_disease/blood/juvenilet"> Juvenile temporal arteritis </a></li>
+  <li><a href="/main_disease/blood/kankazi"> Kanzaki disease </a></li>
+  <li><a href="/main_disease/blood/kaposi"> Kaposi sarcoma </a></li>
+  <li><a href="/main_disease/blood/kaposiformh"> Kaposiform Hemangioendothelioma </a></li>
+  <li><a href="/main_disease/blood/kaposiforml"> Kaposiform lymphangiomatosis </a></li>
+  <li><a href="/main_disease/blood/kawasaki"> Kawasaki disease </a></li>
+  <li><a href="/main_disease/blood/klippel"> Klippel-trenaunay syndrome </a></li>
+  <li><a href="/main_disease/blood/langerhans"> Langerhans cell sarcoma </a></li>
+  <li><a href="/main_disease/blood/lesch"> Lesch nyhan syndrome </a></li>
+  <li><a href="/main_disease/blood/liddle"> Liddle syndrome </a></li>
+  <li><a href="/main_disease/blood/lipedema"> Lipedema </a></li>
+  <li><a href="/main_disease/blood/lissencephaly"> Lissencephaly 2 </a></li>
+  <li><a href="/main_disease/blood/loeys"> Loeys-dietz syndrome </a></li>
+  <li><a href="/main_disease/blood/lymphedemac"> Lymphedema and cerebral arteriovenous anomaly </a></li>
+  <li><a href="/main_disease/blood/lymphedemad"> Lymphedema-distichiasis  syndrome </a></li>
+  <li><a href="/main_disease/blood/lymphomatoid"> Lymphomatoid papulosis </a></li>
+  <li><a href="/main_disease/blood/maffucci"> Maffucci syndrome </a></li>
+  <li><a href="/main_disease/blood/majeed"> Majeed syndrome </a></li>
+  <li><a href="/main_disease/blood/mantle"> Mantle cell lymphoma </a></li>
+  <li><a href="/main_disease/blood/mcleod"> McLeod neuroacanthocytosis syndrome </a></li>
+  <li><a href="/main_disease/blood/megalencephaly"> Megalencephaly-capillary malformation syndrome </a></li>
+  <li><a href="/main_disease/blood/megaloblastic"> Megaloblastic anemia due to dihydrofolate reductase deficiency </a></li>
+  <li><a href="/main_disease/blood/methemoglobinemia"> Methemoglobinemia, beta-globin type </a></li>
+  <li><a href="/main_disease/blood/methylcobalamin"> Methylcobalamin deficiency cbl G type </a></li>
+  <li><a href="/main_disease/blood/methylmalonic_cblx"> Methylmalonic acidemia and homocysteinemia type cblX  </a></li>
+  <li><a href="/main_disease/blood/methylmalonic_cblc"> Methylmalonic acidemia and homocysteinemia type cblC </a></li>
+  <li><a href="/main_disease/blood/methylmalonic_cbld"> Methylmalonic acidemia and homocysteinemia type cblD </a></li>
+  <li><a href="/main_disease/blood/methylmalonic_cblf"> Methylmalonic acidemia and homocysteinemia type cblF </a></li>
+  <li><a href="/main_disease/blood/methylmalonic_cblj"> Methylmalonic acidemia and homocysteinemia type cblJ </a></li>
+  <li><a href="/main_disease/blood/microcystic"> Microcystic lymphatic malformation </a></li>
+  <li><a href="/main_disease/blood/microscopic"> Microscopic polyangiitis </a></li>
+  <li><a href="/main_disease/blood/milroy"> Milroy disease </a></li>
+  <li><a href="/main_disease/blood/mitochondrial"> Mitochondrial myopathy and sideroblastic anemia </a></li>
+  <li><a href="/main_disease/blood/mpi_cdg"> MPI-CDG (CDG-LB) </a></li>
+  <li><a href="/main_disease/blood/multicentric"> Multicentric Castleman disease </a></li>
+  <li><a href="/main_disease/blood/multifocal"> Multifocal lymphangioendotheliomatosis and thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/multiple"> Multiple myeloma </a></li>
+  <li><a href="/main_disease/blood/multisystematic"> Multisystemic smooth muscle dysfunction syndrome </a></li>
+  <li><a href="/main_disease/blood/myelodysplasticlineage"> Myelodysplastic syndrome with single lineage dysplasia </a></li>
+  <li><a href="/main_disease/blood/myelodysplastic"> Myelodysplastic syndromes </a></li>
+  <li><a href="/main_disease/blood/myeloid"> Myeloid sarcoma </a></li>
+  <li><a href="/main_disease/blood/myh9"> MYH9 related thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/neonatal"> Neonatal hemochromatosis </a></li>
+  <li><a href="/main_disease/blood/neutropenia"> Neutropenia chronic familial </a></li>
+  <li><a href="/main_disease/blood/neutropenialethal"> Neutropenia lethal congenital with eosinophelia </a></li>
+  <li><a href="/main_disease/blood/non_involuting"> Non-involuting congenital hemangioma </a></li>
+  <li><a href="/main_disease/blood/nonspherocytic"> Nonspherocytic hemolytic anemia due to hexokinase deficiency </a></li>
+  <li><a href="/main_disease/blood/noonan"> Noonan syndrome </a></li>
+  <li><a href="/main_disease/blood/orotic"> Orotic aciduria type 1 </a></li>
+  <li><a href="/main_disease/blood/overhydrated"> Overhydrated hereditary stomatocytosis </a></li>
+  <li><a href="/main_disease/blood/paris"> Paris-Trousseau thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/parkes"> Parkes Weber syndrome </a></li>
+  <li><a href="/main_disease/blood/paroxysmal"> Paroxysmal cold hemoglobinuria </a></li>
+  <li><a href="/main_disease/blood/paroxysmal_nocturnal"> Paroxysmal nocturnal hemoglobinuria </a></li>
+  <li><a href="/main_disease/blood/pearson"> Pearson syndrome </a></li>
+  <li><a href="/main_disease/blood/peho"> PEHO syndrome </a></li>
+  <li><a href="/main_disease/blood/phace"> PHACE syndrome </a></li>
+  <li><a href="/main_disease/blood/phenochromocytoma"> Phenochromocytoma </a></li>
+  <li><a href="/main_disease/blood/phosphoglycerate"> Phosphoglycerate kinase deficiency </a></li>
+  <li><a href="/main_disease/blood/plasmablastic"> Plasmablastic lymphoma </a></li>
+  <li><a href="/main_disease/blood/plasminogen"> Plasminogen activator inhibitor type 1 deficiency </a></li>
+  <li><a href="/main_disease/blood/platelet"> Platelet storage pool deficiency </a></li>
+  <li><a href="/main_disease/blood/plummer"> Plummer Vinson syndrome </a></li>
+  <li><a href="/main_disease/blood/poems"> POEMS syndrome </a></li>
+  <li><a href="/main_disease/blood/poikiloderma"> Poikiloderma with neutropenia </a></li>
+  <li><a href="/main_disease/blood/polycythemia"> Polycythemia vera </a></li>
+  <li><a href="/main_disease/blood/prekellikrein"> Prekellikrein deficiency, congenital </a></li>
+  <li><a href="/main_disease/blood/primary_angiitis"> Primary angiitis of the central nervous system </a></li>
+  <li><a href="/main_disease/blood/primary_centralnervous"> Primary central nervous system lymphoma </a></li>
+  <li><a href="/main_disease/blood/primary_familial"> Primary familial and congenital polycythemia </a></li>
+  <li><a href="/main_disease/blood/primary_intestinal"> Primary intestinal lymphangiectasia </a></li>
+  <li><a href="/main_disease/blood/primary_myelofibrosis"> Primary myelofibrosis </a></li>
+  <li><a href="/main_disease/blood/primary_release"> Primary release disorder of platelets </a></li>
+  <li><a href="/main_disease/blood/prolidase"> Prolidase deficiency </a></li>
+  <li><a href="/main_disease/blood/proteinc"> Protein C deficiency </a></li>
+  <li><a href="/main_disease/blood/proteins"> Protein S deficiency </a></li>
+  <li><a href="/main_disease/blood/proteus"> Proteus syndrome </a></li>
+  <li><a href="/main_disease/blood/prothrombin"> Prothrombin deficiency </a></li>
+  <li><a href="/main_disease/blood/pseudo_von"> Pseudo-Von Willebrand disease </a></li>
+  <li><a href="/main_disease/blood/pseudohyperkalemia"> Pseudohyperkalemia cardiff </a></li>
+  <li><a href="/main_disease/blood/pseudoxanthoma"> Pseudoxanthoma elasticum </a></li>
+  <li><a href="/main_disease/blood/pulmonaryarterio"> Pulmonary arterio-veinous fistula </a></li>
+  <li><a href="/main_disease/blood/pulmonaryartreisa"> Pulmonary atreisa with intact ventricular septum </a></li>
+  <li><a href="/main_disease/blood/pulmonaryvein"> Pulmonary vein stenosis </a></li>
+  <li><a href="/main_disease/blood/purpura"> Purpura simplex </a></li>
+  <li><a href="/main_disease/blood/pyropoikilocytosis"> Pyropoikilocytosis hereditary </a></li>
+  <li><a href="/main_disease/blood/pyruvate"> Pyruvate kinase deficiency </a></li>
+  <li><a href="/main_disease/blood/quebec"> Quebec platelet disorder </a></li>
+  <li><a href="/main_disease/blood/red_cell"> Red cell phospholipid defect with hemolysis </a></li>
+  <li><a href="/main_disease/blood/revesz"> Revesz syndrome </a></li>
+  <li><a href="/main_disease/blood/reynolds"> Reynolds syndrome </a></li>
+  <li><a href="/main_disease/blood/rhdeficiency"> Rh deficiency syndrome </a></li>
+  <li><a href="/main_disease/blood/rosai"> Rosai-Dorfman disease </a></li>
+  <li><a href="/main_disease/blood/rotor"> Rotor syndrome </a></li>
+  <li><a href="/main_disease/blood/scott"> Scott syndrome </a></li>
+  <li><a href="/main_disease/blood/severedominant"> Severe congenital neutropenia autosomal dominant </a></li>
+  <li><a href="/main_disease/blood/severerecessive"> Severe congenital neutropenia autosomal recessive 3 </a></li>
+  <li><a href="/main_disease/blood/sezary"> Sezary syndrome </a></li>
+  <li><a href="/main_disease/blood/shwachman"> Shwachman-Diamond syndrome </a></li>
+  <li><a href="/main_disease/blood/sicklebeta"> Sickle beta thalassemia </a></li>
+  <li><a href="/main_disease/blood/sicklecell"> Sickel cell-hemoglobin D disease </a></li>
+  <li><a href="/main_disease/blood/sicklecellanemia"> Sickel cell anemia </a></li>
+  <li><a href="/main_disease/blood/sideroblastic"> Sideroblastic anemia </a></li>
+  <li><a href="/main_disease/blood/sideroblastic_autosomal_recessive"> Sideroblastic anemia pyridoxine-refractory autosomal recessive </a></li>
+  <li><a href="/main_disease/blood/sideroblastic_responsive_autosomal_recessive"> Sideroblastic anemia pyridoxine - responsive autosomal recesive </a></li>
+  <li><a href="/main_disease/blood/slow_channel"> Slow-channel congenital myasthenic syndrome </a></li>
+  <li><a href="/main_disease/blood/sneddon"> Sneddon syndrome </a></li>
+  <li><a href="/main_disease/blood/struge"> Struge-Weber syndrome </a></li>
+  <li><a href="/main_disease/blood/supraumbilicial"> Supraumbilical miabdominal raphe and facial cavernous hemangiomas </a></li>
+  <li><a href="/main_disease/blood/supravalvular"> Supravalvular aortic stenosis </a></li>
+  <li><a href="/main_disease/blood/susac"> Susac syndrome </a></li>
+  <li><a href="/main_disease/blood/swyer"> Swyer syndrome </a></li>
+  <li><a href="/main_disease/blood/systemic"> Systemic mastocytosis </a></li>
+  <li><a href="/main_disease/blood/tcell_large_granule"> T-cell large granular lymphocyte leukemia </a></li>
+  <li><a href="/main_disease/blood/tcell_rich_largeb"> T-cell /histocyte rich large B cell lymphoma </a></li>
+  <li><a href="/main_disease/blood/takayasu"> Takayasu arterities </a></li>
+  <li><a href="/main_disease/blood/tar"> TAR syndrome </a></li>
+  <li><a href="/main_disease/blood/thalassemia"> Thalassemia </a></li>
+  <li><a href="/main_disease/blood/thiamine"> Thiamine responsive megaloblastic anemia syndrome </a></li>
+  <li><a href="/main_disease/blood/thoracolaryngopelvic"> Thoracolaryngopelvic dysplasia </a></li>
+  <li><a href="/main_disease/blood/thrombocytopathy"> Thrombocytopathy asplenia miosis </a></li>
+  <li><a href="/main_disease/blood/thrombocytopenia"> Thrombocytopenia 2 </a></li>
+  <li><a href="/main_disease/blood/thrombocytopenia_renal"> Thrombocytopenia with elevated serumIgA and renal disease </a></li>
+  <li><a href="/main_disease/blood/thrombomodulin"> Thrombomodulin anomalies, familial </a></li>
+  <li><a href="/main_disease/blood/thrombotic"> Thrombotic thrombocytopenic purpura, acquired </a></li>
+  <li><a href="/main_disease/blood/transient_erythroblastopenia"> Transient erythroblastopenia of childhood </a></li>
+  <li><a href="/main_disease/blood/transient_myeloproliferative"> Transient myeloproliferative syndrome </a></li>
+  <li><a href="/main_disease/blood/triosephosphate"> Triosephosphate isomerase deficiency </a></li>
+  <li><a href="/main_disease/blood/tuberous"> Tuberous sclerosis complex </a></li>
+  <li><a href="/main_disease/blood/tufted"> Tufted angioma </a></li>
+  <li><a href="/main_disease/blood/twin_to_twin"> Twin to twin transfusion syndrome </a></li>
+  <li><a href="/main_disease/blood/type1"> Type 1 plasminogen deficiency </a></li>
+  <li><a href="/main_disease/blood/unicentric"> Unicentric Castleman disease </a></li>
+  <li><a href="/main_disease/blood/vascular"> Vascular Ehlers-Danlos syndrome </a></li>
+  <li><a href="/main_disease/blood/vein"> Vein of Galen aneurysm </a></li>
+  <li><a href="/main_disease/blood/von"> Von Hippel-Lindau disease </a></li>
+  <li><a href="/main_disease/blood/von_willebrand"> Von Willebrand disease </a></li>
+  <li><a href="/main_disease/blood/warm"> Warm antibody hemolytic anemia </a></li>
+  <li><a href="/main_disease/blood/white"> White platelet syndrome </a></li>
+  <li><a href="/main_disease/blood/williams"> Williams syndrome </a></li>
+  <li><a href="/main_disease/blood/wiskott"> Wiskott Aldrich syndrome </a></li>
+  <li><a href="/main_disease/blood/wt_limb"> WT limb blood syndrome </a></li>
+  <li><a href="/main_disease/blood/wyburn"> Wyburn-Mason syndrome </a></li>
+  <li><a href="/main_disease/blood/xlinked_sideroblastic"> X-linked sideroblastic anemia </a></li>
+  <li><a href="/main_disease/blood/xlinked_thrombocytopenia"> X-linked thrombocytopenia </a></li>
+  <li><a href="/main_disease/blood/yellow_nail"> Yellow nail syndrome </a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

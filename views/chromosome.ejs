@@ -1,0 +1,276 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+    }
+  }
+</style>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+<h3><center> Chromosome Disorder:</center> </h3><br>
+<ol class = "ml-5" >
+    <li><a href="/main_disease/chromosome/15q13.3_microdeletion"> 15q13.3 microdeletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/16p11.2deletion"> 16p11.2 deletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/17q23.1q23.2microdeletion"> 17q23.1q23.2 microdeletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/1qduplications"> 1q duplications </a></li>
+	<li><a href="/main_disease/chromosome/1q21.1_microdeletion"> 1q21.1 microdeletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/22q11.2_deletion"> 22q11.2 deletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/22q11.2_duplication"> 22q11.2 duplication syndrome </a></li>
+	<li><a href="/main_disease/chromosome/2q23.1_microdeletion"> 2q23.1 microdeletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/2q37deletion"> 2q37 deletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/47xxx"> 47 XXX syndrome </a></li>
+	<li><a href="/main_disease/chromosome/47xyy"> 47 XYY syndrome </a></li>
+	<li><a href="/main_disease/chromosome/49xxxxx"> 49 XXXXX syndrome </a></li>
+	<li><a href="/main_disease/chromosome/cateye"> Cat eye syndrome </a></li>
+	<li><a href="/main_disease/chromosome/chromosome1"> Chromosome 1, uniparental disomy 1q12 q21 </a></li>
+	<li><a href="/main_disease/chromosome/chromosome10p"> Chromosome 10p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome10q"> Chromosome 10q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome11p"> Chromosome 11p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome11q"> Chromosome 11q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome12p"> Chromosome 12p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome12q"> Chromosome 12q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome13q"> Chromosome 13q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome14q"> Chromosome 14q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome15q"> Chromosome 15q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome16"> Chromosome 16 trisomy </a></li>
+	<li><a href="/main_disease/chromosome/chromosome16p"> Chromosome 16p dupliaction </a></li>
+	<li><a href="/main_disease/chromosome/chromosome16q"> Chromosome 16q deletion </a></li>
+	<li><a href="/main_disease/chromosome/chromosome17p"> Chromosome 17p deletion and dupliaction </a></li>
+	<li><a href="/main_disease/chromosome/chromosome17q"> Chromosome 17q dupliaction </a></li>
+	<li><a href="/main_disease/chromosome/chromosome18p"> Chromosome 18p deletion and tetrasomy </a></li>
+	<li><a href="/main_disease/chromosome/chromosome19p"> Chromosome 19p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome19q"> Chromosome 19q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome1p"> Chromosome 1p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome1p36"> Chromosome 1p36 deletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/chromosome1q"> Chromosome 1q deletion </a></li>
+	<li><a href="/main_disease/chromosome/chromosome1q21.1"> Chromosome 1q21.1 duplication syndrome </a></li>
+	<li><a href="/main_disease/chromosome/chromosome20"> Chromosome 20 trisomy </a></li>
+	<li><a href="/main_disease/chromosome/chromosome20p"> Chromosome 20p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome20q"> Chromosome 20q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome21q"> Chromosome 21q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome22q"> Chromosome 22q deletion </a></li>
+	<li><a href="/main_disease/chromosome/chromosome2p"> Chromosome 2p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome2q"> Chromosome 2q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome2q24"> Chromosome 2q24 microdeletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/chromosome3p"> Chromosome 3p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome3q"> Chromosome 3q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome3q29"> Chromosome 3q29 microduplication syndrome </a></li>
+	<li><a href="/main_disease/chromosome/chromosome4p"> Chromosome 4p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome4q"> Chromosome 4q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome5p"> Chromosome 5p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome5q"> Chromosome 5q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome6p"> Chromosome 6p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome6q"> Chromosome 6q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome6q25"> Chromosome 6q25 microdeletion </a></li>
+	<li><a href="/main_disease/chromosome/chromosome7p"> Chromosome 7p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome7q"> Chromosome 7q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome8p"> Chromosome 8p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome8q"> Chromosome 8q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome8p23.1"> Chromosome 8p23.1 deletion </a></li>
+	<li><a href="/main_disease/chromosome/chromosome9"> Chromosome 9 inversion </a></li>
+	<li><a href="/main_disease/chromosome/chromosome9p"> Chromosome 9p deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosome9q"> Chromosome 9q deletion and duplication </a></li>
+	<li><a href="/main_disease/chromosome/chromosomexq"> Chromosome Xq duplication </a></li>
+	<li><a href="/main_disease/chromosome/diploid"> Diploid-triploid mosaicism </a></li>
+	<li><a href="/main_disease/chromosome/distal"> Distal chromosome 18q deletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/emanuel"> Emanuel syndrome </a></li>
+	<li><a href="/main_disease/chromosome/jacobsen"> Jacobsen syndrome </a></li>
+	<li><a href="/main_disease/chromosome/kleefstra"> Kleefstra syndrome </a></li>
+	<li><a href="/main_disease/chromosome/koolen"> Koolen de vries syndrome </a></li>
+	<li><a href="/main_disease/chromosome/mosaic18"> Mosaic monosomy 18 </a></li>
+	<li><a href="/main_disease/chromosome/mosaic22"> Mosaic monosomy 22 </a></li>
+	<li><a href="/main_disease/chromosome/mosaic13"> Mosaic trisomy 13 </a></li>
+	<li><a href="/main_disease/chromosome/mosaic14"> Mosaic trisomy 14 </a></li>
+	<li><a href="/main_disease/chromosome/mosaict22"> Mosaic trisomy 22 </a></li>
+	<li><a href="/main_disease/chromosome/mosaict7"> Mosaic trisomy 7 </a></li>
+	<li><a href="/main_disease/chromosome/mosaict8"> Mosaic trisomy 8 </a></li>
+	<li><a href="/main_disease/chromosome/mosaict9"> Mosaic trisomy 9 </a></li>
+	<li><a href="/main_disease/chromosome/nablus"> Nablus mask-like facial syndrome </a></li>
+	<li><a href="/main_disease/chromosome/pallister"> Pallister Killian mosaic syndrome </a></li>
+	<li><a href="/main_disease/chromosome/partial_deletion"> Partial deletion of short arm of chromosome3 </a></li>
+	<li><a href="/main_disease/chromosome/partialy"> Partial deletion of Y </a></li>
+	<li><a href="/main_disease/chromosome/potocki"> Potocki-shaffer syndrome </a></li>
+	<li><a href="/main_disease/chromosome/proximal"> Proximal chromosome 18q deletion syndrome </a></li>
+	<li><a href="/main_disease/chromosome/recombinant"> Recombinant chromosome 8 syndrome </a></li>
+	<li><a href="/main_disease/chromosome/ring1"> Ring chromosome1 </a></li>
+	<li><a href="/main_disease/chromosome/ring10"> Ring chromosome10 </a></li>
+	<li><a href="/main_disease/chromosome/ring11"> Ring chromosome11 </a></li>
+	<li><a href="/main_disease/chromosome/ring12"> Ring chromosome12 </a></li>
+	<li><a href="/main_disease/chromosome/ring13"> Ring chromosome13 </a></li>
+	<li><a href="/main_disease/chromosome/ring14"> Ring chromosome14 </a></li>
+	<li><a href="/main_disease/chromosome/ring15"> Ring chromosome15 </a></li>
+	<li><a href="/main_disease/chromosome/ring16"> Ring chromosome16 </a></li>
+	<li><a href="/main_disease/chromosome/ring17"> Ring chromosome17 </a></li>
+	<li><a href="/main_disease/chromosome/ring18"> Ring chromosome18 </a></li>
+	<li><a href="/main_disease/chromosome/ring19"> Ring chromosome19 </a></li>
+	<li><a href="/main_disease/chromosome/ring20"> Ring chromosome20 </a></li>
+	<li><a href="/main_disease/chromosome/ring21"> Ring chromosome21 </a></li>
+	<li><a href="/main_disease/chromosome/ring22"> Ring chromosome22 </a></li>
+	<li><a href="/main_disease/chromosome/ring3"> Ring chromosome3 </a></li>
+	<li><a href="/main_disease/chromosome/ring4"> Ring chromosome4 </a></li>
+	<li><a href="/main_disease/chromosome/ring5"> Ring chromosome5 </a></li>
+	<li><a href="/main_disease/chromosome/ring6"> Ring chromosome6 </a></li>
+	<li><a href="/main_disease/chromosome/ring7"> Ring chromosome7 </a></li>
+	<li><a href="/main_disease/chromosome/ring8"> Ring chromosome8 </a></li>
+	<li><a href="/main_disease/chromosome/ring9"> Ring chromosome9 </a></li>
+	<li><a href="/main_disease/chromosome/smith"> Smith-magenis syndrome </a></li>
+	<li><a href="/main_disease/chromosome/tetrasomy9"> Tetrasomy 9p </a></li>
+	<li><a href="/main_disease/chromosome/tetrasomyx"> Tetrasomy X </a></li>
+	<li><a href="/main_disease/chromosome/triploidy"> Triploidy </a></li>
+	<li><a href="/main_disease/chromosome/trisomy13"> Trisomy 13 </a></li>
+	<li><a href="/main_disease/chromosome/trisomy17"> Trisomy 17 mosaicism  </a></li>
+	<li><a href="/main_disease/chromosome/trisomy2"> Trisomy 2 mosaicism </a></li>
+	<li><a href="/main_disease/chromosome/turner"> Turner syndrome </a></li>
+	<li><a href="/main_disease/chromosome/wolf"> Wolf-hirschhorn syndrome </a></li>
+	<li><a href="/main_disease/chromosome/xlinked"> Xlinked suspectibility to autism 4 </a></li>
+	<li><a href="/main_disease/chromosome/ychromosome"> Y chromosome infertitlity </a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

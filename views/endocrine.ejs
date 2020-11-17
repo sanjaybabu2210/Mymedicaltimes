@@ -1,0 +1,381 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+    }
+  }
+</style>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+<h3><center> Endocrine disease:</center> </h3><br>
+<ol class = "ml-5" >
+   <li><a href="/main_disease/endocrine/"> 11-beta-hydroxylase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> 17-alpha-hydroxylase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> 17-beta hydroxysteroid dehydrogenase3 deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> 18 Hydroxylase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> 22q11.2 deletion syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> 3-alpha hydroxyacyl-CoA dehydrogenase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> 3-beta-hydroxysteroid dehydrogenase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> 46, XX testicular disorder of sex develpment </a></li>
+   <li><a href="/main_disease/endocrine/"> 47 XXX syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> 48, XXXY syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> 49, XXXXY syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> 5-alpha reductase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Abetalipoproteinemia </a></li>
+   <li><a href="/main_disease/endocrine/"> Acquired generalized lipodystrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> Acromegaly </a></li>
+   <li><a href="/main_disease/endocrine/"> ACTH-independent macronodular adrenal hyperplasia </a></li>
+   <li><a href="/main_disease/endocrine/"> ACTH-secreting pituitary adenoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Addison's disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Adrenocortical carcinoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Adrenomyeloneuropathy </a></li>
+   <li><a href="/main_disease/endocrine/"> Adrenomyodystrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> Ahumada-Herndon-Dudley syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Alpha-thalassemia x-linked intellectual disability syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Alstrom syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Anorchia </a></li>
+   <li><a href="/main_disease/endocrine/"> Arachnoid cysts </a></li>
+   <li><a href="/main_disease/endocrine/"> AREDYLD </a></li>
+   <li><a href="/main_disease/endocrine/"> Aromatase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Aromatase excess syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Ataxia hypogonadism choroidal dystrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> Ataxia telangiectasia </a></li>
+   <li><a href="/main_disease/endocrine/"> Autoimmune polyglandular syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Axenfeld Rieger syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Ayazi syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Bamforth syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Bangstad syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Barakat syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Bardet-Biedl syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Barraquer simons syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Beta-thalassemia </a></li>
+   <li><a href="/main_disease/endocrine/"> Borjeson-Forssman-Lehmann syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Brain-lung-thyroid syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Campomelic dysplasia </a></li>
+   <li><a href="/main_disease/endocrine/"> Carney complex </a></li>
+   <li><a href="/main_disease/endocrine/"> Carney traid </a></li>
+   <li><a href="/main_disease/endocrine/"> Carpenter syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Central nervous system germinoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Cerebellar ataxia and hypogonadotropic hypogonadism </a></li>
+   <li><a href="/main_disease/endocrine/"> Cerebrotendinous xanthomatosis </a></li>
+   <li><a href="/main_disease/endocrine/"> CHARGE syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Cholesteryl ester storage disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Chordoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Chylomicron retention disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Coffin-Lowry syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Cohen syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Combined pituitary hormone deficiency, genetic form </a></li>
+   <li><a href="/main_disease/endocrine/"> Complete androgen insensitivity syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Congential adrenal hyperplasia due to cytochrome P450 oxidoreductase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Congential generalized lipodystrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> Congential generalized lipodystrophy type 4 </a></li>
+   <li><a href="/main_disease/endocrine/"> Corticosteroid-binding globulin deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Craniopharyngioma </a></li>
+   <li><a href="/main_disease/endocrine/"> Culler-Jones syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Cushing's syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Dahlberg borer newcomer syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Deafness hypogonadism syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Dentatorubral-pallidoluysian atrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> Denys-Drash syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Diencephalic syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Dilated cardiomyopathy with hypogonadotropic hypogonadism </a></li>
+   <li><a href="/main_disease/endocrine/"> Epiphyseal dysplasia multiple with early-onset diabetes mellitus </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial chylomicronemia syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial glucocorticoid deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial HDL deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial hyperaldosteronism </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial hyperthyroidism due to mutations in TSH receptor </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial hypocalciuric hypercalcemia </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial LCAT deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial lipoprotein lipase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial partial lipodystrophy type Kobberling </a></li>
+   <li><a href="/main_disease/endocrine/"> Familial thyroglossal duct cyst </a></li>
+   <li><a href="/main_disease/endocrine/"> Fish-eye disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Folllicle stimulating hormone deficiency, isolated </a></li>
+   <li><a href="/main_disease/endocrine/"> Fragile X syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Frasier syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Galactokinase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Genito palato cardiac syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Gigantism </a></li>
+   <li><a href="/main_disease/endocrine/"> Glucocorticoid-remedial aldosteronism </a></li>
+   <li><a href="/main_disease/endocrine/"> Goblet cell carcinoid </a></li>
+   <li><a href="/main_disease/endocrine/"> Granulomatous hypophysitis </a></li>
+   <li><a href="/main_disease/endocrine/"> Graves disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Growth hormone deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Hepatic lipase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Hereditary hyperekplexia </a></li>
+   <li><a href="/main_disease/endocrine/"> Hereditary pancreatitis </a></li>
+   <li><a href="/main_disease/endocrine/"> Hereditary paraganglioma-pheochromocytoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Histiocytosis-lymphadenopathy plus syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Holoprosencephaly </a></li>
+   <li><a href="/main_disease/endocrine/"> Hydrocephalus obesity hypogonadism </a></li>
+   <li><a href="/main_disease/endocrine/"> Hyperadrenalism </a></li>
+   <li><a href="/main_disease/endocrine/"> Hyperinsulinism due to glucokinase deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Hyperinsulinism hyperammonemia syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Hyperlipidemia type 3 </a></li>
+   <li><a href="/main_disease/endocrine/"> Hyperlipoproteinemia type 5 </a></li>
+   <li><a href="/main_disease/endocrine/"> Hyperparathyroidism jaw tumor syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Hypocalcemia, autosomal dominant </a></li>
+   <li><a href="/main_disease/endocrine/"> Hypohidrotic ectodermal dysplasia with hypothyroidism and ciliary dyskinesia </a></li>
+   <li><a href="/main_disease/endocrine/"> Hypoparathyroidism </a></li>
+   <li><a href="/main_disease/endocrine/"> Hypoparathyroidism-intellectual disability-dysmorphism syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Hypophosphatemic rickets </a></li>
+   <li><a href="/main_disease/endocrine/"> Hypopituitarism </a></li>
+   <li><a href="/main_disease/endocrine/"> IMAGe syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Insulin-like growth factor I deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Insulin-resistance type B </a></li>
+   <li><a href="/main_disease/endocrine/"> Iodine antenatal exposure </a></li>
+   <li><a href="/main_disease/endocrine/"> Isolated ACTH deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Isolated growth hormone deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Johanson-Blizzard syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Kallmann syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Kearns-sayre syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Kenny-caffey syndrome type 1 </a></li>
+   <li><a href="/main_disease/endocrine/"> Kenny-caffey syndrome type 2 </a></li>
+   <li><a href="/main_disease/endocrine/"> Kowarski syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Langerhans cell histiocytosis </a></li>
+   <li><a href="/main_disease/endocrine/"> Laron syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Laurence-Moon syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> LCHAD deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Leprechaunism </a></li>
+   <li><a href="/main_disease/endocrine/"> Li-Fraumeni syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> LRBA deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Lubinsky syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Male pseudohermaphroditism intellectual disability syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Mandibuloacral dysplasia </a></li>
+   <li><a href="/main_disease/endocrine/"> Martsolf syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Maternally inherited diabetes and deafness </a></li>
+   <li><a href="/main_disease/endocrine/"> Maturity-onset diabetes of the young </a></li>
+   <li><a href="/main_disease/endocrine/"> McCune-albright syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Meacham winn culler syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> MEHMO syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Meningioma </a></li>
+   <li><a href="/main_disease/endocrine/"> Merkel cell carcinoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Microcephalic osteodysplastic primordial dwarfism </a></li>
+   <li><a href="/main_disease/endocrine/"> Mitochondrial myopathy with diacetes </a></li>
+   <li><a href="/main_disease/endocrine/"> MOMO syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Multiple endocrine neoplasia </a></li>
+   <li><a href="/main_disease/endocrine/"> Myotonic dystrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> Neonatal adrenoleukodystrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> Neonatal progeroid syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Neonatal severe hyperparathyroidism </a></li>
+   <li><a href="/main_disease/endocrine/"> Noonan syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Obesity due to congential leptin deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Optic pathway glioma </a></li>
+   <li><a href="/main_disease/endocrine/"> PAGOD syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Pallister-Hall syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Panhypopituitarism X-linked </a></li>
+   <li><a href="/main_disease/endocrine/"> Papillary thyroid carcinoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Paraganglioma and gastric stromal sarcoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Parathyroid carcinoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Partial androgen insensitivity syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Pearson syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Pendred syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Peripheral resistance to thyrooid hormones </a></li>
+   <li><a href="/main_disease/endocrine/"> Permanent neonatal diabetes mellitus </a></li>
+   <li><a href="/main_disease/endocrine/"> Perrault syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Persistent mullerian duct syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Pheochromocytoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Pituitary hormone deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Pituitary stalk interruption syndrome  </a></li>
+   <li><a href="/main_disease/endocrine/"> Primary hyperaldosteronism </a></li>
+   <li><a href="/main_disease/endocrine/"> Primary hyperparathyroidism </a></li>
+   <li><a href="/main_disease/endocrine/"> Primary pigmented nodular adrenocortical disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Progressive encephalomyelitis with rigidity and myoclonus </a></li>
+   <li><a href="/main_disease/endocrine/"> Prolactinoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Proopiomelanocortin deficiency </a></li>
+   <li><a href="/main_disease/endocrine/"> Pseudohypoparathyroidism </a></li>
+   <li><a href="/main_disease/endocrine/"> Pseudopseudohypoparathyroidism </a></li>
+   <li><a href="/main_disease/endocrine/"> Rabson mendenhall syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Sarcoidosis </a></li>
+   <li><a href="/main_disease/endocrine/"> Satoyoshi syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Schaaf-Yang syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Septo-optic dysplasia spectrum </a></li>
+   <li><a href="/main_disease/endocrine/"> SERKAL syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Sheehan syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> SHORT syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Sickle beta thalassemia </a></li>
+   <li><a href="/main_disease/endocrine/"> Sickle cell anemia </a></li>
+   <li><a href="/main_disease/endocrine/"> Sitosterolemia </a></li>
+   <li><a href="/main_disease/endocrine/"> Small cell carcinoma of the bladder </a></li>
+   <li><a href="/main_disease/endocrine/"> Smith-lemli-opitz syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Smith-magenis syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Stiff person syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Sudden infant death with dysgenesis of the testes syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Swyer syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Syndromic microphthalmia </a></li>
+   <li><a href="/main_disease/endocrine/"> Tangier disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Temple syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Testotoxicosis </a></li>
+   <li><a href="/main_disease/endocrine/"> Tettrasomy X </a></li>
+   <li><a href="/main_disease/endocrine/"> Thiamine responsive megaloblastic anemia syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Thyroid dysgenesis </a></li>
+   <li><a href="/main_disease/endocrine/"> Thyrotropin deficiency, isolated </a></li>
+   <li><a href="/main_disease/endocrine/"> Transient neonatal diabetes mellitus </a></li>
+   <li><a href="/main_disease/endocrine/"> Triple A syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Triploidy </a></li>
+   <li><a href="/main_disease/endocrine/"> Ulnar mammary syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> VIPoma </a></li>
+   <li><a href="/main_disease/endocrine/"> Von Hippel-Lindau disease </a></li>
+   <li><a href="/main_disease/endocrine/"> WAGR syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Waterhouse-Friderichsen syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Wilson Turner syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Wolfram syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Wolman disease </a></li>
+   <li><a href="/main_disease/endocrine/"> Woodhouse sakati syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> X-linked adrenal hypoplasiacongentia </a></li>
+   <li><a href="/main_disease/endocrine/"> X-linked cerebral adrenoleukodystrophy </a></li>
+   <li><a href="/main_disease/endocrine/"> X-linked hypophosphatemia </a></li>
+   <li><a href="/main_disease/endocrine/"> X-linked lissencephaly with abnormal genitalia </a></li>
+   <li><a href="/main_disease/endocrine/"> Yorifuji Okuno syndrome </a></li>
+   <li><a href="/main_disease/endocrine/"> Zollinger-Ellison syndrome </a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

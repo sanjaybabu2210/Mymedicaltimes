@@ -1,0 +1,389 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+      #filter{
+        display: none;
+      }
+
+
+      @media screen and (min-width: 540px) and (max-width: 820px){
+          #mbody{
+            text-align: left;
+            margin: 5% auto;
+          }
+      }
+</style>
+
+
+
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" id="mbody">
+<h3><center> Behavioural & mental disorder:</center> </h3><br>
+<ol class = "ml-5" >
+   <li><a href="/main_disease/behavioural/absence"> Absence seizure </a></li>
+   <li><a href="/main_disease/behavioural/acute"> Acute stress disorder </a></li>
+   <li><a href="/main_disease/behavioural/adjustment"> Adjustment disorder </a></li>
+   <li><a href="/main_disease/behavioural/agoraphobia"> Agoraphobia </a></li>
+   <li><a href="/main_disease/behavioural/alcoholu"> Alcohol use disorder </a></li>
+   <li><a href="/main_disease/behavioural/alcoholic"> Alcoholic hallucinosis </a></li>
+   <li><a href="/main_disease/behavioural/alice"> Alice in wonderland syndrome </a></li>
+   <li><a href="/main_disease/behavioural/alzheimer"> Alzheimer's disease </a></li>
+   <li><a href="/main_disease/behavioural/amnestic"> Amnestic disorder or Amnesia </a></li>
+   <li><a href="/main_disease/behavioural/amphetamine"> Amphetamine dependence </a></li>
+   <li><a href="/main_disease/behavioural/anorexia"> Anorexia nervosa </a></li>
+   <li><a href="/main_disease/behavioural/anterograde"> Anterograde amnesia </a></li>
+   <li><a href="/main_disease/behavioural/antisocial"> Antisocial personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/anxiety"> Anxiety disorder </a></li>
+   <li><a href="/main_disease/behavioural/asperger"> Asperger syndrome </a></li>
+   <li><a href="/main_disease/behavioural/attention"> Attention deficit hyperactivity disorder </a></li>
+   <li><a href="/main_disease/behavioural/austim"> Austism spectrum disorder </a></li>
+   <li><a href="/main_disease/behavioural/autophagia"> Autophagia </a></li>
+   <li><a href="/main_disease/behavioural/avoidant"> Avoidant/restrictive food intake disorder </a></li>
+   <li><a href="/main_disease/behavioural/atypical"> Atypical depression </a></li>
+   <li><a href="/main_disease/behavioural/bipolar"> Bipolar disorder </a></li>
+   <li><a href="/main_disease/behavioural/binge"> Binge eating disorder </a></li>
+   <li><a href="/main_disease/behavioural/body"> Body dysmorphic disorder </a></li>
+   <li><a href="/main_disease/behavioural/borderlinei"> Borderline intellectual functioning </a></li>
+   <li><a href="/main_disease/behavioural/borderlinep"> Borderline personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/brief"> Brief psychotic disorder </a></li>
+   <li><a href="/main_disease/behavioural/bulimia"> Bulimia nervosa </a></li>
+   <li><a href="/main_disease/behavioural/caffeinea"> Caffeine - induced anxiety disorder </a></li>
+   <li><a href="/main_disease/behavioural/caffeines"> Caffeine - induced sleep disorder </a></li>
+   <li><a href="/main_disease/behavioural/caffeined"> Caffeine dependence </a></li>
+   <li><a href="/main_disease/behavioural/caffeinew"> Caffeine withdrawal </a></li>
+   <li><a href="/main_disease/behavioural/cannabis"> Cannabis dependence </a></li>
+   <li><a href="/main_disease/behavioural/capgras"> Capgras delusion </a></li>
+   <li><a href="/main_disease/behavioural/catalepsy"> Catalepsy </a></li>
+   <li><a href="/main_disease/behavioural/catatonia"> Catatonia </a></li>
+   <li><a href="/main_disease/behavioural/catatonic"> Catatonic schizophrenia </a></li>
+   <li><a href="/main_disease/behavioural/childhooda"> Childhood amnesia </a></li>
+   <li><a href="/main_disease/behavioural/childhoodd"> Childhood disintegrative disorder </a></li>
+   <li><a href="/main_disease/behavioural/childhoodo"> Childhood onset fluency disorder </a></li>
+   <li><a href="/main_disease/behavioural/child"> Child neglect </a></li>
+   <li><a href="/main_disease/behavioural/circadian"> Circadian rhythm sleep disorder </a></li>
+   <li><a href="/main_disease/behavioural/claustrophobia"> Claustrophobia </a></li>
+   <li><a href="/main_disease/behavioural/cocained"> Cocaine dependence </a></li>
+   <li><a href="/main_disease/behavioural/cocainei"> Cocaine intoxication </a></li>
+   <li><a href="/main_disease/behavioural/cognitive"> Cognitive disorder </a></li>
+   <li><a href="/main_disease/behavioural/communication"> Communication disorder </a></li>
+   <li><a href="/main_disease/behavioural/conduct"> Conduct disorder </a></li>
+   <li><a href="/main_disease/behavioural/conversion"> Conversion disorder </a></li>
+   <li><a href="/main_disease/behavioural/cotard"> Cotard delusion </a></li>
+   <li><a href="/main_disease/behavioural/cyclothymic"> Cyclothymic disorder </a></li>
+   <li><a href="/main_disease/behavioural/delirium"> Delirium </a></li>
+   <li><a href="/main_disease/behavioural/delusionald"> Delusional disorder </a></li>
+   <li><a href="/main_disease/behavioural/delusionalp"> Delusional parasitosis </a></li>
+   <li><a href="/main_disease/behavioural/dementia"> Dementia </a></li>
+   <li><a href="/main_disease/behavioural/dependent"> Dependent personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/deprsonalization"> Depersonalization disorder </a></li>
+   <li><a href="/main_disease/behavioural/depression"> Depression(mood) </a></li>
+   <li><a href="/main_disease/behavioural/depressive"> Depressive personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/dermotillomania"> Dermotillomania </a></li>
+   <li><a href="/main_disease/behavioural/developmental"> Developmental coordination disorder </a></li>
+   <li><a href="/main_disease/behavioural/diogenes"> Diogenes syndrome </a></li>
+   <li><a href="/main_disease/behavioural/disinhibited"> Disinhibited social engagement disorder </a></li>
+   <li><a href="/main_disease/behavioural/disorder"> Disorder of written expression </a></li>
+   <li><a href="/main_disease/behavioural/dispareunia"> Dispareunia </a></li>
+   <li><a href="/main_disease/behavioural/disruptive"> Disruptive mood dysregulation disorder </a></li>
+   <li><a href="/main_disease/behavioural/dissociativea"> Dissociative amnesia </a></li>
+   <li><a href="/main_disease/behavioural/dissociativei"> Dissociative identity disorder </a></li>
+   <li><a href="/main_disease/behavioural/down"> Down syndrome </a></li>
+   <li><a href="/main_disease/behavioural/drug"> Drug withdrawal </a></li>
+   <li><a href="/main_disease/behavioural/dyscalculia"> Dyscalculia </a></li>
+   <li><a href="/main_disease/behavioural/dyslexia"> Dyslexia </a></li>
+   <li><a href="/main_disease/behavioural/encopresis"> Encopresis </a></li>
+   <li><a href="/main_disease/behavioural/enuresis"> Enuresis </a></li>
+   <li><a href="/main_disease/behavioural/erectile"> Erectile disorder </a></li>
+   <li><a href="/main_disease/behavioural/erotomania"> Erotomania </a></li>
+   <li><a href="/main_disease/behavioural/excoriation"> Excoriation disorder </a></li>
+   <li><a href="/main_disease/behavioural/exhibitionistic"> Exhibitionistic disorder </a></li>
+   <li><a href="/main_disease/behavioural/expressive"> Expressive language disorder </a></li>
+   <li><a href="/main_disease/behavioural/factitious"> Factitious disorder </a></li>
+   <li><a href="/main_disease/behavioural/female"> Female sexual arousal/iterest disorder </a></li>
+   <li><a href="/main_disease/behavioural/folie"> Folie a deux </a></li>
+   <li><a href="/main_disease/behavioural/fregoli"> Fregoli delusion </a></li>
+   <li><a href="/main_disease/behavioural/frotteuristic"> Frotteuristic disorder </a></li>
+   <li><a href="/main_disease/behavioural/fugue"> Fugue disorder </a></li>
+   <li><a href="/main_disease/behavioural/gambling"> Gambling disorder </a></li>
+   <li><a href="/main_disease/behavioural/ganser"> Ganser syndrome </a></li>
+   <li><a href="/main_disease/behavioural/general"> General adaptation syndrome </a></li>
+   <li><a href="/main_disease/behavioural/generalized"> Generalized anxiety disorder </a></li>
+   <li><a href="/main_disease/behavioural/grandiose"> Grandiose delusions </a></li>
+   <li><a href="/main_disease/behavioural/gardnerdiamond"> Gardner-diamond syndrome </a></li>
+   <li><a href="/main_disease/behavioural/hallucinogen"> Hallucinogen persisting perception disorder </a></li>
+   <li><a href="/main_disease/behavioural/haltlose"> Haltlose personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/histrionic"> Histrionic personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/hoarding"> Hoarding disorder </a></li>
+   <li><a href="/main_disease/behavioural/huntington"> Huntington's disease </a></li>
+   <li><a href="/main_disease/behavioural/hyperkinetic"> Hyperkinetic syndrome </a></li>
+   <li><a href="/main_disease/behavioural/hypersomnia"> Hypersomnia </a></li>
+   <li><a href="/main_disease/behavioural/hypoactive"> Hypoactive sexual desire disorder </a></li>
+   <li><a href="/main_disease/behavioural/hypochondriasis"> Hypochondriasis </a></li>
+   <li><a href="/main_disease/behavioural/hypomanic"> Hypomanic episode </a></li>
+   <li><a href="/main_disease/behavioural/hysteria"> Hysteria </a></li>
+   <li><a href="/main_disease/behavioural/illness"> Illness anxiety disorder </a></li>
+   <li><a href="/main_disease/behavioural/impulse"> Impulse control disorder </a></li>
+   <li><a href="/main_disease/behavioural/inhalant"> Inhalant use disorder </a></li>
+   <li><a href="/main_disease/behavioural/insomnia"> Insomnia </a></li>
+   <li><a href="/main_disease/behavioural/intellectual"> Intellectual development disorder </a></li>
+   <li><a href="/main_disease/behavioural/intermittent"> Intermittent explosive disorder </a></li>
+   <li><a href="/main_disease/behavioural/internet"> Internet gaming disorder </a></li>
+   <li><a href="/main_disease/behavioural/kleptomania"> Kleptomania </a></li>
+   <li><a href="/main_disease/behavioural/korsakoff"> Korsakoff's syndrome </a></li>
+   <li><a href="/main_disease/behavioural/lacunar"> Lacunar amnesia </a></li>
+   <li><a href="/main_disease/behavioural/language"> Language disorder </a></li>
+   <li><a href="/main_disease/behavioural/learning"> Learning disorder </a></li>
+   <li><a href="/main_disease/behavioural/majordepressivedisorder"> Major depressive disorder </a></li>
+   <li><a href="/main_disease/behavioural/majordepressiveepisode"> Major depressive episode </a></li>
+   <li><a href="/main_disease/behavioural/maladaptive"> Maladaptive daydreaming </a></li>
+   <li><a href="/main_disease/behavioural/maleercetion"> Male erectile disorder </a></li>
+   <li><a href="/main_disease/behavioural/malingering"> Malingering </a></li>
+   <li><a href="/main_disease/behavioural/mania"> Mania </a></li>
+   <li><a href="/main_disease/behavioural/melancholia"> Melancholia </a></li>
+   <li><a href="/main_disease/behavioural/minordepressive"> Minor depressive disorder </a></li>
+   <li><a href="/main_disease/behavioural/misophonia"> Misophonia </a></li>
+   <li><a href="/main_disease/behavioural/mietens"> Mietens-weber syndrome </a></li>
+   <li><a href="/main_disease/behavioural/mood"> Mood disorder </a></li>
+   <li><a href="/main_disease/behavioural/morbid"> Morbid jealousy </a></li>
+   <li><a href="/main_disease/behavioural/munchausen"> Munchausen syndrome </a></li>
+   <li><a href="/main_disease/behavioural/munchausenbyproxy"> Munchausen by proxy </a></li>
+   <li><a href="/main_disease/behavioural/mixedepisode"> Mixed episode </a></li>
+   <li><a href="/main_disease/behavioural/narcissistic"> Narcissistic personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/narcolepsy"> Narcolepsy </a></li>
+   <li><a href="/main_disease/behavioural/neurodevelopmental"> Neurodevelopmental disorder </a></li>
+   <li><a href="/main_disease/behavioural/neuroleptic"> Neuroleptic related disorder </a></li>
+   <li><a href="/main_disease/behavioural/nicotine"> Nicotine withdrawal </a></li>
+   <li><a href="/main_disease/behavioural/nighteating"> Night eating syndrome </a></li>
+   <li><a href="/main_disease/behavioural/nightmare"> Nightmare disorder </a></li>
+   <li><a href="/main_disease/behavioural/non_suicidal"> Non-suicidal self-injury </a></li>
+   <li><a href="/main_disease/behavioural/obsessivecd"> Obsessive compulsive disorder </a></li>
+   <li><a href="/main_disease/behavioural/obsessivecpd"> Obsessive compulsive personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/obsessiveld"> Obsessive love disorder </a></li>
+   <li><a href="/main_disease/behavioural/oneirophrenia"> Oneirophrenia </a></li>
+   <li><a href="/main_disease/behavioural/onychophagia"> Onychophagia </a></li>
+   <li><a href="/main_disease/behavioural/opioid"> Opioid dependence </a></li>
+   <li><a href="/main_disease/behavioural/opioidud"> Opioid use disorder </a></li>
+   <li><a href="/main_disease/behavioural/oppositional"> Oppositional defiant disorder </a></li>
+   <li><a href="/main_disease/behavioural/orthorexia"> Orthorexia nervosa </a></li>
+   <li><a href="/main_disease/behavioural/othersdd"> Other Specified dissociative disorder </a></li>
+   <li><a href="/main_disease/behavioural/othersfed"> Other specified feeding or eating disorder </a></li>
+   <li><a href="/main_disease/behavioural/pain"> Pain disorder </a></li>
+   <li><a href="/main_disease/behavioural/panic"> Panic disorder </a></li>
+   <li><a href="/main_disease/behavioural/paranoid"> Paranoid personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/parasomnia"> Parasomnia </a></li>
+   <li><a href="/main_disease/behavioural/parkinson"> Parkinson's disease </a></li>
+   <li><a href="/main_disease/behavioural/partialism"> Partialism </a></li>
+   <li><a href="/main_disease/behavioural/passive"> Passive-aggressive personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/pathological"> Pathological gambling </a></li>
+   <li><a href="/main_disease/behavioural/pedophilic"> Pedophilic disorder </a></li>
+   <li><a href="/main_disease/behavioural/perfectionism"> Perfectionism </a></li>
+   <li><a href="/main_disease/behavioural/persecutory"> Persecutory delusion </a></li>
+   <li><a href="/main_disease/behavioural/persistentc"> Persistent complex bereavement disorder(complicated grief disorder) </a></li>
+   <li><a href="/main_disease/behavioural/persistentd"> Persistent depressive disorder(dysthymia) </a></li>
+   <li><a href="/main_disease/behavioural/personality"> Personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/pervasive"> Pervasive developmental disorder </a></li>
+   <li><a href="/main_disease/behavioural/pervasivessos"> Pervasive developmental disorder not otherwise specified </a></li>
+   <li><a href="/main_disease/behavioural/phencyclidine"> Phencyclidine-related disorder </a></li>
+   <li><a href="/main_disease/behavioural/phobic"> Phobic disorder(phobia) </a></li>
+   <li><a href="/main_disease/behavioural/phonological"> Phonological disorder(speech disorder) </a></li>
+   <li><a href="/main_disease/behavioural/physical"> Physical abuse </a></li>
+   <li><a href="/main_disease/behavioural/pica"> Pica (disorder) </a></li>
+   <li><a href="/main_disease/behavioural/polysubstance"> Polysubstance-related disorder </a></li>
+   <li><a href="/main_disease/behavioural/postpartum"> Postpartum depression </a></li>
+   <li><a href="/main_disease/behavioural/posttraumatic"> Posttraumatic embitterment disorder </a></li>
+   <li><a href="/main_disease/behavioural/posttraumaticsd"> Posttraumatic stress disorder </a></li>
+   <li><a href="/main_disease/behavioural/premature"> Premature ejaculation </a></li>
+   <li><a href="/main_disease/behavioural/premenstrual"> Premenstrual dysphoric disorder </a></li>
+   <li><a href="/main_disease/behavioural/presenile"> Presenile dementia, kraepelin type </a></li>
+   <li><a href="/main_disease/behavioural/primary"> Primary hypersomnia </a></li>
+   <li><a href="/main_disease/behavioural/pseudologia"> Pseudologia fantastica(pathological lying) </a></li>
+   <li><a href="/main_disease/behavioural/psychogenic"> Psychogenic amnesia </a></li>
+   <li><a href="/main_disease/behavioural/psychoneurotic"> Psychoneurotic personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/psychotic"> Psychotic disorder(psychosis) </a></li>
+   <li><a href="/main_disease/behavioural/pyromania"> Pyromania </a></li>
+   <li><a href="/main_disease/behavioural/reactive"> Reactive attachment disorder </a></li>
+   <li><a href="/main_disease/behavioural/reading"> Reading disorder </a></li>
+   <li><a href="/main_disease/behavioural/recurrent"> Recurrent brief depression </a></li>
+   <li><a href="/main_disease/behavioural/relational"> Relational disorder </a></li>
+   <li><a href="/main_disease/behavioural/remsleep"> REM sleep behaviour disorder </a></li>
+   <li><a href="/main_disease/behavioural/residual"> Residual schizophrenia </a></li>
+   <li><a href="/main_disease/behavioural/restless"> Restless legs syndrome </a></li>
+   <li><a href="/main_disease/behavioural/retrograde"> Retrograde amnesia </a></li>
+   <li><a href="/main_disease/behavioural/rett"> Rett syndrome </a></li>
+   <li><a href="/main_disease/behavioural/rumination"> Rumination syndrome </a></li>
+   <li><a href="/main_disease/behavioural/sadistic"> Sadistic personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/schizoaffective"> Schizoaffective disorder </a></li>
+   <li><a href="/main_disease/behavioural/schizoid"> Schizoid personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/schizophrenia"> Schizophrenia </a></li>
+   <li><a href="/main_disease/behavioural/schizophreniform"> Schizophreniform disorder </a></li>
+   <li><a href="/main_disease/behavioural/schizotypal"> Schizotypal personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/seasonal"> Seasonal affective disorder </a></li>
+   <li><a href="/main_disease/behavioural/sedative"> Sedative-, hypnotic-, or anxiolytic-related disorder </a></li>
+   <li><a href="/main_disease/behavioural/selective"> Selective mutism </a></li>
+   <li><a href="/main_disease/behavioural/selfdefearting"> Self-defeating personality disorder </a></li>
+   <li><a href="/main_disease/behavioural/separation"> Separation anxiety disorder </a></li>
+   <li><a href="/main_disease/behavioural/shared"> Shared psychotic disorder </a></li>
+   <li><a href="/main_disease/behavioural/sleep"> Sleep disorder </a></li>
+   <li><a href="/main_disease/behavioural/sleepterror"> Sleep terror disorder </a></li>
+   <li><a href="/main_disease/behavioural/sleepparalysis"> Sleep paralysis </a></li>
+   <li><a href="/main_disease/behavioural/sleepwalking"> Sleepwalking disorder </a></li>
+   <li><a href="/main_disease/behavioural/socialanxiety"> Social anxiety disorder(social phobia) </a></li>
+   <li><a href="/main_disease/behavioural/sociopathy"> Sociopathy </a></li>
+   <li><a href="/main_disease/behavioural/somatic"> Somatic symptom disorder </a></li>
+   <li><a href="/main_disease/behavioural/somatizatioon"> Somatization disorder </a></li>
+   <li><a href="/main_disease/behavioural/stendhal"> Stendhal syndrome </a></li>
+   <li><a href="/main_disease/behavioural/stereotypic"> Stereotypic movement disorder </a></li>
+   <li><a href="/main_disease/behavioural/stockholm"> Stockholm syndrome </a></li>
+   <li><a href="/main_disease/behavioural/substancerelated"> Substance-related disorder </a></li>
+   <li><a href="/main_disease/behavioural/tardive"> Tardive dyskinesia </a></li>
+   <li><a href="/main_disease/behavioural/tourette"> Tourette syndrome </a></li>
+   <li><a href="/main_disease/behavioural/transient"> Transient global amnesia </a></li>
+   <li><a href="/main_disease/behavioural/transvestic"> Transvestic disorder </a></li>
+   <li><a href="/main_disease/behavioural/trichotillomania"> Trichotillomania </a></li>
+   <li><a href="/main_disease/behavioural/truman"> Truman syndrome </a></li>
+   <li><a href="/main_disease/behavioural/undifferentiated"> Undiffrentiated somatoform disorder(somatic symptom disorder) </a></li>
+   <li><a href="/main_disease/behavioural/vaginismus"> Vaginismus </a></li>
+   <li><a href="/main_disease/behavioural/voyeuristic"> Voyeuristic disorder </a></li>
+</ol>
+
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

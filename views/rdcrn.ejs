@@ -1,0 +1,238 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+    }
+  }
+</style>
+
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+<h3><center> RDCRN:</center> </h3><br>
+<ol class = "ml-5" >
+   <li><a href="/main_disease/rdcrn/acutegraft"> Acute graft versus host disease </a></li>
+   <li><a href="/main_disease/rdcrn/acuteintermittent"> Acute intermittent porphyria </a></li>
+   <li><a href="/main_disease/rdcrn/aminolevulinate"> Aminolevulinate dehydratase deficiency porphyria </a></li>
+   <li><a href="/main_disease/rdcrn/andersen"> Andersen- Twail syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/angelman"> Angelman syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/arginase"> Arginase deficiency </a></li>
+   <li><a href="/main_disease/rdcrn/argininosuccinic"> Argininosuccinic aciduria </a></li>
+   <li><a href="/main_disease/rdcrn/autosomal"> Autosomal erythropoietic protoporphyria </a></li>
+   <li><a href="/main_disease/rdcrn/baroreflex"> Baroreflex failure </a></li>
+   <li><a href="/main_disease/rdcrn/benign"> Benign essential blepharospasm </a></li>
+   <li><a href="/main_disease/rdcrn/bronchiolitis"> Bronchiolitis oblliterans </a></li>
+   <li><a href="/main_disease/rdcrn/cardioencephalomyopathy"> Cardioencephalomyopathy </a></li>
+   <li><a href="/main_disease/rdcrn/cerebral"> Cerebral cavernous malformation </a></li>
+   <li><a href="/main_disease/rdcrn/cerebrotendinous"> Cerebrotendinous xanthomatosis </a></li>
+   <li><a href="/main_disease/rdcrn/cervical"> Cervical dystonia </a></li>
+   <li><a href="/main_disease/rdcrn/charcot"> Charcot-Marie-Tooth disaese </a></li>
+   <li><a href="/main_disease/rdcrn/chronicgraft"> Chronic graft versus host disease </a></li>
+   <li><a href="/main_disease/rdcrn/chronic_granulomatous"> Chronic granulomatous disease </a></li>
+   <li><a href="/main_disease/rdcrn/coenzyme"> Coenzyme Q10 deficiency </a></li>
+   <li><a href="/main_disease/rdcrn/congential"> Congenital erythropoietic porphyria </a></li>
+   <li><a href="/main_disease/rdcrn/cutaneous"> Cutaneous sclerosis </a></li>
+   <li><a href="/main_disease/rdcrn/vystinuria"> Cystinuria </a></li>
+   <li><a href="/main_disease/rdcrn/dihydroxyadeninuria"> Dihydroxyadeninuria </a></li>
+   <li><a href="/main_disease/rdcrn/dopamine"> Dopamine beta hydroxylase deficiency </a></li>
+   <li><a href="/main_disease/rdcrn/dyt_gnal"> DYT-GNAL </a></li>
+   <li><a href="/main_disease/rdcrn/eosinophilic"> Eosinophilic granulomatosis with polyangiitis </a></li>
+   <li><a href="/main_disease/rdcrn/episodic"> Episodic ataxia </a></li>
+   <li><a href="/main_disease/rdcrn/fabry"> Fabry disease </a></li>
+   <li><a href="/main_disease/rdcrn/familial"> Familial bilateral striatal necrosis </a></li>
+   <li><a href="/main_disease/rdcrn/fatal"> Fatal infantile encephalomyopathy </a></li>
+   <li><a href="/main_disease/rdcrn/focal_segmental"> Focal segmental glomerulosclerosis </a></li>
+   <li><a href="/main_disease/rdcrn/focaltask"> Focal task-specific dystonia </a></li>
+   <li><a href="/main_disease/rdcrn/giantcell"> Giant cell arteritis </a></li>
+   <li><a href="/main_disease/rdcrn/glycogen"> Glycogen storage disease type 2  </a></li>
+   <li><a href="/main_disease/rdcrn/glycoproteinosis"> Glycoproteinosis </a></li>
+   <li><a href="/main_disease/rdcrn/granulomatosis"> Granulomatosis with polyangiitis </a></li>
+   <li><a href="/main_disease/rdcrn/hereditary"> Hereditary hemorrhagic telangiectasia </a></li>
+   <li><a href="/main_disease/rdcrn/leber"> Leber hereditary optic neuropathy </a></li>
+   <li><a href="/main_disease/rdcrn/leigh"> Leigh syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/leukpodystrophgy"> Leukpodystrophgy </a></li>
+   <li><a href="/main_disease/rdcrn/membranous"> Membranous nephropathy  </a></li>
+   <li><a href="/main_disease/rdcrn/mevalonic"> Mevalonic aciduria </a></li>
+   <li><a href="/main_disease/rdcrn/microscopic"> Microscopic polyangiitis </a></li>
+   <li><a href="/main_disease/rdcrn/minimal"> Minimal change disaese </a></li>
+   <li><a href="/main_disease/rdcrn/mitochondrialdepletion"> Mitochondrial DNA depletion syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/mitochondrialleigh"> Mitochondrial DNA-associated Leigh syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/mitochondriallactic"> Mitochondrial encephalomyopathy lactic acidosis and stroke - like episodes </a></li>
+   <li><a href="/main_disease/rdcrn/mitochondrialencephalopathy"> Mitochondrial neurogastrointestinal encephalopathy syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/mucolipidosis"> Mucolipidosis type 4 </a></li>
+   <li><a href="/main_disease/rdcrn/mucopolysaccharidosis"> Mucopolysaccharidosis type III </a></li>
+   <li><a href="/main_disease/rdcrn/multiplesystem"> Multiple system atrophy </a></li>
+   <li><a href="/main_disease/rdcrn/nacetylglutamate"> N-acetylglutamate synthase deficiency </a></li>
+   <li><a href="/main_disease/rdcrn/neonatal"> Neonatal intraheptic cholestasis caused by citrin deficiency </a></li>
+   <li><a href="/main_disease/rdcrn/neuronal"> Neuronal ceroid lipofuscinosis 2 </a></li>
+   <li><a href="/main_disease/rdcrn/neuropathy"> Neuropathy ataxia retinitis pigmentosa syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/niemann"> Niemann-Pick disease </a></li>
+   <li><a href="/main_disease/rdcrn/northernepilepsy"> Northern epilepsy </a></li>
+   <li><a href="/main_disease/rdcrn/polyarteritis"> Polyarteritis nodosa </a></li>
+   <li><a href="/main_disease/rdcrn/porphyria"> Porphyria cutanea tarda </a></li>
+   <li><a href="/main_disease/rdcrn/postural"> Postural orthostatic tachycardia syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/prader"> Prader-Willi syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/primaryciliary"> Primary ciliary dyskinesia </a></li>
+   <li><a href="/main_disease/rdcrn/primaryhyperoxaluria"> Primary hyperoxaluria </a></li>
+   <li><a href="/main_disease/rdcrn/pseudohypoaldosteronism"> Pseudohypoaldosteronism type 2 </a></li>
+   <li><a href="/main_disease/rdcrn/pure"> Pure autonomic failure </a></li>
+   <li><a href="/main_disease/rdcrn/rett"> Rett syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/sandhoff"> Sandhoff disease </a></li>
+   <li><a href="/main_disease/rdcrn/severe"> Severe combined immunodeficiency </a></li>
+   <li><a href="/main_disease/rdcrn/sitosterolemia"> Sitosterolemia </a></li>
+   <li><a href="/main_disease/rdcrn/sjogren"> Sjogren-Larsson syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/spasmodic"> Spasmodic dysphonia </a></li>
+   <li><a href="/main_disease/rdcrn/struge"> Struge-Weber syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/takayasu"> Takayasu arteritis </a></li>
+   <li><a href="/main_disease/rdcrn/variegate"> Variegate porphyria </a></li>
+   <li><a href="/main_disease/rdcrn/wiskott"> Wiskott Aldrich syndrome </a></li>
+   <li><a href="/main_disease/rdcrn/wolman"> Wolman disease </a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

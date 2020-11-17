@@ -1,0 +1,591 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+    }
+  }
+</style>
+
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+<h3><center> Eye disease:</center> </h3><br>
+<ol class = "ml-5" >
+   <li><a href="/main_disease/eye/"> Abetalipoproteinemia </a></li>
+   <li><a href="/main_disease/eye/"> Ablepharon macrostomia syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Aceruloplasminemia </a></li>
+   <li><a href="/main_disease/eye/"> Achromatopsia </a></li>
+   <li><a href="/main_disease/eye/"> Acute intermittent porphyria </a></li>
+   <li><a href="/main_disease/eye/"> Acute posterior multifocal placoid pigment epitheliopathy </a></li>
+   <li><a href="/main_disease/eye/"> Acute zonal occult outer retinopathy </a></li>
+   <li><a href="/main_disease/eye/"> ADULT syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Ault-onset vitelliform macular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Aicardi syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Aicardi-Goutieres syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Aland island eye disease </a></li>
+   <li><a href="/main_disease/eye/"> Albinism ocular late onset sensorineural deafness </a></li>
+   <li><a href="/main_disease/eye/"> Alexander disease </a></li>
+   <li><a href="/main_disease/eye/"> Alkaptonuria </a></li>
+   <li><a href="/main_disease/eye/"> Alpha-mannosidosis </a></li>
+   <li><a href="/main_disease/eye/"> Alport syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Alstrom syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Ambras syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Amyloidosis corneal </a></li>
+   <li><a href="/main_disease/eye/"> Aniridia </a></li>
+   <li><a href="/main_disease/eye/"> Aniridia absent patella </a></li>
+   <li><a href="/main_disease/eye/"> Aniridia renal agenesis psychomotor retardation </a></li>
+   <li><a href="/main_disease/eye/"> Ankyloblepharon filiforme imperforate anus </a></li>
+   <li><a href="/main_disease/eye/"> Ankyloblepharon ectodermal defects cleftlip/palate syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Anterior ischemic optic neuropathy </a></li>
+   <li><a href="/main_disease/eye/"> Anterior segment dysgenesis </a></li>
+   <li><a href="/main_disease/eye/"> Anterior uveitis </a></li>
+   <li><a href="/main_disease/eye/"> Apert syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Aromatic L-amino acid decarboxylase deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Arthrogryposis renal dysfunction cholestasis syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Ataxia telangiectasia </a></li>
+   <li><a href="/main_disease/eye/"> Ataxia with oculomotor apraxia </a></li>
+   <li><a href="/main_disease/eye/"> Ataxia with vitamin E deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Ausems Wittebol-Post Hennekam syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Autosomal dominant leukodystrophy with autonomic </a></li>
+   <li><a href="/main_disease/eye/"> Autosomal dominant optic atrophy and cataract </a></li>
+   <li><a href="/main_disease/eye/"> Autosomal dominant optic atrophy plus syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Autosomal dominant vitreoretinochoroidopathy </a></li>
+   <li><a href="/main_disease/eye/"> Autosomal recessive alport syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Autosomal recessive bestrophinopathy </a></li>
+   <li><a href="/main_disease/eye/"> Autosomal recessive primary microcephaly </a></li>
+   <li><a href="/main_disease/eye/"> Axenfeld-Rieger syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Ayazi syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Barber say syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Bardet-biedl syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Barth syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Bazex-dupre-christol syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Behcet disease </a></li>
+   <li><a href="/main_disease/eye/"> Behr syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Best vitelliform macular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Bietti crystalline corneoretinal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Birdshot chorioretinopathy </a></li>
+   <li><a href="/main_disease/eye/"> Blau syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Blepharo-cheilo-odontic syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Blepharophimosis with ptosis, syndactyly and short stature </a></li>
+   <li><a href="/main_disease/eye/"> Blepharoptosis myopia ectopia lentis </a></li>
+   <li><a href="/main_disease/eye/"> Bloom syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Blue cone monochromatism </a></li>
+   <li><a href="/main_disease/eye/"> Borjeson-forssman-lehmann syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Bradyopsia </a></li>
+   <li><a href="/main_disease/eye/"> Brittle cornea syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Brown syndrome </a></li>
+   <li><a href="/main_disease/eye/"> CADASIL </a></li>
+   <li><a href="/main_disease/eye/"> Carney complex </a></li>
+   <li><a href="/main_disease/eye/"> Cat eye syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cataract congential volkmann type </a></li>
+   <li><a href="/main_disease/eye/"> Cataract microcornea syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cataract, posterior polar </a></li>
+   <li><a href="/main_disease/eye/"> Cataract, total congential </a></li>
+   <li><a href="/main_disease/eye/"> Centronuclear myopathy </a></li>
+   <li><a href="/main_disease/eye/"> Cerebro-oculo-facio-skeletal syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cerebrotendious xanthomatosis </a></li>
+   <li><a href="/main_disease/eye/"> Cerulean cataract </a></li>
+   <li><a href="/main_disease/eye/"> Chanarin-Dorfman syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Chandler's syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Char syndrome </a></li>
+   <li><a href="/main_disease/eye/"> CHARGE syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Charles bonnet syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Chediak-higashi syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Chorioretinitis </a></li>
+   <li><a href="/main_disease/eye/"> Choroidal dystrophy central areolar </a></li>
+   <li><a href="/main_disease/eye/"> Choroideremia </a></li>
+   <li><a href="/main_disease/eye/"> Chromosome 17q11.2 deletion </a></li>
+   <li><a href="/main_disease/eye/"> Chromosome 18p deletion </a></li>
+   <li><a href="/main_disease/eye/"> Chromosome 21q deletion </a></li>
+   <li><a href="/main_disease/eye/"> Chromosome 2q24 microdeletion </a></li>
+   <li><a href="/main_disease/eye/"> Chromosome 5p duplication </a></li>
+   <li><a href="/main_disease/eye/"> Chronic granulomatous disease </a></li>
+   <li><a href="/main_disease/eye/"> Chronic progressive external ophthalmoplegia </a></li>
+   <li><a href="/main_disease/eye/"> Coats disease </a></li>
+   <li><a href="/main_disease/eye/"> Cockayne syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cogan-Reese syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cohen syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Coloboma of macula </a></li>
+   <li><a href="/main_disease/eye/"> Coloboma of macula with type B brachydactyly </a></li>
+   <li><a href="/main_disease/eye/"> Cone dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Cone dystrophy X-linked with tapetal-like sheen </a></li>
+   <li><a href="/main_disease/eye/"> Cone-rod dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Cone-rod dystrophy X-linked </a></li>
+   <li><a href="/main_disease/eye/"> Congenital cystic eye </a></li>
+   <li><a href="/main_disease/eye/"> Congenital disorder of glycosylation </a></li>
+   <li><a href="/main_disease/eye/"> Congenital fibrosis of extraocular muscles </a></li>
+   <li><a href="/main_disease/eye/"> Congenital microcoria </a></li>
+   <li><a href="/main_disease/eye/"> Congenital myasthenic syndrome with episodic apnea </a></li>
+   <li><a href="/main_disease/eye/"> Congenital primary aphakia </a></li>
+   <li><a href="/main_disease/eye/"> Corneal dystrophy and perceptive deafness </a></li>
+   <li><a href="/main_disease/eye/"> Corneal dystrophy Avellino type </a></li>
+   <li><a href="/main_disease/eye/"> Corneal dystrophy crystalline of Schnyder </a></li>
+   <li><a href="/main_disease/eye/"> Corneal dystrophy of Bowman layer type 1 </a></li>
+   <li><a href="/main_disease/eye/"> Corneal dystrophy Thiel Behnke type </a></li>
+   <li><a href="/main_disease/eye/"> Corneal endothelial dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Corneal hypesthesia, familial </a></li>
+   <li><a href="/main_disease/eye/"> Cornelia de Lange syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Corneodermatoosseous syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cortical blindness-intellectual disability-polydactyly syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cri du chat syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Crouzon syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Cystinosis </a></li>
+   <li><a href="/main_disease/eye/"> Deafness and myopia syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Dentatorubaral-pallidoluysian atrophy </a></li>
+   <li><a href="/main_disease/eye/"> Dermochondrocorneal dystrophy of francois </a></li>
+   <li><a href="/main_disease/eye/"> Dermoids of cornea </a></li>
+   <li><a href="/main_disease/eye/"> Developmental prosopagnosia </a></li>
+   <li><a href="/main_disease/eye/"> Dopamine beta hydroxylase deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Doyne honeycomb retinal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Duane syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Dubowitz syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Duchenne muscular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Dyskeratosis congenita </a></li>
+   <li><a href="/main_disease/eye/"> Dyskeratosis congenita autosomal dominant </a></li>
+   <li><a href="/main_disease/eye/"> Dyskeratosis congenita autosomal recessive </a></li>
+   <li><a href="/main_disease/eye/"> Dyskeratosis congenita X-linked </a></li>
+   <li><a href="/main_disease/eye/"> Dyssegmental dysplasia and glaucoma </a></li>
+   <li><a href="/main_disease/eye/"> Eales  disease </a></li>
+   <li><a href="/main_disease/eye/"> Early-onset anterior polar cataract </a></li>
+   <li><a href="/main_disease/eye/"> Early-onset zonular cataract </a></li>
+   <li><a href="/main_disease/eye/"> Ectodermal dysplasia skin fragility syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Ectopia lentis, isolated autosomal recessive </a></li>
+   <li><a href="/main_disease/eye/"> EEC syndrome </a></li>
+   <li><a href="/main_disease/eye/"> EEM syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Enthesitis-related juvenile idiopathic arthritis </a></li>
+   <li><a href="/main_disease/eye/"> Epidermolysa bullosa simplex with muscular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Epithelial basement membrane corneal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Fabry disease </a></li>
+   <li><a href="/main_disease/eye/"> Familial amyloidosis, Finnish type </a></li>
+   <li><a href="/main_disease/eye/"> Familial congenital palsy of trochlear nerve </a></li>
+   <li><a href="/main_disease/eye/"> Familial dysautonomia </a></li>
+   <li><a href="/main_disease/eye/"> Familial exudative viteroretinopathy </a></li>
+   <li><a href="/main_disease/eye/"> Familial isolated hypoparathyroidism </a></li>
+   <li><a href="/main_disease/eye/"> Familial LCAT deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Familial visceral myopathy with external opthalmoplegia </a></li>
+   <li><a href="/main_disease/eye/"> Farber disease </a></li>
+   <li><a href="/main_disease/eye/"> Fatty acid hydroxylase-associated neurodegeneration </a></li>
+   <li><a href="/main_disease/eye/"> Fine-Lubinsky syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Fish-eye disease </a></li>
+   <li><a href="/main_disease/eye/"> Focal dermal hypoplasia </a></li>
+   <li><a href="/main_disease/eye/"> Fragile X syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Fraser syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Friedreich ataxia </a></li>
+   <li><a href="/main_disease/eye/"> Frontofacionasal dysplasia </a></li>
+   <li><a href="/main_disease/eye/"> Fuchs endothelial corneal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Fuchs heterochromic iridocyclitis </a></li>
+   <li><a href="/main_disease/eye/"> Fukuyama type muscular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Fundus dystrophy, pseudoinflamatory of Sorsby </a></li>
+   <li><a href="/main_disease/eye/"> Galactokinase deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Galactosialidosis </a></li>
+   <li><a href="/main_disease/eye/"> GAPO syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Gardner syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Gaucher disease </a></li>
+   <li><a href="/main_disease/eye/"> Gillespie syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Glaucoma sleep apnea </a></li>
+   <li><a href="/main_disease/eye/"> Glaucoma, ectopia, microspherophakia, stiff joints and short stature syndrome </a></li>
+   <li><a href="/main_disease/eye/"> GM1 gangliosidosis </a></li>
+   <li><a href="/main_disease/eye/"> GMS syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Goldberg-sphrintzen megacolon syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Goldenhar disease </a></li>
+   <li><a href="/main_disease/eye/"> Goldmann favre syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Graham cox syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Griscelli syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Groenouw type I corneal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Gyrate atrophy of choroid and retina </a></li>
+   <li><a href="/main_disease/eye/"> Hallermann-streiff syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Hereditary hemorrhagic telangiectasia </a></li>
+   <li><a href="/main_disease/eye/"> Hereditary keratitis </a></li>
+   <li><a href="/main_disease/eye/"> Hereditary vascular retinopathy </a></li>
+   <li><a href="/main_disease/eye/"> Hermansky pudlak syndrome2 </a></li>
+   <li><a href="/main_disease/eye/"> Homocystinuria due to CBS deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Horizontal gaze palsy with progressive scoliosis </a></li>
+   <li><a href="/main_disease/eye/"> Hurler syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Hurler Scheie syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Hyperferritinemia cataract syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Hypohidrotic ectodermal dysplasia autosomal recessive </a></li>
+   <li><a href="/main_disease/eye/"> Hypomelanosis of ito </a></li>
+   <li><a href="/main_disease/eye/"> Hypomyelination and congenital cataract </a></li>
+   <li><a href="/main_disease/eye/"> Icthyosis lamellar 1 </a></li>
+   <li><a href="/main_disease/eye/"> Icthyosis lamellar, autosomal dominant </a></li>
+   <li><a href="/main_disease/eye/"> Incontinentia pigmenti </a></li>
+   <li><a href="/main_disease/eye/"> Infantile cerebellar retinal degeneration </a></li>
+   <li><a href="/main_disease/eye/"> Introcular melanoma </a></li>
+   <li><a href="/main_disease/eye/"> IRVAN syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Isolated congenital megalocornea </a></li>
+   <li><a href="/main_disease/eye/"> Isolated ectopia lentis </a></li>
+   <li><a href="/main_disease/eye/"> Jacobsen syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Joubert syndrome with oculorenal anomalies </a></li>
+   <li><a href="/main_disease/eye/"> Juvenile polyposis syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Juvenile retinoschisis </a></li>
+   <li><a href="/main_disease/eye/"> Kabuki syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Kaufman oculocerebrofacial syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Kearns-Sayre syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Keratoconus </a></li>
+   <li><a href="/main_disease/eye/"> Keratosis follicularis spinulosa decalvans </a></li>
+   <li><a href="/main_disease/eye/"> KID syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Knobloch syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Krabbe disease </a></li>
+   <li><a href="/main_disease/eye/"> Kyphoscoliotic Ehlers-Danlos syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Lacrimo-auriculo-dento-digital syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Lamellar icthyosis </a></li>
+   <li><a href="/main_disease/eye/"> Landau-Kleffner syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Late onset-retinal degeneration </a></li>
+   <li><a href="/main_disease/eye/"> Lattice corneal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Laurence-Moon syndrome </a></li>
+   <li><a href="/main_disease/eye/"> LCHAD deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Leber congenital amaurosis </a></li>
+   <li><a href="/main_disease/eye/"> Leber hereditary optic neuropathy </a></li>
+   <li><a href="/main_disease/eye/"> Leber hereditary optic neuropathy with dystonia </a></li>
+   <li><a href="/main_disease/eye/"> Leigh syndrome, French Canadian type </a></li>
+   <li><a href="/main_disease/eye/"> Lenz microphthalmia syndrome </a></li>
+   <li><a href="/main_disease/eye/"> LEOPARD syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Leukodystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Ligneous conjuctivitis </a></li>
+   <li><a href="/main_disease/eye/"> Limb mammary syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Linear nevus sebaceous syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Lowe oculocerebrorenal syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Lowry maclean syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Lubinsky syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Lymphedema distichiasis syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Macrosomia with lethal microphthalmia </a></li>
+   <li><a href="/main_disease/eye/"> Macular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Macular telangiectasia type 2 </a></li>
+   <li><a href="/main_disease/eye/"> Marfan syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Marinesco Sjogren syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Marshall syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Martsolf syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Maternally inherited diabetes and deafness </a></li>
+   <li><a href="/main_disease/eye/"> Meckel syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Meesmann corneal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Megalocornea-spherophakia-secondary glaucoma </a></li>
+   <li><a href="/main_disease/eye/"> Megalocornea-intellectual disability syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Melnick-Needles syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Menkes disease </a></li>
+   <li><a href="/main_disease/eye/"> Mevalonic aciduria </a></li>
+   <li><a href="/main_disease/eye/"> Micro syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Microcephaly microcornea syndrome seemanova type </a></li>
+   <li><a href="/main_disease/eye/"> Microcornea posterior megalolenticonus persistent fetal vasculature coloboma </a></li>
+   <li><a href="/main_disease/eye/"> Microcornea corectopia macular hypoplasia </a></li>
+   <li><a href="/main_disease/eye/"> Microphthalmia syndromic </a></li>
+   <li><a href="/main_disease/eye/"> Microphthalmia with linear skin defects syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Microspherophakia with hernia </a></li>
+   <li><a href="/main_disease/eye/"> Microtia eye coloboma and imperforation of the nasolacrimal duct </a></li>
+   <li><a href="/main_disease/eye/"> Miller syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Milroy disease </a></li>
+   <li><a href="/main_disease/eye/"> Mitochondrial DNA-associated leigh syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Mitochondrial membrane protein-associated neurodegeneration </a></li>
+   <li><a href="/main_disease/eye/"> Mitochondrial neurogastrointestinal encephalopathy syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Moebius syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Mohr Tranebjaerg syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Molybdenum cofactor deficiency </a></li>
+   <li><a href="/main_disease/eye/"> Morning glory syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Mousa Al din Al Nassar syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Mucolipidosis type 4 </a></li>
+   <li><a href="/main_disease/eye/"> Mucopolysaccharidosis </a></li>
+   <li><a href="/main_disease/eye/"> Muir Torre syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Muscle eye brain disease </a></li>
+   <li><a href="/main_disease/eye/"> Myoclonic epilepsy with ragged red fibers </a></li>
+   <li><a href="/main_disease/eye/"> Myoclonic dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Nager acrofacial dysostosis </a></li>
+   <li><a href="/main_disease/eye/"> Nail-patella syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Nance-horan syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Nathalie syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Neonatal adrenoleukodystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Neonatal onset multisystem inflammatory disease </a></li>
+   <li><a href="/main_disease/eye/"> Neonatal progeroid syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Netherton syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Neurofibromatosis type2 </a></li>
+   <li><a href="/main_disease/eye/"> Neuromyelitis optica spectrum disorder </a></li>
+   <li><a href="/main_disease/eye/"> Neuronal ceroid lipofuscinosis </a></li>
+   <li><a href="/main_disease/eye/"> Neuropathy ataxia retinitis pigmentosa syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Nevoid basal cell carcinoma syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Niemann pick disease </a></li>
+   <li><a href="/main_disease/eye/"> Noonan syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Norrie disease </a></li>
+   <li><a href="/main_disease/eye/"> North carolina macular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Nystagmus 1, congential, X-linked </a></li>
+   <li><a href="/main_disease/eye/"> Nystagmus 2, congential, autosomal dominant </a></li>
+   <li><a href="/main_disease/eye/"> O Donnell pappas syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Ocular albinism type 1 </a></li>
+   <li><a href="/main_disease/eye/"> Ocular neuromyotonia </a></li>
+   <li><a href="/main_disease/eye/"> Oculoauriculofrontonasal syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Oculocerebral syndrome with hypopigmentation </a></li>
+   <li><a href="/main_disease/eye/"> Oculocutaneous albinism </a></li>
+   <li><a href="/main_disease/eye/"> Oculodentodigital dysplasia </a></li>
+   <li><a href="/main_disease/eye/"> Oculofaciocardiodental syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Oculomotor apraxia cogan type </a></li>
+   <li><a href="/main_disease/eye/"> Oculopharyngeal muscular dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Oculopharyngodistal myopathy </a></li>
+   <li><a href="/main_disease/eye/"> Oguchhi disease </a></li>
+   <li><a href="/main_disease/eye/"> OPA3 disease </a></li>
+   <li><a href="/main_disease/eye/"> Opsoclonus-myoclonus syndrome  </a></li>
+   <li><a href="/main_disease/eye/"> Optic atrophy </a></li>
+   <li><a href="/main_disease/eye/"> Orbital varix </a></li>
+   <li><a href="/main_disease/eye/"> Osteopetrosis autosomal dominant type 2 </a></li>
+   <li><a href="/main_disease/eye/"> Osteopetrosis autosomal recessive 4 </a></li>
+   <li><a href="/main_disease/eye/"> Osteopetrosis pseudoglioma syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Panuveitis </a></li>
+   <li><a href="/main_disease/eye/"> Parkinson disease type 9 </a></li>
+   <li><a href="/main_disease/eye/"> Partington syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Pattern dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Pearon syndrome </a></li>
+   <li><a href="/main_disease/eye/"> PEHO syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Pelizaeus merzbacher disease </a></li>
+   <li><a href="/main_disease/eye/"> Peters anomaly </a></li>
+   <li><a href="/main_disease/eye/"> Peters plus syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Peutz Jeghers syndrome </a></li>
+   <li><a href="/main_disease/eye/"> PHACE syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Piebaldism </a></li>
+   <li><a href="/main_disease/eye/"> Pierre Robin sequence </a></li>
+   <li><a href="/main_disease/eye/"> Pillay syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Pontocerebellar hypoplasia type3 </a></li>
+   <li><a href="/main_disease/eye/"> Popliteal pterygium syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Porphyria cutanea tarda </a></li>
+   <li><a href="/main_disease/eye/"> Posterior uveitis </a></li>
+   <li><a href="/main_disease/eye/"> Primary open angle glaucoma juvenile onset 1 </a></li>
+   <li><a href="/main_disease/eye/"> Progeria </a></li>
+   <li><a href="/main_disease/eye/"> Progressive bifocal chorioretinal atrophy </a></li>
+   <li><a href="/main_disease/eye/"> Proximal chromosome 18q deletion syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Pseudohypoparathyroididsm </a></li>
+   <li><a href="/main_disease/eye/"> Pseudopseudohypoparathyroidism  </a></li>
+   <li><a href="/main_disease/eye/"> Pseudoxanthoma elasticum </a></li>
+   <li><a href="/main_disease/eye/"> Pterygium of the conjunctiva and cornea </a></li>
+   <li><a href="/main_disease/eye/"> Ptosis strabismus ectopia pupils </a></li>
+   <li><a href="/main_disease/eye/"> Punctuate inner choroidopathy </a></li>
+   <li><a href="/main_disease/eye/"> Reese retinal dysplasia </a></li>
+   <li><a href="/main_disease/eye/"> Refsum disease </a></li>
+   <li><a href="/main_disease/eye/"> Refsum disease, infantile form </a></li>
+   <li><a href="/main_disease/eye/"> Renal coloboma syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Renal dysplasia, retinal pigmentary dystrophy, cerebellar ataxia and skeletal dysplasia </a></li>
+   <li><a href="/main_disease/eye/"> Retinal arterial macroaneurysm with supravalvular pulmonic stenosis </a></li>
+   <li><a href="/main_disease/eye/"> Retinal cone dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Retinal degeneration </a></li>
+   <li><a href="/main_disease/eye/"> Retinal vasculopathy </a></li>
+   <li><a href="/main_disease/eye/"> Retinitis pigmentosa </a></li>
+   <li><a href="/main_disease/eye/"> Retinopathy of prematurity </a></li>
+   <li><a href="/main_disease/eye/"> Revesz syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Rhizomelic chondrodysplasia punctata </a></li>
+   <li><a href="/main_disease/eye/"> RHYNS syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Ring dermoid of cornea </a></li>
+   <li><a href="/main_disease/eye/"> Roberts syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Rutherfurd syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Saethre chotzen syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Sandhoff disease </a></li>
+   <li><a href="/main_disease/eye/"> Sarcoidosis </a></li>
+   <li><a href="/main_disease/eye/"> Scheie syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Schimke immunoosseous dysplasia </a></li>
+   <li><a href="/main_disease/eye/"> Schwartz jampel syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Sengers syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Senior loken syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Septo-optic dysplasia spectrum </a></li>
+   <li><a href="/main_disease/eye/"> Serpiginous choroiditis </a></li>
+   <li><a href="/main_disease/eye/"> Severe generalized recessive dystrophic epidermolysis bullosa </a></li>
+   <li><a href="/main_disease/eye/"> Severe X-linked intellectual disability, Gustavson type </a></li>
+   <li><a href="/main_disease/eye/"> SHORT syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Sialidosis </a></li>
+   <li><a href="/main_disease/eye/"> Sjogren Larsson syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Slow-channel congential myasthenic syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Smith Lemli Opitz syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Snowflake vitreretinal degeneration </a></li>
+   <li><a href="/main_disease/eye/"> Sotos syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Spastic paraplegia </a></li>
+   <li><a href="/main_disease/eye/"> Spastic tetraplegia retinitis pigmentosa intellectual disability syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Spinocerebellar ataxia </a></li>
+   <li><a href="/main_disease/eye/"> Spinocerebellar ataxia autosomal recessive 5 </a></li>
+   <li><a href="/main_disease/eye/"> Spinocerebellar degeneration and corneal dystrophy </a></li>
+   <li><a href="/main_disease/eye/"> Spondyloepiphyseal dysplasia </a></li>
+   <li><a href="/main_disease/eye/"> SRD5A3-CDG (CDG-lq) </a></li>
+   <li><a href="/main_disease/eye/"> Stargardt disease </a></li>
+   <li><a href="/main_disease/eye/"> Sturge-Weber syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Subaortic stenosis short stature syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Superior limbic keratoconjunctivitis </a></li>
+   <li><a href="/main_disease/eye/"> Syndromic microphthalmia </a></li>
+   <li><a href="/main_disease/eye/"> Tangier disease </a></li>
+   <li><a href="/main_disease/eye/"> Tay-sachs disease </a></li>
+   <li><a href="/main_disease/eye/"> Tietz syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Tolosa hunt syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Trachoma </a></li>
+   <li><a href="/main_disease/eye/"> Treacher collins syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Triple A syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Triploidy </a></li>
+   <li><a href="/main_disease/eye/"> Trisomy </a></li>
+   <li><a href="/main_disease/eye/"> Tuberous sclerosis complex </a></li>
+   <li><a href="/main_disease/eye/"> Tubulointerstitial nephritis and uveitis </a></li>
+   <li><a href="/main_disease/eye/"> Tucker syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Tyrosinemia </a></li>
+   <li><a href="/main_disease/eye/"> Usher syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Uveal disease </a></li>
+   <li><a href="/main_disease/eye/"> Verloes van maldergem marneffe syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Vernal keratoconjunctivitis </a></li>
+   <li><a href="/main_disease/eye/"> Vici syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Visual snow syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Vogt-koyanagi-harada disease </a></li>
+   <li><a href="/main_disease/eye/"> Waardenburg syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Wagner syndrome </a></li>
+   <li><a href="/main_disease/eye/"> WAGR syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Walker-warburg syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Weill marchesani syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Werner syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Williams syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Wilson disease </a></li>
+   <li><a href="/main_disease/eye/"> Wolf hirschhorn syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Wolfram syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Wrinkly skin syndrome </a></li>
+   <li><a href="/main_disease/eye/"> Wyburn mason syndrome </a></li>
+   <li><a href="/main_disease/eye/"> X-linked congenital generalized hypertrichosis </a></li>
+   <li><a href="/main_disease/eye/"> X-linked congenital stationary night blindness </a></li>
+   <li><a href="/main_disease/eye/"> X-linked dominant chondrodysplasia punctata 2 </a></li>
+   <li><a href="/main_disease/eye/"> X-linked hypohidrotic ectodermal dysplasia </a></li>
+   <li><a href="/main_disease/eye/"> X-linked ichthyosis </a></li>
+   <li><a href="/main_disease/eye/"> X-linked myotubular myopathy </a></li>
+   <li><a href="/main_disease/eye/"> Zellweger syndrome </a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

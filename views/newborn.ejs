@@ -1,0 +1,242 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+      min-width: 70%;
+    }
+  }
+</style>
+
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" id="mbody">
+<h3><center> Newborn Screening:</center> </h3><br>
+<ol class = "ml-5" >
+   <li><a href="#"> 2,4-Dienoyl-CoA reductase deficiency </a></li>
+   <li><a href="#"> 2-methylbutyryl-CoA dehydrogenase deficiency </a></li>
+   <li><a href="#"> 21-hydroxylase deficiency </a></li>
+   <li><a href="#"> 3-alpha hydroxyacyl-CoA dehydrogenase deficiency </a></li>
+   <li><a href="#"> 3-methylcrotonyl-CoA carboxylase deficiency (AUH defect) </a></li>
+   <li><a href="#"> Alpha-1 antitrypsin deficiency </a></li>
+   <li><a href="#"> Autosomal dominant type B hypercholestrolemia </a></li>
+   <li><a href="#"> Barth syndrome </a></li>
+   <li><a href="#"> Becker muscular dystrophy </a></li>
+   <li><a href="#"> Beta ketothiolase deficiency </a></li>
+   <li><a href="#"> Biotinidase deficiency </a></li>
+   <li><a href="#"> Carbamoyl phosphate synthetase 1 deficiency </a></li>
+   <li><a href="#"> Carnitine palmitoyl transferase 1A deficiency </a></li>
+   <li><a href="#"> Carnitine palmitoyltransferase 2 deficiency </a></li>
+   <li><a href="#"> Carnitine-acylcarnitine translocase deficiency </a></li>
+   <li><a href="#"> Citrullinemia type 1 </a></li>
+   <li><a href="#"> Citrullinemia type 2 </a></li>
+   <li><a href="#"> Congenital cytomegalovirus </a></li>
+   <li><a href="#"> Congenital human immunodeficiency virus </a></li>
+   <li><a href="#"> Congenital hypothyroidism </a></li>
+   <li><a href="#"> Congenital toxoplasmosis </a></li>
+   <li><a href="#"> Cystic fibrosis </a></li>
+   <li><a href="#"> Diabetes mellitus </a></li>
+   <li><a href="#"> Duchenne musscular dystrophy </a></li>
+   <li><a href="#"> Ethylmalonic encephalopathy </a></li>
+   <li><a href="#"> Fragile X syndrome </a></li>
+   <li><a href="#"> Galactokinase deficiency </a></li>
+   <li><a href="#"> Galactose epimerase deficiency </a></li>
+   <li><a href="#"> Galactosemia </a></li>
+   <li><a href="#"> Glucose-6-phosphate dehydrogenase deficiency </a></li>
+   <li><a href="#"> Glutamate formiminotransferase deficiency </a></li>
+   <li><a href="#"> Glutaric acedemia type 1 </a></li>
+   <li><a href="#"> Glutaric acidemia type 2 </a></li>
+   <li><a href="#"> Glycine N-methyltransferase deficiency </a></li>
+   <li><a href="#"> Gyrate atrophy of choroid and retina </a></li>
+   <li><a href="#"> Haemoglobin E disease </a></li>
+   <li><a href="#"> Haemoglobin SC disease </a></li>
+   <li><a href="#"> HMG CoA lyase deficiency </a></li>
+   <li><a href="#"> Holocarboxylase synthetase deficiency </a></li>
+   <li><a href="#"> Homocystinuria due to CBS deficiency </a></li>
+   <li><a href="#"> HSD 10 disease </a></li>
+   <li><a href="#"> Hyperlysinemia </a></li>
+   <li><a href="#"> Hyperprolinemia type 2 </a></li>
+   <li><a href="#"> Isobutyryl-CoA dehydrogenase deficiency </a></li>
+   <li><a href="#"> Isovaleric acidemia </a></li>
+   <li><a href="#"> Kernicterus </a></li>
+   <li><a href="#"> Krabbe disease </a></li>
+   <li><a href="#"> L-arginine:glycineamidinotransferase deficiency </a></li>
+   <li><a href="#"> LCHAD deficiency</a></li>
+   <li><a href="#"> Malonyl - CoA decarboxylase deficiency </a></li>
+   <li><a href="#"> Maple syrup urnie disease </a></li>
+   <li><a href="#"> Medium-chain 3-ketoacyl-coa thiolase deficiency </a></li>
+   <li><a href="#"> Medium-chain acyl-coenzymeA dehydrogenase deficiency </a></li>
+   <li><a href="#"> Methionine adenosyltransferase deficiency </a></li>
+   <li><a href="#"> Methylmalonic acidemia  </a></li>
+   <li><a href="#"> Methylmalonic acidemia with homocystinuria </a></li>
+   <li><a href="#"> Methylmalonic aciduria, cbIA type </a></li>
+   <li><a href="#"> Methylmalonic aciduria, cbIB type </a></li>
+   <li><a href="#"> Mild phenylketonuria </a></li>
+   <li><a href="#"> Mitochondrial trifunctional protein deficiency </a></li>
+   <li><a href="#"> Mucopolysaccharidosis type I </a></li>
+   <li><a href="#"> Not otherwise specified 3-MGA-uria type </a></li>
+   <li><a href="#"> OPA-3 defect </a></li>
+   <li><a href="#"> Ornithine transcarbamylase deficiency </a></li>
+   <li><a href="#"> Ornithine translocase deficiency syndrome </a></li>
+   <li><a href="#"> Phenylketonuria </a></li>
+   <li><a href="#"> Primary carnitine deficiency </a></li>
+   <li><a href="#"> Propionic acidemia </a></li>
+   <li><a href="#"> Severe combined immunodeficiency due to complete RAG1/2 deficiency </a></li>
+   <li><a href="#"> Short-chain acyl-CoA dehydrogenase deficiency  </a></li>
+   <li><a href="#"> Sickle beta thalassemia </a></li>
+   <li><a href="#"> Sickle cell anemia </a></li>
+   <li><a href="#"> Tetrahydrobiopterin deficiency </a></li>
+   <li><a href="#"> Turner syndrome </a></li>
+   <li><a href="#"> Tyrosinemia </a></li>
+   <li><a href="#"> VLCAD deficiency </a></li>
+   <li><a href="#"> Wilson disease </a></li>
+   <li><a href="#"> X-linked creatine deficiency </a></li>
+   <li><a href="#"> X-linked severe combined immunodeficiency </a></li>
+</ol>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

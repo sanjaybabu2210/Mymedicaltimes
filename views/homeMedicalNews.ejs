@@ -1,0 +1,265 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+  #filter {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 540px) and (max-width: 820px) {
+    #mbody {
+      text-align: left;
+      margin: 5% auto;
+    }
+  }
+</style>
+<div class="col-lg-7 col-md-7 col-sm-9">
+	
+ <div class="btn-group" role="group" aria-label="Basic example" style="border-radius:20px;margin-left:30%;margin-top:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <button type="button" class="btn btn-light"><a href="/home" style="text-decoration:None;color:#000000">New Articles</a></button>
+  <button type="button" class="btn btn-light"><a href="/home/disease" style="text-decoration:None;color:#000000">New Disease Articles</a></button>
+   <button type="button" class="btn btn-info"><a href="/home/medicalNews" style="text-decoration:None;color:#ffffff">Medical News</a></button>
+  
+</div>
+
+ <div class="list-wrapper articleHide">
+  
+  <% md.forEach(function(art){ %>
+  <a href = "/seeMedicalNews/<%= art._id %>">
+  <div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "/seeMedicalNews/<%= art._id %>" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong><%= art.title %></strong></a><br>
+			<a href = "/seeMedicalNews/<%= art._id %>"
+		<p style = "text-decoration:None;font-size: 14px; color: rgba(0,0,0,0.7);-webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; white-space: normal"><%= art.shortDescription %>...<a href = "/seeMedicalNews/<%= art._id %>" class="hov">Read More</a></p>
+		</a>
+			<h4 style = "font-size:12px;color: primary;margin-top:2%;float:left"><strong>By : <%= art.author %></strong></h4>
+				<h5 style = "font-size:12px;color: primary;margin-top:2%;margin-left:75%;opacity:0.8"><strong>Uploaded : <%= moment(art.createdAt).fromNow() %></strong></h5>
+	</div>
+	</a>
+	
+	<% }) %>
+	
+	 <div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div>
+	
+	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div>
+	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div>
+	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div>
+	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div>
+	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div>
+	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div><div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
+			<strong>Title of the disease Article</strong></a><br>
+		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
+		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
+	</div>
+ 
+	
+	<div id="pagination-container"></div>
+		
+			</div>
+	
+</div>
+
+<script type="text/javascript">
+  
+  // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/
+
+var items = $(".list-wrapper .list-item");
+    var numItems = items.length;
+    var perPage = 14;
+
+    items.slice(perPage).hide();
+
+    $('#pagination-container').pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+        }
+    });
+  
+  
+</script>
+
+
+</div>
+
+
+<script>
+
+$('.openbtn').on("click",function(){
+ $('.sidebar').fadeOut(100);
+})
+
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>

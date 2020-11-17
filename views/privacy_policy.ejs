@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<script src = "https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Bootstrap CSS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>My Medical Times</title>
+    
+    <style>
+     
+         	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+ margin: 0;
+ padding:0; 
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;	
+ justify-content: stretch;
+	
+}	
+body{
+  overflow-x: hidden;
+}
+.sidebar{
+	position: scroll;
+	width: 350px;
+	left: 0;
+	background: #1b1b1b;
+	height: 100%;
+	margin: 0px;
+
+
+}
+.sidebar .text{
+	color: white;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 65px;
+	text-align:justify;
+	background: #1e1e1e;
+	letter-spacing: 1px;
+	margin: 0px
+}
+ nav ul{
+	background : #1b1b1b;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	
+} 
+nav ul li{
+	line-height: 60px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+nav ul li a{
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	padding-left: 40px;
+	font-weight: 500;
+	display: block;
+	width: 100%;
+	border-left: 3px solid transparent;
+}
+nav ul li.active a{
+	color:cyan;
+	background: #1e1e1e;
+	border-left-color: cyan;
+	
+}
+nav ul ul{
+	position: static;
+	display:none;
+}
+nav ul .feat-show.show{
+	display: block;
+}
+nav ul .an-show.show2{
+	display: block;
+}
+nav ul .ant-show.show3{
+	display: block;
+}
+nav ul .bi-show.show4{
+	display: block;
+}
+nav ul .bio-show.show5{
+	display: block;
+}
+nav ul .bip-show.show6{
+	display: block;
+}
+nav ul .co-show.show7{
+	display: block;
+}
+nav ul .den-show.show8{
+	display: block;
+}
+nav ul .med-show.show9{
+	display: block;
+}
+nav ul .mib-show.show10{
+	display: block;
+}
+nav ul .mir-show.show11{
+	display: block;
+}
+nav ul .oc-show.show12{
+	display: block;
+}
+nav ul .pat-show.show13{
+	display: block;
+}
+nav ul .pha-show.show14{
+	display: block;
+}
+nav ul .phm-show.show15{
+	display: block;
+}
+nav ul .phs-show.show16{
+	display: block;
+}
+nav ul .phsi-show.show17{
+	display: block;
+}
+nav ul .psy-show.show18{
+	display: block;
+}
+nav ul .sur-show.show19{
+	display: block;
+}
+nav ul .the-show.show20{
+	display: block;
+}
+nav ul .yg-show.show21{
+	display: block;
+}
+nav ul .ve-show.show22{
+	display: block;
+}
+nav ul ul li{
+	line-height: 42px;
+	border-bottom: none;
+}
+nav ul ul li a{
+	font-size: 17px;
+	color: #e6e6e6;
+	padding-left: 80px;
+}
+nav ul li.active ul li a{
+	color:#e6e6e6;
+	background: #1b1b1b;
+	border-left-color: transparent;
+	
+}
+nav ul ul li a:hover{
+	color:cyan!important;
+	background:1e1e1e!important;
+}
+nav ul li a span{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	font-size: 22px;
+	transition: transform 0.4s;
+}
+nav ul li a span.rotate{
+	transform:translateY(-50%) rotate(-180deg);
+}
+footer{
+	background: #1c2331
+}
+.dropdown-submenu{
+    position: relative;
+}
+.dropdown-submenu a::after{
+    transform: rotate(-90deg);
+    position: relative;
+    right: 3px;
+    top: 40%;
+}
+.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+    display: flex;
+    flex-direction: column;
+    position: scroll !important;
+    margin-top: -30px;
+    left: 100%;
+}
+@media screen and (max-width: 892px) {
+    .dropdown-menu{
+        width: 50%;
+    }
+    .dropdown-menu .dropdown-submenu{
+        width: auto;
+    }
+    .sidebar{
+      display: none;
+    }
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 10px;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.icc{
+ width:35px;height:35px;
+}
+.icc:hover{
+ opacity:0.6;
+}
+
+     
+    </style>
+    
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">MMT</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Medical News
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          
+          <a class="dropdown-item" href="#">Something else here</a>
+		  
+        </div>
+      </li>
+	 
+	 <li class="nav-item">
+        <a class="nav-link" href="#">Disease</a>
+      </li>
+	  
+	 
+	  
+	  
+
+	  
+    </ul>
+    <form class="form-inline my-2 my-lg-0 col-lg-3">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	  
+    </form>
+	
+	<% if(!currentUser){ %>
+            <a class="btn btn-primary" href="/login" role="button">Login</a>
+            <%} else{ %>
+            <a href="/profilenav"  style="color:#ffffff;margin-right:18px"><%= currentUser.username %></a>
+            <a class="btn btn-info" href="/logout" role="button">Logout</a>
+            
+            <% } %>
+	
+  </div>
+</nav>
+
+  <% if(error.length>0){%>
+<div class="alert alert-danger container" style="margin-top:0px;"><%=error%></div>
+<% }if(success.length>0){%>
+<div class="alert alert-success container" style="margin-top:0px;"><%=success%></div>
+<% } %> 
+
+<br>
+<marquee behavior="scroll" direction="left" class="px-1 bg-primary text-light">***   The chapter you are learning today, is going to save someone's life tomorrow. Pay attention ***
+</marquee>
+       
+  <div class="row">
+
+<nav class = " sidebar col-lg-3 col-md-5 col-sm-5 col-5">
+ <div class = "text"> My Medical Times </div>
+ <ul>
+  
+   <li>
+    <a href = "#" class = "ant-btn"> Anatomy
+   <span class = "fas fa-caret-down fourth"></span>
+  </a>
+  <ul class = "ant-show">
+   <li><a href = "#"> Embryology</a> </li>
+   <li><a href = "#"> General Anatomy</a> </li>
+   <li> <a href = "#"> Head, Neck, and Face </a> </li>
+   <li><a href = "#"> Histology</a> </li>
+   <li><a href = "#"> Osteology</a> </li>
+   <li><a href = "#"> Pelvis & lower limb</a> </li>
+   <li><a href = "#"> Regional Anatomy</a> </li>
+   <li><a href = "#"> Upper limb, Thorax & Abdomen </a> </li>
+ </ul> 
+ </li>
+  
+  
+  <li>
+    <a href = "#" class = "an-btn"> Anesthesia
+   <span class = "fas fa-caret-down third"></span>
+  </a>
+  <ul class = "an-show">
+   <li><a href = "#"> Anesthesiology</a> </li>
+   <li><a href = "#"> General Anesthesiology</a> </li>
+   <li> <a href = "#"> Local Anesthesia </a> </li>
+ </ul> 
+ </li>
+  
+  
+  <li> <a href = "#" class = "feat-btn">  Ayurveda
+  <span class = "fas fa-caret-down first"></span>
+  </a>
+  <ul class = "feat-show">
+    <li> <a href = "#"> Agada Tantra</a></li>
+	<li> <a href = "#"> Ashtang Hridyam </a></li>
+	<li> <a href = "#"> Ayurveda Itihas </a></li>
+	<li> <a href = "#"> Bhaishajya Kalpana </a> </li>
+	<li> <a href = "#"> Charak Samhita(Purvardha)</a></li>
+	<li> <a href = "#"> Charak Samhita(Uttarardha)</a></li>
+	<li> <a href = "#"> Dravyaguna Vigyan </a> </li>
+	<li> <a href = "#"> Herbal </a></li>
+	<li> <a href = "#"> Herbal Drug Technology</a></li>
+	<li> <a href = "#"> Kayachikitsa </a></li>
+	<li> <a href = "#"> Kaumarbhritya </a></li>
+	<li> <a href = "#"> Kriya Sharir </a></li>
+	<li> <a href = "#"> Padartha Vigyan </a></li>
+	<li> <a href = "#"> Panchkarma </a></li>
+	<li> <a href = "#"> Prasuti Tantra Evum Stri Roga </a></li>
+	<li> <a href = "#"> Rachana Sarir  </a></li>
+	<li> <a href = "#"> Rasa Shastra </a></li>
+	<li> <a href = "#"> Roga Vigyan </a></li>
+	<li> <a href = "#"> Salakya  </a></li>
+	<li> <a href = "#"> Shalya </a></li>
+	<li> <a href = "#"> Swasthavritta </a></li>
+	<li> <a href = "#"> Vidhi Vaidyak  </a></li>
+	<li> <a href = "#"> Vikriti Vigyan </a></li>
+	<li> <a href = "#"> Vyavhar Ayurved </a></li>
+   </ul>
+  </li>
+  
+  
+  
+  <li> <a href = "#" class = "bi-btn">  Biochemistry
+  <span class = "fas fa-caret-down fourthh"></span>
+  </a>
+  <ul class = "bi-show">
+    <li> <a href = "#"> Analytical Biochemistry</a></li>
+	<li> <a href = "#"> Animal Biochemistry </a></li>
+	<li> <a href = "#"> Cell biology </a></li>
+	<li> <a href = "#"> Cytogenetics</a></li>
+	<li> <a href = "#"> DNA Typing & Replications</a></li>
+	<li> <a href = "#"> Enzymology </a> </li>
+	<li> <a href = "#"> Genetics</a></li>
+	<li> <a href = "#"> Immunology</a></li>
+	<li> <a href = "#"> Medicinal Chemistry </a> </li>
+	<li> <a href = "#"> Metabolism </a></li>
+	<li> <a href = "#"> Organic Mechanism</a></li>
+	<li> <a href = "#"> Plant biochemistry </a></li>
+	<li> <a href = "#"> Phytochemistry </a></li>
+   </ul>
+  </li>
+  
+  
+   <li>
+  <a href = "#" class = "bip-btn"> BioPhysics
+   <span class = "fas fa-caret-down fifth"></span>
+  </a>
+  <ul class = "bip-show">
+   <li><a href = "#"> Biomechanics</a> </li>
+   <li> <a href = "#"> Biophysics & Instrumentation </a> </li>
+ </ul> 
+ </li>
+  
+  
+   <li> <a href = "#" class = "bio-btn">  Biotechnology
+  <span class = "fas fa-caret-down sixth"></span>
+  </a>
+  <ul class = "bio-show">
+	<li> <a href = "#"> Animal Biotechnology </a></li>
+	<li> <a href = "#"> Biochemistry</a></li>
+	<li> <a href = "#"> Bioinformatics</a></li>
+	<li> <a href = "#"> Cell cycle & division</a></li>
+	<li> <a href = "#"> Environmental biotechnology </a> </li>
+	<li> <a href = "#"> Immunology</a></li>
+	<li> <a href = "#"> Industrial biotechnology </a> </li>
+	<li> <a href = "#"> Medical biotechnology </a></li>
+	<li> <a href = "#"> Microbiology</a></li>
+	<li> <a href = "#"> Plant biotechnology </a></li>
+   </ul>
+  </li>
+  
+  
+     <li> <a href = "#" class = "co-btn">  Community Medicine
+  <span class = "fas fa-caret-down sixthh"></span>
+  </a>
+  <ul class = "co-show">
+	<li> <a href = "#"> Biostatistics </a></li>
+	<li> <a href = "#"> Epidemiology</a></li>
+	<li> <a href = "#"> Environmental & occupational Health </a> </li>
+	<li> <a href = "#"> Epidemiology</a></li>
+	<li> <a href = "#"> Health Policy & Management </a> </li>
+	<li> <a href = "#"> Hospital Management </a></li>
+	<li> <a href = "#"> Public Health Nutrition</a></li>
+	<li> <a href = "#"> Public health ethics & laws </a></li>
+	<li> <a href = "#"> Public health dentistry </a></li>
+   </ul>
+  </li>
+  
+  
+      <li> <a href = "#" class = "den-btn">  Dentistry
+  <span class = "fas fa-caret-down seventh"></span>
+  </a>
+  <ul class = "den-show">
+    <li> <a href = "#"> Community dentistry </a></li>
+	<li> <a href = "#"> Conservative dentistry & endodontics </a></li>
+	<li> <a href = "#"> Dental anatomy & oral histology</a></li>
+	<li> <a href = "#"> Dental materials </a> </li>
+	<li> <a href = "#"> Oral medicine & radiology </a></li>
+	<li> <a href = "#"> Oral pathology</a></li>
+	<li> <a href = "#"> Oral surgery </a> </li>
+	<li> <a href = "#"> Orthodontics </a></li>
+	<li> <a href = "#"> Pedodontics</a></li>
+	<li> <a href = "#"> Periodontics </a></li>
+	<li> <a href = "#"> Prosthodontics </a></li>
+   </ul>
+  </li>
+  
+  
+  
+   <li> <a href = "#" class = "med-btn">  Medicine
+  <span class = "fas fa-caret-down eigth"></span>
+  </a>
+  <ul class = "med-show">
+    <li> <a href = "#"> Dermatology</a></li>
+	<li> <a href = "#"> Diagnostics </a></li>
+	<li> <a href = "#"> Emergency Medicine </a></li>
+	<li> <a href = "#"> Forensic medicine & toxicology </a> </li>
+	<li> <a href = "#"> General medicine</a></li>
+	<li> <a href = "#"> Gynecology</a></li>
+	<li> <a href = "#"> Interventional </a> </li>
+	<li> <a href = "#"> Naturopathic </a></li>
+	<li> <a href = "#"> Neurology</a></li>
+	<li> <a href = "#"> Nuclear medicine </a></li>
+	<li> <a href = "#"> Opthalmology </a></li>
+	<li> <a href = "#"> Orthopaedics </a></li>
+	<li> <a href = "#"> Pediatrics </a></li>
+	<li> <a href = "#"> Psychiatry </a></li>
+	<li> <a href = "#"> Pulmonology </a></li>
+	<li> <a href = "#"> Radiology  </a></li>
+	<li> <a href = "#"> Rheumatology </a></li>
+	<li> <a href = "#"> Therapeutics  </a></li>
+	<li> <a href = "#"> Transfusion medicine </a></li>
+	<li> <a href = "#"> Traumatology  </a></li>
+	<li> <a href = "#"> Tropical medicine </a></li>
+	<li> <a href = "#"> Venereology  </a></li>
+   </ul>
+  </li>
+  
+     <li> <a href = "#" class = "mib-btn">  Microbiology
+  <span class = "fas fa-caret-down nineth"></span>
+  </a>
+  <ul class = "mib-show">
+    <li> <a href = "#"> Agriculture Microbiology </a></li>
+    <li> <a href = "#"> Bacteriology</a></li>
+	<li> <a href = "#"> Cellular microbiology </a></li>
+	<li> <a href = "#"> Evolutionary microbiology </a></li>
+	<li> <a href = "#"> Generation microbiology </a></li>
+	<li> <a href = "#"> Immunology </a></li>
+	<li> <a href = "#"> Evolutionary microbiology </a></li>
+	<li> <a href = "#"> Food microbiology </a></li>
+	<li> <a href = "#"> Immunology </a></li>
+	<li> <a href = "#"> Industrial microbiology </a></li>
+	<li> <a href = "#"> Medical bacteriology </a></li>
+	<li> <a href = "#"> Microbial cytology </a></li>
+	<li> <a href = "#"> Microbial ecology </a></li>
+	<li> <a href = "#"> Microbial physiology </a></li>
+	<li> <a href = "#"> Microbiology </a></li>
+	<li> <a href = "#"> Molecular microbiology </a></li>
+	<li> <a href = "#"> Mycology </a></li>
+	<li> <a href = "#"> Nematology </a></li>
+	<li> <a href = "#"> Parasitology </a></li>
+	<li> <a href = "#"> Phycology/Algology </a></li>
+	<li> <a href = "#"> Protozoology </a></li>
+	<li> <a href = "#"> Systems microbiology </a></li>
+	<li> <a href = "#"> Virology </a> </li>
+   </ul>
+  </li>
+  
+  
+ <li>
+  <a href = "#" class = "mir-btn"> Microscopy
+   <span class = "fas fa-caret-down tenth"></span>
+  </a>
+  <ul class = "mir-show">
+   <li><a href = "#"> Electron</a> </li>
+   <li> <a href = "#"> Optical </a> </li>
+   <li> <a href = "#"> Scanniing Probe microbiology </a> </li>
+   <li> <a href = "#"> X-Ray microscopy </a> </li>
+ </ul> 
+ </li>
+ 
+   <li><a href = "#"> Nutrition and Dietetics</a> </li>
+  
+      <li>
+  <a href = "#" class = "oc-btn"> Occupational Therapy
+   <span class = "fas fa-caret-down eleventh"></span>
+  </a>
+  <ul class = "oc-show">
+   <li><a href = "#"> Occupational therapy in mental health</a> </li>
+   <li><a href = "#"> Occupational therapy in neurology</a> </li>
+   <li><a href = "#"> Occupational therapy in orthopedics</a> </li>
+   <li><a href = "#"> Occupational therapy in prediatrics</a> </li>
+   <li><a href = "#"> Occupational therapy in rehabillitation</a> </li>
+ </ul> 
+ </li>
+  
+  
+  
+ <li>
+  <a href = "#" class = "pat-btn"> Pathology
+   <span class = "fas fa-caret-down twelth"></span>
+  </a>
+  <ul class = "pat-show">
+   <li><a href = "#"> General pathology</a> </li>
+   <li> <a href = "#"> Haematology </a> </li>
+   <li> <a href = "#"> Systematic pathology </a> </li>
+   </ul>
+ </li>
+ 
+ 
+  <li>
+  <a href = "#" class = "pha-btn"> Pharmacy
+   <span class = "fas fa-caret-down thirteenth"></span>
+  </a>
+  <ul class = "pha-show">
+  <li> <a href = "#"> Clinical pharmacy </a> </li>
+   <li><a href = "#"> Computer application in pharmacy </a> </li>
+   <li> <a href = "#"> Industrial pharmacy </a> </li>
+   <li> <a href = "#"> Pharmaceutics </a> </li>
+   <li> <a href = "#"> Pharmaceutical analysis</a> </li>
+   <li> <a href = "#"> Pharmaceutical biotechnology</a> </li>
+   <li> <a href = "#"> Pharmaceutical engineering</a> </li>
+   <li> <a href = "#"> Pharmaceutical inorganic chemistry </a> </li>
+   <li> <a href = "#"> Pharmacognosy microbiology </a> </li>
+   <li> <a href = "#"> Pharmacovigilance organic chemistry </a> </li>
+   <li> <a href = "#"> Pharmaceutical technology </a> </li>
+   <li> <a href = "#"> Pharma Regulatory science </a> </li>
+   <li> <a href = "#"> Physical pharmaceutics </a> </li>
+   <li> <a href = "#"> Social & preventive pharmacy </a> </li>
+   </ul>
+ </li>
+  
+ 
+ 
+ <li>
+  <a href = "#" class = "phm-btn"> Pharmacology
+   <span class = "fas fa-caret-down fourteenth"></span>
+  </a>
+  <ul class = "phm-show">
+   <li><a href = "#"> Anti cancer drugs</a> </li>
+   <li> <a href = "#"> Anti inflammatory drugs </a> </li>
+   <li> <a href = "#"> Antimicrobial drugs </a> </li>
+    <li><a href = "#"> Biopharmaceutics </a> </li>
+   <li><a href = "#"> Dental Pharmacology</a> </li>
+   <li><a href = "#"> General Pharmacology</a> </li>
+   <li><a href = "#"> Pharmacodynamics </a> </li>
+   <li><a href = "#"> Pharmacokinetics </a> </li>
+   <li><a href = "#"> Systematic Pharmacology</a> </li>
+   </ul>
+ </li>
+ 
+ 
+ <li>
+  <a href = "#" class = "phs-btn"> Physiology
+   <span class = "fas fa-caret-down fifteenth"></span>
+  </a>
+  <ul class = "phs-show">
+   <li><a href = "#"> Animal physiology </a> </li>
+   <li><a href = "#"> Applied physiology </a> </li>
+   <li><a href = "#"> Cardiovascular physiology </a> </li>
+   <li><a href = "#"> Comparative physiology </a> </li>
+   <li><a href = "#"> Defense physiology </a> </li>
+   <li><a href = "#"> Developmental physiology </a> </li>
+   <li><a href = "#"> Eco physiology </a> </li>
+   <li><a href = "#"> Evolutionary physiology</a> </li>
+   <li><a href = "#"> Gastrointestinal physiology </a> </li>
+   <li><a href = "#"> Mathematical physiology </a> </li>
+   <li><a href = "#"> Microbial physiology</a> </li>
+   <li><a href = "#"> Musculoskeletal physiology</a> </li>
+   <li><a href = "#"> Neuro physiology </a> </li>
+   <li><a href = "#"> Pathphysiology</a> </li>
+   <li><a href = "#"> Plant physiology</a> </li>
+   <li><a href = "#"> Respiratory physiology </a> </li>
+   <li><a href = "#"> Yoga physiology </a> </li>
+   </ul>
+ </li>
+ 
+ 
+ 
+ 
+  <li>
+  <a href = "#" class = "phsi-btn"> Physiotherapy
+   <span class = "fas fa-caret-down sixteenth"></span>
+  </a>
+  <ul class = "phsi-show">
+  <li><a href = "#"> Cardio thoracic physiotherapy</a> </li>
+  <li><a href = "#"> Musculo skeletal physiotherapy</a> </li>
+  <li><a href = "#"> Neurological physiotherapy</a> </li>
+   <li><a href = "#"> Orientation to physiotherapy</a> </li>
+   <li><a href = "#"> Paediatric physiotherapy</a> </li>
+   <li><a href = "#"> Physiotherapy in fitness</a> </li>
+   <li><a href = "#"> Physiotherapy in rehabilitation</a> </li>
+   <li><a href = "#"> physiotherapy in obstetrics</a> </li>
+   <li><a href = "#"> Sports physiotherapy</a> </li>
+   </ul>
+ </li>
+ 
+ 
+ 
+   <li>
+  <a href = "#" class = "psy-btn"> Psychology
+   <span class = "fas fa-caret-down seventeenth"></span>
+  </a>
+  <ul class = "psy-show">
+   <li><a href = "#"> Clinical psychology </a> </li>
+   <li><a href = "#"> Cognitive psychology </a> </li>
+   <li><a href = "#"> Development psychology</a> </li>
+   <li><a href = "#"> Evolutionary psychology </a> </li>
+   <li><a href = "#"> Forensic psychology </a> </li>
+   <li><a href = "#"> Health psychology </a> </li>
+   <li><a href = "#"> Neuropsychology </a> </li>
+   <li><a href = "#"> Occupational psychology </a> </li>
+   <li><a href = "#"> Social psychology </a> </li>
+   </ul>
+ </li>
+ 
+
+ <li><a href = "#"> Recombinant DNA Technology</a> </li>
+ 
+ 
+ <li>
+  <a href = "#" class = "sur-btn"> Surgery
+   <span class = "fas fa-caret-down eighteenth"></span>
+  </a>
+  <ul class = "sur-show">
+  <li><a href = "#"> Academic surgery </a> </li>
+   <li><a href = "#"> Cardiothoracic surgery </a> </li>
+   <li><a href = "#"> General surgery </a> </li>
+   <li><a href = "#"> Minor surgery </a> </li>
+   <li><a href = "#"> Neurosurgery </a> </li>
+   <li><a href = "#"> Oral & Maxillofacial surgery </a> </li>
+   <li><a href = "#"> Otolaryngology</a> </li>
+   <li><a href = "#"> Paediatric surgery </a> </li>
+   <li><a href = "#"> Plastic surgery </a> </li>
+   <li><a href = "#"> Trauma & Orthopaedic surgery </a> </li>
+   <li><a href = "#"> Rural surgery </a> </li>
+   <li><a href = "#"> Urology </a> </li>
+   <li><a href = "#"> Vascular surgery </a> </li>
+   </ul>
+ </li>
+ 
+ 
+ 
+ <li>
+  <a href = "#" class = "the-btn"> Therapy
+   <span class = "fas fa-caret-down nineteenth"></span>
+  </a>
+  <ul class = "the-show">
+  <li><a href = "#"> Acupressure </a> </li>
+  <li><a href = "#"> Acupuncture </a> </li>
+   <li><a href = "#"> Chromo therapy </a> </li>
+   <li><a href = "#"> Electro therapy </a> </li>
+   <li><a href = "#"> Exercise therapy </a> </li>
+   <li><a href = "#"> Magneto therapy </a> </li>
+   <li><a href = "#"> Manipulative therapy </a> </li>
+   <li><a href = "#"> Radio therapy </a> </li>
+   <li><a href = "#"> Zone therapy </a> </li>
+   </ul>
+ </li>
+ 
+ 
+ <li>
+  <a href = "#" class = "yg-btn"> Yogic Science
+   <span class = "fas fa-caret-down twentyeeth"></span>
+  </a>
+  <ul class = "yg-show">
+  <li><a href = "#"> Yoga & physical culture </a> </li>
+  <li><a href = "#"> Yoga Therapy </a> </li>
+   </ul>
+ </li>
+ 
+ 
+  <li>
+  <a href = "#" class = "ve-btn"> Veterinary Sciences
+   <span class = "fas fa-caret-down twentyoneth"></span>
+  </a>
+  <ul class = "ve-show">
+    <li><a href = "#"> Animal Breeding </a> </li>
+    <li><a href = "#"> Livestock Product Technology </a> </li>
+	<li><a href = "#"> Livestock Production Management</a> </li>
+    <li><a href = "#"> Veterinary Anatomy </a> </li>
+    <li><a href = "#"> Veterinary Biochemistry  </a> </li>
+    <li><a href = "#"> Veterinary Gynaecology & Obstetrics  </a> </li>
+	<li><a href = "#"> Veterinary Medicine </a> </li>
+	<li><a href = "#"> Veterinary Microbiology  </a> </li>
+	<li><a href = "#"> Veterinary Parasitology  </a> </li>
+	<li><a href = "#"> Veterinary Pathology </a> </li>
+	<li><a href = "#"> Veterinary Physiology  </a> </li>
+	<li><a href = "#"> Veterinary Pharmacology & Toxicology  </a> </li>
+	<li><a href = "#"> Veterinary Public Health & Epidemiology </a> </li>
+	<li><a href = "#"> Veterinary Surgery & Radiology  </a> </li>
+   </ul>
+ </li>
+ 
+
+ </ul>
+</nav>
+
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 ml-3" style="	text-align:justify;padding:20px 30px;">
+<h2>Privacy Policy </h2>
+<h5>Your privacy is important to us</h5>
+<p>
+It is My Medical Times's policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to 
+<a href = "www.mymedicaltimes.com">www.mymedicaltimes.com<a>. We respect your privacy and are committed to protecting personally identifiable information you may 
+provide us through the Website. We have adopted this privacy policy ("Privacy Policy") to explain what information may be collected on our Website, how we use this information, and 
+under what circumstances we may disclose the information to third parties. <br>This Privacy Policy applies only to information we collect through the Website and does not apply to our 
+collection of information from other sources.This Privacy Policy, together with the Terms of service posted on our Website, set forth the general rules and policies governing 
+your use of our Website. Depending on your activities when visiting our Website, you may be required to agree to additional terms of service. 
+</p>
+
+<h5>Website Visitors</h5>
+<p>
+Like most website operators, My Medical Times collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the 
+browser type, language preference, referring site, and the date and time of each visitor request. My Medical Times's purpose in collecting non-personally identifying information 
+is to better understand how My Medical Times's visitors use its website. From time to time, My Medical Times may release non-personally-identifying information in the aggregate, 
+e.g., by publishing a report on trends in the usage of its website.<br>
+My Medical Times also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on  <a href =
+"https://www.mymedicaltimes.com"> https://www.mymedicaltimes.com</a> blog posts. My Medical Times only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses 
+personally-identifying information as described below.
+</p>
+<h5>Gathering of Personally-Identifying Information</h5>
+<p>
+Certain visitors to My Medical Times's websites choose to interact with My Medical Times in ways that require My Medical Times to gather personally-identifying information. 
+The amount and type of information that My Medical Times gathers depends on the nature of the interaction. For example, we ask visitors who sign up for a blog at 
+https://www.mymedicaltimes.com to provide a username and email address.
+</p>
+<h5>Security</h5>
+<p>
+The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% 
+secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.
+</p>
+<h5>Advertisements</h5>
+<p>
+Ads appearing on our website may be delivered to users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time 
+they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver 
+targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by My Medical Times and does not cover the use of cookies 
+by any advertisers.
+</p>
+<h5>Links To External Sites</h5>
+<p>
+Our Service may contain links to external sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. 
+We strongly advise you to review the Privacy Policy and terms of service of every site you visit.<br>
+We have no control over, and assume no responsibility for the content, privacy policies or practices of any third party sites, products or services.
+</p>
+<h5>My Medical Times uses Google AdWords for remarketing</h5>
+<p>
+My Medical Times uses the remarketing services to advertise on third party websites (including Google) to previous visitors to our site. It could mean that we advertise to 
+previous visitors who haven't completed a task on our site, for example using the contact form to make an enquiry. This could be in the form of an advertisement on the Google 
+search results page, or a site in the Google Display Network. Third-party vendors, including Google, use cookies to serve ads based on someone's past visits. Of course, any data 
+collected will be used in accordance with our own privacy policy and Google's privacy policy.<br>
+You can set preferences for how Google advertises to you using the Google Ad Preferences page, and if you want to you can opt out of interest-based advertising entirely by cookie 
+settings or permanently using a browser plugin.
+</p>
+<h5>Protection of Certain Personally-Identifying Information</h5>
+<p>
+My Medical Times discloses potentially personally-identifying and personally-identifying information only to those of its employees, contractors and affiliated organizations that 
+(i) need to know that information in order to process it on My Medical Times's behalf or to provide services available at My Medical Times's website, and (ii) that have agreed not 
+to disclose it to others. Some of those employees, contractors and affiliated organizations may be located outside of your home country; by using My Medical Times's website, you 
+consent to the transfer of such information to them. My Medical Times will not rent or sell potentially personally-identifying and personally-identifying information to anyone. 
+Other than to its employees, contractors and affiliated organizations, as described above, My Medical Times discloses potentially personally-identifying and personally-identifying 
+information only in response to a subpoena, court order or other governmental request, or when My Medical Times believes in good faith that disclosure is reasonably necessary to 
+protect the property or rights of My Medical Times, third parties or the public at large.<br>
+If you are a registered user of https://www.mymedicaltimes.com and have supplied your email address, My Medical Times may occasionally send you an email to tell you about new 
+features, solicit your feedback, or just keep you up to date with what's going on with My Medical Times and our products. We primarily use our blog to communicate this type of 
+information, so we expect to keep this type of email to a minimum. If you send us a request (for example via a support email or via one of our feedback mechanisms), we reserve 
+the right to publish it in order to help us clarify or respond to your request or to help us support other users. My Medical Times takes all measures reasonably necessary to 
+protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying information.
+</p>
+<h5>Aggregated Statistics</h5>
+<p>
+My Medical Times may collect statistics about the behavior of visitors to its website. My Medical Times may display this information publicly or provide it to others. 
+However, My Medical Times does not disclose your personally-identifying information.
+</p>
+<h5>Affiliate Disclosure</h5>
+<p>
+This site uses affiliate links and does earn a commission from certain links. This does not affect your purchases or the price you may pay.
+</p>
+<h5>Cookies</h5>
+<p>
+To enrich and perfect your online experience, My Medical Times uses "Cookies", similar technologies and services provided by others to display personalized content, appropriate 
+advertising and store your preferences on your computer.<br>
+A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. My Medical 
+Times uses cookies to help My Medical Times identify and track visitors, their usage of https://www.mymedicaltimes.com, and their website access preferences. My Medical Times 
+visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using My Medical Times's websites, with the drawback that 
+certain features of My Medical Times's websites may not function properly without the aid of cookies.<br>
+By continuing to navigate our website without changing your cookie settings, you hereby acknowledge and agree to My Medical Times's use of cookies.
+</p>
+<h5>Business Transfers</h5>
+<p>
+If My Medical Times, or substantially all of its assets, were acquired, or in the unlikely event that My Medical Times goes out of business or enters bankruptcy, user 
+information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of My Medical Times 
+may continue to use your personal information as set forth in this policy.
+</p>
+<h5>Privacy Policy Changes</h5>
+<p>
+Although most changes are likely to be minor, My Medical Times may change its Privacy Policy from time to time, and in My Medical Times's sole discretion. My Medical Times 
+encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute 
+your acceptance of such change.
+</p>
+</div>
+
+
+
+</div>
+
+
+<script>
+$('.feat-btn').click(function(){
+ $('nav ul .feat-show').toggleClass("show");
+ $('nav ul .first').toggleClass("rotate"); 
+  });
+
+
+
+$('.an-btn').click(function(){
+ $('nav ul .an-show').toggleClass("show2");
+ $('nav ul .third').toggleClass("rotate");
+  });
+
+$('.ant-btn').click(function(){
+ $('nav ul .ant-show').toggleClass("show3");
+ $('nav ul .fourth').toggleClass("rotate");
+  });
+
+ $('.bi-btn').click(function(){
+ $('nav ul .bi-show').toggleClass("show4");
+ $('nav ul .fourthh').toggleClass("rotate");
+  });
+
+ $('.bio-btn').click(function(){
+ $('nav ul .bio-show').toggleClass("show5");
+ $('nav ul .sixth').toggleClass("rotate");
+  });
+
+ $('.bip-btn').click(function(){
+ $('nav ul .bip-show').toggleClass("show6");
+ $('nav ul .fifth').toggleClass("rotate");
+  });
+
+ $('.co-btn').click(function(){
+ $('nav ul .co-show').toggleClass("show7");
+ $('nav ul .sixthh').toggleClass("rotate");
+  });
+
+ $('.den-btn').click(function(){
+ $('nav ul .den-show').toggleClass("show8");
+ $('nav ul .seventh').toggleClass("rotate");
+  });
+
+ $('.med-btn').click(function(){
+ $('nav ul .med-show').toggleClass("show9");
+ $('nav ul .eigth').toggleClass("rotate");
+  });
+
+ $('.mib-btn').click(function(){
+ $('nav ul .mib-show').toggleClass("show10");
+ $('nav ul .nineth').toggleClass("rotate");
+  });
+
+ $('.mir-btn').click(function(){
+ $('nav ul .mir-show').toggleClass("show11");
+ $('nav ul .tenth').toggleClass("rotate");
+  });
+
+  $('.oc-btn').click(function(){
+ $('nav ul .oc-show').toggleClass("show12");
+ $('nav ul .eleventh').toggleClass("rotate");
+  });
+
+  $('.pat-btn').click(function(){
+ $('nav ul .pat-show').toggleClass("show13");
+ $('nav ul .twelth').toggleClass("rotate");
+  });
+
+  $('.pha-btn').click(function(){
+ $('nav ul .pha-show').toggleClass("show14");
+ $('nav ul .thirteenth').toggleClass("rotate");
+  });
+
+  $('.phm-btn').click(function(){
+ $('nav ul .phm-show').toggleClass("show15");
+ $('nav ul .fourteenth').toggleClass("rotate");
+  });
+
+  $('.phs-btn').click(function(){
+ $('nav ul .phs-show').toggleClass("show16");
+ $('nav ul .fifteenth').toggleClass("rotate");
+  });
+
+  $('.phsi-btn').click(function(){
+ $('nav ul .phsi-show').toggleClass("show17");
+ $('nav ul .sixteenth').toggleClass("rotate");
+  });
+
+  $('.psy-btn').click(function(){
+ $('nav ul .psy-show').toggleClass("show18");
+ $('nav ul .seventeenth').toggleClass("rotate");
+  });
+
+  $('.sur-btn').click(function(){
+ $('nav ul .sur-show').toggleClass("show19");
+ $('nav ul .eighteenth').toggleClass("rotate");
+  });
+
+  $('.the-btn').click(function(){
+ $('nav ul .the-show').toggleClass("show20");
+ $('nav ul .nineteenth').toggleClass("rotate");
+  });
+
+  $('.yg-btn').click(function(){
+ $('nav ul .yg-show').toggleClass("show21");
+ $('nav ul .twentyeeth').toggleClass("rotate");
+  });
+
+  $('.ve-btn').click(function(){
+ $('nav ul .ve-show').toggleClass("show22");
+ $('nav ul .twentyoneth').toggleClass("rotate");
+  });
+  
+  $('nav ul li').click(function(){
+   $(this).addClass("active").siblings().removeClass("active");
+  });
+  
+ </script>
+ 
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <br>
+  <br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+  </body>
+</html>
