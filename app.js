@@ -520,9 +520,9 @@ app.get("/main_disease/viral",function(req, res) {
 
 app.get("/:heading/:subHeading",function(req, res) { ////just for knowing the idea
    var heading=req.params.heading;
-    heading = name.charAt(0).toUpperCase() + name.slice(1);
+    heading = heading.charAt(0).toUpperCase() + heading.slice(1);
    var subHeading=req.params.subHeading;
-    subHeading = name.charAt(0).toUpperCase() + name.slice(1);
+    subHeading = subHeading.charAt(0).toUpperCase() + subHeading.slice(1);
     console.log(heading);
     console.log(subHeading);
    article.find({mainHeading:heading,subHeading:subHeading},function(err, found) {
