@@ -56,7 +56,7 @@ app.use(function(req,res,next)
 });
 
 app.get("/",function(req,res){
-   res.render("login.ejs");
+   res.render("index.ejs");
     
 });
 
