@@ -15,12 +15,12 @@
 </style> -->
 
 <style>
-  .box p {
+  /* .box p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
+} */
 </style>
 
 <div class="col-lg-7 col-md-7 col-sm-9" id="main">
@@ -35,7 +35,7 @@
  <div class="list-wrapper articleHide box" style="min-height: 130vh;text-align: justify;">
   
   <% art.forEach(function(art){ %>
-  <div class="list-item " style = "min-height:200px;border-radius:5px;border:1px solid white; background-color: white;margin-top:15px;padding-left: 3%" class="hov11">
+  <div id="major" class="list-item " style = "min-height:200px;border-radius:5px;border:1px solid white; background-color: white;margin-top:15px;padding-left: 3%" class="hov11">
 		<a href = "/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" target = "_blank" style = "font-size:1.1rem;margin-top: 5%; text-decoration: none;color: primary;text-align:left;">
       <strong style="text-align: left;"><%= art.title %></strong></a><br>
         <%  var today = art.createdAt;var year = today.getFullYear();
