@@ -1,24 +1,29 @@
 <%- include('partials/header.ejs'); -%>
 
 
-<div class="col-lg-7 col-md-7 col-sm-9">
+<div class="col-lg-7 col-md-7 col-sm-9" id="main">
  
- <% art.forEach(function(art){ %> 
- <div class="list-wrapper" style="margin-left: 7%;">
-		
-		<!-- AshtangHridyam Articles below (AshtangHridyam.html)-->
-		
-	<div class="list-item" style = "height: 170px;border-radius:20px;background:rgba(0,180,255,0.4);border:1px solid grey;margin-top:15px" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 25px; margin-left: 2%; margin-top: 2%; text-decoration: none;color: #ffffff">
-			<strong><%= art.title %></strong></a><br><br>
-		<p style = "font-size: 19px; margin-left: 2%;color: rgba(255,255,255,0.7)"><strong><%= art.shortDescription %>...</strong><a href = "/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" class="hov">Read More</a></p>
-		<h4 style = "margin-left: 2%;color:rgba(255,255,255);margin-top:2%"><strong>By : <%= art.author%></strong></h4>
-	</div>
-	
-	</div>
- 
-		<% }) %>
-		
+  <% art.forEach(function(art){ %>
+  <div class="list-item "
+    style="min-height:200px;border-radius:5px;border:1px solid white; background-color: white;margin-top:15px;padding-left: 3%"
+    class="hov11">
+    <a href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" target="_blank"
+      style="font-size:1.1rem;margin-top: 5%; text-decoration: none;color: primary;text-align:left;">
+      <strong style="text-align: left;"><%= art.title %></strong></a><br>
+    <%  var today = art.createdAt;var year = today.getFullYear();
+  var mes = today.getMonth()+1;
+  var dia = today.getDate();
+  var fecha =dia+"-"+mes+"-"+year; %>
+    <h4 style="font-size:12px;color: grey;margin-bottom:2%;position: relative;text-align: left;"><strong>last
+        updated:<%= fecha %></strong>
+    </h4>
+    <p style="font-size: 16px; color: rgba(0,0,0,0.7);margin-bottom:2%;"><%= art.shortDescription %>...<a
+        href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" class="hov">Read More</a></p>
+    <h4 style="font-size:14px;color: primary;margin-bottom:2%;position: relative;"><strong>By : <%= art.author%></strong>
+    </h4>
+  </div>
+  
+  <% }) %>
 	
 </div>
 

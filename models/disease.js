@@ -4,16 +4,26 @@ var diseaseSchema=new mongoose.Schema({
     title:String,
     shortDescription:String,
     description:String,
-    mainHeading:String,
-    subHeading:String,
-    userId:String,
+    mainHeading:{
+        type:String,
+        default:"news"
+    },
+    subHeading:{
+        type:String,
+        default:"news"
+    },
+    userId:{
+        type:String,
+        default:"admin"
+    },
     username:String,
     createdAt:{
         type:Date,
         default:Date.now
     },
     disease:{
-        type:String
+        type:String,
+        default:null
     },
     author:String
 });

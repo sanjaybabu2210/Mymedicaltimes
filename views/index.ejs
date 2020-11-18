@@ -14,83 +14,50 @@
   }
 </style> -->
 
-
+<style>
+  .box p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</style>
 
 <div class="col-lg-7 col-md-7 col-sm-9" id="main">
 	
- <div class="btn-group" role="group" aria-label="Basic example" style="border-radius:20px;margin:5% 20%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+ <!-- <div class="btn-group" role="group" aria-label="Basic example" style="border-radius:20px;margin:5% 20%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <button type="button" class="btn btn-info"><a href="/home" style="text-decoration:None;color:#ffffff">New Articles</a></button>
   <button type="button" class="btn btn-light"><a href="/home/disease" style="text-decoration:None;color:#000000">New Disease Articles</a></button>
      <button type="button" class="btn btn-light"><a href="/home/medicalNews" style="text-decoration:None;color:#000000">Medical News</a></button>
   
-</div>
+</div> -->
 
- <div class="list-wrapper articleHide">
+ <div class="list-wrapper articleHide box" style="min-height: 180vh;text-align: justify;">
   
   <% art.forEach(function(art){ %>
-  <div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong><%= art.title %></strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)"><%= art.shortDescription %>...<a href = "/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By : <%= art.author%></strong></h4>
+  <div class="list-item " style = "min-height:200px;border-radius:5px;border:1px solid white; background-color: white;margin-top:15px;padding-left: 3%" class="hov11">
+		<a href = "/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" target = "_blank" style = "font-size:1.1rem;margin-top: 5%; text-decoration: none;color: primary;text-align:left;">
+      <strong style="text-align: left;"><%= art.title %></strong></a><br>
+        <%  var today = art.createdAt;var year = today.getFullYear();
+var mes = today.getMonth()+1;
+var dia = today.getDate();
+var fecha =dia+"-"+mes+"-"+year; %>
+          <h4 style="font-size:12px;color: grey;margin-bottom:2%;position: relative;text-align: left;"><strong>last updated:<%= fecha %></strong>
+          </h4>
+		<p style = "font-size: 16px; color: rgba(0,0,0,0.7);margin-bottom:2%;"><%= art.shortDescription %>...<a href = "/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" class="hov">Read More</a></p>
+		<h4 style = "font-size:14px;color: primary;margin-bottom:2%;position: relative;"><strong>By : <%= art.author%></strong></h4>
 	</div>
 	
 	<% }) %>
 	
-	 <div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:white;margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div>
+
 	
-	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:#F9F9F9;margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div>
-	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div>
-	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div>
-	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div>
-	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div>
-	<div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div><div class="list-item " style = "height: 170px 200px;border-radius:20px;border:1px solid white; background:rgb(245,245,245);margin-top:15px;padding-left: 3%" class="hov11">
-		<a href = "AnishaChauhan/ashtanga hridayam (1).html" target = "_blank" style = "font-size: 12px;margin-top: 5%; text-decoration: none;color: primary">
-			<strong>Title of the disease Article</strong></a><br>
-		<p style = "font-size: 14px; color: rgba(0,0,0,0.7)">Short description for testing abcoJOJ JNKJ...<a href = "#" class="hov">Read More</a></p>
-		<h4 style = "font-size:12px;color: primary;margin-top:2%"><strong>By :Vaibhav Test</strong></h4>
-	</div>
  
 	
-	<div id="pagination-container"></div>
+	
 		
 			</div>
-	
+  <div id="pagination-container"></div>
 </div>
 
 <script type="text/javascript">
@@ -261,15 +228,15 @@ $('.ant-btn').click(function(){
 
   function closeNav() {
     document.getElementById("sidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+    // document.getElementById("main").style.marginLeft = "0";
     document.getElementById("sidenav").style.left = "-30px";
     $('#filter').show();
     $('button a').css({ "font-size": "12px" });
     $('#main').css({ "filter": "blur(0px)" });
 
 
-    document.body.style.backgroundColor = "white";
-    $('#main').css({ "margin-left": "10%" });
+    document.body.style.backgroundColor = "whitesmoke";
+    // $('#main').css({ "margin-left": "10%" });
 
   }
 

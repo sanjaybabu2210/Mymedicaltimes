@@ -22,7 +22,7 @@
 
         body,html {
             overflow-x: hidden;
-            background: #D7EFEE;
+            background: #f0f0f0;
         }
 
         * {
@@ -62,12 +62,16 @@
             /* background: #1b1b1b; */
             height: 80%;
             width: 100%;
+                                    text-decoration: none;
+
             list-style: none;
 
         }
 
         nav ul li {
             line-height: 50px;
+                                    text-decoration: none;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         }
@@ -77,14 +81,18 @@
             color: white;
             text-decoration: none;
             font-size: 18px;
-            padding-left: 60px;
+            padding-left: 30px;
             font-weight: 500;
             display: block;
+                                    text-decoration: none;
+
             width: 100%;
             border-left: 3px solid transparent;
         }
 
         nav ul li.active a {
+                                    text-decoration: none;
+
             color: cyan;
             background: #1e1e1e;
             border-left-color: cyan;
@@ -185,26 +193,35 @@
         }
 
         nav ul ul li {
+                        text-decoration: none;
+            
             line-height: 42px;
             border-bottom: none;
         }
 
         nav ul ul li a {
+                        text-decoration: none;
+
             font-size: 17px;
             color: #e6e6e6;
-            padding-left: 80px;
+            padding-left: 30px;
+            text-decoration: none;
         }
 
         nav ul li.active ul li a {
             color: #e6e6e6;
+                        text-decoration: none;
+
             background: #1b1b1b;
             border-left-color: transparent;
 
         }
 
         nav ul ul li a:hover {
+                        text-decoration: none;
+
             color: cyan !important;
-            background: yellow !important;
+            background: #343a40 !important;
         }
 
         nav ul li a span {
@@ -257,7 +274,21 @@
      @media screen and (max-width: 992px) {
 
         nav ul li a {
-            font-size: 15px !important;
+            font-size: large !important;
+        }
+        #userm{
+            font-size: large !important;
+        }
+        #userm:hover{
+            color:cyan;
+        }
+        #logo{
+                float:right;
+                margin: 5px auto;
+        }
+        nav ul li a {
+
+            font-size: 18px !important;
         }
 
 
@@ -268,7 +299,7 @@
             width: 50px;
             text-align: center;
             text-decoration: none;
-            margin: 10px 10px;
+            margin: 10px 5px;
         }
 
         .fa-facebook {
@@ -405,7 +436,9 @@
 
             display: none;
         }
-        
+        .m-view{
+            display: none;
+        }
     }
     .btn-group button a{
                 font-size: 15px !important;
@@ -427,11 +460,19 @@
   overflow-x: hidden;
   padding-top: 20px;
         }
+        .m-view{
+            display: none;
+        }
 #dclose {
 
             display: none;
         }
 
+    }
+    #icon-all{
+        width: 70vw !important;
+        margin: 5px auto;
+        text-align: center;
     }
     .btn-group {
                 position: relative;
@@ -454,6 +495,22 @@
                 overflow-x: hidden;
                 transition: 0.5s;
                 padding-top: 60px;
+            }
+            #logos{
+                font-size: 1rem !important;
+                margin-left: -20% !important;
+            }
+            #l-foot{
+                font-size: 0.9rem !important;
+                font-weight: normal !important;
+            }
+            #email{
+                font-size: 15px;
+                width: 95vw !important;
+            }
+            #f-foot{
+font-size: 0.9rem !important;
+                font-weight: normal !important;
             }
             #main{
                 text-align: center;
@@ -486,8 +543,8 @@
 
             #filter {
                 position: absolute;
-                left: 5px;
-                top: 15%;
+                left: 10px;
+                top: 1%;
 
                 display: inline-block;
                 z-index: 100;
@@ -531,11 +588,11 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:20px;">
-        <a class="navbar-brand" href="/home">MMT</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <a class="navbar-brand" href="/home" id="logo">MMT</a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -543,16 +600,16 @@
                     <a class="nav-link" href="/home" style="padding-left: 15px;">Home <span class="sr-only">(current)</span></a>
                 </li>
 
-                <li class="nav-item dropdown" style="line-height: 40px;margin-top:5px;">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-left: 15px;">
+                <li class="nav-item " style="line-height: 40px;margin-top:5px;">
+                    <a class="nav-link " href="#" id="" role="button"
+                        data-toggle="" aria-haspopup="true" aria-expanded="false" style="padding-left: 15px;">
                         Medical News
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:350px;">
+                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:350px;">
                         <a class="dropdown-item"  style="width:340px;background-color: honeydew;color: black;" href="/home/medicalNews">Latest Medical News</a>
                         <a class="dropdown-item" style="width:340px;background-color: honeydew;color: black;" href="/writemedicalnews">Write Medical News</a>
 
-                    </div>
+                    </div> -->
                 </li>
 
                 <li class="nav-item" style="line-height: 40px;margin-top:5px;">
@@ -570,7 +627,7 @@
             <% if(!currentUser){ %>
             <a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;">Login</a>
             <%} else{ %>
-            <a href="/profilenav" style="color:#ffffff;margin:5px 4%;" > <%= currentUser.username %></a>
+            <a href="/profilenav" style="color:#ffffff;margin-left:20px;margin-right:20px;margin-top:-20px;font-size: 20px;" id="userm"><i class="far fa-users"></i> <%= currentUser.username %></a>
             <a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
 
             <% } %>
@@ -594,23 +651,40 @@
     <div class="row" >
         <div id="filter">
             <button style="width: 50px;height: 50px;border-radius: 50%;background-color:black" onclick="openNav()"><i
-                    class="fas fa-filter" style="color:snow"></i></button>
+                    class="fas fa-bars" style="color:snow"></i></button>
         </div>
 
 
-        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10" id="sidenav" style="overflow-x: hidden;">
+        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10" id="sidenav" style="overflow-x: hidden;max-width: 340px;">
             <a href="javascript:void(0)" class="closebtn" id="dclose" onclick="closeNav()"
                 style="width: 500px;height: 50px;position: absolute;top: -5px;right: 5px;font-size: 50px;color:white;margin-bottom:30px;">&times;</a>
-            <div class="text"> My Medical Times </div>
+            <!-- <div class="text"> My Medical Times </div> -->
+           
             <ul>
                 <!-- --------------------------------newly added--------------------------------------     -->
+                <li class="ant-btn m-view">
+<% if(!currentUser){ %>
+<a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;width:80% ;margin: 10px 10%;">Login</a>
+<%} else{ %>
+<a href="/profilenav" style="color:#ffffff;margin:5px 20%;"> <%= currentUser.username %></a>
+<a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
 
+<% } %>                <li>
+                
+                <li class="ant-btnf m-view" >
+                    <a style="color: white;font-weight: 200;" href="/">Home</a></li>
+                <li>
+                <li class="ant-btnf m-view">
+                    <a style="color: white;font-weight: 200;" href="/maindisease">Disease</a></li>
+                <li>
+                <li class="ant-btnf ">
+                    <a style="color: white;font-weight: 200;" href="/writemedicalnews">Write Article</a></li>
                 <li>
                     <a class="ant-btn"> Anatomy
                         <span class="fas fa-caret-down fourth"></span>
                     </a>
                     <ul class="ant-show">
-                        <li><a href="/anatomy/embryology"> Embryology</a> </li>
+                        <li ><a href="/anatomy/embryology" style="padding-left:-20px;"> Embryology</a> </li>
                         <li><a href="#"> General Anatomy</a> </li>
                         <li> <a href="#"> Head, Neck, and Face </a> </li>
                         <li><a href="#"> Histology</a> </li>

@@ -8,8 +8,8 @@ var User=require("./models/user");
 var intern=require("./models/intern");
 var review=require("./models/review");
 var article=require("./models/article");
-var Disease=require("./models/disease");
-var medicalnews=require("./models/medicalnews");
+// var Disease=require("./models/disease");
+// var medicalnews=require("./models/medicalnews");
 
 
 
@@ -71,11 +71,11 @@ app.get("/home",function(req,res){
     });
 });
 app.get("/home/disease",function(req, res) {
-    Disease.aggregate([{$sort:{createdAt:-1}}],function(err, rev) {
+    article.aggregate([{$sort:{createdAt:-1}}],function(err, rev) {
                 if(err)
                 console.log(err);
                 else{
-                      res.render("landingDisease.ejs",{rev:rev});
+                      res.render("index.ejs",{rev:rev});
                 }
           
         });
@@ -141,7 +141,7 @@ app.get("/writemedicalnews",isLoggedIn,function(req,res){
 
 app.post("/writemedicalnews",function(req,res){
     var news={title:req.body.title,description:req.body.description,author:req.body.author,shortDescription:req.body.shortDescription};
-   medicalnews.create(news,function(err, newss) {
+   article.create(news,function(err, newss) {
        if(err)
        console.log(err);
        else{
@@ -154,7 +154,7 @@ app.post("/writemedicalnews",function(req,res){
 });
 
 app.get("/home/medicalNews",function(req, res) {
-    medicalnews.aggregate([{$sort:{createdAt:-1}}],function(err, md) {
+    article.aggregate([{$sort:{createdAt:-1}}],function(err, md) {
         if(err)
         console.log(err);
         else{
@@ -164,11 +164,11 @@ app.get("/home/medicalNews",function(req, res) {
 });
 
 app.get("/seeMedicalNews/:id",function(req,res){
-    medicalnews.findById(req.params.id,function(err, art) {
+    article.findById(req.params.id,function(err, art) {
         if(err)
         console.log(err);
         else{
-        res.render("seeMedicalNews.ejs",{art:art});     
+        res.render("index.ejs",{art:art});     
         }
     });
      
@@ -188,7 +188,7 @@ app.post("/writearticle",isLoggedIn,function(req,res){
    });
    }
    else{
-       Disease.create(art,function(err, rev) {
+       article.create(art,function(err, rev) {
            if(err)
            console.log(err);
            else{
@@ -225,7 +225,7 @@ app.post("/login",passport.authenticate("local",
 app.get("/logout",function(req,res){
    req.logout();
    req.flash("success","Successfully logged you out");
-   res.redirect("/login");
+   res.redirect("/");
 });
 
  
@@ -429,7 +429,7 @@ app.get("/main_disease/:heading/:subHeading",function(req, res) {
     
      var heading=req.params.heading;
    var subHeading=req.params.subHeading;
-   Disease.find({mainHeading:heading,subHeading:subHeading},function(err, aa) {
+   article.find({mainHeading:heading,subHeading:subHeading},function(err, aa) {
        if(err)
        console.log(err);
         else{
