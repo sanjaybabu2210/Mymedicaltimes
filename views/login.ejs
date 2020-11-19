@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title> MMT</title>
-    <meta name="author" content="Codeconvey" />
-    
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</link>
-    <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+<%- include('partials/header.ejs'); -%>
+
     <style>
       
 
@@ -18,7 +7,7 @@
     
     body{
         font-family: 'Arial', sans-serif;
-       
+        background-color: white !important;
         background-size: 100%;
         overflow-x:hidden;
         
@@ -145,7 +134,9 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
             .body{
                 overflow-x: hidden !important;
             }
-
+            .Scriptcontent{
+                min-width: 60vw;
+            }
 .codehim-form{
         margin-bottom: 10vh !important;
         text-align: center;
@@ -158,7 +149,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 
     @media only screen 
   and (min-width: 751px) 
-  and (max-width: 824px) 
+  and (max-width: 920px) 
  {
     .doc-png{
             display: none !important ;     
@@ -212,12 +203,21 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 
 }
 
+
+@media screen and (min-width: 800px) {
+    .sidebar{
+        display: none; 
+    }
+    #mj{
+        margin-left:-20% !important;
+    }
+    
+
+}
+
     </style>
 	
-</head>
 
-<body>
-    
       <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -253,10 +253,10 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     </div>
 </header>
 
-    <div class=" row" >
+    <div class=" row mx-auto" style="justify-content: space-around;" id="mj">
         <div class="col-lg-1"></div>
           <div class="col-rt-6 col-lg-4 col-md-4 col-sm-6" style="margin-top:150px;z-index: 50;">
-              <div class="Scriptcontent" >
+              <div class="Scriptcontent mx-auto" >
               
     <form class="codehim-form" action="/login" method="POST" style="z-index: 50;">
         <div class="form-title">
@@ -268,7 +268,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
             
     
     <label for="email"><i class="fa fa-user" aria-hidden="true"></i> Username:</label>
-        <input type="text" id="email" class="cm-input" placeholder="Enter your username" required name="username">
+        <input type="text" id="email" class="cm-input" placeholder="Enter your username" required name="username" style="max-width: 100%;">
         
         <label for="pass"><i class="fa fa-lock"></i> Password:</label>
         <input id="pass" type="password" class="cm-input" placeholder="Enter your password" required name="password">
@@ -292,6 +292,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     
         
     </script>
+<%- include('partials/footertemplate.ejs'); -%>
 
 	</body>
 	

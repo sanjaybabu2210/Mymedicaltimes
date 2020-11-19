@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title> MMT</title>
-    <meta name="author" content="Codeconvey" />
-    
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</link>
-    <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+<%- include('partials/header.ejs'); -%>
+
     <style>
       
 
@@ -18,7 +7,7 @@
     
     body{
         font-family: 'Arial', sans-serif;
-       
+        background-color: white !important;
         background-size: 100%;
         
         
@@ -64,7 +53,11 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         
     }
     
-    
+    @media only screen and(min-width: 800px) {
+        #sidenav{
+            display: none !important;
+        }
+    }
     /* Login Button Design */
     
     .btn-login{
@@ -113,6 +106,8 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         left: -45px;
         
     }
+
+    
      @media only screen and (min-width: 980px) and (max-width: 1200px){
 
              .doc-png img{
@@ -135,7 +130,14 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
           
 
     }
-
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2){
+      #sidenav{
+          display: none !important;
+      }
+  }
     @media only screen and (min-width: 1200px){
             .doc-png img{
                 width:800px;height:750px;
@@ -146,6 +148,9 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
             }
             .c1{
                 margin-left:155px;
+            }
+            #sidenav{
+                display: none !important;
             }
 .codehim-form{
         margin-bottom: 10vh !important;
@@ -170,6 +175,9 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         margin: 5vh auto;
         width: 80%;
         justify-content: space-around !important;
+}
+#rj{
+    min-width: 80vw !important;
 }
 
     }
@@ -271,7 +279,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     </div>
 </header>
 
-    <div class=" row" >
+    <div class=" row"  id="rj">
         <div class="col-lg-1"></div>
           <div class="col-rt-6 col-lg-4 col-sm-6" style="margin-top:150px;z-index: 50;">
               <div class="Scriptcontent">
@@ -291,7 +299,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         <input type="text" id="Uname" class="cm-input" placeholder="Enter your Username" required name="username">
         
     <label for="email"> Email:</label>
-        <input type="email" id="email" class="cm-input" placeholder="Enter your email adress" required name="email">
+        <input type="email" id="email" class="cm-input" placeholder="Enter your email adress" required name="email" style="max-width: 100%;">
         
         <label for="pass">Password:</label>
         <input id="pass" type="password" class="cm-input" placeholder="Enter your password" required name="password">
@@ -320,6 +328,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     
         
     </script>
+<%- include('partials/footertemplate.ejs'); -%>
 
 	</body>
 	

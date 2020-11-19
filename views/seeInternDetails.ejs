@@ -1,19 +1,5 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<script src = "https://code.jquery.com/jquery-3.4.1.js"></script>
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- Bootstrap CSS -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>My Medical Times</title>
+<%- include('partials/header.ejs'); -%>
 
     <style>
     	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -21,23 +7,14 @@
  margin: 0;
  padding:0; 
  box-sizing: border-box;
- overflow-x: hidden;
  font-family: 'Poppins', sans-serif;	
 	
 }	
 body{
-    background-color: #ffe9ec
+    background-color: #ffe9ec;
+    min-height: 140vh;
 }
-.sidebar{
-	position: scroll;
-	width: 350px;
-	left: 0;
-	background: #1b1b1b;
-	height: 100%;
-	margin: 0px;
 
-
-}
 .sidebar .text{
 	color: white;
 	font-size: 25px;
@@ -48,13 +25,7 @@ body{
 	letter-spacing: 1px;
 	margin: 0px
 }
- nav ul{
-	background : #1b1b1b;
-	height: 100%;
-	width: 100%;
-	list-style: none;
-	
-} 
+
 nav ul li{
 	line-height: 60px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -195,7 +166,7 @@ footer{
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -70%;
+  bottom: -100%;
 }
 .dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
     display: flex;
@@ -212,7 +183,11 @@ footer{
         width: auto;
     }
 }
-
+ @media only screen and(min-width: 800px) {
+        .sidebar{
+            display: none !important;
+        }
+    }
 
 .fa {
   padding: 20px;
@@ -265,7 +240,7 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  width: 20%;
+  width: 15%;
 background:#ffffff;
 }
 
@@ -275,58 +250,19 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background-color: #ffffff;
 }
+@media screen and (min-width: 800px) {
+    .sidebar{
+        display: none; 
+    }
+    
+    
 
+}
     </style>
 
-  </head>
-  <body>
-   
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/home">MMT</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-      </li>
-	  
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Medical News
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/home/medicalNews">Latest Medical News</a>
-          <a class="dropdown-item" href="/writemedicalnews">Write Medical News</a>
-		  
-        </div>
-      </li>
-	 
-	 <li class="nav-item">
-        <a class="nav-link" href="/maindisease">Disease</a>
-      </li>
-
-	  
-    </ul>
-    <form class="form-inline my-2 my-lg-0 " >
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	  
-    </form>
-	
-	<% if(!currentUser){ %>
-            <a class="btn btn-primary" href="/login" role="button">Login</a>
-            <%} else{ %>
-            <a href="/profilenav"  style="color:#ffffff;margin-right:18px"> <%= currentUser.username %></a>
-            <a class="btn btn-info" href="/logout" role="button">Logout</a>
-            
-            <% } %>
-	
-  </div>
-</nav>
 
   <% if(error.length>0){%>
 <div class="alert alert-danger container" style="margin-top:0px;"><%=error%></div>
@@ -334,26 +270,36 @@ tr:nth-child(odd) {
 <div class="alert alert-success container" style="margin-top:0px;"><%=success%></div>
 <% } %> 
 
-<h2 style="text-align:center;margin-top:2%"><b>Applied Intern Details</b></h2>
+<h2 style="text-align:center;margin-top:2%;margin-left: 5%;" ><b>Applied Intern Details</b></h2>
 
-<table style="margin:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:2%;margin-bottom:15%;overflow: auto;display:inline-block;background-color: transparent;">
+<table style="margin:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:2%;margin-bottom:45%;overflow: auto;display:inline-block;background-color: transparent;">
   <tr>
     <th>Email</th>
     <th>Full Name</th>
     <th>College</th>
     <th>Question</th>
+        <th>View CV</th>
+    <th>Delete</th>
+
   </tr>
    <% use.forEach(function(u){ %>
   <tr>
     <td><%= u.email %> </td>
-    <td><%= u.name %> <button class="btn btn-info btn-sm">See CV</button></td>
+    <td><%= u.name %> </td>
     <td><%= u.college %>  </td>
     <td><%= u.question %> </td>
+    <td><button class="btn btn-info btn-sm">See CV</button></td>
+    <td><button class="btn btn-danger btn-sm">Delete</button> </td>
+
   </tr>
   <% }) %>
   
 </table>
 
 
-
+<div style="margin-top:20%;">
 <%- include('partials/footertemplate.ejs'); -%>
+
+</div>
+  </body>
+  </html>

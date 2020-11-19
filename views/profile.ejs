@@ -1,19 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<script src = "https://code.jquery.com/jquery-3.4.1.js"></script>
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- Bootstrap CSS -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>My Medical Times</title>
+<%- include('partials/header.ejs'); -%>
 
     <style>
     	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -25,7 +10,7 @@
 	
 }	
 body{
-    background: rgb(173,216,230);
+    background: whitesmoke;
 
 }
 .sidebar{
@@ -38,6 +23,9 @@ body{
 
 
 }
+#div{
+  margin-top:3.5%;
+}
 .sidebar .text{
 	color: white;
 	font-size: 25px;
@@ -49,7 +37,7 @@ body{
 	margin: 0px
 }
  nav ul{
-	background : #1b1b1b;
+	/* background : #1b1b1b; */
 	height: 100%;
 	width: 100%;
 	list-style: none;
@@ -220,6 +208,14 @@ footer{
     .dropdown-menu .dropdown-submenu{
         width: auto;
     }
+    #div{
+      margin-top:43.5%;
+    }
+    /* #email{
+    font-size:2.4vw !important;
+
+} */
+
 }
 
 
@@ -278,12 +274,12 @@ footer{
 }
 
 .flip-card-front {
-  background-color: #f1f1f1;
+  background-color: rgb(173,216,230);
   color: black;
 }
 
 .flip-card-back {
-  background: rgb(34,193,195);
+  background: rgb(173,216,230);
 background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(115,191,140,1) 100%, rgba(253,187,45,1) 100%);
   color: white;
   transform: rotateY(180deg);
@@ -295,17 +291,14 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(115,191,140,1) 100
  opacity:0.6;
 }
 
-#email{
-    font-size:2vw;
 
-}
 
 @media screen and (min-width: 990px){
-   #email{
-       font-size:1vw !important;
+   /* #email{
+       font-size:1.5vw !important;
 
 
-   }
+   } */
    
 }
 
@@ -315,58 +308,6 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(115,191,140,1) 100
   <body>
    
    
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/home">MMT</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-	  
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Medical News
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          
-          <a class="dropdown-item" href="#">Something else here</a>
-		  
-        </div>
-      </li>
-	 
-	 <li class="nav-item">
-        <a class="nav-link" href="#">Disease</a>
-      </li>
-	  
-	 
-	  
-	  
-
-	  
-    </ul>
-    <form class="form-inline my-2 my-lg-0 col-lg-3">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	  
-    </form>
-	
-	<% if(!currentUser){ %>
-            <a class="btn btn-primary" href="/login" role="button">Login</a>
-            <%} else{ %>
-            <a href="/profilenav"  style="color:#ffffff;margin-right:18px"><%= currentUser.username %></a>
-            <a class="btn btn-info" href="/logout" role="button">Logout</a>
-            
-            <% } %>
-	
-  </div>
-</nav>
 
 <% if(error.length>0){%>
 <div class="alert alert-danger container" style="margin-top:0px;"><%=error%></div>
@@ -381,12 +322,12 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(115,191,140,1) 100
       <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" style="width:60%;height:250px;">
       <hr style="width:80%;margin-left:10%;background:#000000">
             <h2 style="margin-top:10px"><b><%= foundUser.fullName %></b></h2>
-            <h3 style="margin-top:10px" id="email"><%= foundUser.email %></h3>
+            <h3 style="margin-top:10px;font-size: 0.8rem;"><%= foundUser.email %></h3>
             <p style="opacity:0.8;font-size:20px"><%= foundUser.college %></p>
             <h4 style="color:#ff1a1a;margin-leftt:50%;text-decoration:underline;opacity:0.8"><strong>Edit Profile</strong></h4>
         
     </div>
-    <div class="flip-card-back" style="height:550px;">
+    <div class="flip-card-back" style="height:550px;margin-bottom: 10%;" >
        <h1 style="color:#000000;margin-top:10px">Edit Profile</h1>
             <form action="/profilenav/update?_method=PUT" method="POST">
                 <div class="form-group" style="color:#000000;margin-top:15px">Full Name<input type="text" placeholder="fullName" name="fullName" required class="form-control" style="margin-top:5px;margin-left:27px;width:80%;" value="<%= foundUser.fullName %>"></div>
@@ -532,8 +473,12 @@ $('.ant-btn').click(function(){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <br>
   <br>
-
+<br>
+<br>
+<div id="div" >
 <%- include('partials/footertemplate.ejs'); -%>
+
+</div>
 
   </body>
 </html>
