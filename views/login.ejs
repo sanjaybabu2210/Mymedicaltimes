@@ -30,7 +30,7 @@
         box-sizing: border-box;
         padding: 10px;
         width: 100%; 
-        margin-top:2px;
+        margin-top:-40px;
         margin-bottom:20px;
         border-radius: 20px;
         border: 1px solid #ccc;
@@ -96,7 +96,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         color: #fff;
         width: 90px;
         height: 90px;
-        line-height: 90px;
+        line-height: 40px;
         text-align: center;
         border-radius: 45px;
         top: -60px;
@@ -143,6 +143,9 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         margin: 5vh auto;
         width: 80%;
         justify-content: space-around !important;
+}
+footer{
+    width: 104vw !important;
 }
 
     }
@@ -267,15 +270,18 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
             </div>
             
     
-    <label for="email"><i class="fa fa-user" aria-hidden="true"></i> Username:</label>
+    <label for="email"><i class="fa fa-user" aria-hidden="true" style="margin-bottom:15%;margin-left: -40%;"></i> Username</label>
         <input type="text" id="email" class="cm-input" placeholder="Enter your username" required name="username" style="max-width: 100%;">
         
-        <label for="pass"><i class="fa fa-lock"></i> Password:</label>
+        <div style="margin-top: -8%;">
+
+        
+        <label for="pass"><i class="fa fa-lock" style="margin-bottom:15%; margin-left: -40%;"></i> Password</label>
         <input id="pass" type="password" class="cm-input" placeholder="Enter your password" required name="password">
         <button type="submit" class="btn-login  gr-bg" >Login</button>
         
         <a href="/signup" class="cl" style=" text-align: center;">Sign Up</a>
-    
+    </div>
     </form>
     		
     		</div>
