@@ -84,6 +84,9 @@ app.get("/home/disease",function(req, res) {
 app.get("/privacy-policy",function(req,res){
    res.render("privacy_policy.ejs");
 });
+app.get("/cookie-policy",function(req,res){
+   res.render("cookie_policy.ejs");
+});
 
 app.get("/applyintern",function(req,res){
    res.render("applyintern.ejs");
