@@ -1,16 +1,100 @@
 var express=require("express");
-var app=express=express();
+var app =express();
 var mongoose=require("mongoose");
 var bodyParser=require("body-parser");
 var flash=require("connect-flash");
 app.locals.moment=require("moment");
 var User=require("./models/user");
+var path = require('path');
 var intern=require("./models/intern");
 var review=require("./models/review");
 var article=require("./models/article");
+var Application=require("./models/application");
+
 // var Disease=require("./models/disease");
 // var medicalnews=require("./models/medicalnews");
 
+
+const multer = require('multer');
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)) //Appending extension
+  }
+})
+
+var upload = multer({ storage: storage });
+
+// destination: function(req, file, callback) {
+//     callback(null, './public/audio');
+//   },
+//   filename: function(req, file, callback) {
+//     console.log(file);
+//     if(file.originalname.length>6)
+//       callback(null, file.fieldname + '-' + Date.now() + file.originalname.substr(file.originalname.length-6,file.originalname.length));
+//     else
+//       callback(null, file.fieldname + '-' + Date.now() + file.originalname);
+
+//   }
+// });
+
+// const upload = multer({ storage: storage });
+
+app.use(express.static('public'));
+
+//   const fileName = req.body.title;
+
+
+//   saveAudio(fileName,audioFile.filename,audioGraphic.filename,req.body.artist,function (error,success) {
+//     req.flash('success','File Uploaded Successfully')
+
+//     res.redirect('/')
+//   });
+
+
+app.post('/application/:id', upload.fields([{
+  name: 'photo', maxCount: 1
+}, {
+  name: 'resume', maxCount: 1
+}]) ,(req, res) => {
+
+  const photo1 = req.files.photo[0];
+  const resume1 = req.files.resume[0];
+
+    var photo = photo1.filename
+	var email = req.body.email;
+	var fullName = req.body.fullname;
+	var country = req.body.country;
+    var degree = req.body.degree;
+    	var pcode = req.body.pcode;
+
+        	var resume = resume1.filename;
+
+            	var sample = req.body.sample;
+
+                    var hearfrom = req.body.hearfrom;
+                    var userid = req.params.id;
+
+
+	
+	 var newapp = {photo:photo,email:email,fullname:fullName,country:country,degree:degree,pcode:pcode,resume:resume,sample:sample,hearfrom:hearfrom,userid : userid }
+
+	//create a new campground and save to db
+					Application.create(newapp, function(err,newlyCreated){
+						if(err){
+                            // req.flash('error', err.message);
+                            console.log(err);
+							return res.redirect('back');
+						}else{
+                            console.log(newlyCreated);
+							res.redirect("/");
+						}
+					});
+		
+		
+	});
 
 
 //mongoose.connect("mongodb://localhost/MMT_v8",{useNewUrlParser: true});
@@ -45,6 +129,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(flash());
 mongoose.set('useCreateIndex', true);
+// app.use(express.static(path.join(__dirname, 'public/')));
 
 app.use(function(req,res,next)
 //this will pass status of user as log in or log out to every page.
@@ -214,15 +299,34 @@ app.get("/login",function(req, res) {
     req.flash("error");
     res.render("login.ejs");
 });
+app.get("/application", isLoggedIn, function(req, res) {
+
+    var user = req.user._id;
+    res.render("application.ejs",{userid: user});
+});
+
+
+
+app.get("/seeapplications",function(req, res) {
+     Application.find({},function(err,use){
+        if(err)
+        console.log(use);
+        else{
+            console.log(use);
+        res.render("viewapplication.ejs",{use:use}); 
+        }
+    });
+});
 
 app.post("/login",passport.authenticate("local",
 {
-  successRedirect:"/home",
+  successReturnToOrRedirect:"/",
   failureRedirect:"/login",
   failureFlash:true,
   successFlash:true
 }),function(req, res) {
-   
+       delete req.session.returnTo;
+
 });
 
 app.get("/logout",function(req,res){
@@ -398,6 +502,7 @@ app.get("/removeAccess/:userId",function(req, res) {
     });
 });
 
+
 app.get("/grantNewsAccess/:userId",function(req, res) {
     var userId=req.params.userId;
     User.findById(userId,function(err, foundUser) {
@@ -563,6 +668,9 @@ function isLoggedIn(req,res,next){
         return next();
     }
      req.flash("error","Please login,Don't have an account? Please Sign Up");
+    //  req.session.returnTo = req.originalUrl; 
+     console.log("fadsf");
+    //  console.log(req.session.returnTo);
     res.redirect("/login");
    
 }

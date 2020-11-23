@@ -1,0 +1,578 @@
+<%- include('partials/header.ejs'); -%>
+<!-- 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+<style>
+    .register {
+        background: -webkit-linear-gradient(left, #615F67, #00c6ff);
+        margin-top: -0.4%;
+        min-width: 100vw !important;
+        padding: 3%;
+    }
+
+    .register-left {
+        text-align: center;
+        color: #fff;
+        margin-top: 4%;
+    }
+
+    /*just bg and body style*/
+    .container {
+        background-color: #1E2832;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    #top {
+        margin-top: 20px;
+    }
+
+    .btn-container {
+        background: #fff;
+        border-radius: 5px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .white {
+        color: white;
+    }
+
+    .imgupload {
+        color: #1E2832;
+        padding-top: 40px;
+        font-size: 7em;
+    }
+
+    #namefile {
+        color: black;
+    }
+
+    h4>strong {
+        color: #ff3f3f
+    }
+
+    .btn-primary {
+        border-color: #ff3f3f !important;
+        color: #ffffff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-color: #ff3f3f !important;
+        border-color: #ff3f3f !important;
+    }
+
+    /*these two are set to not display at start*/
+    .imgupload.ok {
+        display: none;
+        color: green;
+    }
+
+    .imgupload.stop {
+        display: none;
+        color: red;
+    }
+
+
+    /*this sets the actual file input to overlay our button*/
+    #fileup {
+        opacity: 0;
+        -moz-opacity: 0;
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+        width: 200px;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 40px;
+        height: 50px;
+    }
+
+    /*switch between input and not active input*/
+    #submitbtn {
+        padding: 5px 50px;
+        display: none;
+    }
+
+    #fakebtn {
+        padding: 5px 40px;
+    }
+
+
+    /*www.emilianocostanzo.com*/
+    #sign {
+        color: #1E2832;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        text-shadow: 0px 0px 0px #1E2832;
+        transition: all.3s;
+    }
+
+    #sign:hover {
+        color: #1E2832;
+        text-shadow: 0px 0px 5px #1E2832;
+    }
+
+    .register-left input {
+        border: none;
+        border-radius: 1.5rem;
+        padding: 2%;
+        width: 60%;
+        background: #f8f9fa;
+        font-weight: bold;
+        color: #383d41;
+        margin-top: 30%;
+        margin-bottom: 3%;
+        cursor: pointer;
+    }
+
+    .register-right {
+        background: #f8f9fa;
+        border-top-left-radius: 10% 50%;
+        border-bottom-left-radius: 10% 50%;
+    }
+
+    .register-left img {
+        margin-top: 15%;
+        margin-bottom: 5%;
+        width: 25%;
+        -webkit-animation: mover 2s infinite alternate;
+        animation: mover 1s infinite alternate;
+    }
+
+    @-webkit-keyframes mover {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes mover {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .register-left p {
+        font-weight: lighter;
+        padding: 12%;
+        margin-top: -9%;
+    }
+
+    .register .register-form {
+        padding: 10%;
+        margin-top: 10%;
+    }
+
+    .btnRegister {
+        float: right;
+        margin-top: 10%;
+        border: none;
+        border-radius: 1.5rem;
+        padding: 2%;
+        background: #0062cc;
+        color: #fff;
+        font-weight: 600;
+        width: 50%;
+        cursor: pointer;
+    }
+
+    .kv-avatar .krajee-default.file-preview-frame,
+    .kv-avatar .krajee-default.file-preview-frame:hover {
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    .kv-avatar {
+        display: inline-block;
+    }
+
+    .kv-avatar .file-input {
+        display: table-cell;
+        width: 213px;
+    }
+
+    .kv-reqd {
+        color: red;
+        font-family: monospace;
+        font-weight: normal;
+    }
+
+    .register .nav-tabs {
+        margin-top: 3%;
+        border: none;
+        background: #0062cc;
+        border-radius: 1.5rem;
+        width: 28%;
+        float: right;
+    }
+
+    .register .nav-tabs .nav-link {
+        padding: 2%;
+        height: 34px;
+        font-weight: 600;
+        color: #fff;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+
+    .register .nav-tabs .nav-link:hover {
+        border: none;
+    }
+
+    .register .nav-tabs .nav-link.active {
+        width: 100px;
+        color: #0062cc;
+        border: 2px solid #0062cc;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+    }
+
+    .register-heading {
+        text-align: center;
+        margin-top: 8%;
+        margin-bottom: -15%;
+        color: #495057;
+    }
+
+    @media screen and (min-width: 800px) {
+        .sidebar {
+            display: none;
+        }
+    }
+
+.avatar-wrapper {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 50px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px -5px black;
+  transition: all .3s ease;
+}
+.avatar-wrapper:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.avatar-wrapper:hover .profile-pic {
+  opacity: .5;
+}
+.avatar-wrapper .profile-pic {
+  height: 100%;
+  width: 100%;
+  transition: all .3s ease;
+}
+.avatar-wrapper .profile-pic:after {
+  font-family: FontAwesome;
+  content: "\f007";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 190px;
+  background: #ecf0f1;
+  color: #34495e;
+  text-align: center;
+}
+.avatar-wrapper .upload-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.avatar-wrapper .upload-button .fa-arrow-circle-up {
+  position: absolute;
+  font-size: 220px;
+  top: -40px;
+  left: -20px;
+  text-align: center;
+  opacity: 0;
+  transition: all .3s ease;
+  color: #34495e;
+}
+.avatar-wrapper .upload-button:hover .fa-arrow-circle-up {
+  opacity: .9;
+}
+
+</style>
+<div class="container register" style="width: 100vw;height: 100%;">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="picc.jpeg" alt="" />
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away becoming a writer</p>
+            <!-- <input type="submit" name="" value="Login" /><br /> -->
+        </div>
+        <div class="col-md-9 register-right">
+            <!-- <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">Employee</a>
+                </li>
+                
+            </ul> -->
+
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Apply as a Employee</h3>
+
+                    <form class="row register-form" action="/application/<%= userid  %>" method="post"
+                        enctype="multipart/form-data">
+                      <div class="col-md-12">
+<div class="avatar-wrapper ">
+    <img class="profile-pic" src="" />
+    <div class="upload-button">
+        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    </div>
+    <input class="file-upload" type="file" accept="image/*" name="photo" />
+</div>
+                      </div>
+  
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name *"  name="fullname" />
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control" name="country">
+                            <option class="hidden" selected disabled>Country
+                            </option>
+                            <option value="india">India</option>
+                            <option value="usa">America</option>
+                            <option value="germany">Germany</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="degree" class="form-control" placeholder="Highest Degree" value="" />
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="email" class="form-control" placeholder="Email Address *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="pcode" minlength="6" maxlength="6" name="txtEmpPhone" class="form-control"
+                            placeholder="Postal Code *" value="" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="file" class="form-control" placeholder="Upload your resume" name="resume" value="resume" />
+                    </div>
+                    <!-- <input type="submit" class="btnRegister" value="Register" /> -->
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea type="text" rows="3" class="form-control" name="sample" placeholder=" samples already published"
+                            value=""></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="hearfrom" placeholder="where you heard about us" value="" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" class="btnRegister ml-4" value="Register" />
+
+                </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<script>
+$(document).ready(function() {
+	
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.profile-pic').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+   
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+    
+    $(".upload-button").on('click', function() {
+       $(".file-upload").click();
+    });
+});
+    $('.feat-btn').click(function () {
+        $('nav ul .feat-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+    });
+
+
+
+    $('.an-btn').click(function () {
+        $('nav ul .an-show').toggleClass("show2");
+        $('nav ul .third').toggleClass("rotate");
+    });
+
+    $('.ant-btn').click(function () {
+        $('nav ul .ant-show').toggleClass("show3");
+        $('nav ul .fourth').toggleClass("rotate");
+    });
+
+    $('.bi-btn').click(function () {
+        $('nav ul .bi-show').toggleClass("show4");
+        $('nav ul .fourthh').toggleClass("rotate");
+    });
+
+    $('.bio-btn').click(function () {
+        $('nav ul .bio-show').toggleClass("show5");
+        $('nav ul .sixth').toggleClass("rotate");
+    });
+
+    $('.bip-btn').click(function () {
+        $('nav ul .bip-show').toggleClass("show6");
+        $('nav ul .fifth').toggleClass("rotate");
+    });
+
+    $('.co-btn').click(function () {
+        $('nav ul .co-show').toggleClass("show7");
+        $('nav ul .sixthh').toggleClass("rotate");
+    });
+
+    $('.den-btn').click(function () {
+        $('nav ul .den-show').toggleClass("show8");
+        $('nav ul .seventh').toggleClass("rotate");
+    });
+
+    $('.med-btn').click(function () {
+        $('nav ul .med-show').toggleClass("show9");
+        $('nav ul .eigth').toggleClass("rotate");
+    });
+
+    $('.mib-btn').click(function () {
+        $('nav ul .mib-show').toggleClass("show10");
+        $('nav ul .nineth').toggleClass("rotate");
+    });
+
+    $('.mir-btn').click(function () {
+        $('nav ul .mir-show').toggleClass("show11");
+        $('nav ul .tenth').toggleClass("rotate");
+    });
+
+    $('.oc-btn').click(function () {
+        $('nav ul .oc-show').toggleClass("show12");
+        $('nav ul .eleventh').toggleClass("rotate");
+    });
+
+    $('.pat-btn').click(function () {
+        $('nav ul .pat-show').toggleClass("show13");
+        $('nav ul .twelth').toggleClass("rotate");
+    });
+
+    $('.pha-btn').click(function () {
+        $('nav ul .pha-show').toggleClass("show14");
+        $('nav ul .thirteenth').toggleClass("rotate");
+    });
+
+    $('.phm-btn').click(function () {
+        $('nav ul .phm-show').toggleClass("show15");
+        $('nav ul .fourteenth').toggleClass("rotate");
+    });
+
+    $('.phs-btn').click(function () {
+        $('nav ul .phs-show').toggleClass("show16");
+        $('nav ul .fifteenth').toggleClass("rotate");
+    });
+
+    $('.phsi-btn').click(function () {
+        $('nav ul .phsi-show').toggleClass("show17");
+        $('nav ul .sixteenth').toggleClass("rotate");
+    });
+
+    $('.psy-btn').click(function () {
+        $('nav ul .psy-show').toggleClass("show18");
+        $('nav ul .seventeenth').toggleClass("rotate");
+    });
+
+    $('.sur-btn').click(function () {
+        $('nav ul .sur-show').toggleClass("show19");
+        $('nav ul .eighteenth').toggleClass("rotate");
+    });
+
+    $('.the-btn').click(function () {
+        $('nav ul .the-show').toggleClass("show20");
+        $('nav ul .nineteenth').toggleClass("rotate");
+    });
+
+    $('.yg-btn').click(function () {
+        $('nav ul .yg-show').toggleClass("show21");
+        $('nav ul .twentyeeth').toggleClass("rotate");
+    });
+
+    $('.ve-btn').click(function () {
+        $('nav ul .ve-show').toggleClass("show22");
+        $('nav ul .twentyoneth').toggleClass("rotate");
+    });
+
+    $('nav ul li').click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+ 
+</script>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<br>
+<br>
+<%- include('partials/footertemplate.ejs'); -%>
+
+
+
+</body>
+
+</html>
