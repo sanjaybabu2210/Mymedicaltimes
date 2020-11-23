@@ -315,13 +315,13 @@
     }
 </style>
 
- <% if(error.length>0){%> <div class="alert alert-danger container" style="margin-top:0px;"><%=error%></div>
-    <% }if(success.length>0){%>
-    <div class="alert alert-success container" style="margin-top:0px;"><%=success%></div>
-    <% } %>
-
-
-    <h2 style="text-align:center;margin-top:2%" id="main"><b>User Details</b></h2>
+<% if(error.length>0){%> <div class="alert alert-danger container" style="margin-top:0px;"><%=error%></div>
+<% }if(success.length>0){%>
+<div class="alert alert-success container" style="margin-top:0px;"><%=success%></div>
+<% } %>
+<br>
+<hr>
+    <h2 style="text-align:center;margin-top:2%;display: block;" class="container" id="main"><b>User Details</b></h2>
 
     <table
         style="margin:5% 7%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);overflow: auto;display:inline-block;background-color: transparent;">
@@ -340,31 +340,43 @@
         </tr>
         <% use.forEach(function(u){ %>
         <tr>
-            <td><img src="images/<%= u.photo %>" /></td>
+            <td><img src="images/<%= u.photo %>" style="width: 100px;height: 100px;" /></td>
             <td><%= u.fullname %></td>
             <td><%= u.email %></td>
                         <td><%= u.country %></td>
                         <td><%= u.pcode %></td>
 
-<td><a href="images/<%= u.resume %>" download class="btn btn-success">Download the pdf</a>
+<td><a href="images/<%= u.resume %>" download class="btn btn-info">Download the pdf</a>
 </td>
 
-            <% if (u.writearticle===true){%>
-            <td><a href="/removeAccess/<%= u.userid %>"><button class="btn btn-danger btn-sm"
-                        style="color:#ffffff;text-decoration:None">Remove Access</button></a></td>
+            <% if (u.access=='0'){%>
+<td><a href="/grantAccess/<%= u._id %>"><button class="btn btn-success btn-sm"
+            style="color:#ffffff;text-decoration:None" >Grant Access</button></a></td>
+        <td><a href="/removeAccess/<%= u._id  %>"><button class="btn btn-danger btn-sm"
+                    style="color:#ffffff;text-decoration:None">Remove Access</button></a></td>
+
+
             <% } else { %>
-            <td><a href="/grantAccess/<%= u.userid %>"><button class="btn btn-success btn-sm"
+
+
+            <% if (u.access=='true'){%>
+            <td><a href="/grantAccess/<%= u._id %>"><button class="btn btn-secondary btn-sm"
+                        style="color:#ffffff;text-decoration:None" disabled>Grant Access</button></a></td>
+            <% } else { %>
+            <td><a href="/grantAccess/<%= u._id  %>"><button class="btn btn-success btn-sm"
                         style="color:#ffffff;text-decoration:None">Grant Access</button></a></td>
             <% } %>
-            <% if (u.writenews===true){%>
-            <td><a href="/removeNewsAccess/<%= u.userid %>"><button class="btn btn-danger btn-sm"
+            <% if (u.access=='true'){%>
+            <td><a href="/removeAccess/<%= u._id  %>"><button class="btn btn-danger btn-sm"
                         style="color:#ffffff;text-decoration:None">Remove Access</button></a></td>
             <% } else { %>
-            <td><a href="/grantNewsAccess/<%= u.userid %>"><button class="btn btn-success btn-sm"
-                        style="color:#ffffff;text-decoration:None">Grant Access</button></a></td>
+            <td><a href="/removeAccess/<%= u._id  %>"><button disabled class="btn btn-secondary btn-sm"
+                        style="color:#ffffff;text-decoration:None" disabled>Remove Access</button></a></td>
             <% } %>
         </tr>
-        <% }) %>
+        <% } %>
+                <% }) %>
+
 
 
     </table>

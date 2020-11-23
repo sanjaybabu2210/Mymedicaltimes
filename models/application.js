@@ -11,7 +11,11 @@ var ApplicationSchema=new mongoose.Schema({
         sample:String,
     hearfrom:String,
     photo:String,
-    userid: String
+    userid: String,
+      access:{
+        type:String,
+        default:'0'
+    }
 
     
 

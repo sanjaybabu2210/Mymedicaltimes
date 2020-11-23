@@ -4,10 +4,12 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <!------ Include the above in your HEAD tag ---------->
+
 <style>
     .register {
         background: -webkit-linear-gradient(left, #615F67, #00c6ff);
-        margin-top: -0.4%;
+        margin-top: -0.7% !important;
+        height: 105% !important;
         min-width: 100vw !important;
         padding: 3%;
     }
@@ -318,14 +320,14 @@
          <% if(error.length>0){%>
             <div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
             <% }if(success.length>0){%>
-            <div class="alert alert-success container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=success%>
+            <div class="alert alert-success container" style="margin:3% auto;text-align: center;max-width: 80%;background-color: whitesmoke;"><%=success%>
             </div>
             <% } %> 
     <div class="row">
         <div class="col-md-3 register-left">
             <img src="picc.jpeg" alt="" />
             <h3>Welcome</h3>
-            <p>You are 30 seconds away becoming a writer</p>
+            <p>You are 30 seconds away from becoming a writer</p>
             <!-- <input type="submit" name="" value="Login" /><br /> -->
         </div>
         <div class="col-md-9 register-right">
@@ -347,59 +349,60 @@
                       <div class="col-md-12">
 <div class="avatar-wrapper ">
     <img class="profile-pic" src="" />
-    <div class="upload-button">
+    <div class="upload-button" style="margin-top: 0%;">
         <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
     </div>
-    <input class="file-upload" type="file" accept="image/*" name="photo" />
+    <input class="file-upload" type="file" accept="image/*" name="photo" required/>
 </div>
                       </div>
   
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Full Name *"  name="fullname" />
+                        <input type="text" class="form-control" placeholder="Full Name *"  name="fullname" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nationality *" name="country" required/>
                     </div>
 
                     <div class="form-group">
-                        <select class="form-control" name="country">
-                            <option class="hidden" selected disabled>Country
-                            </option>
-                            <option value="india">India</option>
-                            <option value="usa">America</option>
-                            <option value="germany">Germany</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="degree" class="form-control" placeholder="Highest Degree" value="" />
+                        <input type="text" required name="degree" class="form-control" placeholder="Highest Degree" value="" />
                     </div>
 
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" name="email" class="form-control" placeholder="Email Address *" value="" />
+                        <input type="email" name="email" class="form-control" placeholder="Email Address *" value="" required />
                     </div>
                     <div class="form-group">
-                        <input type="number" name="pcode" minlength="6" maxlength="6" name="txtEmpPhone" class="form-control"
+                        <input type="number" name="pcode" minlength="6" maxlength="6" name="txtEmpPhone" required class="form-control"
                             placeholder="Postal Code *" value="" />
                     </div>
 
                     <div class="form-group">
-                        <input type="file" class="form-control" placeholder="Upload your resume" name="resume" value="resume" />
+                        <input type="file" class="form-control" placeholder="Upload your resume" name="resume" required value="resume" />
                     </div>
                     <!-- <input type="submit" class="btnRegister" value="Register" /> -->
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea type="text" rows="3" class="form-control" name="sample" placeholder=" samples already published"
+                        <textarea type="text" rows="3" class="form-control" name="sample" required placeholder="  samples already published"
                             value=""></textarea>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="hearfrom" placeholder="where you heard about us" value="" />
+                        <input type="text" class="form-control" name="hearfrom" required placeholder="where you heard about us" value="" />
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <input type="submit" class="btnRegister ml-4" value="Register" />
+                <div class="col-md-12">
+                    <div class="form-group ">
+                        <span><input type="checkbox" id="check" value="1" id="terms" required /></span><span style="font-size: 20px;text-align: center;">
+                            I have read and agree to the <a href="/t&c">Terms of Use</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <input type="submit" id="sub" class="btnRegister"  style="margin-left: 10% !important;" value="Register" />
 
                 </div>
                 </form>
@@ -452,6 +455,7 @@ $(document).ready(function() {
         $('nav ul .an-show').toggleClass("show2");
         $('nav ul .third').toggleClass("rotate");
     });
+        $('.countrypicker').countrypicker();
 
     $('.ant-btn').click(function () {
         $('nav ul .ant-show').toggleClass("show3");
@@ -556,7 +560,57 @@ $(document).ready(function() {
     $('nav ul li').click(function () {
         $(this).addClass("active").siblings().removeClass("active");
     });
- 
+
+    $(document).ready(function () {
+
+          $('#basic').flagStrap();
+
+        $('.select-country').flagStrap({
+            countries: {
+                "US": "USD",
+                "AU": "AUD",
+                "CA": "CAD",
+                "SG": "SGD",
+                "GB": "GBP",
+            },
+            buttonSize: "btn-sm",
+            buttonType: "btn-info",
+            labelMargin: "10px",
+            scrollable: false,
+            scrollableHeight: "350px"
+        });
+
+        $('#advanced').flagStrap({
+            buttonSize: "btn-lg",
+            buttonType: "btn-primary",
+            labelMargin: "20px",
+            scrollable: false,
+            scrollableHeight: "350px"
+        });
+        // $('input[type="submit"]').attr('disabled', 'true');
+        // $('input[type="checkbox"]').change(function () {
+        //     console.log($(this).val)
+        //     if ($(this).val == 1) {
+        //         $('input[type="submit"]').removeAttr('disabled');
+        //     }
+        // });
+
+            var checker = document.getElementById('check');
+        var sendbtn = document.getElementById('sub');
+        checker.onchange = function () {
+            sendbtn.disabled = !!this.checked;
+        };
+    });
+
+
+
+
+
+
+    //this is for coutry dropdown
+    
+
+
 </script>
 
 

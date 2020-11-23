@@ -12,7 +12,13 @@
 
 <div class="col-lg-7 col-md-10 col-sm-11 " id="main" style="width: 90%;">
 	
-
+<% if(error.length>0){%>
+<div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
+<% }if(success.length>0){%>
+<div class="alert alert-success container"
+  style="margin:3% auto;text-align: center;max-width: 80%;background-color: whitesmoke;"><%=success%>
+</div>
+<% } %>
 
  <div class="list-wrapper articleHide box" style="min-height: 130vh;text-align: justify;">
   

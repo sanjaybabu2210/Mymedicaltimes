@@ -137,8 +137,10 @@ app.post('/application/:id', upload.fields([{
                             console.log(err);
 							return res.redirect('back');
 						}else{
+                                            req.flash('success', "Your application has been submited and is being reviewed by our Expert. you will be notified about the same within 5-7 working days and");
+
                             console.log(newlyCreated);
-							res.redirect("/");
+							res.redirect("/application");
 						}
 					});
 		
@@ -210,10 +212,10 @@ app.post("/writereview",function(req,res){
 });
 
 app.get("/writearticle",isLoggedIn,function(req,res){
-    if(req.user.writearticle===true)
+    if(req.user.writearticle=='true')
    res.render("writearticle.ejs");
    else{
-       req.flash("error","You Don't have permission to write articles, Mail us at mymedicaltimes@gmail.com with your article for us to give you access to write");
+       req.flash("error","Unfortunately now you are not eligible to become a Medical Content Writer on our platform. you can apply for the same after 3 months. Thank you");
        res.redirect("/home");
    }
 });
@@ -475,31 +477,51 @@ app.post("/admin/login",function(req, res) {
    }
 });
 
-app.get("/grantAccess/:userId",function(req, res) {
-    var userId=req.params.userId;
-    User.findById(userId,function(err, foundUser) {
+app.get("/grantAccess/:appid",function(req, res) {
+    var appid=req.params.appid;
+  Application.findById(appid,function(err, foundUser) {
         if(err)
         console.log(err);
         else{
-            foundUser.writearticle=true;
+            foundUser.access='true';
             foundUser.save();
+                                User.findById(foundUser.userid,function(err, foundUser) {
+                            if(err)
+                            console.log(err);
+                            else{
+                                foundUser.writearticle=true;
+                                foundUser.save();
+                            }
+                        });
             req.flash("success","Permission Granted");
-            res.redirect("/seeUserDetails");
+            res.redirect("/seeapplications");
         }
     });
+
+   
 });
 app.get("/removeAccess/:userId",function(req, res) {
-    var userId=req.params.userId;
-    User.findById(userId,function(err, foundUser) {
+      var appid=req.params.userId;
+  Application.findById(appid,function(err, foundUser) {
         if(err)
         console.log(err);
         else{
-            foundUser.writearticle=false;
+            foundUser.access='false';
             foundUser.save();
-            req.flash("success","Permission Removed from the User");
-            res.redirect("/seeUserDetails");
+                                User.findById(foundUser.userid,function(err, foundUser) {
+                            if(err)
+                            console.log(err);
+                            else{
+                                foundUser.writearticle=true;
+                                foundUser.save();
+                            }
+                        });
+            req.flash("success","Permission Granted");
+            res.redirect("/seeapplications");
         }
     });
+
+   
 });
 
 
@@ -512,7 +534,7 @@ app.get("/grantNewsAccess/:userId",function(req, res) {
             foundUser.writenews=true;
             foundUser.save();
             req.flash("success","News Permission Granted");
-            res.redirect("/seeUserDetails");
+            res.redirect("/seeapplications");
         }
     });
 });
@@ -525,7 +547,7 @@ app.get("/removeNewsAccess/:userId",function(req, res) {
             foundUser.writenews=false;
             foundUser.save();
             req.flash("success","News Permission Removed from the User");
-            res.redirect("/seeUserDetails");
+            res.redirect("/seeapplications");
         }
     });
 });
