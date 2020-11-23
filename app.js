@@ -227,7 +227,7 @@ app.get("/writearticle",isLoggedIn,function(req,res){
 app.get("/writemedicalnews",isLoggedIn,function(req,res){
     if(req.user.writenews=='true')
    res.render("writemedicalnews.ejs");
-   elseif(req.user.writenews=='0'){
+   else if(req.user.writenews=='0'){
        req.flash("error","You Don't have permission to write medical news, Mail us at mymedicaltimes@gmail.com to give you access");
        res.redirect("/home");
     
