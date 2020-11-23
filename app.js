@@ -212,18 +212,26 @@ app.post("/writereview",function(req,res){
 });
 
 app.get("/writearticle",isLoggedIn,function(req,res){
-    if(req.user.writearticle=='true')
+    if(req.user.writearticle=='true'){
    res.render("writearticle.ejs");
-   else{
+}  else if(req.user.writearticle=='0'){
+       req.flash("error","You Don't have permission to write medical news, Mail us at mymedicaltimes@gmail.com to give you access");
+       res.redirect("/home");
+    
+   }else{
        req.flash("error","Unfortunately now you are not eligible to become a Medical Content Writer on our platform. you can apply for the same after 3 months. Thank you");
        res.redirect("/home");
    }
 });
 
 app.get("/writemedicalnews",isLoggedIn,function(req,res){
-    if(req.user.writenews===true)
+    if(req.user.writenews=='true')
    res.render("writemedicalnews.ejs");
-   else{
+   elseif(req.user.writenews=='0'){
+       req.flash("error","You Don't have permission to write medical news, Mail us at mymedicaltimes@gmail.com to give you access");
+       res.redirect("/home");
+    
+   }else{
        req.flash("error","You Don't have permission to write medical news, Mail us at mymedicaltimes@gmail.com to give you access");
        res.redirect("/home");
    }
