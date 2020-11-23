@@ -315,6 +315,12 @@
 
 </style>
 <div class="container register" style="width: 100vw;height: 100%;">
+         <% if(error.length>0){%>
+            <div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
+            <% }if(success.length>0){%>
+            <div class="alert alert-success container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=success%>
+            </div>
+            <% } %> 
     <div class="row">
         <div class="col-md-3 register-left">
             <img src="picc.jpeg" alt="" />

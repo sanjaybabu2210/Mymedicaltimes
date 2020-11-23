@@ -18,5 +18,4 @@ var ApplicationSchema=new mongoose.Schema({
 
 });
 
-ApplicationSchema.plugin(passportLocalMongoose);
-module.exports=mongoose.model("Application",ApplicationSchema);
+module.exports=mongoose.model("applications",ApplicationSchema);

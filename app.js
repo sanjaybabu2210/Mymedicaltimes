@@ -54,47 +54,6 @@ app.use(express.static('public'));
 //   });
 
 
-app.post('/application/:id', upload.fields([{
-  name: 'photo', maxCount: 1
-}, {
-  name: 'resume', maxCount: 1
-}]) ,(req, res) => {
-
-  const photo1 = req.files.photo[0];
-  const resume1 = req.files.resume[0];
-
-    var photo = photo1.filename
-	var email = req.body.email;
-	var fullName = req.body.fullname;
-	var country = req.body.country;
-    var degree = req.body.degree;
-    	var pcode = req.body.pcode;
-
-        	var resume = resume1.filename;
-
-            	var sample = req.body.sample;
-
-                    var hearfrom = req.body.hearfrom;
-                    var userid = req.params.id;
-
-
-	
-	 var newapp = {photo:photo,email:email,fullname:fullName,country:country,degree:degree,pcode:pcode,resume:resume,sample:sample,hearfrom:hearfrom,userid : userid }
-
-	//create a new campground and save to db
-					Application.create(newapp, function(err,newlyCreated){
-						if(err){
-                            // req.flash('error', err.message);
-                            console.log(err);
-							return res.redirect('back');
-						}else{
-                            console.log(newlyCreated);
-							res.redirect("/");
-						}
-					});
-		
-		
-	});
 
 
 //mongoose.connect("mongodb://localhost/MMT_v8",{useNewUrlParser: true});
@@ -144,6 +103,47 @@ app.get("/",function(req,res){
    res.redirect("/home");
     
 });
+app.post('/application/:id', upload.fields([{
+  name: 'photo', maxCount: 1
+}, {
+  name: 'resume', maxCount: 1
+}]) ,(req, res) => {
+
+  const photo1 = req.files.photo[0];
+  const resume1 = req.files.resume[0];
+
+    var photo = photo1.filename
+	var email = req.body.email;
+	var fullName = req.body.fullname;
+	var country = req.body.country;
+    var degree = req.body.degree;
+    	var pcode = req.body.pcode;
+
+        	var resume = resume1.filename;
+
+            	var sample = req.body.sample;
+
+                    var hearfrom = req.body.hearfrom;
+                    var userid = req.params.id;
+
+
+	
+	 var newapp = {photo:photo,email:email,fullname:fullName,country:country,degree:degree,pcode:pcode,resume:resume,sample:sample,hearfrom:hearfrom,userid : userid }
+
+	//create a new campground and save to db
+					Application.create(newapp, function(err,newlyCreated){
+						if(err){
+                            // req.flash('error', err.message);
+                            console.log(err);
+							return res.redirect('back');
+						}else{
+                            console.log(newlyCreated);
+							res.redirect("/");
+						}
+					});
+		
+		
+	});
 
 app.get("/home",function(req,res){
     article.aggregate([{$sort:{createdAt:-1}}],function(err, art) {
