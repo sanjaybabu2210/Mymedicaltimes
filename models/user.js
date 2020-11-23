@@ -9,8 +9,8 @@ var UserSchema=new mongoose.Schema({
     college:String,
     nationality:String,
     writearticle:{
-        type:Boolean,
-        default:false
+        type:String,
+        default:'0'
     },
     writenews:{
         type:Boolean,

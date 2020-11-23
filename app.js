@@ -405,7 +405,7 @@ app.post("/register",function(req,res)
             users.email=req.body.email;
             users.fullName=req.body.fullName;
             if(users.username==='admin'){
-            users.writearticle=true;
+            users.writearticle='true';
             users.writenews=true;
             }
             users.save();
@@ -497,7 +497,7 @@ app.get("/grantAccess/:appid",function(req, res) {
                             if(err)
                             console.log(err);
                             else{
-                                foundUser.writearticle=true;
+                                foundUser.writearticle='true';
                                 foundUser.save();
                             }
                         });
@@ -520,7 +520,7 @@ app.get("/removeAccess/:userId",function(req, res) {
                             if(err)
                             console.log(err);
                             else{
-                                foundUser.writearticle=true;
+                                foundUser.writearticle='false';
                                 foundUser.save();
                             }
                         });
