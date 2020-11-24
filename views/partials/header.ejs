@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="niceCountryInput.css">
+        <!-- <link rel="stylesheet" href="social.css"> -->
+
     <script src="niceCountryInput.js"></script>
     <title>My Medical Times</title>
 
@@ -71,6 +73,201 @@
             list-style: none;
 
         }
+/*common styles !!!YOU DON'T NEED THEM */
+.container {
+  margin: 60px auto 0px auto;
+  text-align: center;
+}
+.container h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #212121;
+  letter-spacing: 3px;
+}
+.container h1 span {
+  display: inline-block;
+}
+.container h1 span:before, .container h1 span:after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 2px;
+  background-color: #212121;
+  margin: 0px 0px 0px 2px;
+}
+
+.effect {
+  width: 100%;
+  padding: 50px 0px 70px 0px;
+  background-color: #212121;
+}
+.effect h2 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+.effect:nth-child(2) {
+  margin-top: 50px;
+}
+.effect:nth-child(2n+1) {
+  background-color: #fff;
+}
+.effect:nth-child(2n+1) h2 {
+  color: #212121;
+}
+.effect .buttons {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.effect a:last-child {
+  margin-right: 0px;
+}
+
+/*common link styles !!!YOU NEED THEM*/
+.effect {
+  /*display: flex; !!!uncomment this line !!!*/
+}
+.effect a {
+  text-decoration: none !important;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+}
+.effect a i {
+  position: relative;
+  z-index: 3;
+}
+.effect a.fb {
+  background-color: #3b5998;
+}
+.effect a.tw {
+  background-color: #00aced;
+}
+.effect a.g-plus {
+  background-color: #dd4b39;
+}
+.effect a.dribbble {
+  background-color: #ea4c89;
+}
+.effect a.pinterest {
+  background-color: #cb2027;
+}
+.effect a.insta {
+  background-color: #bc2a8d;
+}
+.effect a.in {
+  background-color: #007bb6;
+}
+.effect a.vimeo {
+  background-color: #1ab7ea;
+}
+
+/* aeneas effect */
+.effect.aeneas a {
+  -webkit-transition: border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s, -webkit-transform 0.4s linear 0s;
+  transition: border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s, -webkit-transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+  transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s, -webkit-transform 0.4s linear 0s;
+}
+.effect.aeneas a i {
+  -webkit-transition: -webkit-transform 0.4s linear 0s;
+  transition: -webkit-transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s, -webkit-transform 0.4s linear 0s;
+}
+.effect.aeneas a:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  border-radius: 50%;
+}
+.effect.aeneas a:hover i {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+/* jaques effect */
+.effect.jaques a {
+  -webkit-transition: border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+  transition: border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+}
+.effect.jaques a:hover {
+  border-radius: 50%;
+}
+
+/* egeon effect */
+.effect.egeon a {
+  -webkit-transition: border-radius 0.2s linear 0.2s, -webkit-transform 0.2s linear 0s;
+  transition: border-radius 0.2s linear 0.2s, -webkit-transform 0.2s linear 0s;
+  transition: transform 0.2s linear 0s, border-radius 0.2s linear 0.2s;
+  transition: transform 0.2s linear 0s, border-radius 0.2s linear 0.2s, -webkit-transform 0.2s linear 0s;
+}
+.effect.egeon a i {
+  -webkit-transition: -webkit-transform 0.2s linear 0s;
+  transition: -webkit-transform 0.2s linear 0s;
+  transition: transform 0.2s linear 0s;
+  transition: transform 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
+}
+.effect.egeon a:hover {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.effect.egeon a:hover i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* claudio effect */
+.effect.claudio a {
+  -webkit-transition: border-radius 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
+  transition: border-radius 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
+  transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
+  transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
+}
+.effect.claudio a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+/* laertes effect */
+.effect.laertes a {
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+.effect.laertes a i {
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+.effect.laertes a:hover {
+  border-radius: 50%/20%;
+}
+.effect.laertes a:hover i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  text-shadow: 0 0 12px rgba(33, 33, 33, 0.6);
+}
 
         nav ul li {
             line-height: 50px;
@@ -297,33 +494,7 @@
 
 
      }
-        .fa {
-            padding: 20px;
-            font-size: 30px;
-            width: 50px;
-            text-align: center;
-            text-decoration: none;
-            margin: 10px 5px;
-        }
-
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-        }
-
-        .fa:hover {
-            opacity: 0.7;
-        }
-
-        .fa-linkedin {
-            background: #007bb5;
-            color: white;
-        }
-
-        .fa-youtube {
-            background: #bb0000;
-            color: white;
-        }
+    
 
         .icc {
             width: 35px;
@@ -539,7 +710,10 @@ font-size: 0.9rem !important;
                 /* line-height: -10px !important; */
 
             }
-
+            #major{
+                margin-left: 3% !important;
+                margin-top: -15% !important;
+            }
 
 /* 
             #cred{
@@ -686,9 +860,6 @@ font-size: 0.9rem !important;
                 <li>
                 <li class="ant-btnf m-view">
                     <a style="color: white;font-weight: 200;" href="/maindisease">Disease</a></li>
-                <li>
-                <li class="ant-btnf ">
-                    <a style="color: white;font-weight: 200;" href="/writearticle">Write Article</a></li>
                 <li>
                     <li class="ant-btnf ">
                         <a style="color: white;font-weight: 200;" href="/application">Apply for writing</a></li>

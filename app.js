@@ -171,14 +171,18 @@ app.get("/home/disease",function(req, res) {
 app.get("/privacy-policy",function(req,res){
    res.render("privacy_policy.ejs");
 });
+
+app.get("/sitemap",function(req,res){
+   res.render("sitemap.ejs");
+});
 app.get("/cookie-policy",function(req,res){
    res.render("cookie_policy.ejs");
 });
 
-app.get("/applyintern",function(req,res){
+app.get("/applyintern",isLoggedIn, function(req,res){
    res.render("applyintern.ejs");
 });
-app.post("/applyintern",function(req,res){
+app.post("/applyintern",isLoggedIn,function(req,res){
    var name=req.body.name;
    var email=req.body.email;
    var college=req.body.college;
@@ -195,10 +199,10 @@ app.post("/applyintern",function(req,res){
   });
 });
 
-app.get("/writereview",function(req,res){
+app.get("/writereview", isLoggedIn, function(req,res){
    res.render("writereview.ejs");
 });
-app.post("/writereview",function(req,res){
+app.post("/writereview",isLoggedIn,function(req,res){
    var gotReview={email:req.body.email,name:req.body.name,college:req.body.college,reviewtxt:req.body.reviewtxt};
    review.create(gotReview,function(err,rev){
        if(err)
