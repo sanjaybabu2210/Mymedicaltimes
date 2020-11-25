@@ -6,6 +6,8 @@ var flash=require("connect-flash");
 app.locals.moment=require("moment");
 var User=require("./models/user");
 var path = require('path');
+var	methodOverride = require("method-override");
+
 var intern=require("./models/intern");
 var review=require("./models/review");
 var article=require("./models/article");
@@ -14,6 +16,7 @@ var Application=require("./models/application");
 // var Disease=require("./models/disease");
 // var medicalnews=require("./models/medicalnews");
 
+app.use(methodOverride("_method"));
 
 const multer = require('multer');
 var storage = multer.diskStorage({
@@ -300,7 +303,47 @@ app.post("/writearticle",isLoggedIn,function(req,res){
        });
    }
 });
+app.delete("/writearticle/:id",function(req,res){
+	article.findByIdAndRemove(req.params.id, function(err){
+		if(err){
+			res.redirect("/seeArticles");
+		}else{
+			res.redirect("/seeArticles");
+		}
+	});
+});
+app.post("/writearticle/:id",function(req,res){
+  
 
+    	article.findById(req.params.id,async function(err, adpost){
+		if(err){
+			req.flash("error", err.message)
+			res.redirect("back");
+		}else{
+            
+            
+
+            var article = req.body.article;
+            article.description = req.body.description;
+			article.findByIdAndUpdate(req.params.id, article, function(err, upadatedArticle){
+				if(err){
+					req.flash("error", err.message);
+					req.redirect("back");
+					
+				}else{
+					req.flash("success", "Successfully Updated")
+			res.redirect("/seeArticles");
+				}
+                })
+			
+		}
+		
+	});
+
+
+
+
+});
 app.get("/maindisease",function(req,res){
    res.render("main_disease.ejs");
 });
@@ -644,6 +687,7 @@ app.get("/main_disease/newborn",function(req, res) {
 app.get("/main_disease/nutritional",function(req, res) {
    res.render("nutritional.ejs"); 
 });
+
 app.get("/main_disease/parasitic",function(req, res) {
    res.render("parasitic.ejs"); 
 });
@@ -658,7 +702,11 @@ app.get("/main_disease/viral",function(req, res) {
    res.render("viral.ejs"); 
 });
 /*------------------------------------------------------------------------------------*/
-
+app.get("/:id/edit", function(req,res){
+    console.log("hifsd");
+			article.findById(req.params.id, function(err, foundAd){
+				res.render("editArticle.ejs", {art: foundAd} );		});
+});
 
 app.get("/:heading/:subHeading",function(req, res) { ////just for knowing the idea
    var heading=req.params.heading;
@@ -676,6 +724,18 @@ app.get("/:heading/:subHeading",function(req, res) { ////just for knowing the id
         }
    });
 });
+
+app.get("/seeArticles",function(req, res) {
+    article.find({},function(err, found) {
+       if(err)
+       console.log(err);
+        else{
+            //console.log(found);
+            res.render("viewArticles.ejs",{use:found});
+        }
+   });
+});
+
 
 app.get("/:heading/:subHeading/:id",function(req, res) { ////just for knowing the idea
    var heading=req.params.heading;

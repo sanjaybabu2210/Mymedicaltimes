@@ -1,0 +1,360 @@
+<%- include('partials/header.ejs'); -%>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    body {
+        background-color: #ffe9ec;
+        min-height: 140vh;
+    }
+
+    .sidebar .text {
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 65px;
+        text-align: center;
+        background: #1e1e1e;
+        letter-spacing: 1px;
+        margin: 0px
+    }
+
+    nav ul li {
+        line-height: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    }
+
+    nav ul li a {
+        position: relative;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding-left: 40px;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+        border-left: 3px solid transparent;
+    }
+
+    nav ul li.active a {
+        color: cyan;
+        background: #1e1e1e;
+        border-left-color: cyan;
+
+    }
+
+    nav ul ul {
+        position: static;
+        display: none;
+    }
+
+    nav ul .feat-show.show {
+        display: block;
+    }
+
+    nav ul .an-show.show2 {
+        display: block;
+    }
+
+    nav ul .ant-show.show3 {
+        display: block;
+    }
+
+    nav ul .bi-show.show4 {
+        display: block;
+    }
+
+    nav ul .bio-show.show5 {
+        display: block;
+    }
+
+    nav ul .bip-show.show6 {
+        display: block;
+    }
+
+    nav ul .co-show.show7 {
+        display: block;
+    }
+
+    nav ul .den-show.show8 {
+        display: block;
+    }
+
+    nav ul .med-show.show9 {
+        display: block;
+    }
+
+    nav ul .mib-show.show10 {
+        display: block;
+    }
+
+    nav ul .mir-show.show11 {
+        display: block;
+    }
+
+    nav ul .oc-show.show12 {
+        display: block;
+    }
+
+    nav ul .pat-show.show13 {
+        display: block;
+    }
+
+    nav ul .pha-show.show14 {
+        display: block;
+    }
+
+    nav ul .phm-show.show15 {
+        display: block;
+    }
+
+    nav ul .phs-show.show16 {
+        display: block;
+    }
+
+    nav ul .phsi-show.show17 {
+        display: block;
+    }
+
+    nav ul .psy-show.show18 {
+        display: block;
+    }
+
+    nav ul .sur-show.show19 {
+        display: block;
+    }
+
+    nav ul .the-show.show20 {
+        display: block;
+    }
+
+    nav ul .yg-show.show21 {
+        display: block;
+    }
+
+    nav ul .ve-show.show22 {
+        display: block;
+    }
+
+    nav ul ul li {
+        line-height: 42px;
+        border-bottom: none;
+    }
+
+    nav ul ul li a {
+        font-size: 17px;
+        color: #e6e6e6;
+        padding-left: 80px;
+    }
+
+    nav ul li.active ul li a {
+        color: #e6e6e6;
+        background: #1b1b1b;
+        border-left-color: transparent;
+
+    }
+
+    nav ul ul li a:hover {
+        color: cyan !important;
+        background: 1e1e1e !important;
+    }
+
+    nav ul li a span {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 22px;
+        transition: transform 0.4s;
+    }
+
+    nav ul li a span.rotate {
+        transform: translateY(-50%) rotate(-180deg);
+    }
+
+    footer {
+        background: #1c2331
+    }
+
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu a::after {
+        transform: rotate(-90deg);
+        position: relative;
+        right: 3px;
+        top: 40%;
+    }
+
+    footer {
+        background: #1c2331;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -100%;
+    }
+
+    .dropdown-submenu:hover .dropdown-menu,
+    .dropdown-submenu:focus .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        position: scroll !important;
+        margin-top: -30px;
+        left: 100%;
+    }
+
+    @media (max-width: 992px) {
+        .dropdown-menu {
+            width: 50%;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            width: auto;
+        }
+    }
+
+    @media only screen and(min-width: 800px) {
+        .sidebar {
+            display: none !important;
+        }
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px 10px;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+
+    .icc {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icc:hover {
+        opacity: 0.6;
+    }
+
+    .sBlog:hover {
+        box-shadow: 6px 8px 8px 6px rgba(0, 0, 0, 0.9);
+    }
+
+    .mainNew:hover {
+
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 85%;
+    }
+
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        width: 15%;
+        background: #ffffff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f1f1f1;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    @media screen and (min-width: 800px) {
+        .sidebar {
+            display: none;
+        }
+
+
+
+    }
+</style>
+
+
+
+
+
+<% if(error.length>0){%>
+<div class="alert alert-danger container" style="margin-top:0px;"><%=error%></div>
+<% }if(success.length>0){%>
+<div class="alert alert-success container" style="margin-top:0px;"><%=success%></div>
+<% } %>
+
+<h2 style="text-align:center;margin-top:2%;margin-left: 5%;"><b>Applied Intern Details</b></h2>
+
+<table
+    style="margin:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:2%;margin-bottom:45%;overflow: auto;display:inline-block;background-color: transparent;">
+    <tr>
+        <th>Articl Title</th>
+        <th>Main Heading</th>
+        <th>Sub Heading</th>
+        <th>Author</th>
+        <th>Edit </th>
+        <th>Delete</th>
+
+    </tr>
+    <% use.forEach(function(u){ %>
+    <tr>
+        <td><%= u.title %> </td>
+        <td><%= u.mainHeading %> </td>
+        <td><%= u.subHeading %> </td>
+        <td><%= u.author %> </td>
+        <td><button class="btn btn-success btn-sm"><a style="text-decoration: none;color:white;" href="/<%= u._id %>/edit">Edit</a> </button></td>
+        <td><form id="delete-form" action="/writearticle/<%= u._id %>?_method=DELETE" method="POST"><button class="btn btn-danger btn-sm" type="submit">Delete</button> </form></td>
+
+    </tr>
+    <% }) %>
+
+</table>
+
+
+<div style="margin-top:20%;">
+    <%- include('partials/footertemplate.ejs'); -%>
+
+</div>
+</body>
+
+</html>

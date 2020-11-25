@@ -1,0 +1,355 @@
+<%- include('partials/header.ejs'); -%>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    * {
+        margin: 0;
+        /* overflow-x: hidden; */
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    body {
+        background-color: white;
+    }
+
+    footer {
+        background: #1c2331
+    }
+
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu a::after {
+        transform: rotate(-90deg);
+        position: relative;
+        right: 3px;
+        top: 40%;
+    }
+
+    .dropdown-submenu:hover .dropdown-menu,
+    .dropdown-submenu:focus .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        position: scroll !important;
+        margin-top: -30px;
+        left: 100%;
+    }
+
+    @media (max-width: 992px) {
+        .dropdown-menu {
+            width: 50%;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            width: auto;
+        }
+    }
+
+
+
+    #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+    }
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+        animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    }
+
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    .icc {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icc:hover {
+        opacity: 0.6;
+    }
+
+    @media screen and (min-width: 800px) {
+        .sidebar {
+            display: none;
+        }
+
+    }
+</style>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+<% if(error.length>0){%>
+<div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
+<% }if(success.length>0){%>
+<div class="alert alert-success container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=success%></div>
+<% } %>
+
+
+
+<div class="container" style="margin-top:6%;margin-bottom:8%;border-radius:25px;">
+
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-9 jumbotron" style="margin:2% 5%;max-width: 90%;">
+
+            <form action="/writearticle/<%= art._id %>?_method = PUT" method="POST">
+                <h3><b>Add New Article</b></h3>
+
+                <div class="form-group"><input type="text" placeholder="Article Title" value="<%= art.title %>" name="article[title]" required
+                        class="form-control" style="margin-top:10px;width:" required></div>
+                <div class="form-group"><input type="text" placeholder="Short Description" value="<%= art.shortDescription %>" name="article[shortDescription]"
+                        required class="form-control" style="margin-top:10px"></div>
+                <br>
+                <label for="mainHeading" style="margin-top:27px"><b>Main Heading:</b></label>
+                <div class="form-group"><input type="text" id="mainHeading"
+                        placeholder="Main Heading under which this article comes(eg. Biotechnology, Anatomy)"
+                        value="<%= art.mainHeading%>" name="article[mainHeading]" required class="form-control" style="margin-top:2px;width:"></div>
+                <label for="subHeading" style="margin-top:27px"><b>Sub Heading:</b></label>
+                <div class="form-group"><input type="text" id="mainHeading" value="<%= art.subHeading %>"
+                        placeholder="Sub Heading under which this article comes(eg. Biochemistry in Biotechnology)"
+                        name="article[subHeading]" required class="form-control" style="margin-top:2px;width:"></div>
+                <p style="font-size:17px">
+                    <b>Which Part this Article belongs to?</b>
+                </p>
+                <div>
+                    <input type="radio" id="huey" value="<%= art.topic %>" name="article[topic]" value="<%= art.topic %>" value="notPart" checked>
+                    <label for="huey">Not Part of disease Topic</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="dewey" value="<%= art.topic %>" name="article[subtopic]" value="isPart">
+                    <label for="dewey">Part of Disease Topic</label>
+                </div>
+
+<% var mvalue = art.description; console.log(mvalue) %>
+
+                <hr><hr><label for="body" style="margin-top:7px"><b>Article Body:</b></label>
+                <div class="form-group" style="margin-top:10px;"><textarea type="text" id="body" placeholder="Body" name="description"
+                        required class="form-control" required><%= art.description %></textarea></div>
+                <div class="form-group"><input type="text" id="author" placeholder="Author Name" name="article[author]" required
+                        class="form-control" style="margin-top:2px;" value="<%= art.author %>"></div>
+                
+                <button class="btn btn-info bld" style="margin-top:40px;margin-left:42%;width:30%"
+                    onclick="myFunction()">Submit</button>
+
+           
+
+            </form>
+        </div>
+
+    </div>
+
+</div>
+<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    CKEDITOR.replace('description',
+        {
+            height: '300px',
+        });
+    CKEDITOR.config.format_h1 = { element: 'h4' };
+
+</script>
+
+<div id="snackbar">Article Submitted</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 6000);
+    }
+</script>
+<script>
+    $('.feat-btn').click(function () {
+        $('nav ul .feat-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+    });
+
+    $('#body').text = mvalue;
+
+    $('.an-btn').click(function () {
+        $('nav ul .an-show').toggleClass("show2");
+        $('nav ul .third').toggleClass("rotate");
+    });
+
+    $('.ant-btn').click(function () {
+        $('nav ul .ant-show').toggleClass("show3");
+        $('nav ul .fourth').toggleClass("rotate");
+    });
+
+    $('.bi-btn').click(function () {
+        $('nav ul .bi-show').toggleClass("show4");
+        $('nav ul .fourthh').toggleClass("rotate");
+    });
+
+    $('.bio-btn').click(function () {
+        $('nav ul .bio-show').toggleClass("show5");
+        $('nav ul .sixth').toggleClass("rotate");
+    });
+
+    $('.bip-btn').click(function () {
+        $('nav ul .bip-show').toggleClass("show6");
+        $('nav ul .fifth').toggleClass("rotate");
+    });
+    $('#body').value = mvalue;
+
+    $('.co-btn').click(function () {
+        $('nav ul .co-show').toggleClass("show7");
+        $('nav ul .sixthh').toggleClass("rotate");
+    });
+
+    $('.den-btn').click(function () {
+        $('nav ul .den-show').toggleClass("show8");
+        $('nav ul .seventh').toggleClass("rotate");
+    });
+
+    $('.med-btn').click(function () {
+        $('nav ul .med-show').toggleClass("show9");
+        $('nav ul .eigth').toggleClass("rotate");
+    });
+
+    $('.mib-btn').click(function () {
+        $('nav ul .mib-show').toggleClass("show10");
+        $('nav ul .nineth').toggleClass("rotate");
+    });
+
+    $('.mir-btn').click(function () {
+        $('nav ul .mir-show').toggleClass("show11");
+        $('nav ul .tenth').toggleClass("rotate");
+    });
+
+    $('.oc-btn').click(function () {
+        $('nav ul .oc-show').toggleClass("show12");
+        $('nav ul .eleventh').toggleClass("rotate");
+    });
+
+    $('.pat-btn').click(function () {
+        $('nav ul .pat-show').toggleClass("show13");
+        $('nav ul .twelth').toggleClass("rotate");
+    });
+
+    $('.pha-btn').click(function () {
+        $('nav ul .pha-show').toggleClass("show14");
+        $('nav ul .thirteenth').toggleClass("rotate");
+    });
+
+    $('.phm-btn').click(function () {
+        $('nav ul .phm-show').toggleClass("show15");
+        $('nav ul .fourteenth').toggleClass("rotate");
+    });
+
+    $('.phs-btn').click(function () {
+        $('nav ul .phs-show').toggleClass("show16");
+        $('nav ul .fifteenth').toggleClass("rotate");
+    });
+
+    $('.phsi-btn').click(function () {
+        $('nav ul .phsi-show').toggleClass("show17");
+        $('nav ul .sixteenth').toggleClass("rotate");
+    });
+
+    $('.psy-btn').click(function () {
+        $('nav ul .psy-show').toggleClass("show18");
+        $('nav ul .seventeenth').toggleClass("rotate");
+    });
+
+    $('.sur-btn').click(function () {
+        $('nav ul .sur-show').toggleClass("show19");
+        $('nav ul .eighteenth').toggleClass("rotate");
+    });
+
+    $('.the-btn').click(function () {
+        $('nav ul .the-show').toggleClass("show20");
+        $('nav ul .nineteenth').toggleClass("rotate");
+    });
+
+    $('.yg-btn').click(function () {
+        $('nav ul .yg-show').toggleClass("show21");
+        $('nav ul .twentyeeth').toggleClass("rotate");
+    });
+
+    $('.ve-btn').click(function () {
+        $('nav ul .ve-show').toggleClass("show22");
+        $('nav ul .twentyoneth').toggleClass("rotate");
+    });
+
+    $('nav ul li').click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+
+</script>
+<%- include('partials/footertemplate.ejs'); -%>
+
+</body>
+
+</html>

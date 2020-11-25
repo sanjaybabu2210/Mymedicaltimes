@@ -178,8 +178,178 @@ $('.ant-btn').click(function(){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <br>
   <br>
+<!-- Footer -->
 
-<%- include('partials/footertemplate.ejs'); -%>
 
-  </body>
+<script>
+
+  $(document).ready(function () {
+
+    $('.navbar-toggler').click(function () {
+      $('#filter').toggle();
+    })
+  })
+
+
+  // --------------------new ------------------------
+  function openNav() {
+    document.getElementById("sidenav").style.width = "75vw";
+    document.getElementById("sidenav").style.left = "0px";
+    $('#filter').hide();
+    // document.getElementById("main").style.marginLeft = "300px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    $('#main').css({ "filter": "blur(8px)" });
+    // $('#main').css({"opacity":"0.3"});
+    $('#sidenav').css({ "opacity": "1" });
+
+    document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+    // document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("sidenav").style.left = "-30px";
+    $('#filter').show();
+    $('button a').css({ "font-size": "12px" });
+    $('#main').css({ "filter": "blur(0px)" });
+
+
+    document.body.style.backgroundColor = "whitesmoke";
+    // $('#main').css({ "margin-left": "10%" });
+
+  }
+
+  $('#sidenav ul li a[href="#"]').click(function () {
+    closeNav();
+  })
+</script>
+<footer class="page-footer font-small " style="padding:40px 70px;width: 100%;">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-sm-12 " id="mobi">
+
+        <!-- Content -->
+
+        <div style="justify-content: space-between;margin-left: -10%;">
+          <h5 class="text-uppercase " id="times"
+            style="margin-left:10%;margin-top: 0%;font-weight: 500 !important;margin-bottom: 3%;color:whitesmoke"><img
+              src="https://i.ibb.co/vx5zDFF/picc.jpg" style="width:50px;height:50px;border-radius:22px;"> My Medical
+            Times</h5>
+
+          <a href="#" id="email" style="color:#ffffff;" style="margin-left: 18%;"><i class="fas fa-envelope fa-sm"
+              style="margin-left: 10%;"></i> mymedicaltimes@gmail.com </a>
+          <br>
+          <div class="social-buttons " id="buts" style="margin-top: 4%;margin-bottom: 6%; text-decoration: none;">
+            <a href="#" class="social-buttons__button social-button social-button--facebook"
+              style="text-decoration: none;" aria-label="Facebook">
+              <span class="social-button__inner">
+                <i class="fab fa-facebook-f"></i>
+              </span>
+            </a>
+            <a href="#" class="social-buttons__button social-button social-button--linkedin"
+              style="text-decoration: none;" aria-label="LinkedIn">
+              <span class="social-button__inner">
+                <i class="fab fa-linkedin-in"></i>
+              </span>
+            </a>
+
+            <a href="#" class="social-buttons__button social-button social-button--youtube"
+              style="text-decoration: none;" aria-label="YouTube">
+              <span class="social-button__inner">
+                <i class="fab fa-youtube" style="background-color: white;color:red"></i>
+              </span>
+            </a>
+            <a href="#" class="social-buttons__button social-button social-button--twitter"
+              style="text-decoration: none;" aria-label="CodePen">
+              <span class="social-button__inner">
+                <i class="fab fa-twitter" style="color:skyblue"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3 col-lg-3" id="f-foot">
+
+
+        <ul class="list-unstyled">
+          <li style="margin-bottom:10px">
+            <a href="#" style="color: #FE3633;font-size: larger;"><b>Company</b></a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="/aboutus" style="color:#ffffff;">About us</a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="/privacy-policy" style="color:#ffffff;">Privacy Policy</a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="/t&c" style="color:#ffffff;">Terms & Conditions</a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="/contactus" style="color:#ffffff;">Contact Us</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3 col-lg-3" id="l-foot">
+
+        <ul class="list-unstyled">
+          <li style="margin-bottom:10px">
+            <a href="#" style="color: #FE3633;font-size: larger;"><b>Articles</b></a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="#!" style="color:#ffffff;">Sitemap</a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="/applyintern" style="color:#ffffff;">Internships</a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="/writearticle" style="color:#ffffff;">Write an article</a>
+          </li>
+          <li style="margin-bottom:10px">
+            <a href="/writereview" style="color:#ffffff;">Write a review</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+
+
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright  "
+    style="text-align: center;font-size:15px;opacity:0.8; background-color: #B1D4E0;color: black;width: 100%;height: 40px;position: absolute;bottom: 10;left: 0;">
+    <i class="far fa-copyright" style="color: black;"></i> My Medical Times, All rights reserved
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+
 </html>
