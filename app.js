@@ -323,9 +323,9 @@ app.post("/writearticle/:id",function(req,res){
             
             
 
-            var article = req.body.article;
-            article.description = req.body.description;
-			article.findByIdAndUpdate(req.params.id, article, function(err, upadatedArticle){
+            var articles = req.body.article;
+            articles.description = req.body.description;
+			article.findByIdAndUpdate(req.params.id, articles, function(err, upadatedArticle){
 				if(err){
 					req.flash("error", err.message);
 					req.redirect("back");
