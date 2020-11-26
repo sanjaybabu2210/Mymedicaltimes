@@ -140,7 +140,7 @@ app.post('/application/:id', upload.fields([{
                             console.log(err);
 							return res.redirect('back');
 						}else{
-                                            req.flash('success', "Your application has been submited and is being reviewed by our Expert. you will be notified about the same within 5-7 working days and");
+                                            req.flash('success', "Your application has been submited and is being reviewed by our Expert. you will be notified about the same within 5-7 working days.");
 
                             console.log(newlyCreated);
 							res.redirect("/application");
@@ -222,7 +222,7 @@ app.get("/writearticle",isLoggedIn,function(req,res){
     if(req.user.writearticle=='true'){
    res.render("writearticle.ejs");
 }  else if(req.user.writearticle=='0'){
-       req.flash("error","You Don't have permission to write medical news, Mail us at mymedicaltimes@gmail.com to give you access");
+       req.flash("error","You Don't have permission to write Medical Article, Mail us at mymedicaltimes@gmail.com to give you access");
        res.redirect("/home");
     
    }else{
@@ -235,11 +235,11 @@ app.get("/writemedicalnews",isLoggedIn,function(req,res){
     if(req.user.writenews=='true')
    res.render("writemedicalnews.ejs");
    else if(req.user.writenews=='0'){
-       req.flash("error","You Don't have permission to write medical news, Mail us at mymedicaltimes@gmail.com to give you access");
+       req.flash("error","You Don't have permission to write Medical Article, Mail us at mymedicaltimes@gmail.com to give you access");
        res.redirect("/home");
     
    }else{
-       req.flash("error","You Don't have permission to write medical news, Mail us at mymedicaltimes@gmail.com to give you access");
+       req.flash("error","You Don't have permission to write Medical Articles, Mail us at mymedicaltimes@gmail.com to give you access");
        res.redirect("/home");
    }
 });
