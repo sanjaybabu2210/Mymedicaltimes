@@ -334,20 +334,19 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     </div>
 
     <script>
-         $(function () {
-         $("#submit-test-form").click(function () {
-               
-                    event.preventDefault();
-                    var rcres = grecaptcha.getResponse();
-                    if (rcres.length) {
-                        grecaptcha.reset();
-                        showHideMsg("Form Submitted!", "success");
-                    } else {
-                        showHideMsg("Please verify reCAPTCHA", "error");
-                    }
-                
-            
-        });
+        document.getElementById("commentform").addEventListener("submit", function (evt) {
+
+                var response = grecaptcha.getResponse();
+                if (response.length == 0) {
+                    //reCaptcha not verified
+                    alert("please verify you are humann!");
+                    evt.preventDefault();
+                    return false;
+                }
+                //captcha verified
+                //do the rest of your validations here
+
+            });
 
 
         $('.feat-btn').click(function () {
