@@ -196,7 +196,7 @@ app.post("/applyintern",isLoggedIn,function(req,res){
       console.log(err);
       else{
          // console.log(ints);
-          req.flash("success","Thank you for showing interest. Your Internship application has been submitted ,Our Recruitment team will connect with you on specified Email");
+          req.flash("success","Thank you for showing interest. Your Internship application has been submitted ,Our Recruitment team will connect with you on specified Email.");
           res.redirect("/applyintern");
       }
   });
