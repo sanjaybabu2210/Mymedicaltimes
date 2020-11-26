@@ -8,9 +8,18 @@
     $('.navbar-toggler').click(function(){
         $('#filter').toggle();
     })
+     $('.bim-btn').click(function () {
+      $('nav ul .bim-show').toggleClass("show20");
+      $('nav ul .kle').toggleClass("rotate");
+    });
+
+     $('.zg-btn').click(function () {
+      $('nav ul .zg-show').toggleClass("show60");
+      $('nav ul .kle').toggleClass("rotate");
+    });
   })
 
-
+    
   // --------------------new ------------------------
   function openNav() {
     document.getElementById("sidenav").style.width = "75vw";
