@@ -334,19 +334,19 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     </div>
 
     <script>
-        document.getElementById("commentform").addEventListener("submit", function (evt) {
+        // document.getElementById("commentform").addEventListener("submit", function (evt) {
 
-                var response = grecaptcha.getResponse();
-                if (response.length == 0) {
-                    //reCaptcha not verified
-                    alert("please verify you are humann!");
-                    evt.preventDefault();
-                    return false;
-                }
-                //captcha verified
-                //do the rest of your validations here
+        //         var response = grecaptcha.getResponse();
+        //         if (response.length == 0) {
+        //             //reCaptcha not verified
+        //             alert("please verify you are humann!");
+        //             evt.preventDefault();
+        //             return false;
+        //         }
+        //         //captcha verified
+        //         //do the rest of your validations here
 
-            });
+        //     });
 
 
         $('.feat-btn').click(function () {

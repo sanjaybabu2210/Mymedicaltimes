@@ -451,7 +451,7 @@ app.post("/register",function(req,res)
             users.nationality=req.body.nationality;
             users.email=req.body.email;
             users.fullName=req.body.fullName;
-            if(users.username==='admin'){
+            if(users.username==='admin@gmail.com'){
             users.writearticle='true';
             users.writenews=true;
             }
@@ -517,7 +517,7 @@ app.get("/seeReviewDetails",isNewLoggedIn,function(req, res) {
     });
 });
 app.post("/admin/login",function(req, res) {
-   if(req.body.email=="admin"){
+   if(req.body.username=="admin@gmail.com"){
        passport.authenticate("local",
 {
   successRedirect:"/admin",
@@ -769,7 +769,7 @@ function isLoggedIn(req,res,next){
    
 }
 function isNewLoggedIn(req,res,next){
-    if(req.isAuthenticated() && (req.user.email==="admin"))
+    if(req.isAuthenticated() && (req.user.username==="admin@gmail.com"))
     {
         return next();
     }
