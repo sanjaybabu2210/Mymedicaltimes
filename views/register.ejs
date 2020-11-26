@@ -313,12 +313,12 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         <label for="phone"> Nationality:</label>
         <input type="text" id="phone" class="cm-input" placeholder="Nationality" required name="nationality">
         <div style="margin-bottom: 20px;">
-                    <div class="g-recaptcha" data-sitekey="6Le-XuYZAAAAAKVbiVIlw4Swr-Rbq5VWYh4j0Z_x" style="max-width: 90% !important;" required>
+                    <div class="g-recaptcha" data-sitekey="6Le-XuYZAAAAAKVbiVIlw4Swr-Rbq5VWYh4j0Z_x" style="max-width: 90% !important;" data-callback="onSuccess" data-action="action" >
                     </div>
 
         </div>
 
-        <button type="submit" class="btn-login  gr-bg" onclick="get_action" >Sign Up</button>
+        <button type="submit" class="btn-login  gr-bg" id="submit-test-form" >Sign Up</button>
         
         <p style="font-size: 14px;">By creating this account,you agree to our <a style="color: #9A7FF4;font-weight: bold;" href="/privacy-policy" >Privacy Policy</a>& <a style="color: #9A7FF4;font-weight: bold;" href="/cookie-policy">Cookie Policy</a></p>
     </form>
@@ -333,13 +333,23 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 		</div>
     </div>
 
-    <script type="text/javascript">
-    var formData = new FormData(document.getElementById("commentform"));
-    var captcha = formData.get("g-recaptcha-response")
-        
-    </script>
-
     <script>
+         $(function () {
+         $("#submit-test-form").click(function () {
+               
+                    event.preventDefault();
+                    var rcres = grecaptcha.getResponse();
+                    if (rcres.length) {
+                        grecaptcha.reset();
+                        showHideMsg("Form Submitted!", "success");
+                    } else {
+                        showHideMsg("Please verify reCAPTCHA", "error");
+                    }
+                
+            
+        });
+
+
         $('.feat-btn').click(function () {
             $('nav ul .feat-show').toggleClass("show");
             $('nav ul .first').toggleClass("rotate");
@@ -455,18 +465,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
         $('nav ul li').click(function () {
             $(this).addClass("active").siblings().removeClass("active");
         });
-    function get_action(form) {
 
-        var v = grecaptcha.getResponse();
-        if (v.length == 0) {
-            document.getElementById('captcha').innerHTML = "You can't leave Captcha Code empty";
-            return false;
-        }
-        if (v.length != 0) {
-            document.getElementById('captcha').innerHTML = "Captcha completed";
-            return true;
-        }
-    }
     </script>
 <%- include('partials/footertemplate.ejs'); -%>
 
