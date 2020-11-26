@@ -115,7 +115,7 @@ app.post('/application/:id', upload.fields([{
   const photo1 = req.files.photo[0];
   const resume1 = req.files.resume[0];
 
-    var photo = photo1.filename
+    var photo = photo1.filename;
 	var email = req.body.email;
 	var fullName = req.body.fullname;
 	var country = req.body.country;
@@ -196,7 +196,7 @@ app.post("/applyintern",isLoggedIn,function(req,res){
       console.log(err);
       else{
          // console.log(ints);
-          req.flash("success","Thank you for showing interest. Your Internship application has been submitted ,Our Recruitment team will connect with you on specified Email.");
+          req.flash("success","Thank you for showing interest. Your Internship application has been submitted ,Our Recruitment team will connect with you on specified Email");
           res.redirect("/applyintern");
       }
   });
@@ -239,7 +239,7 @@ app.get("/writemedicalnews",isLoggedIn,function(req,res){
        res.redirect("/home");
     
    }else{
-       req.flash("error","You Don't have permission to write Medical Articles, Mail us at mymedicaltimes@gmail.com to give you access");
+       req.flash("error","You Don't have permission to write Medical Article, Mail us at mymedicaltimes@gmail.com to give you access");
        res.redirect("/home");
    }
 });
@@ -413,9 +413,9 @@ app.get("/profilenav",function(req,res) {
 
 app.put("/profilenav/update",function(req, res) {
     var userId=req.body.userId;
-    var username=req.body.username;
+    var username=req.body.email;
     var college=req.body.college;
-    var email=req.body.email;
+    var email=req.body.username;
     var fullName=req.body.fullName;
     User.findById(userId,function(err,foundUser)
     {
@@ -457,7 +457,7 @@ app.post("/register",function(req,res)
             }
             users.save();
             //console.log(users);
-           req.flash("success","Welcome "+users.username);
+           req.flash("success","Welcome "+users.email);
            res.redirect("/home");
        });
         }
@@ -517,7 +517,7 @@ app.get("/seeReviewDetails",isNewLoggedIn,function(req, res) {
     });
 });
 app.post("/admin/login",function(req, res) {
-   if(req.body.username=="admin"){
+   if(req.body.email=="admin"){
        passport.authenticate("local",
 {
   successRedirect:"/admin",
@@ -769,7 +769,7 @@ function isLoggedIn(req,res,next){
    
 }
 function isNewLoggedIn(req,res,next){
-    if(req.isAuthenticated() && (req.user.username==="admin"))
+    if(req.isAuthenticated() && (req.user.email==="admin"))
     {
         return next();
     }

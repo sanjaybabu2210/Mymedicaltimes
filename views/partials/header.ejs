@@ -779,7 +779,7 @@ font-size: 0.9rem !important;
             <% if(!currentUser){ %>
             <a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;">Login</a>
             <%} else{ %>
-            <a href="/profilenav" style="color:#ffffff;margin-left:20px;margin-right:20px;margin-top:-20px;font-size: 20px;" id="userm"><i class="far fa-users"></i> <%= currentUser.username %></a>
+            <a href="/profilenav" style="color:#ffffff;margin-left:20px;margin-right:20px;margin-top:-20px;font-size: 20px;" id="userm"><i class="far fa-users"></i> <%= currentUser.email %></a>
             <a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
 
             <% } %>

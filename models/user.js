@@ -17,6 +17,11 @@ var UserSchema=new mongoose.Schema({
         default:false
     }
 });
-
-UserSchema.plugin(passportLocalMongoose);
+var options = {
+    errorMessages: {
+        UserExistsError: 'Given Email already exists',
+        IncorrectUsernameError: 'Email does not exist',
+    }
+};
+UserSchema.plugin(passportLocalMongoose,options);
 module.exports=mongoose.model("User",UserSchema);
