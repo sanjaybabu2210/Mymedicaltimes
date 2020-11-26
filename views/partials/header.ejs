@@ -818,7 +818,7 @@ font-size: 0.9rem !important;
 <% if(!currentUser){ %>
 <a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;width:80% ;margin: 10px 10%;">Login</a>
 <%} else{ %>
-<a href="/profilenav" style="color:#ffffff;margin:5px 20%;"> <%= currentUser.username %></a>
+<a href="/profilenav" style="color:#ffffff;margin:5px 20%;"> <%= currentUser.email %></a>
 <a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
 
 <% } %>                <li>

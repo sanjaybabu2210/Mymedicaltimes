@@ -19,7 +19,7 @@ var UserSchema=new mongoose.Schema({
 });
 var options = {
     errorMessages: {
-        UserExistsError: 'Given Email already exists',
+        UserExistsError: 'An account already exists with the given Email Id',
         IncorrectUsernameError: 'Email does not exist',
     }
 };
