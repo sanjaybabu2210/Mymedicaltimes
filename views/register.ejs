@@ -253,8 +253,11 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
+<div class="alert alert-danger container" id="error" style="margin:3% auto;text-align: center;max-width: 80%;"></div>
+
 <% if(error.length>0){%>
-<div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
+<div class="alert alert-danger container" id="error" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
 <% }if(success.length>0){%>
 <div class="alert alert-success container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=success%></div>
 <% } %>
@@ -334,19 +337,22 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     </div>
 
     <script>
-        // document.getElementById("commentform").addEventListener("submit", function (evt) {
+        $('#error').hide();
+        document.getElementById("commentform").addEventListener("submit", function (evt) {
 
-        //         var response = grecaptcha.getResponse();
-        //         if (response.length == 0) {
-        //             //reCaptcha not verified
-        //             alert("please verify you are humann!");
-        //             evt.preventDefault();
-        //             return false;
-        //         }
-        //         //captcha verified
-        //         //do the rest of your validations here
+                var response = grecaptcha.getResponse();
+                if (response.length == 0) {
+                    //reCaptcha not verified
+                    $('#error').show();
+                    document.getElementById("error").innerHTML = "<p>Please verify you are Human!  </p>"
+                    // alert("please verify you are humann!");
+                    evt.preventDefault();
+                    return false;
+                }
+                //captcha verified
+                //do the rest of your validations here
 
-        //     });
+            });
 
 
         $('.feat-btn').click(function () {
