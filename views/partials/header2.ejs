@@ -16,14 +16,15 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>My Medical Times</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-        body,html {
+        body,
+        html {
             overflow-x: hidden;
             background: #f0f0f0;
         }
@@ -58,15 +59,17 @@
             letter-spacing: 1px;
             margin: 0px
         }
-        nav{
-                        padding: 0px 60px;
+
+        nav {
+            padding: 0px 60px;
 
         }
+
         nav ul {
             /* background: #1b1b1b; */
             height: 80%;
             width: 100%;
-                                    text-decoration: none;
+            text-decoration: none;
 
             list-style: none;
 
@@ -74,7 +77,7 @@
 
         nav ul li {
             line-height: 50px;
-                                    text-decoration: none;
+            text-decoration: none;
 
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -88,14 +91,14 @@
             padding-left: 30px;
             font-weight: 500;
             display: block;
-                                    text-decoration: none;
+            text-decoration: none;
 
             width: 100%;
             border-left: 3px solid transparent;
         }
 
         nav ul li.active a {
-                                    text-decoration: none;
+            text-decoration: none;
 
             color: cyan;
             background: #1e1e1e;
@@ -123,6 +126,7 @@
         nav ul .bi-show.show4 {
             display: block;
         }
+
         .show20 {
             display: block;
         }
@@ -194,7 +198,8 @@
         nav ul .yg-show.show21 {
             display: block;
         }
-          .show60 {
+
+        .show60 {
             display: block;
         }
 
@@ -204,14 +209,14 @@
         }
 
         nav ul ul li {
-                        text-decoration: none;
-            
+            text-decoration: none;
+
             line-height: 42px;
             border-bottom: none;
         }
 
         nav ul ul li a {
-                        text-decoration: none;
+            text-decoration: none;
 
             font-size: 17px;
             color: #e6e6e6;
@@ -221,7 +226,7 @@
 
         nav ul li.active ul li a {
             color: #e6e6e6;
-                        text-decoration: none;
+            text-decoration: none;
 
             background: rgba(255, 255, 255, 0.2);
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -230,7 +235,7 @@
         }
 
         nav ul ul li a:hover {
-                        text-decoration: none;
+            text-decoration: none;
 
             color: cyan !important;
             background: #343a40 !important;
@@ -245,129 +250,159 @@
             transition: transform 0.4s;
         }
 
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: -10px;
-}
-.social-buttons__button {
-  margin: 10px 5px 0;
-}
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: -10px;
+        }
 
-.social-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  width: 70px;
-  height: 70px;
-  text-decoration: none;
-}
-.social-button__inner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  border-radius: 100%;
-  background: #fff;
-  text-align: center;
-}
-.social-button i,
-.social-button svg {
-  position: relative;
-  z-index: 1;
-  transition: 0.3s;
-}
-.social-button i {
-  font-size: 28px;
-}
-.social-button svg {
-  height: 40%;
-  width: 40%;
-}
-.social-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  display: block;
-  width: 0;
-  height: 0;
-  border-radius: 100%;
-  transition: 0.3s;
-}
-.social-button:focus, .social-button:hover {
-  color: #fff;
-}
-.social-button:focus::after, .social-button:hover::after {
-  width: 100%;
-  height: 100%;
-  margin-left: -50%;
-}
-.social-button--mail {
-  color: #0072c6;
-}
-.social-button--mail::after {
-  background: #0072c6;
-}
-.social-button--facebook {
-  color: #3b5999;
-}
-.social-button--facebook::after {
-  background: #3b5999;
-}
-.social-button--linkedin {
-  color: #0077b5;
-}
-.social-button--linkedin::after {
-  background: #0077b5;
-}
-.social-button--github {
-  color: red;
-}
-.social-button--github::after {
-  background: red;
-}
-.social-button--codepen {
-  color: #212121;
-}
-.social-button--codepen::after {
-  background: #212121;
-}
-.social-button--steam {
-  color: #7da10e;
-}
-.social-button--steam::after {
-  background: #7da10e;
-}
-.social-button--snapchat {
-  color: #eec900;
-}
-.social-button--snapchat::after {
-  background: #eec900;
-}
-.social-button--twitter {
-  color: #55acee;
-}
-.social-button--twitter::after {
-  background: #55acee;
-}
-.social-button--instagram {
-  color: pink;
-}
-.social-button--instagram::after {
-  background:pink;
-}
-.social-button--npmjs {
-  color: #c12127;
-}
-.social-button--npmjs::after {
-  background: #c12127;
-}
+        .social-buttons__button {
+            margin: 10px 5px 0;
+        }
+
+        .social-button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            width: 70px;
+            height: 70px;
+            text-decoration: none;
+        }
+
+        .social-button__inner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            border-radius: 100%;
+            background: #fff;
+            text-align: center;
+        }
+
+        .social-button i,
+        .social-button svg {
+            position: relative;
+            z-index: 1;
+            transition: 0.3s;
+        }
+
+        .social-button i {
+            font-size: 28px;
+        }
+
+        .social-button svg {
+            height: 40%;
+            width: 40%;
+        }
+
+        .social-button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: 0;
+            height: 0;
+            border-radius: 100%;
+            transition: 0.3s;
+        }
+
+        .social-button:focus,
+        .social-button:hover {
+            color: #fff;
+        }
+
+        .social-button:focus::after,
+        .social-button:hover::after {
+            width: 100%;
+            height: 100%;
+            margin-left: -50%;
+        }
+
+        .social-button--mail {
+            color: #0072c6;
+        }
+
+        .social-button--mail::after {
+            background: #0072c6;
+        }
+
+        .social-button--facebook {
+            color: #3b5999;
+        }
+
+        .social-button--facebook::after {
+            background: #3b5999;
+        }
+
+        .social-button--linkedin {
+            color: #0077b5;
+        }
+
+        .social-button--linkedin::after {
+            background: #0077b5;
+        }
+
+        .social-button--github {
+            color: red;
+        }
+
+        .social-button--github::after {
+            background: red;
+        }
+
+        .social-button--codepen {
+            color: #212121;
+        }
+
+        .social-button--codepen::after {
+            background: #212121;
+        }
+
+        .social-button--steam {
+            color: #7da10e;
+        }
+
+        .social-button--steam::after {
+            background: #7da10e;
+        }
+
+        .social-button--snapchat {
+            color: #eec900;
+        }
+
+        .social-button--snapchat::after {
+            background: #eec900;
+        }
+
+        .social-button--twitter {
+            color: #55acee;
+        }
+
+        .social-button--twitter::after {
+            background: #55acee;
+        }
+
+        .social-button--instagram {
+            color: pink;
+        }
+
+        .social-button--instagram::after {
+            background: pink;
+        }
+
+        .social-button--npmjs {
+            color: #c12127;
+        }
+
+        .social-button--npmjs::after {
+            background: #c12127;
+        }
 
         nav ul li a span.rotate {
             transform: translateY(-50%) rotate(-180deg);
@@ -407,28 +442,74 @@
             }
         }
 
-     @media screen and (max-width: 992px) {
+        @media screen and (max-width: 1000px) and (min-width: 400px) {
+            .social-buttons {
+                margin-left: 30% !important;
+                text-align: center;
+                justify-content: center;
+                font-size: smaller !important;
+            }
 
-        nav ul li a {
-            font-size: large !important;
+            #dk {
+                margin-left: -5% !important;
+                text-align: center;
+                width: 100vw;
+
+                margin-bottom: 10% !important;
+            }
+
+            #times {
+                margin-bottom: 5% !important;
+            }
+
+            #email {
+                margin-left: -5% !important;
+            }
         }
-        #userm{
-            font-size: large !important;
-        }
-        #userm:hover{
-            color:cyan;
-        }
-        #logo{
-                float:right;
+
+        @media screen and (max-width: 992px) {
+
+            nav ul li a {
+                font-size: large !important;
+            }
+
+            #userm {
+                font-size: large !important;
+            }
+
+            #userm:hover {
+                color: cyan;
+            }
+
+            #logo {
+                float: right;
                 margin: 5px auto;
+            }
+
+            nav ul li a {
+
+                font-size: 18px !important;
+            }
+
+            #dk {
+                margin-left: -15%;
+                text-align: center;
+                width: 100vw;
+
+                margin-bottom: 10% !important;
+            }
+
+            #times {
+                margin-bottom: 5% !important;
+            }
+
+            #email {
+                margin-left: -6%;
+            }
+
+
         }
-        nav ul li a {
 
-            font-size: 18px !important;
-        }
-
-
-     }
         .fa {
             padding: 20px;
             font-size: 30px;
@@ -462,6 +543,14 @@
             height: 35px;
         }
 
+        #pk {
+            text-align: center !important;
+        }
+
+        /* #email{
+            margin-left: -4% !important
+            ;
+        } */
         .icc:hover {
             opacity: 0.6;
         }
@@ -549,11 +638,59 @@
 
         #filter {
             display: none;
-        } 
-        
+        }
 
-    @media only screen and (min-width: 990px) {
-        #sidenav{
+
+        @media only screen and (min-width: 990px) {
+            #sidenav {
+                height: 110%;
+                margin-top: -8px;
+                margin-bottom: -55px;
+                box-sizing: border-box;
+                position: sticky;
+                z-index: 1;
+                top: 0;
+                left: 0;
+
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+
+            #logos {
+                margin-top: -10% !important;
+            }
+
+            #main {
+                margin-left: 10%;
+            }
+
+            #pk {
+                text-align: left !important;
+            }
+
+            #buts {
+                margin-left: -40%;
+            }
+
+            #dclose {
+
+                display: none;
+            }
+
+            .m-view {
+                display: none;
+            }
+        }
+
+        .btn-group button a {
+            font-size: 15px !important;
+            /* line-height: -10px !important; */
+
+        }
+
+        @media only screen and (min-width: 824px) and (max-width: 990px) {
+
+            /* #sidenav{
                 height: 110%;
                 margin-top: -8px;
                 margin-bottom: -55px;
@@ -565,67 +702,28 @@
 
   overflow-x: hidden;
   padding-top: 20px;
-        }
-        #logos{
-            margin-top:-10% !important;
-        }
-        #main{
-            margin-left: 10%;
-        }
-        #buts{
-            margin-left: -40%;
-        }
-        #dclose {
-
-            display: none;
-        }
-        .m-view{
-            display: none;
-        }
-    }
-    .btn-group button a{
-                font-size: 15px !important;
-                /* line-height: -10px !important; */
-
-            }
-    @media only screen and (min-width: 824px) and (max-width: 990px) {
-
-        #sidenav{
-                height: 110%;
-                margin-top: -8px;
-                margin-bottom: -55px;
-                box-sizing: border-box;
-  position: sticky;
-  z-index: 1;
-  top: 0;
-  left: 0;
-
-  overflow-x: hidden;
-  padding-top: 20px;
-        }
-        .m-view{
-            display: none;
-        }
-#dclose {
-
-            display: none;
-        }
-
-    }
-    #icon-all{
-        width: 70vw !important;
-        margin: 5px auto;
-        text-align: center;
-    }
-    .btn-group {
-                position: relative;
-                left: 0%;
-                min-width: 70%;
-                height: 3.2rem;
-                text-align: center;
+        } */
+            .m-view {
+                display: none;
             }
 
-        @media only screen and (max-width: 984px) {
+        }
+
+        #icon-all {
+            width: 70vw !important;
+            margin: 5px auto;
+            text-align: center;
+        }
+
+        .btn-group {
+            position: relative;
+            left: 0%;
+            min-width: 70%;
+            height: 3.2rem;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 994px) {
 
             .sidebar {
                 height: 100%;
@@ -639,30 +737,41 @@
                 transition: 0.5s;
                 padding-top: 60px;
             }
-            #logos{
+
+            #logos {
                 font-size: 1rem !important;
                 margin-left: -5% !important;
                 margin-bottom: 8% !important;
             }
-            #l-foot{
+
+            #l-foot {
                 font-size: 0.9rem !important;
                 font-weight: normal !important;
             }
-            #email{
+
+            #email {
                 font-size: 15px;
                 width: 95vw !important;
             }
-            #f-foot{
-font-size: 0.9rem !important;
+
+            #f-foot {
+                font-size: 0.9rem !important;
                 font-weight: normal !important;
             }
-            #main{
+
+            #main {
                 text-align: center;
                 margin: 3% auto;
             }
-            #times{
+
+            #pk {
+                text-align: center;
+            }
+
+            #times {
                 margin-left: -2% !important;
             }
+
             .btn-group {
                 position: relative;
                 left: 0%;
@@ -671,30 +780,31 @@ font-size: 0.9rem !important;
                 text-align: center;
             }
 
-            .btn-group button a{
+            .btn-group button a {
                 font-size: 8px !important;
                 /* line-height: -10px !important; */
 
             }
 
 
-/* 
+            /* 
             #cred{
                 margin-top:20px;
                 text-align: center;
                 justify-content: space-evenly;
             } */
-            #buts{
+            #buts {
                 margin-left: -10px;
-}
+            }
 
-           #buts a{
-               width: 50px !important;
-               height: 50px !important;
-           }
-           #email{
+            #buts a {
+                width: 50px !important;
+                height: 50px !important;
+            }
+
+            /* #email{
                margin-left: -6% !important;
-           }
+           } */
             #filter {
                 position: absolute;
                 left: 10px;
@@ -715,21 +825,23 @@ font-size: 0.9rem !important;
                 font-size: 36px;
                 margin-left: 95%;
             }
-            #mobi{
-                margin-left: -16%;
+
+            #mobi {
+                justify-content: center;
+                /* margin-left: -16%; */
                 min-width: 90vw;
             }
-            
-            #dclose{
-                color:white !important;
+
+            #dclose {
+                color: white !important;
                 position: absolute;
-                left:85%;
+                left: 85%;
                 text-decoration: none !important;
-                top:-1%;
-                margin-bottom:8%;
+                top: -1%;
+                margin-bottom: 8%;
                 /* background-color: tomato; */
             }
-           
+
         }
 
         /* -------------------------------------newly added-------------------------------------------- */
@@ -747,8 +859,11 @@ font-size: 0.9rem !important;
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:20px;">
-        <a class="navbar-brand" href="/home" id="logo"><h5 class="text-uppercase " id="times"
-            style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:whitesmoke;font-size: smaller;"> My Medical Times</h5></a>
+        <a class="navbar-brand" href="/home" id="logo">
+            <h5 class="text-uppercase " id="times"
+                style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:whitesmoke;font-size: smaller;">
+                My Medical Times</h5>
+        </a>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -757,12 +872,13 @@ font-size: 0.9rem !important;
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active" style="line-height: 40px;margin-top:5px;">
-                    <a class="nav-link" href="/home" style="padding-left: 15px;">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/home" style="padding-left: 15px;">Home <span
+                            class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item " style="line-height: 40px;margin-top:5px;">
-                    <a class="nav-link " href="/" id="" role="button"
-                        data-toggle="" aria-haspopup="true" aria-expanded="false" style="padding-left: 15px;">
+                    <a class="nav-link " href="/" id="" role="button" data-toggle="" aria-haspopup="true"
+                        aria-expanded="false" style="padding-left: 15px;">
                         Medical News
                     </a>
                     <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:350px;">
@@ -778,16 +894,18 @@ font-size: 0.9rem !important;
 
 
             </ul>
-            
+
             <form class="form-inline my-2 my-lg-0 ">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
             </form>
-<!-- <span id="cred"> -->
+            <!-- <span id="cred"> -->
             <% if(!currentUser){ %>
             <a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;">Login</a>
             <%} else{ %>
-            <a href="/profilenav" style="color:#ffffff;margin-left:20px;margin-right:20px;margin-top:-20px;font-size: 20px;" id="userm"><i class="far fa-users"></i> <%= currentUser.email %></a>
+            <a href="/profilenav"
+                style="color:#ffffff;margin-left:20px;margin-right:20px;margin-top:-20px;font-size: 20px;" id="userm"><i
+                    class="far fa-users"></i> <%= currentUser.email %></a>
             <a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
 
             <% } %>
@@ -808,58 +926,65 @@ font-size: 0.9rem !important;
         today, is going to save someone's life tomorrow. Pay attention ***
     </marquee>
     <!-- --------------------------------newly added--------------------------------------     -->
-    <div class="row" >
+    <div class="row">
         <div id="filter">
             <button style="width: 50px;height: 50px;border-radius: 50%;background-color:black" onclick="openNav()"><i
                     class="fas fa-bars" style="color:snow"></i></button>
         </div>
 
 
-        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10" id="sidenav" style="overflow-x: hidden;max-width: 340px;">
+        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10" id="sidenav"
+            style="overflow-x: hidden;max-width: 340px;">
             <a href="javascript:void(0)" class="closebtn" id="dclose" onclick="closeNav()"
                 style="width: 500px;height: 50px;position: absolute;top: -5px;right: 5px;font-size: 50px;color:white;margin-bottom:30px;">&times;</a>
             <!-- <div class="text"> My Medical Times </div> -->
-           
+
             <ul>
                 <!-- --------------------------------newly added--------------------------------------     -->
                 <li class="ant-btn m-view">
-<% if(!currentUser){ %>
-<a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;width:80% ;margin: 10px 10%;">Login</a>
-<%} else{ %>
-<a href="/profilenav" style="color:#ffffff;margin:5px 20%;"> <%= currentUser.email %></a>
-<a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
+                    <% if(!currentUser){ %>
+                    <a class="btn btn-primary" href="/login" role="button"
+                        style="margin-top:5px;text-align: center;width:80% ;margin: 10px 10%;">Login</a>
+                    <%} else{ %>
+                    <a href="/profilenav" style="color:#ffffff;margin:5px 20%;"> <%= currentUser.email %></a>
+                    <a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>
 
-<% } %>                <li>
-                
-                <li class="ant-btnf m-view" >
+                    <% } %>
+                <li>
+
+                <li class="ant-btnf m-view">
                     <a style="color: white;font-weight: 200;" href="/">Home</a></li>
                 <li>
                 <li class="ant-btnf m-view">
                     <a style="color: white;font-weight: 200;" href="/maindisease">Disease</a></li>
                 <li>
-                    <li class="ant-btnf ">
-                        <a style="color: white;font-weight: 200;" href="/application">Apply for writing</a></li>
-                    <li>
+                <li class="ant-btnf ">
+                    <a style="color: white;font-weight: 200;" href="/application">Apply for writing</a></li>
+                <li>
                     <a class="ant-btn"> Anatomy
                         <span class="fas fa-caret-down fourth  buttor"></span>
                     </a>
                     <ul class="ant-show shower ">
-                                                <li><a href="/anatomy/Clinical Anatomy" style="padding-left:-20px;"> Clinical Anatomy</a> </li>
+                        <li><a href="/anatomy/Clinical Anatomy" style="padding-left:-20px;"> Clinical Anatomy</a> </li>
 
-                                                                        <li><a href="/anatomy/Comporative Anatomy" style="padding-left:-20px;"> Comporative Anatomy</a> </li>
+                        <li><a href="/anatomy/Comporative Anatomy" style="padding-left:-20px;"> Comporative Anatomy</a>
+                        </li>
 
-                        <li ><a href="/anatomy/embryology" style="padding-left:-20px;"> Embryology</a> </li>
+                        <li><a href="/anatomy/embryology" style="padding-left:-20px;"> Embryology</a> </li>
                         <li><a href="/anatomy/histology"> Histology</a> </li>
-                                                <li><a href="/anatomy/Living Anatomy" style="padding-left:-20px;"> Living Anatomy</a> </li>
+                        <li><a href="/anatomy/Living Anatomy" style="padding-left:-20px;"> Living Anatomy</a> </li>
                         <li><a href="/anatomy/Neuroanatomy" style="padding-left:-20px;"> Neuroanatomy</a> </li>
 
                         <li><a href="/anatomy/Osteology"> Osteology</a> </li>
-                                                <li><a href="/anatomy/Radiographic Anatomy" style="padding-left:-20px;"> Radiographic Anatomy</a> </li>
+                        <li><a href="/anatomy/Radiographic Anatomy" style="padding-left:-20px;"> Radiographic
+                                Anatomy</a> </li>
 
                         <li><a href="/anatomy/Regional Anatomy"> Regional Anatomy</a> </li>
-                                                <li><a href="/anatomy/Sectional Anatomy" style="padding-left:-20px;"> Sectional Anatomy</a> </li>
+                        <li><a href="/anatomy/Sectional Anatomy" style="padding-left:-20px;"> Sectional Anatomy</a>
+                        </li>
                         <li><a href="/anatomy/Surface Anatomy" style="padding-left:-20px;"> Surface Anatomy</a> </li>
-                        <li><a href="/anatomy/Systematic Anatomy" style="padding-left:-20px;"> Systematic Anatomy</a> </li>
+                        <li><a href="/anatomy/Systematic Anatomy" style="padding-left:-20px;"> Systematic Anatomy</a>
+                        </li>
 
                     </ul>
                 </li>
@@ -872,9 +997,9 @@ font-size: 0.9rem !important;
                     <ul class="an-show shower ">
                         <li><a href="/Anesthesia/Anesthesiology"> Anesthesiology</a> </li>
                         <li><a href="/Anesthesia/General Anesthesia"> General Anesthesia</a> </li>
-                                                <li> <a href="/Anesthesia/Local Anesthesia"> Local Anesthesia </a> </li>
+                        <li> <a href="/Anesthesia/Local Anesthesia"> Local Anesthesia </a> </li>
 
-                                                <li><a href="/Anesthesia/Regional Anesthesia"> Regional Anesthesia</a> </li>
+                        <li><a href="/Anesthesia/Regional Anesthesia"> Regional Anesthesia</a> </li>
 
                     </ul>
                 </li>
@@ -926,29 +1051,32 @@ font-size: 0.9rem !important;
                         <li> <a href="/Biochemistry/Genetics"> Genetics</a></li>
                         <li> <a href="/Biochemistry/Medicinal Chemistry"> Medicinal Chemistry </a> </li>
                         <li> <a href="/Biochemistry/Metabolism"> Metabolism </a></li>
-                                                <li> <a href="/Biochemistry/Molecular biology"> Molecular biology </a> </li>
+                        <li> <a href="/Biochemistry/Molecular biology"> Molecular biology </a> </li>
                         <li> <a href="/Biochemistry/Phytochemistry"> Phytochemistry </a></li>
 
                         <li> <a href="/Biochemistry/Plant biochemistry"> Plant biochemistry </a></li>
                     </ul>
                 </li>
-    <li> <a class="bim-btn"> BioInformatics
-            <span class="fas fa-caret-down kle buttor"></span>
-        </a>
-        <ul class="bim-show shower " id="mala">
-            <li> <a href="/BioInformatics/Agricultural BioInformatics">Agricultural BioInformatics</a></li>
+                <li> <a class="bim-btn"> BioInformatics
+                        <span class="fas fa-caret-down kle buttor"></span>
+                    </a>
+                    <ul class="bim-show shower " id="mala">
+                        <li> <a href="/BioInformatics/Agricultural BioInformatics">Agricultural BioInformatics</a></li>
                         <li> <a href="/BioInformatics/Forest plant BioInformatics"> Forest plant BioInformatics</a></li>
 
-            <li> <a href="/BioInformatics/Horticulture BioInformatics"> Horticulture BioInformatics </a></li>
+                        <li> <a href="/BioInformatics/Horticulture BioInformatics"> Horticulture BioInformatics </a>
+                        </li>
                         <li> <a href="/BioInformatics/Java for BioInformatics">Java for BioInformatics</a></li>
-            <li> <a href="/BioInformatics/Machine Learning for BioInformatics"> Machine Learning for BioInformatics </a></li>
+                        <li> <a href="/BioInformatics/Machine Learning for BioInformatics"> Machine Learning for
+                                BioInformatics </a></li>
 
-            <li> <a href="/BioInformatics/Medical plant BioInformatics"> Medical plant BioInformatics </a></li>
+                        <li> <a href="/BioInformatics/Medical plant BioInformatics"> Medical plant BioInformatics </a>
+                        </li>
                         <li> <a href="/BioInformatics/python for Biology">python for Biology</a></li>
 
-           
-        </ul>
-    </li>
+
+                    </ul>
+                </li>
 
                 <li>
                     <a class="bip-btn"> BioPhysics
@@ -956,12 +1084,12 @@ font-size: 0.9rem !important;
                     </a>
                     <ul class="bip-show shower ">
                         <li><a href="/BioPhysics/Biomechanics"> Biomechanics</a> </li>
-                                                <li><a href="/BioPhysics/Computational biology"> Computational biology</a> </li>
+                        <li><a href="/BioPhysics/Computational biology"> Computational biology</a> </li>
                         <li><a href="/BioPhysics/Nanotechnology"> Nanotechnology</a> </li>
 
-                                                                        <li><a href="/BioPhysics/physical chemistry"> physical chemistry</a> </li>
+                        <li><a href="/BioPhysics/physical chemistry"> physical chemistry</a> </li>
 
-                                                                                                <li><a href="/BioPhysics/Quantum biology"> Quantum biology</a> </li>
+                        <li><a href="/BioPhysics/Quantum biology"> Quantum biology</a> </li>
                         <li><a href="/BioPhysics/structural biology"> structural biology</a> </li>
 
                     </ul>
@@ -974,8 +1102,9 @@ font-size: 0.9rem !important;
                     <ul class="bio-show shower ">
                         <li> <a href="/Biotechnology/Animal biotechnology"> Animal biotechnology </a></li>
                         <li> <a href="/Biotechnology/Agricultural biotechnology">Agricultural biotechnology</a></li>
-                                                <li> <a href="/Biotechnology/Cell cycle & division"> Cell cycle & division</a></li>
-                        <li> <a href="/Biotechnology/Environmental biotechnology"> Environmental biotechnology </a> </li>
+                        <li> <a href="/Biotechnology/Cell cycle & division"> Cell cycle & division</a></li>
+                        <li> <a href="/Biotechnology/Environmental biotechnology"> Environmental biotechnology </a>
+                        </li>
                         <li> <a href="/Biotechnology/Immunology"> Immunology</a></li>
                         <li> <a href="/Biotechnology/Industrial biotechnology"> Industrial biotechnology </a> </li>
                         <li> <a href="/Biotechnology/Medical biotechnology"> Medical biotechnology </a></li>
@@ -985,19 +1114,22 @@ font-size: 0.9rem !important;
                         <li> <a href="/Biotechnology/Plant biotechnology"> Plant biotechnology </a></li>
                     </ul>
                 </li>
-                
+
 
                 <li> <a class="co-btn"> Community Medicine
                         <span class="fas fa-caret-down sixthh buttor"></span>
                     </a>
                     <ul class="co-show shower ">
                         <li> <a href="/Community Medicine/Biostatistics"> Biostatistics </a></li>
-                        <li> <a href="/Community Medicine/Environmental & occupational Health"> Environmental & occupational Health </a> </li>
+                        <li> <a href="/Community Medicine/Environmental & occupational Health"> Environmental &
+                                occupational Health </a> </li>
                         <li> <a href="/Community Medicine/Epidemiology"> Epidemiology</a></li>
-                        <li> <a href="/Community Medicine/Health Policy & Management"> Health Policy & Management </a> </li>
+                        <li> <a href="/Community Medicine/Health Policy & Management"> Health Policy & Management </a>
+                        </li>
                         <li> <a href="/Community Medicine/Hospital Management"> Hospital Management </a></li>
                         <li> <a href="/Community Medicine/Public Health Nutrition"> Public Health Nutrition</a></li>
-                        <li> <a href="/Community Medicine/Public health ethics & laws"> Public health ethics & laws </a></li>
+                        <li> <a href="/Community Medicine/Public health ethics & laws"> Public health ethics & laws </a>
+                        </li>
                         <li> <a href="/Community Medicine/Public health dentistry"> Public health dentistry </a></li>
                     </ul>
                 </li>
@@ -1008,8 +1140,10 @@ font-size: 0.9rem !important;
                     </a>
                     <ul class="den-show shower ">
                         <li> <a href="/Dentistry/Community dentistry"> Community dentistry </a></li>
-                        <li> <a href="/Dentistry/Conservative dentistry & endodontics"> Conservative dentistry & endodontics </a></li>
-                        <li> <a href="/Dentistry/Dental anatomy & oral histology"> Dental anatomy & oral histology</a></li>
+                        <li> <a href="/Dentistry/Conservative dentistry & endodontics"> Conservative dentistry &
+                                endodontics </a></li>
+                        <li> <a href="/Dentistry/Dental anatomy & oral histology"> Dental anatomy & oral histology</a>
+                        </li>
                         <li> <a href="/Dentistry/Dental materials"> Dental materials </a> </li>
                         <li> <a href="/Dentistry/Oral medicine & radiology"> Oral medicine & radiology </a></li>
                         <li> <a href="/Dentistry/Oral pathology"> Oral pathology</a></li>
@@ -1030,7 +1164,8 @@ font-size: 0.9rem !important;
                         <li> <a href="/Medicine/Dermatology"> Dermatology</a></li>
                         <li> <a href="/Medicine/Diagnostics"> Diagnostics </a></li>
                         <li> <a href="/Medicine/Emergency Medicine"> Emergency Medicine </a></li>
-                        <li> <a href="/Medicine/Forensic medicine & toxicology"> Forensic medicine & toxicology </a> </li>
+                        <li> <a href="/Medicine/Forensic medicine & toxicology"> Forensic medicine & toxicology </a>
+                        </li>
                         <li> <a href="/Medicine/General medicine"> General medicine</a></li>
                         <li> <a href="/Medicine/Gynecology"> Gynecology</a></li>
                         <li> <a href="/Medicine/Interventional"> Interventional </a> </li>
@@ -1091,7 +1226,7 @@ font-size: 0.9rem !important;
                         <li> <a href="/Microscopy/X-Ray microscopy"> X-Ray microscopy </a> </li>
                     </ul>
                 </li>
-                
+
                 <li><a href="/Nutrition and Dietetics/Nutrition and Dietetics"> Nutrition and Dietetics</a> </li>
 
                 <li>
@@ -1099,11 +1234,16 @@ font-size: 0.9rem !important;
                         <span class="fas fa-caret-down eleventh buttor"></span>
                     </a>
                     <ul class="oc-show shower ">
-                        <li><a href="/Occupational Therapy/Occupational therapy in mental health"> Occupational therapy in mental health</a> </li>
-                        <li><a href="/Occupational Therapy/Occupational therapy in neurology"> Occupational therapy in neurology</a> </li>
-                        <li><a href="/Occupational Therapy/Occupational therapy in orthopedics"> Occupational therapy in orthopedics</a> </li>
-                        <li><a href="/Occupational Therapy/Occupational therapy in prediatrics"> Occupational therapy in prediatrics</a> </li>
-                        <li><a href="/Occupational Therapy/Occupational therapy in rehabillitation"> Occupational therapy in rehabillitation</a> </li>
+                        <li><a href="/Occupational Therapy/Occupational therapy in mental health"> Occupational therapy
+                                in mental health</a> </li>
+                        <li><a href="/Occupational Therapy/Occupational therapy in neurology"> Occupational therapy in
+                                neurology</a> </li>
+                        <li><a href="/Occupational Therapy/Occupational therapy in orthopedics"> Occupational therapy in
+                                orthopedics</a> </li>
+                        <li><a href="/Occupational Therapy/Occupational therapy in prediatrics"> Occupational therapy in
+                                prediatrics</a> </li>
+                        <li><a href="/Occupational Therapy/Occupational therapy in rehabillitation"> Occupational
+                                therapy in rehabillitation</a> </li>
                     </ul>
                 </li>
 
@@ -1127,15 +1267,18 @@ font-size: 0.9rem !important;
                     </a>
                     <ul class="pha-show shower ">
                         <li> <a href="/Pharmacy/Clinical pharmacy"> Clinical pharmacy </a> </li>
-                        <li><a href="/Pharmacy/Computer application in pharmacy"> Computer application in pharmacy </a> </li>
+                        <li><a href="/Pharmacy/Computer application in pharmacy"> Computer application in pharmacy </a>
+                        </li>
                         <li> <a href="/Pharmacy/Industrial pharmacy"> Industrial pharmacy </a> </li>
                         <li> <a href="/Pharmacy/Pharmaceutics"> Pharmaceutics </a> </li>
                         <li> <a href="/Pharmacy/Pharmaceutical analysis"> Pharmaceutical analysis</a> </li>
                         <li> <a href="/Pharmacy/Pharmaceutical biotechnology"> Pharmaceutical biotechnology</a> </li>
                         <li> <a href="/Pharmacy/Pharmaceutical engineering"> Pharmaceutical engineering</a> </li>
-                        <li> <a href="/Pharmacy/Pharmaceutical inorganic chemistry"> Pharmaceutical inorganic chemistry </a> </li>
+                        <li> <a href="/Pharmacy/Pharmaceutical inorganic chemistry"> Pharmaceutical inorganic chemistry
+                            </a> </li>
                         <li> <a href="/Pharmacy/Pharmacognosy microbiology"> Pharmacognosy microbiology </a> </li>
-                        <li> <a href="/Pharmacy/Pharmacovigilance organic chemistry"> Pharmacovigilance organic chemistry </a> </li>
+                        <li> <a href="/Pharmacy/Pharmacovigilance organic chemistry"> Pharmacovigilance organic
+                                chemistry </a> </li>
                         <li> <a href="/Pharmacy/Pharmaceutical technology"> Pharmaceutical technology </a> </li>
                         <li> <a href="/Pharmacy/Pharma Regulatory science"> Pharma Regulatory science </a> </li>
                         <li> <a href="/Pharmacy/Physical pharmaceutics"> Physical pharmaceutics </a> </li>
@@ -1173,8 +1316,8 @@ font-size: 0.9rem !important;
                         <li><a href="/Physiology/Cardiovascular physiology"> Cardiovascular physiology </a> </li>
                         <li><a href="/Physiology/Comparative physiology"> Comparative physiology </a> </li>
                         <li><a href="/Physiology/Defense physiology"> Defense physiology </a> </li>
-                                                <li><a href="/Physiology/Endocrinology"> Endocrinology </a> </li>
-                                                <li><a href="/Physiology/Exercise physiology"> Exercise physiology </a> </li>
+                        <li><a href="/Physiology/Endocrinology"> Endocrinology </a> </li>
+                        <li><a href="/Physiology/Exercise physiology"> Exercise physiology </a> </li>
 
                         <li><a href="/Physiology/Eco physiology"> Eco physiology </a> </li>
                         <li><a href="/Physiology/Evolutionary physiology"> Evolutionary physiology</a> </li>
@@ -1185,7 +1328,7 @@ font-size: 0.9rem !important;
                         <li><a href="/Physiology/Neuro physiology"> Neuro physiology </a> </li>
                         <li><a href="/Physiology/Pathophysiology"> Pathophysiology</a> </li>
                         <li><a href="/Physiology/Plant physiology"> Plant physiology</a> </li>
-                                                <li><a href="/Physiology/Renal physiology"> Renal physiology</a> </li>
+                        <li><a href="/Physiology/Renal physiology"> Renal physiology</a> </li>
 
                         <li><a href="/Physiology/Respiratory physiology"> Respiratory physiology </a> </li>
                         <li><a href="/Physiology/Yoga physiology"> Yoga physiology </a> </li>
@@ -1195,7 +1338,7 @@ font-size: 0.9rem !important;
 
 
 
-              
+
 
 
                 <li>
@@ -1216,7 +1359,8 @@ font-size: 0.9rem !important;
                 </li>
 
 
-                <li><a href="/Recombinant DNA Technology/Recombinant DNA Technology"> Recombinant DNA Technology</a> </li>
+                <li><a href="/Recombinant DNA Technology/Recombinant DNA Technology"> Recombinant DNA Technology</a>
+                </li>
 
 
                 <li>
@@ -1234,7 +1378,7 @@ font-size: 0.9rem !important;
                         <li><a href="/Surgery/Paediatric surgery"> Paediatric surgery </a> </li>
                         <li><a href="/Surgery/Plastic surgery"> Plastic surgery </a> </li>
                         <li><a href="/Surgery/Rural surgery"> Rural surgery </a> </li>
-                                                <li><a href="/Surgery/Trauma & Orthopaedic surgery"> Trauma & Orthopaedic surgery </a> </li>
+                        <li><a href="/Surgery/Trauma & Orthopaedic surgery"> Trauma & Orthopaedic surgery </a> </li>
 
                         <li><a href="/Surgery/Urology"> Urology </a> </li>
                         <li><a href="/Surgery/Vascular surgery"> Vascular surgery </a> </li>
@@ -1250,10 +1394,10 @@ font-size: 0.9rem !important;
                     <ul class="the-show shower ">
                         <li><a href="/Therapy/Aromatheraphy"> Aromatheraphy </a> </li>
                         <li><a href="/Therapy/Art theraphy"> Art theraphy </a> </li>
-                        
-                    <li><a href="/Therapy/Balneotherapy"> Balneotherapy </a> </li>
+
+                        <li><a href="/Therapy/Balneotherapy"> Balneotherapy </a> </li>
                         <li><a href="/Therapy/Biotherapy"> Biotherapy </a> </li>
-                                                <li><a href="/Therapy/Brachytherapy"> Brachytherapy </a> </li>
+                        <li><a href="/Therapy/Brachytherapy"> Brachytherapy </a> </li>
                         <li><a href="/Therapy/Cell therapy"> Cell therapy </a> </li>
                         <li><a href="/Therapy/Chelation therapy"> Chelation therapy </a> </li>
                         <li><a href="/Therapy/chemotherapy"> chemotherapy </a> </li>
@@ -1263,25 +1407,25 @@ font-size: 0.9rem !important;
                         <li><a href="/Therapy/ElectroConvulsive therapy"> ElectroConvulsive therapy </a> </li>
 
                         <li><a href="/Therapy/Exercise therapy"> Exercise therapy </a> </li>
-                        
-                                                <li><a href="/Therapy/Gene therapy"> Gene therapy </a> </li>
+
+                        <li><a href="/Therapy/Gene therapy"> Gene therapy </a> </li>
                         <li><a href="/Therapy/Immunotherapy"> Immunotherapy </a> </li>
                         <li><a href="/Therapy/Magnet therapy"> Magnet therapy </a> </li>
-                                                <li><a href="/Therapy/Magneto therapy"> Magneto therapy </a> </li>
+                        <li><a href="/Therapy/Magneto therapy"> Magneto therapy </a> </li>
                         <li><a href="/Therapy/Manipulative therapy"> Manipulative therapy </a> </li>
 
                         <li><a href="/Therapy/Massage therapy"> Massage therapy </a> </li>
 
-                                                <li><a href="/Therapy/Music therapy"> Music therapy </a> </li>
-                                                <li><a href="/Therapy/Occupational therapy"> Occupational therapy </a> </li>
-                                                <li><a href="/Therapy/Pharmacotherapy"> Pharmacotherapy </a> </li>
-                                                <li><a href="/Therapy/Physiotherapy"> Physiotherapy </a> </li>
+                        <li><a href="/Therapy/Music therapy"> Music therapy </a> </li>
+                        <li><a href="/Therapy/Occupational therapy"> Occupational therapy </a> </li>
+                        <li><a href="/Therapy/Pharmacotherapy"> Pharmacotherapy </a> </li>
+                        <li><a href="/Therapy/Physiotherapy"> Physiotherapy </a> </li>
 
                         <li><a href="/Therapy/Radio therapy"> Radio therapy </a> </li>
-                                                                    <li><a href="/Therapy/Sex therapy"> Sex therapy </a> </li>
-                                                <li><a href="/Therapy/Stem cell therapy"> Stem cell therapy </a> </li>
+                        <li><a href="/Therapy/Sex therapy"> Sex therapy </a> </li>
+                        <li><a href="/Therapy/Stem cell therapy"> Stem cell therapy </a> </li>
 
-                       
+
                     </ul>
                 </li>
 
@@ -1303,30 +1447,36 @@ font-size: 0.9rem !important;
                     </a>
                     <ul class="ve-show shower">
                         <li><a href="/Veterinary Sciences/Animal Breeding"> Animal Breeding </a> </li>
-                        <li><a href="/Veterinary Sciences/Livestock Product Technology"> Livestock Product Technology </a> </li>
-                        <li><a href="/Veterinary Sciences/Livestock Production Management"> Livestock Production Management</a> </li>
+                        <li><a href="/Veterinary Sciences/Livestock Product Technology"> Livestock Product Technology
+                            </a> </li>
+                        <li><a href="/Veterinary Sciences/Livestock Production Management"> Livestock Production
+                                Management</a> </li>
                         <li><a href="/Veterinary Sciences/Veterinary Anatomy"> Veterinary Anatomy </a> </li>
                         <li><a href="/Veterinary Sciences/Veterinary Biochemistry"> Veterinary Biochemistry </a> </li>
-                        <li><a href="/Veterinary Sciences/Veterinary Gynaecology & Obstetrics"> Veterinary Gynaecology & Obstetrics </a> </li>
+                        <li><a href="/Veterinary Sciences/Veterinary Gynaecology & Obstetrics"> Veterinary Gynaecology &
+                                Obstetrics </a> </li>
                         <li><a href="/Veterinary Sciences/Veterinary Medicine"> Veterinary Medicine </a> </li>
                         <li><a href="/Veterinary Sciences/Veterinary Microbiology"> Veterinary Microbiology </a> </li>
                         <li><a href="/Veterinary Sciences/Veterinary Parasitology"> Veterinary Parasitology </a> </li>
                         <li><a href="/Veterinary Sciences/Veterinary Pathology"> Veterinary Pathology </a> </li>
                         <li><a href="/Veterinary Sciences/Veterinary Physiology"> Veterinary Physiology </a> </li>
-                        <li><a href="/Veterinary Sciences/Veterinary Pharmacology & Toxicology"> Veterinary Pharmacology & Toxicology </a> </li>
-                        <li><a href="/Veterinary Sciences/Veterinary Public Health & Epidemiology"> Veterinary Public Health & Epidemiology </a> </li>
-                        <li><a href="/Veterinary Sciences/Veterinary Surgery & Radiology"> Veterinary Surgery & Radiology </a> </li>
+                        <li><a href="/Veterinary Sciences/Veterinary Pharmacology & Toxicology"> Veterinary Pharmacology
+                                & Toxicology </a> </li>
+                        <li><a href="/Veterinary Sciences/Veterinary Public Health & Epidemiology"> Veterinary Public
+                                Health & Epidemiology </a> </li>
+                        <li><a href="/Veterinary Sciences/Veterinary Surgery & Radiology"> Veterinary Surgery &
+                                Radiology </a> </li>
                     </ul>
                 </li>
-<li>
-    <a class="zg-btn"> Zoology
-        <span class="fas fa-caret-down zoo buttor"></span>
-    </a>
-    <ul class="zg-show">
-        <li><a href="/Zoology/Invertibrates"> Invertibrates </a> </li>
-        <li><a href="/Zoology/Vertibrates"> Vertibrates </a> </li>
-    </ul>
-</li>
+                <li>
+                    <a class="zg-btn"> Zoology
+                        <span class="fas fa-caret-down zoo buttor"></span>
+                    </a>
+                    <ul class="zg-show">
+                        <li><a href="/Zoology/Invertibrates"> Invertibrates </a> </li>
+                        <li><a href="/Zoology/Vertibrates"> Vertibrates </a> </li>
+                    </ul>
+                </li>
 
             </ul>
         </nav>
