@@ -36,17 +36,7 @@
 
         }
 
-        .sidebar {
-            position: scroll;
-            width: 350px;
-            left: 0;
-            background: #1b1b1b;
-
-            height: 100%;
-            margin: 0px;
-
-
-        }
+    
 
         .sidebar .text {
             color: white;
@@ -553,6 +543,17 @@
         
 
     @media only screen and (min-width: 990px) {
+            .sidebar {
+            position: scroll;
+            width: 350px;
+            left: 0;
+            background: #1b1b1b;
+
+            height: 100%;
+            margin: 0px;
+
+
+        }
         #sidenav{
                 height: 110%;
                 margin-top: -8px;
@@ -590,9 +591,10 @@
             }
     @media only screen and (min-width: 824px) and (max-width: 990px) {
 
-        #sidenav{
+        /* #sidenav{
                 height: 110%;
                 margin-top: -8px;
+                width: 0px;
                 margin-bottom: -55px;
                 box-sizing: border-box;
   position: sticky;
@@ -602,11 +604,15 @@
 
   overflow-x: hidden;
   padding-top: 20px;
-        }
+        } */
         .m-view{
             display: none;
         }
+/* #dclose {
 
+            display: none;
+        }
+       */
 
     }
     #icon-all{
@@ -622,7 +628,7 @@
                 text-align: center;
             }
 
-        @media only screen and (max-width: 984px) {
+        @media only screen and (max-width: 994px) {
 
             .sidebar {
                 height: 100%;
@@ -636,6 +642,7 @@
                 transition: 0.5s;
                 padding-top: 60px;
             }
+            
             #logos{
                 font-size: 1rem !important;
                 margin-left: -5% !important;
