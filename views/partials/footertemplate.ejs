@@ -22,8 +22,10 @@
     });
 
      $('.zg-btn').click(function () {
+        $('.shower').not('.zg-show').removeClass("show20");
+       $('.buttor').not('nav ul .zoo').removeClass("rotate");
       $('nav ul .zg-show').toggleClass("show60");
-      $('nav ul .kle').toggleClass("rotate");
+      $('nav ul .zoo').toggleClass("rotate");
     });
   })
 
@@ -217,7 +219,9 @@
     // $('#main').css({ "margin-left": "10%" });
 
   }
-
+  $('nav ul li').click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+  });
   $('#sidenav ul li a[href="#"]').click(function () {
     closeNav();
   })
