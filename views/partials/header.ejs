@@ -36,7 +36,15 @@
 
         }
 
-    
+     nav ul li.active ul li a {
+            color: #e6e6e6;
+            text-decoration: none;
+
+            background: rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-left-color: transparent;
+
+        }
 
         .sidebar .text {
             color: white;
@@ -215,6 +223,12 @@
             color: #e6e6e6;
             padding-left: 30px;
             text-decoration: none;
+             color: #e6e6e6;
+                        text-decoration: none;
+
+            background: rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-left-color: transparent;
         }
 
         nav ul li.active ul li a {
@@ -487,7 +501,8 @@
 
         .list-wrapper {
             padding: 15px;
-            min-width: 80%;
+            min-width: 90%;
+            margin-left: 7% !important;
             overflow: hidden;
         }
 
@@ -496,6 +511,8 @@
             background: #FFF;
             margin-bottom: 10px;
             padding: 10px;
+            width: 40% !important;
+            height: 50px !important;
             box-shadow: 0px 0px 10px 0px #EEE;
         }
 
@@ -738,7 +755,9 @@ font-size: 0.9rem !important;
                 justify-content: center;
                 
             } */
-           
+           .list-wrapper{
+               margin-left: 10% !important;
+           }
             #dclose{
                 color:white !important;
                 position: absolute;
@@ -834,7 +853,7 @@ font-size: 0.9rem !important;
         </div>
 
 
-        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10" id="sidenav" style="overflow-x: hidden;max-width: 340px;">
+        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10 sider" id="sidenav" style="overflow-x: hidden;max-width: 340px;">
             <a href="javascript:void(0)" class="closebtn" id="dclose" onclick="closeNav()"
                 style="width: 500px;height: 50px;position: absolute;top: -5px;right: 5px;font-size: 50px;color:white;margin-bottom:30px;">&times;</a>
             <!-- <div class="text"> My Medical Times </div> -->
