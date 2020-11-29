@@ -344,19 +344,25 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 .list-wrapper{
 	padding-left: 0%;
 }
+#dcol{
+	margin-left: -10%;
+}
 }
 
 @media screen and (min-width:1400px){
 .list-wrapper{
 	padding-left: 20%;
 }
-
+.dcol{
+	margin-left: -10% !important;
+	/* background-color: black; */
+}
 }
 
 @media screen and (min-width:820px) and(max-width: 1250px){
 	#dcol{
 	max-width: 60vw !important;
-    margin-left: 30% !important;
+    margin-left: 20% !important;
 	}
 
 
@@ -938,7 +944,7 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 
 
 
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-7 mx-auto" style="z-index:1;position: relative; max-width: 100%;justify-content: center;" id="dcol">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-7 mx-auto " style="z-index:1;position: relative; max-width: 100%;justify-content: center;" id="dcol">
 <h2 class=" " style="text-align:center;"></h2>
 
 	<h3 style="text-align: center;margin-bottom: 4%;" id="dise">DISEASE</h3>
@@ -1113,12 +1119,16 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 
 $(document).ready(function(){
  $(".collap").hide();
+    $("#dcol").addClass('dcol');
+
+//  $("#dcol").css("margin-left","-300px")
 });
 	$('#disease').addClass('active');
 
  $(".coll").on("click",function(){
   $(".collap").show();
   $(".des").hide();
+
  });
  
 </script>
@@ -1133,6 +1143,8 @@ $('body').ready(function(){
 	function sideopen(event) {
 		$('#mhi').css("display", "none");
 		$('.mclass').show();
+		   $("#dcol").removeClass('dcol');
+
 	}
 
 
