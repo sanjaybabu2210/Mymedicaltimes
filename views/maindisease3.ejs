@@ -10,6 +10,12 @@
 	line-height: 18px;
 	background: #f4f4f4;
 }
+#mclass{
+    display: none !important;
+}
+#sidenav{
+    display: none;
+}
 
 .list-wrapper {
 	padding:15px 10%;
@@ -952,109 +958,10 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 <div class="list-wrapper dislist" style="margin: 50px auto;width: 100%;">
       
       <!---------1st page starts here--------------------------->
-	<div class="list-item" style="float:left;font-size:17px">
-		<li><a href="/main_disease/autoimmune">Autoimmune Disease</a></li>
-		</div>
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/allergic">Allergic & Asthma</a></li>
-		</div>
-	<div class="list-item" style="float:left;font-size:17px">
-		<li><a href="/main_disease/bacterial">Bacterial infection</a></li>
-		</div>
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/behavioural">Behavioural & mental disorder</a></li>
-		</div>
-	<div class="list-item" style="float:left;font-size:17px">
-		<li><a href="/main_disease/blood">Blood disease</a></li>
-		</div>
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/cancer">Cancer</a></li>
-		</div>
 
 
-	<div class="list-item" style="float:left;font-size:17px">
-		<li><a href="/main_disease/celaic">Celaic disease</a></li>
-		</div>
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/chromosome">Chromosome disorder</a></li>
-		</div>
-	<div class="list-item" style="float:left;font-size:17px">
-		<li><a href="/main_disease/congential">Congential & genetics disease</a></li>
-		</div>
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/connective">Connective tissue disease</a></li>
-		</div>
-	<div class="list-item" style="float:left;font-size:17px">
-		<li><a href="/main_disease/contagious">Contagious disease</a></li>
-		</div>
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/digestive">Digestive disease</a></li>
-		</div>
-
-	<div class="list-item" style="float:left;font-size:17px">
-		<li><a href="/main_disease/deficiency">Deficiency disease</a></li>
-		</div>
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/ear">Ear disease</a></li>
-		</div>
 
 
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/endocrine">Encrodine disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/environmental">Environmental disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/eye">Eye disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/female">Female reproductive disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/fungal">Fungal infection</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/heart">Heart disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/immune">Immune system disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/infectious">Infectious disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/kidney">Kidney disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/liver">Liver disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/lung">Lung disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/male_reproductive">Male reproductive disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/metabolic">Metabolic disease</a></li>
-		</div>
-		
-		<div class="list-item" style="float:left;font-size:17px" >
-		 <li><a href="/main_disease/mouth">Mouth disease</a></li>
-		</div>
 		
 		<div class="list-item" style="float:left;font-size:17px" >
 		 <li><a href="/main_disease/musuloskeletal">Musculoskeletal disease</a></li>
@@ -1113,11 +1020,78 @@ background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
 	
 </div>
 
-<div id="pagination-container"></div>
+<div id="pagination-container">
+	<div class="simple-pagination">
+		<ul>
+			<li>
+				<a href="#" id="previ"> &laquo;</a>
+			</li>
+			<li>
+				<a href="/maindisease1" id="page1"> 1</a>
+			</li>
+			<li>
+				<a href="/maindisease2" id="page2"> 2</a>
+			</li>
+			<li>
+				<a href="/maindisease3" id="page3" style="background-color: rosybrown !important; color: black;"> 3</a>
+			</li>
+			<li>
+				<a href="#" id="nexti"> &raquo;</a>
+			</li>
+		</ul>
+	</div>
+</div>
 
 <script type="text/javascript">
+    $(".collap").hide();
+            $('.mclass').hide();
+            $('.mclass').css("display", "none");
 
 $(document).ready(function(){
+
+
+
+    var page = window.location.href;
+    var murl = page.slice(0, -1);
+    var pg = page.slice(-1);
+    pg = parseInt(pg);
+    pk = pg + 1;
+    pl = pg - 1;
+    console.log(pg);
+    console.log(pk);
+
+    if (pg == 3) {
+        $("#nexti").click(function (e) {
+            e.preventDefault();
+            $("#nexti").css("background-color", "gray");
+
+        })
+    } else {
+        $("#nexti").click(function (e) {
+            e.preventDefault();
+
+            url = murl + pk;
+            location.replace(url);
+        })
+    }
+    if (pg == 1) {
+        $("#previ").click(function (e) {
+            e.preventDefault();
+            $("#previ").css("background-color", "gray");
+        })
+    } else {
+        $("#previ").click(function (e) {
+            e.preventDefault();
+
+            url = murl + pl;
+            location.replace(url);
+        })
+    }
+
+
+
+$("#page3").addClass('active');
+
  $(".collap").hide();
     $("#dcol").addClass('dcol');
 
@@ -1131,9 +1105,10 @@ $(document).ready(function(){
 
  });
  
-</script>
 
-<script type="text/javascript">
+        $('.mclass').hide();
+        $('.mclass').css("display","none");
+
 $('body').ready(function(){
 	$('.mclass').hide();
 	
@@ -1150,23 +1125,24 @@ $('body').ready(function(){
 
   // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/
 
-var items = $(".list-wrapper .list-item");
-    var numItems = items.length;
-    var perPage = 14;
+// var items = $(".list-wrapper .list-item");
+//     var numItems = items.length;
+//     var perPage = 14;
 
-    items.slice(perPage).hide();
+//     items.slice(perPage).hide();
 
-    $('#pagination-container').pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "&laquo;",
-        nextText: "&raquo;",
-        onPageClick: function (pageNumber) {
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
-            items.hide().slice(showFrom, showTo).show();
-        }
-    });
+//     $('#pagination-container').pagination({
+//         items: numItems,
+//         itemsOnPage: perPage,
+//         prevText: "&laquo;",
+//         nextText: "&raquo;",
+//         onPageClick: function (pageNumber) {
+			
+//             var showFrom = perPage * (pageNumber - 1);
+//             var showTo = showFrom + perPage;
+//             items.hide().slice(showFrom, showTo).show();
+//         }
+//     });
     
 
   

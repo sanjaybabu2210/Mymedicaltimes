@@ -344,8 +344,8 @@ app.post("/writearticle/:id",function(req,res){
 
 
 });
-app.get("/maindisease",function(req,res){
-   res.render("main_disease.ejs");
+app.get("/maindisease1",function(req,res){
+   res.render("maindisease1.ejs");
 });
 
 
@@ -470,6 +470,18 @@ app.post("/register",function(req,res)
 app.get("/contactus",function(req,res){
    res.render("contactus.ejs");
 });
+// app.get("/maindisease1",function(req,res){
+//    res.render("maindisease1.ejs");
+// });
+
+app.get("/maindisease2",function(req,res){
+   res.render("maindisease2.ejs");
+});
+
+app.get("/maindisease3",function(req,res){
+   res.render("maindisease3.ejs");
+});
+
 
 app.get("/t&c",function(req,res){
    res.render("t&c.ejs");
