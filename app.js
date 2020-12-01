@@ -353,7 +353,6 @@ app.post("/writearticle/:id",function(req,res){
 
 
 
-
 });
 app.get("/maindisease1",function(req,res){
    res.render("maindisease1.ejs");
