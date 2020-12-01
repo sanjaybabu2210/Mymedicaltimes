@@ -1,6 +1,6 @@
 var mongoose=require("mongoose");
 
-var diseaseSchema=new mongoose.Schema({
+var articleSchema=new mongoose.Schema({
     title:String,
     shortDescription:String,
     description:String,
@@ -11,6 +11,9 @@ var diseaseSchema=new mongoose.Schema({
     subHeading:{
         type:String,
         default:"news"
+    },
+    coverImage:{
+        type: String,
     },
     userId:{
         type:String,
@@ -28,4 +31,4 @@ var diseaseSchema=new mongoose.Schema({
     author:String
 });
 
-module.exports=mongoose.model("disease",diseaseSchema);
+module.exports=mongoose.model("article",articleSchema);

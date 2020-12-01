@@ -203,7 +203,7 @@
     // $('#main').css({"opacity":"0.3"});
     $('#sidenav').css({ "opacity": "1" });
 
-    document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
+    // document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
   function closeNav() {
@@ -221,6 +221,7 @@
   }
   $('nav ul li').click(function () {
     $(this).addClass("active").siblings().removeClass("active");
+
   });
   $('#sidenav ul li a[href="#"]').click(function () {
     closeNav();

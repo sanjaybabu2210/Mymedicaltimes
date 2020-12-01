@@ -218,7 +218,7 @@ app.post("/writereview",isLoggedIn,function(req,res){
    });
 });
 
-app.get("/writearticle",isLoggedIn,function(req,res){
+app.get("/writearticle",function(req,res){
     if(req.user.writearticle=='true'){
    res.render("writearticle.ejs");
 }  else if(req.user.writearticle=='0'){
@@ -244,8 +244,15 @@ app.get("/writemedicalnews",isLoggedIn,function(req,res){
    }
 });
 
-app.post("/writemedicalnews",function(req,res){
-    var news={title:req.body.title,description:req.body.description,author:req.body.author,shortDescription:req.body.shortDescription};
+app.post("/writemedicalnews", upload.single('coverImage') ,function(req,res){
+
+     const image1 = req.file;
+
+    var image = image1.filename;
+
+
+
+    var news={title:req.body.title,description:req.body.description,author:req.body.author,coverImage: image,shortDescription:req.body.shortDescription};
    article.create(news,function(err, newss) {
        if(err)
        console.log(err);
@@ -279,8 +286,12 @@ app.get("/seeMedicalNews/:id",function(req,res){
      
 });
 
-app.post("/writearticle",isLoggedIn,function(req,res){
-    var art={title:req.body.title,mainHeading:req.body.mainHeading,description:req.body.description,shortDescription:req.body.shortDescription,userId:req.user._id,subHeading:req.body.subHeading,author:req.body.author,disease:req.body.topic};
+app.post("/writearticle",upload.single('cover') ,function(req,res){
+     const cover1 = req.file;
+
+    var cover = cover1.filename;
+
+    var art={title:req.body.title,mainHeading:req.body.mainHeading,coverImage:cover,description:req.body.description,shortDescription:req.body.shortDescription,userId:req.user._id,subHeading:req.body.subHeading,author:req.body.author,disease:req.body.topic};
    if(req.body.topic==="notPart"){
        
    article.create(art,function(err, articles) {
