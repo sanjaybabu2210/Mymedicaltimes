@@ -9,13 +9,13 @@ p {
   font-size: 0.85rem;
   line-height: 1.6rem;
 }
-a,
+/* a,
 a:link,
 a:visited,
 a:hover,
 a:active {
   color: #777;
-}
+} */
 h1,
 h2,
 h3,
@@ -2222,7 +2222,7 @@ p.form-success {
 /* Typography */
 .text-uppercase {
   text-transform: uppercase;
-  line-height: 1;
+  /* line-height: 1; */
 }
 .text-line-height-1 {
   line-height: 1;
