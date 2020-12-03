@@ -32,6 +32,18 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/responsee.css">
+  <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+  <!-- CUSTOM STYLE -->
+  <link rel="stylesheet" href="css/template-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet'
+    type='text/css'>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/validation.js"></script>
   <link href="css/animate.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
@@ -87,7 +99,7 @@
     nav ul li.active ul li a {
       color: #e6e6e6;
       text-decoration: none;
-
+      font-size: 12px !important;
       background: rgba(255, 255, 255, 0.2);
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       border-left-color: transparent;
@@ -96,7 +108,7 @@
 
     .sidebar .text {
       color: white;
-      font-size: 25px;
+      font-size: 12px !important;
       font-weight: 600;
       line-height: 65px;
       text-align: center;
@@ -104,7 +116,11 @@
       letter-spacing: 1px;
       margin: 0px
     }
+    .text-thin:hover{
+      transform: translateX(5px) scale(1.05 ,1.05);
+      transition: 0.7s;
 
+    }
     nav {
       padding: 0px 60px;
 
@@ -132,8 +148,8 @@
       position: relative;
       color: white;
       text-decoration: none;
-      font-size: 18px;
-      padding-left: 30px;
+      font-size: 14px !important;
+      /* padding-left: 30px; */
       font-weight: 500;
       display: block;
       text-decoration: none;
@@ -141,11 +157,15 @@
       width: 100%;
       border-left: 3px solid transparent;
     }
-
+ .margin-bottom:hover{
+   opacity: 0.7;
+   transition: 0.6s;
+ }
     .activer {
       text-decoration: none;
 
       color: cyan;
+      width: 100%;
       background: #1e1e1e;
       border-left-color: cyan;
 
@@ -153,7 +173,7 @@
 
     nav ul li.active a {
       text-decoration: none;
-
+      width: 100%;
       color: cyan;
       background: #1e1e1e;
       border-left-color: cyan;
@@ -264,6 +284,7 @@
 
     nav ul ul li {
       text-decoration: none;
+      width: 100%;
 
       line-height: 42px;
       border-bottom: none;
@@ -274,6 +295,7 @@
 
       font-size: 17px;
       color: #e6e6e6;
+      width: 100%;
       padding-left: 30px;
       text-decoration: none;
       color: #e6e6e6;
@@ -286,9 +308,12 @@
 
     nav ul li.active ul li a {
       color: #e6e6e6;
+      width: 100% !important;
+      /* margin-left:-20px; */
       text-decoration: none;
-
-      background: rgba(255, 255, 255, 0.2);
+      margin-left: -10px;
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.2);
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       border-left-color: transparent;
 
@@ -502,7 +527,7 @@
       left: 100%;
     }
 
-    .activer {
+    .activeri {
       background-color: blueviolet !important;
       color: black;
     }
@@ -515,6 +540,10 @@
       .dropdown-menu .dropdown-submenu {
         width: auto;
       }
+          nav ul li.active ul li a {
+            min-width: 205px;
+            margin-left: -20px;
+          }
     }
 
     @media screen and (max-width: 992px) {
@@ -702,6 +731,9 @@
 
 
       }
+          nav ul li.active ul li a {
+            width: 100% !important;
+          }
 
       #sidenav {
         height: 110%;
@@ -797,6 +829,9 @@
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
+      }
+      #rec{
+        font-size: 23px !important;
       }
 
       footer {
@@ -1004,7 +1039,7 @@
     </div>
 
 
-    <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10 sider" id="sidenav"
+    <nav class=" sidebar col-lg-2 col-md-4 col-sm-8 col-xs-12 col-10 sider" id="sidenav"
       style="overflow-x: hidden;max-width: 340px;color: whitesmoke;">
       <a href="javascript:void(0)" class="closebtn" id="dclose" onclick="closeNav()"
         style="width: 500px;height: 50px;position: absolute;top: -5px;right: 5px;font-size: 50px;color:white;margin-bottom:30px;">&times;</a>
@@ -1287,7 +1322,8 @@
           </ul>
         </li>
 
-        <li><a href="/Nutrition and Dietetics/Nutrition and Dietetics"> Nutrition and Dietetics</a> </li>
+        <li><a href="/Nutrition and Dietetics/Nutrition and Dietetics" style="      color: white;
+"> Nutrition and Dietetics</a> </li>
 
         <li>
           <a class="oc-btn"> Occupational Therapy
@@ -1416,7 +1452,8 @@
         </li>
 
 
-        <li><a href="/Recombinant DNA Technology/Recombinant DNA Technology"> Recombinant DNA Technology</a> </li>
+        <li><a href="/Recombinant DNA Technology/Recombinant DNA Technology" style="      color: white;
+"> Recombinant DNA Technology</a> </li>
 
 
         <li>
@@ -1543,550 +1580,394 @@
 } */
 </style>
 
-<div class="col-lg-9 col-md-10 col-sm-11 " style="width: 98%;">
-      <div class="top-news">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 tn-left">
-              <div class="row tn-slider">
-                <div class="col-md-6">
-                  <div class="tn-img">
-                    <img style="max-height: 343px;" src="https://images.unsplash.com/photo-1542736667-069246bdbc6d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzR8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="height:100%;" />
-                    <div class="tn-title">
-                      <a href="">Medical news</a>
+<div class="col-lg-10 col-md-10 col-sm-11 " style="width: 98%;">
+        <main role="main" style="background-color: #f0f0f0 !important;">
+          <!-- Main Carousel -->
+        
+        
+          <!-- Section 1 -->
+        
+          <section class="section background-white" style="background-color: #f0f0f0 !important;">
+        
+            <div class="line">
+              <h3 id="rec"
+                style="height: 50px;width: 100%;background-color: #827D92;margin-top: -4%;margin-bottom:3%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
+                Recent Medical News</h3>
+        
+              <div class="margin">
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                  <img class="margin-bottom" src="img/img-01.jpg" alt="">
+                  <h2 class="text-thin">ARTICLE</h2>
+                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                  <img class="margin-bottom" src="img/img-02.jpg" alt="">
+                  <h2 class="text-thin">ARTICLE</h2>
+                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                  <img class="margin-bottom" src="img/img-03.jpg" alt="">
+                  <h2 class="text-thin">ARTICLE</h2>
+                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
+              </div>
+              <div class="margin" style="margin-top:4%;">
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                  <img class="margin-bottom" src="img/img-01.jpg" alt="">
+                  <h2 class="text-thin">ARTICLE</h2>
+                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                  <img class="margin-bottom" src="img/img-02.jpg" alt="">
+                  <h2 class="text-thin">ARTICLE</h2>
+                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
+                <div class="s-12 m-12 l-4 margin-m-bottom">
+                  <img class="margin-bottom" src="img/img-03.jpg" alt="">
+                  <h2 class="text-thin">ARTICLE</h2>
+                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+          <!-- Section 2 -->
+        
+        
+          <!-- Section 3 -->
+        
+          <!-- Section 4 -->
+        
+          <section class="section background-white" style="margin-top:-10%;background-color: #f0f0f0 !important;">
+            <div class="line">
+              <h3
+                style="height: 50px;width: 100%;background-color: #827D92;margin-top: -4%;margin-bottom:3%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
+                Medical Articles</h3>
+        
+        
+              <div class="item">
+        
+                <div class="s-12 m-12 l-6">
+                  <div class="image-border-radius margin-m-bottom">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-05.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8 margin-m-bottom">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="tn-img">
-                    <img  src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60" />
-                    <div class="tn-title">
-                      <a href="">Medical News</a>
+                <div class="s-12 m-12 l-6">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+        
+          </section>
+          <section class="section background-white" style="margin-top:-10%;background-color: #f0f0f0 !important;">
+            <div class="line">
+              <div class="item">
+        
+                <div class="s-12 m-12 l-6">
+                  <div class="image-border-radius margin-m-bottom">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-05.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8 margin-m-bottom">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-12 m-12 l-6" style="margin-left:0px;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+        
+          </section>
+        
+          <section class="section background-white" style="margin-top:-5%;background-color: #E3DBFC !important; height: 30%;">
+            <div class="line">
+              <div class="carousel-default owl-carousel ">
+                <div class="item">
+                  <div class="margin">
+                    <div class="s-12 m-12 l-6">
+                      <div class="image-border-radius margin-m-bottom">
+                        <div class="margin">
+                          <div class="s-12 m-12 l-4 margin-m-bottom">
+                            <a class="image-hover-zoom" href="/"><img src="img/blog-05.jpg" alt=""></a>
+                          </div>
+                          <div class="s-12 m-12 l-8 margin-m-bottom">
+                            <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                            <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="s-12 m-12 l-6">
+                      <div class="image-border-radius">
+                        <div class="margin">
+                          <div class="s-12 m-12 l-4 margin-m-bottom">
+                            <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                          </div>
+                          <div class="s-12 m-12 l-8">
+                            <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                            <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="margin">
+                    <div class="s-12 m-12 l-6">
+                      <div class="image-border-radius margin-m-bottom">
+                        <div class="margin">
+                          <div class="s-12 m-12 l-4 margin-m-bottom">
+                            <a class="image-hover-zoom" href="/"><img src="img/blog-04.jpg" alt=""></a>
+                          </div>
+                          <div class="s-12 m-12 l-8 margin-m-bottom">
+                            <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                            <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="s-12 m-12 l-6">
+                      <div class="image-border-radius">
+                        <div class="margin">
+                          <div class="s-12 m-12 l-4 margin-m-bottom">
+                            <a class="image-hover-zoom" href="/"><img src="img/blog-02.jpg" alt=""></a>
+                          </div>
+                          <div class="s-12 m-12 l-8">
+                            <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                            <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="margin">
+                    <div class="s-12 m-12 l-6">
+                      <div class="image-border-radius margin-m-bottom">
+                        <div class="margin">
+                          <div class="s-12 m-12 l-4 margin-m-bottom">
+                            <a class="image-hover-zoom" href="/"><img src="img/blog-01.jpg" alt=""></a>
+                          </div>
+                          <div class="s-12 m-12 l-8 margin-m-bottom">
+                            <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                            <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="s-12 m-12 l-6">
+                      <div class="image-border-radius">
+                        <div class="margin">
+                          <div class="s-12 m-12 l-4 margin-m-bottom">
+                            <a class="image-hover-zoom" href="/"><img src="img/blog-06.jpg" alt=""></a>
+                          </div>
+                          <div class="s-12 m-12 l-8">
+                            <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                            <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 tn-right">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="tn-img">
-                    <img src="img/news-350x223-1.jpg" />
-                    <div class="tn-title">
-                      <a href="">Medical News</a>
+          </section>
+        
+        
+        
+          <section class="section background-white" style="background-color: #f0f0f0 !important;">
+            <div class="line">
+              <h3
+                style="height: 50px;width: 100%;background-color: #827D92;margin-top: -4%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
+                Featured Articles</h3>
+        
+              <div class="item">
+        
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius margin-m-bottom">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-05.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8 margin-m-bottom">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="tn-img">
-                    <img src="img/news-350x223-2.jpg" />
-                    <div class="tn-title">
-                      <a href="">Medical News</a>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
                     </div>
                   </div>
+        
                 </div>
-                <div class="col-md-6">
-                  <div class="tn-img">
-                    <img  src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60" />
-                    <div class="tn-title">
-                      <a href="">Medical News</a>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
                     </div>
                   </div>
+        
                 </div>
-                <div class="col-md-6">
-                  <div class="tn-img">
-                    <img  src="https://images.unsplash.com/photo-1453847668862-487637052f8a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60" />
-                    <div class="tn-title">
-                      <a href="">Medical News</a>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
                     </div>
                   </div>
+        
+                </div>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <div class="s-12 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                  <div class="image-border-radius">
+                    <div class="margin">
+                      <div class="s-12 m-12 l-4 margin-m-bottom">
+                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
+                      </div>
+                      <div class="s-12 m-12 l-8">
+                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
+                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+        
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Category News Start-->
-      <div class="cat-news mt-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h2>Blood disease</h2>
-              <div class="row cn-slider">
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-1.jpg" />
-                    <div class="cn-title">
-                      <a href="">Acatalasemia</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-2.jpg" />
-                    <div class="cn-title">
-                      <a href="">Acatalasemia</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-3.jpg" />
-                    <div class="cn-title">
-                      <a href="">Acatalasemia</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <h2>Bacterial infection</h2>
-              <div class="row cn-slider">
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-4.jpg" />
-                    <div class="cn-title">
-                      <a href="">Bacterial infection</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-5.jpg" />
-                    <div class="cn-title">
-                      <a href="">Bacterial infection</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-1.jpg" />
-                    <div class="cn-title">
-                      <a href="">Bacterial infection</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Category News End-->
-      
-      <!-- Category News Start-->
-      <div class="cat-news">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h2>Digestive disease</h2>
-              <div class="row cn-slider">
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-5.jpg" />
-                    <div class="cn-title">
-                      <a href="">Alpers syndrome</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-4.jpg" />
-                    <div class="cn-title">
-                      <a href="">Alpers syndrome</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-3.jpg" />
-                    <div class="cn-title">
-                      <a href="">Alpers syndrome</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <h2>Celaic disease</h2>
-              <div class="row cn-slider">
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-2.jpg" />
-                    <div class="cn-title">
-                      <a href="">Cardiomyopathy</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="img/news-350x223-1.jpg" />
-                    <div class="cn-title">
-                      <a href="">Cardiomyopathy</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cn-img">
-                    <img src="https://images.unsplash.com/photo-1579781403313-56447cb42199?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
-                    <div class="cn-title">
-                      <a href="">Cardiomyopathy</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Category News End-->
-      
-      
-      
-      <section class="section" style="margin-top: -10%;">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9">
-              <div class="blog-list clearfix">
-                <div class="section-title">
-                  <h3 style="color:black;"><a style="color:black;" href="" title="">Recent Articles</a></h3>
-                </div><!-- end title -->
-      
-                <div class="blog-box row">
-                  <div class="col-md-4">
-                    <div class="post-media">
-                      <a href="" title="">
-                        <img src="https://images.unsplash.com/photo-1579781403313-56447cb42199?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="img-fluid">
-                        <div class="hovereffect"></div>
-                      </a>
-                    </div><!-- end media -->
-                  </div><!-- end col -->
-      
-                  <div class="blog-meta big-meta col-md-8">
-                    <h4><a href="" title="">Most common medical things are</a></h4>
-                    <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor.
-                      Suspendissea sodales urna. .</p>
-                    <small><a href="" title="">Travel</a></small>
-                    <small><a href="" title="">21 July, 2020</a></small>
-                    <small><a href="" title="">by san</a></small>
-                  </div><!-- end meta -->
-                </div><!-- end blog-box -->
-      
-                <hr class="invis">
-      
-                <div class="blog-box row">
-                  <div class="col-md-4">
-                    <div class="post-media">
-                      <a href="" title="">
-                        <img src="https://images.unsplash.com/photo-1579781403313-56447cb42199?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="img-fluid">
-                        <div class="hovereffect"></div>
-                      </a>
-                    </div><!-- end media -->
-                  </div><!-- end col -->
-      
-                  <div class="blog-meta big-meta col-md-8">
-                    <h4><a href="" title="">Most common medical things are</a>
-                    </h4>
-                    <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor.
-                      Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus
-                      tempor odio.</p>
-                    <small><a href="" title="">Travel</a></small>
-                    <small><a href="" title="">20 July, 2020</a></small>
-                    <small><a href="" title="">by Sanjay</a></small>
-                  </div><!-- end meta -->
-                </div><!-- end blog-box -->
-      
-                <hr class="invis">
-      
-                <div class="blog-box row">
-                  <div class="col-md-4">
-                    <div class="post-media">
-                      <a href="" title="">
-                        <img src="https://images.unsplash.com/photo-1579781403313-56447cb42199?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="img-fluid">
-                        <div class="hovereffect"></div>
-                      </a>
-                    </div><!-- end media -->
-                  </div><!-- end col -->
-      
-                  <div class="blog-meta big-meta col-md-8">
-                    <h4><a href="" title="">Most common medical things are</a></h4>
-                    <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor.
-                      Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus
-                      tempor odio.</p>
-                    <small><a href="" title="">Travel</a></small>
-                    <small><a href="" title="">19 July, 2020</a></small>
-                    <small><a href="" title="">by sang</a></small>
-                  </div><!-- end meta -->
-                </div><!-- end blog-box -->
-              </div><!-- end blog-list -->
-      
-              <hr class="invis">
-      
-              <div class="blog-list clearfix">
-                <div class="section-title">
-                  <h3 ><a style="color: black;" href="" title="">Ayurveda</a></h3>
-                </div><!-- end title -->
-      
-                <div class="blog-box row">
-                  <div class="col-md-4">
-                    <div class="post-media">
-                      <a href="" title="">
-                        <img src="https://images.unsplash.com/photo-1579781403313-56447cb42199?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="img-fluid">
-                        <div class="hovereffect"></div>
-                      </a>
-                    </div><!-- end media -->
-                  </div><!-- end col -->
-      
-                  <div class="blog-meta big-meta col-md-8">
-                    <h4><a href="" title="">Most common medical things are</a></h4>
-                    <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor.
-                      Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus
-                      tempor odio.</p>
-                    <small><a href="" title="">title</a></small>
-                    <small><a href="" title="">11 July, 2020</a></small>
-                    <small><a href="" title="">by sanj</a></small>
-                  </div><!-- end meta -->
-                </div><!-- end blog-box -->
-      
-                <hr class="invis">
-      
-                <div class="blog-box row">
-                  <div class="col-md-4">
-                    <div class="post-media">
-                      <a href="" title="">
-                        <img src="https://images.unsplash.com/photo-1579781403313-56447cb42199?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"alt="" class="img-fluid">
-                        <div class="hovereffect"></div>
-                      </a>
-                    </div><!-- end media -->
-                  </div><!-- end col -->
-      
-                  <div class="blog-meta big-meta col-md-8">
-                    <h4><a href="" title="">Most common medical things are</a></h4>
-                    <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor.
-                      Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus
-                      tempor odio.</p>
-                    <small><a href="" title="">title</a></small>
-                    <small><a href="" title="">10 July, 2020</a></small>
-                    <small><a href="" title="">by sanjay</a></small>
-                  </div><!-- end meta -->
-                </div><!-- end blog-box -->
-      
-                <hr class="invis">
-      
-                <div class="blog-box row">
-                  <div class="col-md-4">
-                    <div class="post-media">
-                      <a href="" title="">
-                        <img style="max-height: 400px !important;" src="https://images.unsplash.com/photo-1579781403313-56447cb42199?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBpbWFnZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="img-fluid">
-                        <div class="hovereffect"></div>
-                      </a>
-                    </div><!-- end media -->
-                  </div><!-- end col -->
-      
-                  <div class="blog-meta big-meta col-md-8">
-                    <h4><a href="" title="">Most common medical things are</a></h4>
-                    <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor.
-                      Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus
-                      tempor odio.</p>
-                    <small><a href="" title="">title</a></small>
-                    <small><a href="" title="">09 July, 2020</a></small>
-                    <small><a href="" title="">by sanjay</a></small>
-                  </div><!-- end meta -->
-                </div><!-- end blog-box -->
-              </div><!-- end blog-list -->
-            </div><!-- end col -->
-            <div class="col-lg-3">
-              <div class="section-title">
-                <h3 ><a style="color: black;" href="" title="">Anatomy</a></h3>
-              </div><!-- end title -->
-      
-              <div class="blog-box">
-                <div class="post-media">
-                  <a href="upload/blog_11.jpg" title="">
-                    <img src="" alt="" class="img-fluid">
-                    <div class="hovereffect">
-                      <span class="videohover"></span>
-                    </div><!-- end hover -->
-                  </a>
-                </div><!-- end media -->
-                <div class="blog-meta">
-                  <h4><a href="" title="">Most common medical things are</a></h4>
-                  <small><a href="" title="">article</a></small>
-                  <small><a href="" title="">21 July, 2020</a></small>
-                </div><!-- end meta -->
-              </div><!-- end blog-box -->
-      
-              <hr class="invis">
-      
-              <div class="blog-box">
-                <div class="post-media">
-                  <a href="" title="">
-                    <img src="upload/blog_11.jpg" alt="" class="img-fluid">
-                    <div class="hovereffect">
-                      <span class="videohover"></span>
-                    </div><!-- end hover -->
-                  </a>
-                </div><!-- end media -->
-                <div class="blog-meta">
-                  <h4><a href="" title="">Most common medical things are</a></h4>
-                  <small><a href="" title="">Article</a></small>
-                  <small><a href="" title="">20 July, 2020</a></small>
-                </div><!-- end meta -->
-              </div><!-- end blog-box -->
-      
-              <hr class="invis">
-      
-              <div class="blog-box">
-                <div class="post-media">
-                  <a href="" title="">
-                    <img src="upload/blog_12.jpg" alt="" class="img-fluid">
-                    <div class="hovereffect">
-                      <span class="videohover"></span>
-                    </div><!-- end hover -->
-                  </a>
-                </div><!-- end media -->
-                <div class="blog-meta">
-                  <h4><a href="" title="">Most common medical things are</a></h4>
-                  <small><a href="" title="">Article</a></small>
-                  <small><a href="" title="">20 July, 2020</a></small>
-                </div><!-- end meta -->
-              </div><!-- end blog-box -->
-      
-              <hr class="invis">
-      
-              <div class="section-title">
-                <h3><a style="color: black;" href="" title="">Health</a></h3>
-              </div><!-- end title -->
-      
-              <div class="blog-box">
-                <div class="post-media">
-                  <a href="" title="">
-                    <img src="upload/blog_07.jpg" alt="" class="img-fluid">
-                    <div class="hovereffect">
-                      <span></span>
-                    </div><!-- end hover -->
-                  </a>
-                </div><!-- end media -->
-                <div class="blog-meta">
-                  <h4><a href="" title="">Most common medical things are</a></h4>
-                  <small><a href="" title="">Article</a></small>
-                  <small><a href="" title="">21 July, 2020</a></small>
-                </div><!-- end meta -->
-              </div><!-- end blog-box -->
-      
-              <hr class="invis">
-      
-              <div class="blog-box">
-                <div class="post-media">
-                  <a href="" title="">
-                    <img src="upload/blog_08.jpg" alt="" class="img-fluid">
-                    <div class="hovereffect">
-                      <span></span>
-                    </div><!-- end hover -->
-                  </a>
-                </div><!-- end media -->
-                <div class="blog-meta">
-                  <h4><a href="" title="">Most common medical things are</a></h4>
-                  <small><a href="" title="">Health</a></small>
-                  <small><a href="" title="">20 July, 2020</a></small>
-                </div><!-- end meta -->
-              </div><!-- end blog-box -->
-      
-              <hr class="invis">
-      
-              <div class="blog-box">
-                <div class="post-media">
-                  <a href="" title="">
-                    <img src="upload/blog_09.jpg" alt="" class="img-fluid">
-                    <div class="hovereffect">
-                      <span></span>
-                    </div><!-- end hover -->
-                  </a>
-                </div><!-- end media -->
-                <div class="blog-meta">
-                  <h4><a href="" title="">Most common medical things are</a></h4>
-                  <small><a href="" title="">Beauty</a></small>
-                  <small><a href="" title="">20 July, 2020</a></small>
-                </div><!-- end meta -->
-              </div><!-- end blog-box -->
-            </div><!-- end col -->
-          </div>
-        </div><!-- end container -->
-      </section>
-      
-      
-      <div class="container-fluid pt-3">
-        <div class="container animate-box" data-animate-effect="fadeIn">
-          <div>
-            <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Featured</div>
-          </div>
-          <div class="owl-carousel owl-theme js" id="slider1" >
-            <div class="item px-2">
-              <div class="fh5co_latest_trading_img_position_relative">
-                <div class="fh5co_latest_trading_img"><img src="image/allef-vinicius-108153.jpg" alt=""
-                    class="fh5co_img_special_relative" /></div>
-                <div class="fh5co_latest_trading_img_position_absolute"></div>
-                <div class="fh5co_latest_trading_img_position_absolute_1">
-                  <a href="" class="text-white"> Top featured articles </a>
-                  <div class="fh5co_latest_trading_date_and_name_color"> sanjay december 2020</div>
-                </div>
-              </div>
-            </div>
-            <div class="item px-2">
-              <div class="fh5co_latest_trading_img_position_relative">
-                <div class="fh5co_latest_trading_img"><img src="image/abigail-keenan-65477.jpg" alt=""
-                    class="fh5co_img_special_relative" /></div>
-                <div class="fh5co_latest_trading_img_position_absolute"></div>
-                <div class="fh5co_latest_trading_img_position_absolute_1">
-                  <a href="" class="text-white"> Top featured articles</a>
-                  <div class="fh5co_latest_trading_date_and_name_color"> sanjay december 2020</div>
-                </div>
-              </div>
-            </div>
-            <div class="item px-2">
-              <div class="fh5co_latest_trading_img_position_relative">
-                <div class="fh5co_latest_trading_img"><img src="image/ryan-moreno-98837.jpg" alt=""
-                    class="fh5co_img_special_relative" /></div>
-                <div class="fh5co_latest_trading_img_position_absolute"></div>
-                <div class="fh5co_latest_trading_img_position_absolute_1">
-                  <a href=class="text-white"> Top featured articles </a>
-                  <div class="fh5co_latest_trading_date_and_name_color"> sanjay december 2020</div>
-                </div>
-              </div>
-            </div>
-            <div class="item px-2">
-              <div class="fh5co_latest_trading_img_position_relative">
-                <div class="fh5co_latest_trading_img"><img src="image/science-578x362.jpg" alt=""
-                    class="fh5co_img_special_relative" /></div>
-                <div class="fh5co_latest_trading_img_position_absolute"></div>
-                <div class="fh5co_latest_trading_img_position_absolute_1">
-                  <a href="" class="text-white"> Top featured articles </a>
-                  <div class="fh5co_latest_trading_date_and_name_color"> sanjay december 2020</div>
-                </div>
-              </div>
-            </div>
-            <div class="item px-2">
-              <div class="fh5co_latest_trading_img_position_relative">
-                <div class="fh5co_latest_trading_img"><img src="image/nick-karvounis-78711.jpg" alt=""
-                    class="fh5co_img_special_relative" /></div>
-                <div class="fh5co_latest_trading_img_position_absolute"></div>
-                <div class="fh5co_latest_trading_img_position_absolute_1">
-                  <a href="" class="text-white"> Top featured articles </a>
-                  <div class="fh5co_latest_trading_date_and_name_color"> sanjay december 2020</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   </div>
-   
-	
- 
-	
-	
-		
-			</div>
+        
+          </section>
+          <!-- FOOTER -->
+        </main>
 </div>
 
 <script type="text/javascript">
@@ -2123,7 +2004,7 @@ var items = $(".list-wrapper .list-item");
 <script>
 
   $('nav ul li').click(function () {
-    $(this).addClass("activer").siblings().removeClass("activer");
+    $(this).addClass("active").siblings().removeClass("active");
 
   });
 
@@ -2131,7 +2012,9 @@ var items = $(".list-wrapper .list-item");
 
 
  </script>
- 
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>
 
  
     <!-- Optional JavaScript -->
