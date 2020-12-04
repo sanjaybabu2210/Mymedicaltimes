@@ -1618,10 +1618,10 @@
         
               <div class="margin">
                 <div class="s-12 m-12 l-4 margin-m-bottom">
-                  <img class="margin-bottom" src="img/img-01.jpg" alt="">
-                  <h2 class="text-thin">ARTICLE</h2>
-                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                  <img class="margin-bottom" src="images/<%= art[0].coverImage %>" alt="">
+                  <h2 class="text-thin"><%= art[0].coverImage %></h2>
+                  <p><%= art[0].shortDescription %></p>
+                  <a class="text-more-info text-primary-hover" href="/<%= art[0].mainHeading %>/<%= art[0].subHeading %>/<%= art[0]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
                   <img class="margin-bottom" src="img/img-02.jpg" alt="">
@@ -1635,9 +1635,9 @@
                   <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
                   <a class="text-more-info text-primary-hover" href="/">Read more</a>
                 </div>
-              </div>
-              <div class="margin" style="margin-top:4%;">
-                <div class="s-12 m-12 l-4 margin-m-bottom">
+              <!-- </div>
+              <div class="margin" style="margin-top:4%;"> -->
+                <div class="s-12 m-12 l-4 margin-m-bottom" >
                   <img class="margin-bottom" src="img/img-01.jpg" alt="">
                   <h2 class="text-thin">ARTICLE</h2>
                   <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
