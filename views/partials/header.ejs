@@ -810,7 +810,7 @@
 
         @media only screen and (max-width: 994px) {
  .containery{
-        margin-top: -4%;
+        margin-top: -5%;
         margin-right: -24% !important;
       }
       .containery .search {
@@ -969,7 +969,7 @@ font-size: 0.9rem !important;
             <span class="navbar-toggler-icon"></span>
         </button> -->
 <form class="form-inline ">
-    <div class="containery" style="margin-right: 2%  ">
+    <div class="containery" style="margin-right: 12%  ">
         <input type="text" placeholder="Search...">
         <div class="search"></div>
     </div>
@@ -999,13 +999,10 @@ font-size: 0.9rem !important;
 
             </ul>
             
-            <form class="form-inline my-2 my-lg-0 ">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-
-            </form>
+            
 <!-- <span id="cred"> -->
             <% if(!currentUser){ %>
-            <a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;">Login</a>
+            <a class="btn btn-primary" href="/login" role="button" style="margin-top:5px;text-align: center;margin-right: 9%;">Login</a>
             <%} else{ %>
             <a href="/profilenav" style="color:#ffffff;margin-left:20px;margin-right:20px;margin-top:-20px;font-size: 20px;" id="userm"><i class="far fa-users"></i> <%= currentUser.email %></a>
             <a class="btn btn-info" href="/logout" role="button" style="margin-top:5px;">Logout</a>

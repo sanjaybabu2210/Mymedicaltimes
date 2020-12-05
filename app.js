@@ -218,7 +218,7 @@ app.post("/writereview",isLoggedIn,function(req,res){
    });
 });
 
-app.get("/writearticle",function(req,res){
+app.get("/writearticle",isLoggedIn,function(req,res){
     if(req.user.writearticle=='true'){
    res.render("writearticle.ejs");
 }  else if(req.user.writearticle=='0'){
