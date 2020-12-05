@@ -171,6 +171,16 @@ app.get("/home",function(req,res){
         }
     });
 });
+app.get("/medinews",function(req,res){
+    article.aggregate([{$sort:{createdAt:-1}}],function(err, art) {
+        if(err)
+        console.log(err);
+        else{
+           // console.log(art);
+           res.render("medinews.ejs",{art:art});
+        }
+    });
+});
 app.get("/home/disease",function(req, res) {
     article.aggregate([{$sort:{createdAt:-1}}],function(err, rev) {
                 if(err)

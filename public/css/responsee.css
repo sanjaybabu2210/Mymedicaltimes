@@ -132,10 +132,7 @@ hr {
 li {
   padding: 0;
 }
-ul,
-ol {
-  padding-left: 1.25rem;
-}
+
 blockquote {
   border: 2px solid #f0f0f0;
   padding: 1.25rem;

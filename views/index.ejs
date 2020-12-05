@@ -114,7 +114,6 @@
       text-align: center;
       background: #1e1e1e;
       letter-spacing: 1px;
-      margin: 0px
     }
     .text-thin:hover{
       transform: translateX(5px) scale(1.05 ,1.05);
@@ -315,7 +314,9 @@
 
       text-decoration: none !important;
       height: 50px;
-      margin-bottom: 12%;
+      margin: auto;
+            margin-bottom: 14% !important;
+
       font-size: 20px;
     }
     .text-more-info:hover{
@@ -471,7 +472,7 @@
       width: 100% !important;
       /* margin-left:-20px; */
       text-decoration: none;
-      margin-left: -12px;
+
       font-size: 16px;
       background-color: rgba(255, 255, 255, 0.2);
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -702,7 +703,7 @@
       }
           nav ul li.active ul li a {
             min-width: 205px;
-            margin-left: -10px;
+            
           }
     }
 
@@ -821,7 +822,7 @@
     }
     .margin-bottom{
       max-height: 200px;
-      min-width: 350px;
+      width: 100%;
       border-radius: 5px;
       size: cover;
     }
@@ -992,7 +993,7 @@
         height: 100%;
         width: 0;
         position: fixed;
-        margin-left: -30px;
+        margin-left: -10px;
         z-index: 90;
         top: 0;
         left: -20px;
@@ -1214,7 +1215,7 @@ padding:10px 25px !important;
         </li>
 
         <li class="nav-item " style="line-height: 40px;margin-top:5px;" id="news">
-          <a class="nav-link " href="/" id="" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false"
+          <a class="nav-link " href="/medinews" id="" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false"
             style="padding-left: 15px;font-size: 18px !important;">
             Medical News
           </a>
@@ -1269,7 +1270,7 @@ padding:10px 25px !important;
 
 
     <nav class=" sidebar col-lg-2 col-md-4 col-sm-8 col-xs-12 col-10 sider" id="sidenav"
-      style="overflow-x: hidden;max-width: 340px;color: whitesmoke;">
+      style="overflow-x: hidden;color: whitesmoke;">
       <a href="javascript:void(0)" class="closebtn" id="dclose" onclick="closeNav()"
         style="width: 500px;height: 50px;position: absolute;top: -5px;right: 5px;font-size: 50px;color:white;margin-bottom:30px;">&times;</a>
       <!-- <div class="text"> My Medical Times </div> -->
@@ -1846,40 +1847,58 @@ padding:10px 25px !important;
               <div class="margin">
                 <div class="s-12 m-12 l-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[0].coverImage  %>" alt="something">
+                                    <div style="height:100px;">
+
                   <h2 class="text-thin"><%= news[0].title %></h2>
                   <p><%= news[0].shortDescription %></p>
+                  </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[0].mainHeading %>/<%= art[0].subHeading %>/<%= art[0]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[1].coverImage  %>" alt="">
+                  <div style="height:100px;">
+                  
                   <h2 class="text-thin"><%= news[1].title %></h2>
                   <p><%= news[1].shortDescription %></p>
+                  </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[1].mainHeading %>/<%= art[1].subHeading %>/<%= art[1]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[2 % (news.length)].coverImage  %>" alt="">
+                                    <div style="height:100px;">
+
                   <h2 class="text-thin"><%= news[2 % (news.length)].title %></h2>
                   <p><%= news[2 % (news.length)].shortDescription %></p>
+                  </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[2 % (news.length)].mainHeading %>/<%= art[2 % (news.length)].subHeading %>/<%= art[2 % (news.length)]._id %>">Read more</a>
                 </div>
               <!-- </div>
               <div class="margin" style="margin-top:4%;"> -->
                 <div class="s-12 m-12 l-4 margin-m-bottom" >
                   <img class="margin-bottom" src="<%= news[3 % (news.length)].coverImage  %>" alt="">
+                                    <div style="height:100px;">
+
                   <h2 class="text-thin"><%= news[3 % (news.length)].title %></h2>
                   <p><%= news[3 % (news.length)].shortDescription %></p>
+                  </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[3 % (news.length)].mainHeading %>/<%= art[3 % (news.length)].subHeading %>/<%= art[3 % (news.length)]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[4 % (news.length)].coverImage  %>" alt="">
+                                    <div style="height:100px;">
+
                   <h2 class="text-thin"><%= news[4 % (news.length)].title %></h2>
                   <p><%= news[4 % (news.length)].shortDescription %></p>
+                  </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[4 % (news.length)].mainHeading %>/<%= art[4 % (news.length)].subHeading %>/<%= art[4 % (news.length)]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[5 % (news.length)].coverImage  %>" alt="">
+                                    <div style="height:100px;">
+
                   <h2 class="text-thin"><%= news[5 % (news.length)].title %></h2>
                   <p><%= news[5 % (news.length)].shortDescription %></p>
+                  </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[5 % (news.length)].mainHeading %>/<%= art[5 % (news.length)].subHeading %>/<%= art[5 % (news.length)]._id %>">Read more</a>
                 </div>
               </div>
@@ -1901,73 +1920,24 @@ padding:10px 25px !important;
         
         
               <div class="item">
+        <% articles.splice(0,4).forEach(function(art){ %>
+
         
                 <div class="s-12 m-12 l-6">
                   <div class="image-border-radius margin-m-bottom">
                     <div class="margin">
                       <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-05.jpg" alt=""></a>
+                        <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img src="<%= art.coverImage  %>" alt=""></a>
                       </div>
                       <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                        <h3><a class="text-dark text-primary-hover" href="/"><%= art.title %></a></h3>
+                        <p><%= art.shortDescription %></p>
+                        <a class="text-more-info text-primary-hover" href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>">Read more</a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-              </div>
-            </div>
-        
-          </section>
-          <section class="section background-white" id="kit" style="margin-top:-15%;background-color: #f0f0f0 !important;">
-            <div class="line">
-              <div class="item">
-        
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-05.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="s-12 m-12 l-6" style="margin-left:0px;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                        <a class="text-more-info text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
+             <% }) %>
               </div>
             </div>
         
@@ -2085,132 +2055,30 @@ padding:10px 25px !important;
                 Featured Articles</h3>
         
               <div class="item">
-        
+                <% disease.splice(0,4).forEach(function(art){ %>
+
                 <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
                   <div class="image-border-radius margin-m-bottom">
                     <div class="margin">
                       <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-05.jpg" alt=""></a>
+                        <a class="image-hover-zoom" href="/"><img src="<%= art.coverImage  %>" alt=""></a>
                       </div>
                       <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
+                        <h3><a class="text-dark text-primary-hover" href="/"><%= art.title    %></a></h3>
+                        <a class=" text-primary-hover" href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>">Read more </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
+              
+             <%  }) %>
+               
         
-                </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class=" text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
-                  <div class="image-border-radius">
-                    <div class="margin">
-                      <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="img/blog-03.jpg" alt=""></a>
-                      </div>
-                      <div class="s-12 m-12 l-8">
-                        <h3><a class="text-dark text-primary-hover" href="/">Lorem Ipsum Dolor sit Amet</a></h3>
-                        <a class="text-primary-hover" href="/">Read more</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
+           
+             
+               
+               
+              
               </div>
             </div>
         
