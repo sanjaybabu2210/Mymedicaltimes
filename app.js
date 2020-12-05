@@ -16,19 +16,30 @@ var Application=require("./models/application");
 // var Disease=require("./models/disease");
 // var medicalnews=require("./models/medicalnews");
 
-app.use(methodOverride("_method"));
 
-const multer = require('multer');
+var multer = require('multer');
+
 var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'public/images/')
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname)) //Appending extension
+  filename: function(req, file, callback) {
+    callback(null, Date.now() + file.originalname);
   }
-})
+});
+var imageFilter = function (req, file, cb) {
+    // accept image files only
+    if (!file.originalname.match(/\.(jpg|jpeg|png|gif|pdf)$/i)) {
+        return cb(new Error('Only image files are allowed!'), false);
+    }
+    cb(null, true);
+};
+var upload = multer({ storage: storage, fileFilter: imageFilter})
 
-var upload = multer({ storage: storage });
+var cloudinary = require('cloudinary');
+cloudinary.config({ 
+  cloud_name: 'tycoon', 
+  api_key: '167312485966359', 
+  api_secret: 'uD9LwJ61EhmLk4Y95rrXQNflIt8'
+});
+
 
 // destination: function(req, file, callback) {
 //     callback(null, './public/audio');
@@ -232,23 +243,23 @@ app.get("/writearticle",isLoggedIn,function(req,res){
 });
 
 app.get("/writemedicalnews",isLoggedIn,function(req,res){
-    if(req.user.writenews=='true')
+    // if(req.user.writenews=='true')
    res.render("writemedicalnews.ejs");
-   else if(req.user.writenews=='0'){
-       req.flash("error","You Don't have permission to write Medical Article, Mail us at mymedicaltimes@gmail.com to give you access");
-       res.redirect("/home");
+//    else if(req.user.writenews=='0'){
+//        req.flash("error","You Don't have permission to write Medical Article, Mail us at mymedicaltimes@gmail.com to give you access");
+//        res.redirect("/home");
     
-   }else{
-       req.flash("error","You Don't have permission to write Medical Article, Mail us at mymedicaltimes@gmail.com to give you access");
-       res.redirect("/home");
-   }
+//    }else{
+//        req.flash("error","You Don't have permission to write Medical Article, Mail us at mymedicaltimes@gmail.com to give you access");
+//        res.redirect("/home");
+//    }
 });
 
-app.post("/writemedicalnews", upload.single('coverImage') ,function(req,res){
+app.post("/writemedicalnews", upload.single('coverImage'),function(req,res){
+cloudinary.uploader.upload(req.file.path, function(result) {
 
-     const image1 = req.file;
+    	var image = result.secure_url;
 
-    var image = image1.filename;
 
 
 
@@ -262,7 +273,7 @@ app.post("/writemedicalnews", upload.single('coverImage') ,function(req,res){
            res.redirect("/writemedicalnews");
        }
    });
-    
+});
 });
 
 app.get("/home/medicalNews",function(req, res) {
@@ -286,12 +297,12 @@ app.get("/seeMedicalNews/:id",function(req,res){
      
 });
 
-app.post("/writearticle",upload.single('cover') ,function(req,res){
-     const cover1 = req.file;
+app.post("/writearticle",upload.single('cover'),function(req,res){
+     cloudinary.uploader.upload(req.file.path, function(result) {
 
-    var cover = cover1.filename;
+    	var image = result.secure_url;
 
-    var art={title:req.body.title,mainHeading:req.body.mainHeading,coverImage:cover,description:req.body.description,shortDescription:req.body.shortDescription,userId:req.user._id,subHeading:req.body.subHeading,author:req.body.author,disease:req.body.topic};
+    var art={title:req.body.title,mainHeading:req.body.mainHeading,coverImage:image,description:req.body.description,shortDescription:req.body.shortDescription,userId:req.user._id,subHeading:req.body.subHeading,author:req.body.author,disease:req.body.topic};
    if(req.body.topic==="notPart"){
        
    article.create(art,function(err, articles) {
@@ -313,6 +324,7 @@ app.post("/writearticle",upload.single('cover') ,function(req,res){
            }
        });
    }
+});
 });
 app.delete("/writearticle/:id",function(req,res){
 	article.findByIdAndRemove(req.params.id, function(err){

@@ -309,12 +309,13 @@
       padding: 15px 30px;
       text-align: center;
       transition: 0.8s;
-      width: 200px;
+      bottom: -10px !important;
+      width: 180px;
               color:whitesmoke !important;
 
       text-decoration: none !important;
       height: 50px;
-      margin: 10% auto;
+      margin-bottom: 12%;
       font-size: 20px;
     }
     .text-more-info:hover{
@@ -326,6 +327,9 @@
     .text-primary-hover{
         color:#002B5C ;
         text-decoration: none !important;
+    }
+    .margin-m-bottom{
+      max-height: 400px;
     }
     nav ul li.active a {
       text-decoration: none;
@@ -524,7 +528,7 @@
       background: #fff;
       text-align: center;
     }
-
+    
     .social-button i,
     .social-button svg {
       position: relative;
@@ -815,7 +819,17 @@
       height: 50px !important;
       box-shadow: 0px 0px 10px 0px #EEE;
     }
-
+    .margin-bottom{
+      max-height: 200px;
+      min-width: 350px;
+      border-radius: 5px;
+      size: cover;
+    }
+    .text-thin{
+      font-size: 1.1rem;
+      font-weight: 600;
+      width: 85%;
+    }
     .list-item {
       border: 1px solid #EEE;
       background: #FFF;
@@ -1805,7 +1819,22 @@ padding:10px 25px !important;
         
         
           <!-- Section 1 -->
-        
+        <%  
+        var news = art.filter(function(val){
+           return val.subHeading == "news";
+        })
+        %>
+
+        <%  
+                var articles = art.filter(function(val){
+                   return  val.disease == "notPart";
+                })
+                %>
+          <%  
+                          var disease = art.filter(function(val){
+                             return  val.disease == "isPart";
+                          })
+                          %>
           <section class="section background-white" style="background-color: #f0f0f0 !important;">
         
             <div class="line">
@@ -1816,42 +1845,42 @@ padding:10px 25px !important;
         
               <div class="margin">
                 <div class="s-12 m-12 l-4 margin-m-bottom">
-                  <img class="margin-bottom" src="img/img-02.jpg" alt="something">
-                  <h2 class="text-thin"><%= art[0].title %></h2>
-                  <p><%= art[0].shortDescription %></p>
+                  <img class="margin-bottom" src="<%= news[0].coverImage  %>" alt="something">
+                  <h2 class="text-thin"><%= news[0].title %></h2>
+                  <p><%= news[0].shortDescription %></p>
                   <a class="text-more-info text-primary-hover" href="/<%= art[0].mainHeading %>/<%= art[0].subHeading %>/<%= art[0]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
-                  <img class="margin-bottom" src="img/img-02.jpg" alt="">
-                  <h2 class="text-thin">ARTICLE</h2>
-                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                  <img class="margin-bottom" src="<%= news[1].coverImage  %>" alt="">
+                  <h2 class="text-thin"><%= news[1].title %></h2>
+                  <p><%= news[1].shortDescription %></p>
+                  <a class="text-more-info text-primary-hover" href="/<%= art[1].mainHeading %>/<%= art[1].subHeading %>/<%= art[1]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
-                  <img class="margin-bottom" src="img/img-03.jpg" alt="">
-                  <h2 class="text-thin">ARTICLE</h2>
-                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                  <img class="margin-bottom" src="<%= news[2 % (news.length)].coverImage  %>" alt="">
+                  <h2 class="text-thin"><%= news[2 % (news.length)].title %></h2>
+                  <p><%= news[2 % (news.length)].shortDescription %></p>
+                  <a class="text-more-info text-primary-hover" href="/<%= art[2 % (news.length)].mainHeading %>/<%= art[2 % (news.length)].subHeading %>/<%= art[2 % (news.length)]._id %>">Read more</a>
                 </div>
               <!-- </div>
               <div class="margin" style="margin-top:4%;"> -->
                 <div class="s-12 m-12 l-4 margin-m-bottom" >
-                  <img class="margin-bottom" src="img/img-01.jpg" alt="">
-                  <h2 class="text-thin">ARTICLE</h2>
-                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                  <img class="margin-bottom" src="<%= news[3 % (news.length)].coverImage  %>" alt="">
+                  <h2 class="text-thin"><%= news[3 % (news.length)].title %></h2>
+                  <p><%= news[3 % (news.length)].shortDescription %></p>
+                  <a class="text-more-info text-primary-hover" href="/<%= art[3 % (news.length)].mainHeading %>/<%= art[3 % (news.length)].subHeading %>/<%= art[3 % (news.length)]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
-                  <img class="margin-bottom" src="img/img-02.jpg" alt="">
-                  <h2 class="text-thin">ARTICLE</h2>
-                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                  <img class="margin-bottom" src="<%= news[4 % (news.length)].coverImage  %>" alt="">
+                  <h2 class="text-thin"><%= news[4 % (news.length)].title %></h2>
+                  <p><%= news[4 % (news.length)].shortDescription %></p>
+                  <a class="text-more-info text-primary-hover" href="/<%= art[4 % (news.length)].mainHeading %>/<%= art[4 % (news.length)].subHeading %>/<%= art[4 % (news.length)]._id %>">Read more</a>
                 </div>
                 <div class="s-12 m-12 l-4 margin-m-bottom">
-                  <img class="margin-bottom" src="img/img-03.jpg" alt="">
-                  <h2 class="text-thin">ARTICLE</h2>
-                  <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                  <a class="text-more-info text-primary-hover" href="/">Read more</a>
+                  <img class="margin-bottom" src="<%= news[5 % (news.length)].coverImage  %>" alt="">
+                  <h2 class="text-thin"><%= news[5 % (news.length)].title %></h2>
+                  <p><%= news[5 % (news.length)].shortDescription %></p>
+                  <a class="text-more-info text-primary-hover" href="/<%= art[5 % (news.length)].mainHeading %>/<%= art[5 % (news.length)].subHeading %>/<%= art[5 % (news.length)]._id %>">Read more</a>
                 </div>
               </div>
             </div>
