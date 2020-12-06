@@ -133,7 +133,7 @@
 
 
 
-input[type="text"] {
+.pira {
   height: 60px;
   font-size: 55px;
   display: inline-block;
@@ -154,17 +154,17 @@ input[type="text"] {
   cursor: pointer;
 }
 
-input[type="text"]:focus:hover {
+.pira:focus:hover {
   border-bottom: 2px solid whitesmoke;
 }
 
-input[type="text"]:focus {
+.pira:focus {
   width: 220px;
   z-index: 1;
   border-bottom: 2px solid whitesmoke;
   cursor: text;
 }
-input[type="submit"] {
+.pura{
   height: 60px;
   width: 63px;
   display: inline-block;
@@ -182,8 +182,7 @@ input[type="submit"] {
   cursor: pointer;
   transition: opacity .4s ease;
 }
-
-input[type="submit"]:hover {
+.pura:hover {
   opacity: 0.8;
 }
 
@@ -838,9 +837,7 @@ input[type="submit"]:hover {
       #timesm{
           display: none !important;
       }
-      #search{
-        width: 350px !important;
-      }
+     
           nav ul li.active ul li a {
             width: 100% !important;
           }
@@ -1118,7 +1115,7 @@ padding:10px 25px !important;
 
 
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="naa" style="padding-left:20px;min-height: 20px !important;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="naa" style="padding-left:20px;min-height: 80px !important;">
     <a class="navbar-brand" href="/home" id="logo">
       <h5 class="text-uppercase " id="times"
         style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
@@ -1130,8 +1127,8 @@ padding:10px 25px !important;
     <form class="form-inline " id="secure" >
       <div class="containery" style="position: absolute;left: 80vw;top: 10px;  ">
         <form action="" autocomplete="on">
-          <input id="search" name="search" type="text" style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
-            <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;" id="isearch"><input id="search_submit" value="Rechercher" type="submit"></i>
+          <input id="search" name="search" type="text" class="pira" style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+            <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;" id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
         </form>
       </div>
     </form>
@@ -1228,7 +1225,7 @@ padding:10px 25px !important;
           <a style="color: white;font-weight: 200;" href="/maindisease1">Disease</a></li>
         <li>
           <li class="ant-btnf m-view">
-            <a style="color: white;font-weight: 200;" href="/home">Medical News</a></li>
+            <a style="color: white;font-weight: 200;" href="/medinews">Medical News</a></li>
           <li>
         <li class="ant-btnf ">
           <a style="color: white;font-weight: 200;" href="/application">Apply for writing</a></li>
@@ -2027,7 +2024,7 @@ $('body').ready(function(){
   $('#secure').click(function () {
 
     $('#timesm').toggle();
-    $('#naa').css("height","90px");
+    $('#naa').css("height","80px");
   })
 })
   // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/

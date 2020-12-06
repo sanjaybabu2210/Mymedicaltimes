@@ -178,7 +178,7 @@
 
 
 
-input[type="text"] {
+.pira{
   height: 60px;
   font-size: 55px;
   display: inline-block;
@@ -199,17 +199,17 @@ input[type="text"] {
   cursor: pointer;
 }
 
-input[type="text"]:focus:hover {
+.pira:focus:hover {
   border-bottom: 2px solid whitesmoke;
 }
 
-input[type="text"]:focus {
+.pira:focus {
   width: 220px;
   z-index: 1;
   border-bottom: 2px solid whitesmoke;
   cursor: text;
 }
-input[type="submit"] {
+.pura {
   height: 60px;
   width: 63px;
   display: inline-block;
@@ -228,7 +228,7 @@ input[type="submit"] {
   transition: opacity .4s ease;
 }
 
-input[type="submit"]:hover {
+.pura:hover {
   opacity: 0.8;
 }
 
@@ -684,9 +684,7 @@ input[type="submit"]:hover {
          #timesm{
           display: none !important;
       }
-      #search{
-        width: 350px !important;
-      }
+     
         #sidenav{
                 height: 110%;
                 margin-top: -8px;
@@ -902,7 +900,7 @@ font-size: 0.9rem !important;
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:20px;" id="naa">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:20px;min-height: 80px;" id="naa">
         <a class="navbar-brand" href="/home" id="logo"><h5 class="text-uppercase " id="times"
             style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:whitesmoke;font-size: smaller;"> My Medical Times</h5></a>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -915,10 +913,10 @@ font-size: 0.9rem !important;
 <form class="form-inline " id="secure">
     <div class="containery" style="position: absolute;left: 80vw;top: 10px;  ">
         <form action="" autocomplete="on">
-            <input id="search" name="search" type="text" style="color: white !important;font-size: 18px !important;"
+            <input id="search" name="search" type="text" class="pira" style="color: white !important;font-size: 18px !important;"
                 placeholder="SEARCH">
             <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
-                id="isearch"><input id="search_submit" value="Rechercher" type="submit"></i>
+                id="isearch"><input id="search_submit" class="pura" value="Rechercher" type="submit"></i>
         </form>
     </div>
 </form>
@@ -1002,6 +1000,9 @@ font-size: 0.9rem !important;
                 <li class="ant-btnf m-view">
                     <a style="color: white;font-weight: 200;" href="/maindisease">Disease</a></li>
                 <li>
+                    <li class="ant-btnf m-view">
+                        <a style="color: white;font-weight: 200;" href="/medinews">Medical News</a></li>
+                    <li>
                     <li class="ant-btnf ">
                         <a style="color: white;font-weight: 200;" href="/application">Apply for writing</a></li>
                     <li>
@@ -1500,7 +1501,7 @@ font-size: 0.9rem !important;
         <script>
               $('body').ready(function () {
                     $('#secure').click(function () {
-                        $('#naa').css("height", "90px");
+                        $('#naa').css("height", "80px");
 
                         $('#timesm').toggle();
                     })
