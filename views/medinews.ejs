@@ -30,6 +30,9 @@
             #wrap {
                 margin-left: 15%;
             }
+              #timesm{
+          display: none !important;
+      }
         }
     </style>
     <link rel="stylesheet" href="css/components.css">
@@ -132,145 +135,70 @@
         /* ----------------------------------search bar--------------------------- */
 
 
-        .containery {
-            position: absolute;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 300px;
-            height: 100px;
-        }
+       
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
 
-        .containery .search {
-            position: absolute;
-            margin: auto;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 60px;
-            background: #F65058;
-            border-radius: 50%;
-            transition: all 1s;
-            z-index: 4;
-            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-        }
 
-        .containery .search:hover {
-            cursor: pointer;
-        }
 
-        .containery .search::before {
-            content: "";
-            position: absolute;
-            margin: auto;
-            top: 22px;
-            right: 0;
-            bottom: 0;
-            left: 22px;
-            width: 12px;
-            height: 2px;
-            background: white;
-            transform: rotate(45deg);
-            transition: all .5s;
-        }
 
-        .containery .search::after {
-            content: "";
-            position: absolute;
-            margin: auto;
-            top: -5px;
-            right: 0;
-            bottom: 0;
-            left: -5px;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            border: 2px solid white;
-            transition: all .5s;
-        }
+.pira {
+  height: 60px;
+  font-size: 55px;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #555;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
 
-        .containery input {
-            font-family: 'Inconsolata', monospace;
-            position: absolute;
-            margin: auto;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            outline: none;
-            border: none;
-            background: snow;
-            color: rgb(54, 52, 53);
-            text-shadow: 0 0 10px rgb(54, 52, 53);
-            padding: 0 80px 0 20px;
-            border-radius: 30px;
-            box-shadow: 0 0 25px 0 rgb(54, 52, 53), 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-            transition: all 1s;
-            opacity: 0;
-            z-index: 5;
-            font-weight: bolder;
-            letter-spacing: 0.1em;
-        }
+.pira:focus:hover {
+  border-bottom: 2px solid whitesmoke;
+}
 
-        .containery input:hover {
-            cursor: pointer;
-        }
-
-        .containery input:focus {
-            width: 262px;
-            left: -200px;
-            opacity: 1;
-            cursor: text;
-        }
-
-        .containery input:focus~.search {
-            right: -10px;
-            background: #151515;
-            z-index: 6;
-        }
-
-        .containery input:focus~.search::before {
-            top: 0;
-            left: 0;
-            width: 25px;
-        }
-
-        .containery input:focus~.search::after {
-            top: 0;
-            left: 0;
-            width: 25px;
-            height: 2px;
-            border: none;
-            background: white;
-            border-radius: 0%;
-            transform: rotate(-45deg);
-        }
-
-        .containery input::placeholder {
-            color: rgb(54, 52, 53);
-            opacity: 0.5;
-            font-weight: bolder;
-        }
+.pira:focus {
+  width: 220px;
+  z-index: 1;
+  border-bottom: 2px solid whitesmoke;
+  cursor: text;
+}
+.pura{
+  height: 60px;
+  width: 63px;
+  display: inline-block;
+  background-color: transparent !important;
+  float: right;
+  /* background: url('http://www.w3.org/2000/svg') center center no-repeat; */
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+.pura:hover {
+  opacity: 0.8;
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+}
 
 
         /* ----------------------------------------search bar ends----------------------------------------- */
@@ -330,10 +258,13 @@
             bottom: -70px !important;
             width: 180px;
             color: whitesmoke !important;
+      margin: auto;
 
             text-decoration: none !important;
             height: 50px;
-            margin-bottom: 12%;
+                        margin-top: 8%;
+
+            margin-bottom: 16%;
             font-size: 20px;
         }
 
@@ -414,7 +345,10 @@
         nav ul .mir-show.show11 {
             display: block;
         }
+.tcut{
+   width: 380px !important; 
 
+    }
         nav ul .oc-show.show12 {
             display: block;
         }
@@ -764,8 +698,35 @@
 
                 font-size: 18px !important;
             }
+ .pcut{
 
+   width: 300px !important; 
+   height: 60px;
+  overflow: hidden;
+  text-align:justify;
+  text-overflow: ellipsis !important; 
 
+    }
+    .tcut{
+   width: 300px !important; 
+
+    }
+.text-more-info{
+      background-color: #F65058 !important;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      text-align: center;
+      transition: 0.8s;
+      bottom: -80px !important;
+      width: 180px;
+              color:whitesmoke !important;
+
+      text-decoration: none !important;
+      height: 50px;
+      margin-top: 16% auto !important;
+
+      font-size: 20px;
+    }
         }
 
         /* .fa {
@@ -1035,6 +996,9 @@
                 transition: 0.5s;
                 padding-top: 60px;
             }
+              #times{
+        display: none;
+      }
                .text-more-info {
             background-color: #F65058 !important;
             text-transform: uppercase;
@@ -1130,7 +1094,11 @@
                 margin-bottom: 5% !important;
                 margin-right: -4% !important;
             }
-
+ #timesm {
+        margin-top: 7% !important;
+        margin-bottom: 5% !important;
+        margin-right: -4% !important;
+      }
             .btn-group {
                 position: relative;
                 left: 0%;
@@ -1154,27 +1122,6 @@
             } */
             #buts {
                 margin-left: -10px;
-            }
-
-            .containery {
-                margin-top: -2%;
-                margin-right: -27% !important;
-            }
-
-            .containery .search {
-                position: absolute;
-                margin: auto;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                width: 50px;
-                height: 50px;
-                background: #F65058;
-                border-radius: 50%;
-                transition: all 1s;
-                z-index: 4;
-                box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
             }
 
             #buts a {
@@ -1249,18 +1196,25 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:20px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="naa" style="padding-left:20px;">
         <a class="navbar-brand" href="/home" id="logo">
             <h5 class="text-uppercase " id="times"
                 style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
                 My Medical Times</h5>
+                <h5 class="text-uppercase " id="timesm"
+                    style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
+                    My Medical Times</h5>
         </a>
-        <form class="form-inline ">
-            <div class="containery" style="margin-right: 12%  ">
-                <input type="text" placeholder="Search...">
-                <div class="search"></div>
-            </div>
-        </form>
+    <form class="form-inline " id="secure">
+        <div class="containery" style="position: absolute;left: 80vw;top: 10px;  ">
+            <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" class="pira"
+                    style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+                <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
+                    id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
+            </form>
+        </div>
+    </form>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -1929,7 +1883,7 @@
                             <div class="s-12 m-12 l-4 margin-m-bottom">
                                 <img class="margin-bottom" src="<%= news.coverImage  %>" alt="something">
                                 <div style="height:100px;">
-<h2 class="text-thin"><%= news.title %></h2>
+<h2 class="text-thin tcut"><%= news.title %></h2>
 <p class="pcut"><%= news.shortDescription %></p>
                                 </div>
                                 
@@ -1985,7 +1939,13 @@
 
 
     <script>
+    $('body').ready(function () {
+        $('#secure').click(function () {
 
+            $('#timesm').toggle();
+            $('#naa').css("height", "80px");
+        })
+    })
         $('nav ul li').click(function () {
             $(this).addClass("active").siblings().removeClass("active");
 
