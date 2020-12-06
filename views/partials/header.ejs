@@ -171,123 +171,66 @@
 /* ----------------------------------search bar--------------------------- */
 
 
-.containery {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 300px;
-  height: 100px;
-}
-.containery .search {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 60px;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+
+
+
+input[type="text"] {
   height: 60px;
-  background: transparent;
-  border-radius: 50%;
-  transition: all 1s;
-  z-index: 4;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-}
-.containery .search:hover {
-  cursor: pointer;
-}
-.containery .search::before {
-  content: "";
+  font-size: 55px;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #555;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
   position: absolute;
-  margin: auto;
-  top: 22px;
-  right: 0;
-  bottom: 0;
-  left: 22px;
-  width: 12px;
-  height: 2px;
-  background: white;
-  transform: rotate(45deg);
-  transition: all .5s;
-}
-.containery .search::after {
-  content: "";
-  position: absolute;
-  margin: auto;
-  top: -5px;
-  right: 0;
-  bottom: 0;
-  left: -5px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid white;
-  transition: all .5s;
-}
-.containery input {
-  font-family: 'Inconsolata', monospace;
-  position: absolute;
-  margin: auto;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border: none;
-  background: crimson;
-  color: white;
-  text-shadow: 0 0 10px crimson;
-  padding: 0 80px 0 20px;
-  border-radius: 30px;
-  box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-  transition: all 1s;
-  opacity: 0;
-  z-index: 5;
-  font-weight: bolder;
-  letter-spacing: 0.1em;
-}
-.containery input:hover {
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
   cursor: pointer;
 }
-.containery input:focus {
-  width: 262px;
-  left:-200px;
-  opacity: 1;
+
+input[type="text"]:focus:hover {
+  border-bottom: 2px solid whitesmoke;
+}
+
+input[type="text"]:focus {
+  width: 220px;
+  z-index: 1;
+  border-bottom: 2px solid whitesmoke;
   cursor: text;
 }
-.containery input:focus ~ .search {
-  right: -10px;
-  background: #151515;
-  z-index: 6;
-}
-.containery input:focus ~ .search::before {
-  top: 0;
-  left: 0;
-  width: 25px;
-}
-.containery input:focus ~ .search::after {
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 2px;
+input[type="submit"] {
+  height: 60px;
+  width: 63px;
+  display: inline-block;
+  background-color: transparent !important;
+  float: right;
+  /* background: url('http://www.w3.org/2000/svg') center center no-repeat; */
+  text-indent: -10000px;
   border: none;
-  background: white;
-  border-radius: 0%;
-  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
 }
-.containery input::placeholder {
-  color: white;
-  opacity: 0.5;
-  font-weight: bolder;
+
+input[type="submit"]:hover {
+  opacity: 0.8;
 }
-
-
-
 
 
 
@@ -738,6 +681,12 @@
 
 
         }
+         #timesm{
+          display: none !important;
+      }
+      #search{
+        width: 350px !important;
+      }
         #sidenav{
                 height: 110%;
                 margin-top: -8px;
@@ -809,25 +758,7 @@
             }
 
         @media only screen and (max-width: 994px) {
- .containery{
-        margin-top: -5%;
-        margin-right: -27% !important;
-      }
-      .containery .search {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  background: #F65058;
-  border-radius: 50%;
-  transition: all 1s;
-  z-index: 4;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-}
+
             .sidebar {
                 height: 100%;
                 width: 0;
@@ -840,6 +771,9 @@
                 transition: 0.5s;
                 padding-top: 60px;
             }
+            #times{
+        display: none;
+      }
             footer{
                 text-align: center !important;
             }
@@ -866,9 +800,16 @@ font-size: 0.9rem !important;
                 text-align: center;
                 margin: 3% auto;
             }
-            #times{
-                margin-left: -2% !important;
-            }
+            #times {
+        margin-top: 7% !important;
+        margin-bottom: 5% !important;
+        margin-right: -4% !important;
+      }
+  #timesm {
+        margin-top: 7% !important;
+        margin-bottom: 5% !important;
+        margin-right: 30% !important;
+      }
             .btn-group {
                 position: relative;
                 left: 0%;
@@ -961,17 +902,24 @@ font-size: 0.9rem !important;
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:20px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:20px;" id="naa">
         <a class="navbar-brand" href="/home" id="logo"><h5 class="text-uppercase " id="times"
             style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:whitesmoke;font-size: smaller;"> My Medical Times</h5></a>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button> -->
-<form class="form-inline ">
-    <div class="containery" style="margin-right: 12%  ">
-        <input type="text" placeholder="Search...">
-        <div class="search"></div>
+        <h5 class="text-uppercase " id="timesm"
+            style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
+            My Medical Times</h5>
+<form class="form-inline " id="secure">
+    <div class="containery" style="position: absolute;left: 80vw;top: 10px;  ">
+        <form action="" autocomplete="on">
+            <input id="search" name="search" type="text" style="color: white !important;font-size: 18px !important;"
+                placeholder="SEARCH">
+            <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
+                id="isearch"><input id="search_submit" value="Rechercher" type="submit"></i>
+        </form>
     </div>
 </form>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -1547,3 +1495,14 @@ font-size: 0.9rem !important;
 
             </ul>
         </nav>
+
+
+        <script>
+              $('body').ready(function () {
+                    $('#secure').click(function () {
+                        $('#naa').css("height", "90px");
+
+                        $('#timesm').toggle();
+                    })
+                })
+        </script>
