@@ -1,29 +1,42 @@
 <%- include('partials/header.ejs'); -%>
 
 
+
 <div class="col-lg-7 col-md-7 col-sm-9" id="main">
  
-  <% art.forEach(function(art){ %>
-  <div class="list-item "
-    style="min-height:200px;border-radius:5px;border:1px solid white; background-color: white;margin-top:15px;padding-left: 3%"
-    class="hov11">
-    <a href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" target="_blank"
-      style="font-size:1.1rem;margin-top: 5%; text-decoration: none;color: primary;text-align:left;">
-      <strong style="text-align: left;"><%= art.title %></strong></a><br>
-    <%  var today = art.createdAt;var year = today.getFullYear();
-  var mes = today.getMonth()+1;
-  var dia = today.getDate();
-  var fecha =dia+"-"+mes+"-"+year; %>
-    <h4 style="font-size:12px;color: grey;margin-bottom:2%;position: relative;text-align: left;"><strong>last
-        updated:<%= fecha %></strong>
-    </h4>
-    <p style="font-size: 16px; color: rgba(0,0,0,0.7);margin-bottom:2%;"><%= art.shortDescription %>...<a
-        href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>" class="hov">Read More</a></p>
-    <h4 style="font-size:14px;color: primary;margin-bottom:2%;position: relative;"><strong>By : <%= art.author%></strong>
-    </h4>
-  </div>
+
+
   
-  <% }) %>
+  <section class="section background-white" style="margin-top:-10%;background-color: #f0f0f0 !important;min-height: 100vh;">
+    <div class="line">
+      <h3 id="kic"
+        style="height: 50px;color: snow;width: 100%;background-color: #002B5C !important;margin-top: 14%;margin-bottom:3%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
+        Medical Articles</h3>
+  
+  
+      <div class="item">
+  
+  
+        <div class="s-12 m-12 l-8 col-md-12 col-lg-12 col-sm-12">
+          <div class="image-border-radius margin-m-bottom" style="background-color: snow;border-radius: 5px;max-height: 200px; ">
+            <div class=" row" style="text-align: center;">
+              <div class="s-12 m-12 l-4 margin-m-bottom col-lg-4 col-md-4 col-sm-10">
+                <a class="image-hover-zoom"  href="/"><img style="max-height: 200px; width:100%;"
+                    src="<%= art.coverImage  %> https://image.shutterstock.com/image-vector/search-icon-modern-flat-600w-319741109.jpg" alt=""></a>
+              </div>
+              <div class="s-12 m-12 l-8 margin-m-bottom col-lg-7 col-md-8 col-sm-10 mt-2" style="background-color: blue;width: 100%;margin:2% auto;">
+                <h3><a class="text-dark text-primary-hover" href="/"><%= art.title %> fafdsfsfsdf</a></h3>
+                <p><%= art.shortDescription %> fafsdfdsf</p>
+                <a class="text-more-info text-primary-hover"
+                  href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </section>
 	
 </div>
 </div>
