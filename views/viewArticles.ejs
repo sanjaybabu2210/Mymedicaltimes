@@ -182,7 +182,8 @@
     }
 
     footer {
-        background: #1c2331
+        background: #1c2331;
+        margin-top: 100vh !important;
     }
 
     .dropdown-submenu {
@@ -332,6 +333,8 @@
         <th>Main Heading</th>
         <th>Sub Heading</th>
         <th>Author</th>
+                <th>Featured </th>
+
         <th>Edit </th>
         <th>Delete</th>
 
@@ -342,6 +345,16 @@
         <td><%= u.mainHeading %> </td>
         <td><%= u.subHeading %> </td>
         <td><%= u.author %> </td>
+        <% if(u.isfeatured){ %>
+<td><button class="btn btn-danger btn-sm"><a style="text-decoration: none;color:white;"
+            href="/removefeatured/<%= u._id %>">Remove</a> </button></td>
+            <% }else{ %>
+<td><button class="btn btn-info btn-sm"><a style="text-decoration: none;color:white;"
+            href="/makefeatured/<%= u._id %>">Add</a> </button></td>
+
+                <% }; %>
+               
+
         <td><button class="btn btn-success btn-sm"><a style="text-decoration: none;color:white;" href="/<%= u._id %>/edit">Edit</a> </button></td>
         <td><form id="delete-form" action="/writearticle/<%= u._id %>?_method=DELETE" method="POST"><button class="btn btn-danger btn-sm" type="submit">Delete</button> </form></td>
 
@@ -351,7 +364,7 @@
 </table>
 
 
-<div style="margin-top:20%;">
+<div style="position: relative;bottom: 0px; width: 100%;margin-top:100vh;">
     <%- include('partials/footertemplate.ejs'); -%>
 
 </div>

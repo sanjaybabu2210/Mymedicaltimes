@@ -123,7 +123,7 @@
     .pcut{
 
    max-width: 380px; 
-   height: 55px;
+   height: 60px;
   overflow: hidden;
   text-overflow: ellipsis !important; 
 
@@ -256,8 +256,8 @@
       text-decoration: none !important;
       height: 50px;
       margin: auto;
-      margin-top: 6% !important;
-            margin-bottom: 18% !important;
+      margin-top: 10% !important;
+            margin-bottom: 23% !important;
 
       font-size: 20px;
     }
@@ -273,6 +273,7 @@
     }
     .margin-m-bottom{
       max-height: 400px;
+      margin-top:3%;
     }
     nav ul li.active a {
       text-decoration: none;
@@ -1805,7 +1806,7 @@ padding:10px 25px !important;
                 %>
           <%  
                           var disease = art.filter(function(val){
-                             return  val.disease == "isPart";
+                             return  val.isfeatured == true;
                           })
                           %>
           <section class="section background-white" style="background-color: #f0f0f0 !important;">
@@ -2027,7 +2028,7 @@ padding:10px 25px !important;
                 Featured Articles</h3>
         
               <div class="item">
-                <% disease.splice(0,4).forEach(function(art){ %>
+                <% disease.splice(0,9).forEach(function(art){ %>
 
                 <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
                   <div class="image-border-radius margin-m-bottom">

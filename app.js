@@ -599,6 +599,38 @@ app.get("/grantAccess/:appid",function(req, res) {
 
    
 });
+app.get("/makefeatured/:appid",function(req, res) {
+    var appid=req.params.appid;
+  article.findById(appid,function(err, foundArt) {
+        if(err)
+        console.log(err);
+        else{
+            foundArt.isfeatured= true;
+            foundArt.save();
+                                
+            req.flash("success","Article added as Featured");
+            res.redirect("/seeArticles");
+        }
+    });
+
+   
+});
+app.get("/removefeatured/:appid",function(req, res) {
+    var appid=req.params.appid;
+  article.findById(appid,function(err, foundArt) {
+        if(err)
+        console.log(err);
+        else{
+            foundArt.isfeatured= false;
+            foundArt.save();
+                                
+            req.flash("success","Article added as Featured");
+            res.redirect("/seeArticles");
+        }
+    });
+
+   
+});
 app.get("/removeAccess/:userId",function(req, res) {
       var appid=req.params.userId;
   Application.findById(appid,function(err, foundUser) {

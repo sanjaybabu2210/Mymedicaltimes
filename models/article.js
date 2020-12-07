@@ -19,6 +19,10 @@ var articleSchema=new mongoose.Schema({
         type:String,
         default:"admin"
     },
+    isfeatured:{
+        type:Boolean,
+        default:false
+    },
     username:String,
     createdAt:{
         type:Date,
