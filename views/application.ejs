@@ -53,9 +53,7 @@
         font-size: 7em;
     }
 
-    #namefile {
-        color: black;
-    }
+  
 
     h4>strong {
         color: #ff3f3f
@@ -177,6 +175,7 @@
     .register .register-form {
         padding: 10%;
         margin-top: 10%;
+        background-color: transparent !important;
     }
 
     .btnRegister {
@@ -266,7 +265,7 @@
   margin: 50px auto;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 1px 1px 15px -5px black;
+  /* box-shadow: 1px 1px 15px -5px black; */
   transition: all .3s ease;
 }
 .avatar-wrapper:hover {
@@ -337,7 +336,7 @@ input[type="file"] {
             <p>You are 30 seconds away from becoming a writer</p>
             <!-- <input type="submit" name="" value="Login" /><br /> -->
         </div>
-        <div class="col-md-9 register-right">
+        <div class="col-md-9 register-right" style="background-color:transparent !important;">
             <!-- <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
@@ -351,7 +350,7 @@ input[type="file"] {
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="register-heading">Apply to Contribute Article</h3>
 
-                    <form class="row register-form" action="/application/<%= userid  %>" method="post"
+                    <form class="row register-form" style="background-color: whitesmoke !important;border-radius: 20px;" action="/application/<%= userid  %>" method="post"
                         enctype="multipart/form-data">
                       <div class="col-md-12">
 <div class="avatar-wrapper ">
