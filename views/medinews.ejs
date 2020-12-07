@@ -1892,7 +1892,7 @@
                         <div class="margin" style="margin-top: -10% !important;">
                                         <%   newse.forEach(function(news){ %>
 
-                            <div class="s-12 m-12 l-4 margin-m-bottom">
+                            <div class="s-12 m-12 l-4 margin-m-bottom" id="mla">
                                 <img class="margin-bottom" src="<%= news.coverImage  %>" alt="something">
                                 <div style="height:100px;">
 <h2 class="text-thin tcut"><%= news.title %></h2>
@@ -1912,7 +1912,9 @@
 
                
                
+<div id="pagination-container">
 
+</div>
 
            
                 <!-- FOOTER -->
@@ -1925,9 +1927,9 @@
 
             // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/
 
-            var items = $(".list-wrapper .list-item");
+            var items = $(".margin #mla");
             var numItems = items.length;
-            var perPage = 14;
+            var perPage = 15;
 
             items.slice(perPage).hide();
 
