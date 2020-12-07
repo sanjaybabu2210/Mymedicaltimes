@@ -911,7 +911,9 @@
       #buts {
         margin-left: -20%;
       }
-
+.mview{
+            display:none;
+        }
       #dclose {
 
         display: none;
@@ -1097,13 +1099,16 @@ padding:10px 25px !important;
       #pisa{
     margin-left: -30% !important;
 }
+#mt{
+  margin-top: -6% !important;
+}
       #buts a {
         width: 50px !important;
         height: 50px !important;
       }
 
       #email {
-        margin-left: -6% !important;
+        margin-left: 2% !important;
       }
 
       #filter {
@@ -1195,6 +1200,16 @@ padding:10px 25px !important;
             style="padding-left: 15px;font-size: 18px !important;">
             Medical News
           </a>
+          <form class="form-inline mview " id="secure">
+            <div class="containery" style="position: relative;margin-right: -70% !important;  ">
+              <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" class="pira"
+                  style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+                <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;" id="isearch"><input
+                    class="pura" id="search_submit" value="Rechercher" type="submit"></i>
+              </form>
+            </div>
+          </form>
           <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:350px;">
                         <a class="dropdown-item"  style="width:340px;background-color: honeydew;color: black;" href="/home/medicalNews">Latest Medical News</a>
                         <a class="dropdown-item" style="width:340px;background-color: honeydew;color: black;" href="/writemedicalnews">Write Medical News</a>
@@ -2042,14 +2057,14 @@ padding:10px 25px !important;
               <div class="item">
                 <% disease.splice(0,9).forEach(function(art){ %>
 
-                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;">
+                <div class="s-10 m-4 l-3" style="border-bottom: 1px solid rgba(0,0,0,0.4); padding-bottom: 20px;margin: 2% 3%;min-height: 230px;">
                   <div class="image-border-radius margin-m-bottom">
                     <div class="margin">
                       <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" href="/"><img src="<%= art.coverImage  %>" alt=""></a>
+                        <a class="image-hover-zoom" href="/"><img src="<%= art.coverImage  %>"  alt=""></a>
                       </div>
                       <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover tcut"  href="/"><%= art.title    %></a></h3>
+                        <h3><a class="text-dark text-primary-hover pcut" style="font-size: 16px; text-align: justify;width: 98%;"  href="/"><%= art.title    %></a></h3>
                         <a class=" text-primary-hover" href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>">Read more </a>
                       </div>
                     </div>

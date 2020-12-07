@@ -681,10 +681,20 @@
 
 
         }
+           #mt{
+  margin-top: -10% !important;
+  margin-left: 10% !important;
+}
+        #email{
+              margin-left: 10% !important;
+
+        }
          #timesm{
           display: none !important;
       }
-     
+     .mview{
+            display:none;
+        }
         #sidenav{
                 height: 110%;
                 margin-top: -8px;
@@ -705,10 +715,10 @@
             margin-left: 10%;
         }
         #buts{
-            margin-left: -22% !important;
+            margin-left: -8% !important;
         }
         #email{
-            margin-left: -7% !important;
+            margin-left: 10% !important;
         }
         #dclose {
 
@@ -838,7 +848,7 @@ font-size: 0.9rem !important;
                 justify-content: space-evenly;
             } */
             #buts{
-                margin-left: -10% ;
+                margin-left: -6% ;
                 width: 100vw !important;
 
 }
@@ -851,9 +861,12 @@ font-size: 0.9rem !important;
                height: 50px !important;
            }
            #email{
-               margin-left: -6% !important;
+               margin-left: -3% !important;
            }
-          
+          #mt{
+  margin-top: -10% !important;
+  margin-left: -3% !important;
+}
             #filter {
                 position: absolute;
                 left: 10px;
@@ -935,6 +948,16 @@ font-size: 0.9rem !important;
                         data-toggle="" aria-haspopup="true" aria-expanded="false" style="padding-left: 15px;">
                         Medical News
                     </a>
+                    <form class="form-inline mview " id="secure">
+                        <div class="containery" style="position: relative;margin-right: -70% !important;  ">
+                            <form action="" autocomplete="on">
+                                <input id="search" name="search" type="text" class="pira"
+                                    style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+                                <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
+                                    id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
+                            </form>
+                        </div>
+                    </form>
                     <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:350px;">
                         <a class="dropdown-item"  style="width:340px;background-color: honeydew;color: black;" href="/home/medicalNews">Latest Medical News</a>
                         <a class="dropdown-item" style="width:340px;background-color: honeydew;color: black;" href="/writemedicalnews">Write Medical News</a>

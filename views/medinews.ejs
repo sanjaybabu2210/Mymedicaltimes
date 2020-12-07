@@ -669,6 +669,9 @@
                 min-width: 205px;
 
             }
+            .margin{
+                margin-top: -30% !important;
+            }
         }
 
         @media screen and (max-width: 992px) {
@@ -927,9 +930,11 @@
             #main {
                 margin-left: 10%;
             }
-
+.mview{
+            display:none;
+        }
             #buts {
-                margin-left: -20%;
+                margin-left: -17%;
             }
 
             #dclose {
@@ -947,6 +952,7 @@
             /* line-height: -10px !important; */
 
         }
+        
 
         @media only screen and (min-width: 724px) and (max-width: 990px) {
 
@@ -1073,10 +1079,12 @@
                 font-size: 0.9rem !important;
                 font-weight: normal !important;
             }
-
+            
             #email {
                 font-size: 15px;
                 width: 95vw !important;
+                               margin-left: 10% !important;
+
             }
 
             #f-foot {
@@ -1145,7 +1153,7 @@
             }
 
             #email {
-                margin-left: -6% !important;
+                margin-left: -1% !important;
             }
 
             #filter {
@@ -1220,7 +1228,16 @@
                     style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
                     My Medical Times</h5>
         </a>
-
+<form class="form-inline mview " id="secure">
+    <div class="containery" style="position: relative;margin-right: -70% !important;  ">
+        <form action="" autocomplete="on">
+            <input id="search" name="search" type="text" class="pira"
+                style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+            <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
+                id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
+        </form>
+    </div>
+</form>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -1889,7 +1906,7 @@
                     <div class="line">
                         
 
-                        <div class="margin" style="margin-top: -10% !important;">
+                        <div class="margin" style="margin-top: -10% ;">
                                         <%   newse.forEach(function(news){ %>
 
                             <div class="s-12 m-12 l-4 margin-m-bottom" id="mla">
