@@ -181,6 +181,41 @@ app.get("/medinews",function(req,res){
         }
     });
 });
+app.get("/articles/view",function(req,res){
+
+
+    if(req.query.search != 0) {
+        const regex1 = new RegExp(req.query.search, 'gi');
+	
+        // Get all campgrounds from DB
+		console.log(regex1);
+        article.find({title: regex1}, function(err, all){
+           if(err){
+               console.log(err);
+           } else {
+              if(all.length < 1) {
+                  noMatch = "No journey Shceduled on that day";
+              }
+              console.log(all);
+           res.render("showSubCategories.ejs",{art:all});
+           }
+        });
+    } 
+    
+});
+app.get("/articles/:title",function(req,res){
+
+    var tit = req.params.title;
+    console.log(tit);
+    article.find({title: tit},function(err, art) {
+        if(err)
+        console.log(err);
+        else{
+           console.log(art);
+           res.render("showSubCategories.ejs",{art:art});
+        }
+    });
+});
 app.get("/home/disease",function(req, res) {
     article.aggregate([{$sort:{createdAt:-1}}],function(err, rev) {
                 if(err)

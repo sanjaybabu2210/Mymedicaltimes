@@ -1296,7 +1296,15 @@
             <!-- </span> -->
         </div>
     </nav>
+<ul id="myUL"
+    style="max-height: 300px !important; overflow: hidden;z-index: 400;position: absolute;width: 215px !important;right:200px;top:80px;">
 
+    <% art.forEach(function(art){ %>
+
+    <li><a href="/articles/<%= art.title %>"><%= art.title %></a></li>
+    <% }); %>
+
+</ul>
 
     <!-- <% if(error.length>0){%>
     <div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
