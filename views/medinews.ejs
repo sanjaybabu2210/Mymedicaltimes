@@ -140,7 +140,26 @@
 @import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
 
 
+#myUL {
+  list-style-type: none;
 
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; 
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+   
 
 .pira {
   height: 60px;
@@ -618,7 +637,9 @@
         }
 
         footer {
-            background: #1c2331
+            background: #1c2331;
+              margin-top: 10% !important;
+
         }
 
         .dropdown-submenu {
@@ -631,6 +652,9 @@
             right: 3px;
             top: 40%;
         }
+#pisa{
+      margin-right: -5% !important;
+    }
 
         #previ:hover {
             background-color: rosybrown;
@@ -1027,6 +1051,10 @@
             margin-bottom: 12%;
             font-size: 20px;
         }
+         #myUL{
+        right:27px !important;
+        
+      }
 
             #rec {
                 background-color: #002B5C !important;
@@ -1228,14 +1256,12 @@
                     style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
                     My Medical Times</h5>
         </a>
-<form class="form-inline mview " id="secure">
+<form class="form-inline mview" id="secure" method="get" action="/articles/view">
     <div class="containery" style="position: relative;margin-right: -70% !important;  ">
-        <form action="" autocomplete="on">
-            <input id="search" name="search" type="text" class="pira"
-                style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
-            <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
-                id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
-        </form>
+        <input name="search" type="text" id="myInput2" onkeyup="myFunction2()" class="pira"
+            style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+        <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"><input class="pura"
+                id="search_submit" value="Rechercher" type="submit"></i>
     </div>
 </form>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -1270,14 +1296,12 @@
 
             </ul>
 
-<form class="form-inline " id="secure">
+<form class="form-inline " method="get" action="/articles/view">
     <div class="containery" style="position: relative;margin-right: -70% !important;  ">
-        <form action="" autocomplete="on">
-            <input id="search" name="search" type="text" class="pira"
-                style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
-            <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
-                id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
-        </form>
+        <input name="search" type="text" id="myInput" onkeyup="myFunction()" class="pira"
+            style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+        <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;" id="isearch"><input
+                class="pura" id="search_submiti" value="Rechercher" type="submit"></i>
     </div>
 </form>
             <!-- <span id="cred"> -->
@@ -1950,27 +1974,26 @@
     $('#myUL li a').css("display", "none");
 
     $('#myUL').css("display", "none");
-
-    function myFunction() {
+    function myFunction2() {
         var input, filter, ul, li, a, i, txtValue;
 
 
 
-        input = document.getElementById("myInput");
+        input = document.getElementById("myInput2");
         if (input.value) {
             $('#myUL').css("display", "");
             $('#myUL li').css("display", "");
-                $('#myUL li a').css("display", "");
+            $('#myUL li a').css("display", "");
 
 
         } else {
-             $('#myUL li').css("display", "none");
+            $('#myUL li').css("display", "none");
             $('#myUL li a').css("display", "none");
 
             $('#myUL').css("display", "none");
 
         }
-          $('body').click(function () {
+        $('body').click(function () {
             $('#myUL li').css("display", "none");
 
         })
@@ -1983,10 +2006,48 @@
         ul = document.getElementById("myUL");
         li = ul.getElementsByTagName("li");
         for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0]; txtValue = a.textContent || a.innerText; if
+                (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
 
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+
+        input = document.getElementById("myInput");
+        if (input.value) {
+            $('#myUL').css("display", "");
+            $('#myUL li').css("display", "");
+            $('#myUL li a').css("display", "");
+
+
+        } else {
+            $('#myUL li').css("display", "none");
+            $('#myUL li a').css("display", "none");
+
+            $('#myUL').css("display", "none");
+
+        }
+        $('body').click(function () {
+            $('#myUL li').css("display", "none");
+
+        })
+        $('.pira').click(function () {
+            $('#myUL li').css("display", "none");
+
+        })
+        filter = input.value.toUpperCase();
+
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0]; txtValue = a.textContent || a.innerText; if
+                (txtValue.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = "";
             } else {
                 li[i].style.display = "none";

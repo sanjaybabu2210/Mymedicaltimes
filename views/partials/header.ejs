@@ -70,6 +70,26 @@
 
         }
 
+#myUL {
+  list-style-type: none;
+
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; 
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+   
         nav ul li {
             line-height: 50px;
                                     text-decoration: none;
@@ -462,7 +482,9 @@
         }
 
         footer {
-            background: #1c2331
+            background: #1c2331;
+              margin-top: 10% !important;
+
         }
 
         .dropdown-submenu {
@@ -936,14 +958,12 @@ font-size: 0.9rem !important;
         <h5 class="text-uppercase " id="timesm"
             style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
             My Medical Times</h5></a>
-<form class="form-inline mview" id="secure">
+<form class="form-inline mview" id="secure" method="get" action="/articles/view">
     <div class="containery" style="position: relative;margin-right: -70% !important;  ">
-        <form action="" autocomplete="on">
-            <input name="search" type="text" id="myInput" onkeyup="myFunction()" class="pira"
+            <input name="search" type="text" id="myInput2" onkeyup="myFunction2()" class="pira"
                 style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
             <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;"
                 id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
-        </form>
     </div>
 </form>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -980,16 +1000,14 @@ font-size: 0.9rem !important;
 
 
             </ul>
-        <form class="form-inline " id="secure">
-            <div class="containery" style="position: relative;margin-right: -80% !important; margin-top: -20px; ">
-                <form action="" autocomplete="on">
-                    <input id="search" name="search" type="text" class="pira"
-                        style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
-                    <i class="fas fa-search fa-2x" style="color:white !important;margin-top:20px !important;"
-                        id="isearch"><input class="pura" id="search_submit" value="Rechercher" type="submit"></i>
-                </form>
-            </div>
-        </form>
+    <form class="form-inline " method="get" action="/articles/view">
+        <div class="containery" style="position: relative;margin-right: -70% !important;  ">
+            <input name="search" type="text" id="myInput" onkeyup="myFunction()" class="pira"
+                style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
+            <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;" id="isearch"><input
+                    class="pura" id="search_submiti" value="Rechercher" type="submit"></i>
+        </div>
+    </form>
             
 <!-- <span id="cred"> -->
             <% if(!currentUser){ %>
@@ -1002,7 +1020,7 @@ font-size: 0.9rem !important;
             <!-- </span> -->
         </div>
     </nav>
-
+<!-- -->
 
     <!-- <% if(error.length>0){%>
     <div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;"><%=error%></div>
@@ -1043,7 +1061,7 @@ font-size: 0.9rem !important;
                     <a style="color: white;font-weight: 200;" href="/">Home</a></li>
                 <li>
                 <li class="ant-btnf m-view">
-                    <a style="color: white;font-weight: 200;" href="/maindisease">Disease</a></li>
+                    <a style="color: white;font-weight: 200;" href="/maindisease1">Disease</a></li>
                 <li>
                     <li class="ant-btnf m-view">
                         <a style="color: white;font-weight: 200;" href="/medinews">Medical News</a></li>
@@ -1551,4 +1569,91 @@ font-size: 0.9rem !important;
                         $('#timesm').toggle();
                     })
                 })
+        </script>
+
+        <script>
+            $('#myUL li').css("display", "none");
+            $('#myUL li a').css("display", "none");
+
+            $('#myUL').css("display", "none");
+    function myFunction2() {
+        var input, filter, ul, li, a, i, txtValue;
+
+
+
+        input = document.getElementById("myInput2");
+        if (input.value) {
+            $('#myUL').css("display", "");
+            $('#myUL li').css("display", "");
+            $('#myUL li a').css("display", "");
+
+
+        } else {
+            $('#myUL li').css("display", "none");
+            $('#myUL li a').css("display", "none");
+
+            $('#myUL').css("display", "none");
+
+        }
+        $('body').click(function () {
+            $('#myUL li').css("display", "none");
+
+        })
+        $('.pira').click(function () {
+            $('#myUL li').css("display", "none");
+
+        })
+        filter = input.value.toUpperCase();
+
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0]; txtValue = a.textContent || a.innerText; if
+                (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+
+
+
+                input = document.getElementById("myInput");
+                if (input.value) {
+                    $('#myUL').css("display", "");
+                    $('#myUL li').css("display", "");
+                    $('#myUL li a').css("display", "");
+
+
+                } else {
+                    $('#myUL li').css("display", "none");
+                    $('#myUL li a').css("display", "none");
+
+                    $('#myUL').css("display", "none");
+
+                }
+                $('body').click(function () {
+                    $('#myUL li').css("display", "none");
+
+                })
+                $('.pira').click(function () {
+                    $('#myUL li').css("display", "none");
+
+                })
+                filter = input.value.toUpperCase();
+
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0]; txtValue = a.textContent || a.innerText; if
+                        (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
         </script>

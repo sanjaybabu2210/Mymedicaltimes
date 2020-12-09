@@ -412,7 +412,14 @@ app.post("/writearticle/:id",function(req,res){
 
 });
 app.get("/maindisease1",function(req,res){
-   res.render("maindisease1.ejs");
+     article.find({},function(err, found) {
+       if(err)
+       console.log(err);
+        else{
+            //console.log(found);
+            res.render("maindisease1.ejs",{art:found});
+        }
+   });
 });
 
 
@@ -542,11 +549,26 @@ app.get("/contactus",function(req,res){
 // });
 
 app.get("/maindisease2",function(req,res){
-   res.render("maindisease2.ejs");
+       article.find({},function(err, found) {
+       if(err)
+       console.log(err);
+        else{
+            //console.log(found);
+            res.render("maindisease2.ejs",{art:found});
+        }
+   });
 });
 
 app.get("/maindisease3",function(req,res){
-   res.render("maindisease3.ejs");
+article.find({},function(err, found) {
+       if(err)
+       console.log(err);
+        else{
+            //console.log(found);
+            res.render("maindisease3.ejs",{art:found});
+        }
+   });
+
 });
 
 

@@ -632,7 +632,9 @@
     }
 
     footer {
-      background: #1c2331
+      background: #1c2331;
+        /* margin-top: 10% !important; */
+
     }
 
     .dropdown-submenu {
@@ -1005,6 +1007,9 @@
       height: 3.2rem;
       text-align: center;
     }
+    #pisa{
+      margin-right: -5% !important;
+    }
 
     @media only screen and (max-width: 994px) {
       #times{
@@ -1022,6 +1027,10 @@
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
+      }
+      #myUL{
+        right:27px !important;
+        
       }
       #rec{
         background-color: #002B5C !important;
@@ -1060,9 +1069,9 @@ padding:10px 25px !important;
       #kit{
         margin-top: -48% !important;
       }
-      footer {
+      /* footer {
         text-align: center !important;
-      }
+      } */
 
       #logos {
         font-size: 1rem !important;
@@ -1133,14 +1142,15 @@ padding:10px 25px !important;
                 text-align: center;
                 justify-content: space-evenly;
             } */
-      #buts {
-        margin-left: -10px;
-                        width: 100vw !important;
+    #buts{
+                margin-left: -6% ;
+                width: 100vw !important;
 
-      }
-      #pisa{
+}
+#pisa{
     margin-left: -30% !important;
 }
+
 #mt{
   margin-top: -6% !important;
 }
@@ -1225,9 +1235,9 @@ padding:10px 25px !important;
           style="margin-left:0%;margin-top: 0%;font-weight: bold !important;margin-bottom: 3%;color:snow;font-size: smaller;">
           My Medical Times</h5>
     </a> 
-    <form class="form-inline mview" id="secure"  >
+    <form class="form-inline mview" id="secure" method="get" action="/articles/view" >
       <div class="containery" style="position: relative;margin-right: -70% !important;  ">
-          <input name="search" type="text"  onkeyup="myFunction()"  class="pira"
+          <input name="search" type="text" id="myInput2"  onkeyup="myFunction2()"  class="pira"
             style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
           <i class="fas fa-search fa-2x" style="color:white !important;margin-top:15px !important;" ><input
               class="pura" id="search_submit" value="Rechercher" type="submit"></i>
@@ -2159,6 +2169,7 @@ padding:10px 25px !important;
 </div>
 
 <script type="text/javascript">
+  $('#home').addClass('active');
 
 
 
@@ -2175,7 +2186,6 @@ padding:10px 25px !important;
   $('#list-example').linkfilter({
       input: '#input-example'
     })
-$('#home').addClass('active');
 
 
   // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/
@@ -2197,6 +2207,7 @@ var items = $(".list-wrapper .list-item");
             items.hide().slice(showFrom, showTo).show();
         }
     });
+
   
   
 </script>
@@ -2205,7 +2216,46 @@ $('#myUL li').css("display", "none");
 $('#myUL li a').css("display", "none");
 
 $('#myUL').css("display", "none");
+  function myFunction2() {
+    var input, filter, ul, li, a, i, txtValue;
 
+
+
+    input = document.getElementById("myInput2");
+    if (input.value) {
+      $('#myUL').css("display", "");
+      $('#myUL li').css("display", "");
+      $('#myUL li a').css("display", "");
+
+
+    } else {
+      $('#myUL li').css("display", "none");
+      $('#myUL li a').css("display", "none");
+
+      $('#myUL').css("display", "none");
+
+    }
+    $('body').click(function () {
+      $('#myUL li').css("display", "none");
+
+    })
+    $('.pira').click(function () {
+      $('#myUL li').css("display", "none");
+
+    })
+    filter = input.value.toUpperCase();
+
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0]; txtValue = a.textContent || a.innerText; if
+        (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
 function myFunction() {
 var input, filter, ul, li, a, i, txtValue;
 
