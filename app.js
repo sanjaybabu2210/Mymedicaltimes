@@ -189,7 +189,7 @@ app.get("/articles/view",function(req,res){
 	
         // Get all campgrounds from DB
 		console.log(regex1);
-        article.find({title: regex1,description: regex1,shortDescription:regex1}, function(err, all){
+        article.find({ $or: [ {shortDescription: regex1}, {description: regex1}, {title:regex1} ]},function(err, all){
            if(err){
                console.log(err);
            } else {

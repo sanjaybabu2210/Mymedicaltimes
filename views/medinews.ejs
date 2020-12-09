@@ -1945,7 +1945,55 @@
                 <!-- FOOTER -->
             </main>
         </div>
+<script>
+    $('#myUL li').css("display", "none");
+    $('#myUL li a').css("display", "none");
 
+    $('#myUL').css("display", "none");
+
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+
+
+
+        input = document.getElementById("myInput");
+        if (input.value) {
+            $('#myUL').css("display", "");
+            $('#myUL li').css("display", "");
+                $('#myUL li a').css("display", "");
+
+
+        } else {
+             $('#myUL li').css("display", "none");
+            $('#myUL li a').css("display", "none");
+
+            $('#myUL').css("display", "none");
+
+        }
+          $('body').click(function () {
+            $('#myUL li').css("display", "none");
+
+        })
+        $('.pira').click(function () {
+            $('#myUL li').css("display", "none");
+
+        })
+        filter = input.value.toUpperCase();
+
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
         <script type="text/javascript">
 
             $('#news').addClass('active');

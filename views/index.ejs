@@ -452,6 +452,7 @@
       border-left-color: transparent;
 
     }
+   =
 
     nav ul ul li a:hover {
       text-decoration: none;
@@ -706,6 +707,7 @@
     }
     .tcut{
    width: 330px !important; 
+   font-size: 16px !important;
 
     }
 .text-more-info{
@@ -989,7 +991,7 @@
                 text-align: center !important;
             } */
     }
-
+    
     #icon-all {
       width: 70vw !important;
       margin: 5px auto;
@@ -1040,6 +1042,11 @@ padding:10px 25px !important;
                 margin-bottom: 5% !important;
 
       }
+      .image-border-radiusus{
+      width: 90%;
+      margin: 10px auto !important;
+      height:900px !important;
+    }
       #kic{
         background-color: #002B5C !important;
 padding:10px 25px !important;
@@ -1253,7 +1260,7 @@ padding:10px 25px !important;
 
       </ul>
 
-    <form class="form-inline " id="secure" method="get" action="/articles/view">
+    <form class="form-inline "  method="get" action="/articles/view">
       <div class="containery" style="position: relative;margin-right: -70% !important;  ">
           <input  name="search" type="text" id="myInput" onkeyup="myFunction()" class="pira"
             style="color: white !important;font-size: 18px !important;" placeholder="SEARCH">
@@ -1958,27 +1965,82 @@ padding:10px 25px !important;
                 style="height: 50px;color: snow;width: 100%;background-color: #002B5C !important;margin-top: -4%;margin-bottom:3%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
                 Medical Articles</h3>
         
-        
-              <div class="item">
-        <% articles.splice(0,4).forEach(function(art){ %>
 
-        
-                <div class="s-12 m-12 l-6">
-                  <div class="image-border-radius margin-m-bottom">
+              <div class="item">
+
+
+                <div class="s-12 m-6 l-6" style="height: 300px ;overflow: hidden; " >
+                  <div class="image-border-radiusus margin-m-bottom" style="width: 80% !important;height: 300px ;overflow: hidden; margin-bottom: 0px !important;">
                     <div class="margin">
                       <div class="s-12 m-12 l-4 margin-m-bottom">
-                        <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img src="<%= art.coverImage  %>" alt=""></a>
+                        <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img src="<%= articles[0].coverImage  %>" alt=""></a>
                       </div>
                       <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover tcut" href="/"><%= art.title %></a></h3>
-                        <p class="pcut"><%= art.shortDescription %></p>
-                        <a class="text-more-info text-primary-hover" href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>">Read more</a>
+                        <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[0].title %></a></h3>
+                        <p class="pcut"><%= articles[0].shortDescription %></p>
+                        <a class="text-more-info text-primary-hover" href="/<%= articles[0].mainHeading %>/<%= articles[0].subHeading %>/<%= art[0]._id %>">Read more</a>
                       </div>
                     </div>
                   </div>
                 </div>
-             <% }) %>
+              <div class="s-12 m-6 l-6" style="height: 300px ;overflow: hidden; ">
+                <div class="image-border-radiusus margin-m-bottom"
+                  style="width: 80% !important;height: 300px ;overflow: hidden; margin-bottom: 0px !important;">
+                  <div class="margin">
+                    <div class="s-12 m-12 l-4 margin-m-bottom">
+                      <a class="image-hover-zoom" style="height: 140px;height:140px;border-radius: 10px;" href="/"><img
+                          src="<%= articles[1].coverImage  %>" alt=""></a>
+                    </div>
+                    <div class="s-12 m-12 l-8 margin-m-bottom">
+                      <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[1].title %></a></h3>
+                      <p class="pcut"><%= articles[1].shortDescription %></p>
+                      <a class="text-more-info text-primary-hover"
+                        href="/<%= articles[1].mainHeading %>/<%= articles[1].subHeading %>/<%= articles[1]._id %>">Read more</a>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              </div>
+<div class="item">
+
+
+  <div class="s-12 m-6 l-6" style="height: 300px ;overflow: hidden; ">
+    <div class="image-border-radiusus margin-m-bottom"
+      style="width: 80% !important;height: 300px ;overflow: hidden; margin-bottom: 0px !important;">
+      <div class="margin">
+        <div class="s-12 m-12 l-4 margin-m-bottom">
+          <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
+              src="<%= articles[2].coverImage  %>" alt=""></a>
+        </div>
+        <div class="s-12 m-12 l-8 margin-m-bottom">
+          <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[2].title %></a></h3>
+          <p class="pcut"><%= articles[2].shortDescription %></p>
+          <a class="text-more-info text-primary-hover"
+            href="/<%= articles[2].mainHeading %>/<%= articles[2].subHeading %>/<%= articles[2]._id %>">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="s-12 m-6 l-6" style="height: 300px ;overflow: hidden; ">
+    <div class="image-border-radiusus margin-m-bottom"
+      style="width: 80% !important;height: 300px ;overflow: hidden; margin-bottom: 0px !important;">
+      <div class="margin">
+        <div class="s-12 m-12 l-4 margin-m-bottom">
+          <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
+              src="<%= articles[3].coverImage  %>" alt=""></a>
+        </div>
+        <div class="s-12 m-12 l-8 margin-m-bottom">
+          <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[3].title %></a></h3>
+          <p class="pcut"><%= articles[3].shortDescription %></p>
+          <a class="text-more-info text-primary-hover"
+            href="/<%= articles[3].mainHeading %>/<%= articles[3].subHeading %>/<%= articles[3]._id %>">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
             </div>
         
           </section>
@@ -2097,20 +2159,25 @@ padding:10px 25px !important;
 </div>
 
 <script type="text/javascript">
+
+
+
+
+    $('#secure').click(function () {
+
+      $('#timesm').toggle();
+      // $('#naa').css("background-color", "green !important");
+    })
+
+
+
+
   $('#list-example').linkfilter({
       input: '#input-example'
     })
 $('#home').addClass('active');
 
-$('body').ready(function(){
 
-    
-  $('#secure').click(function () {
-
-    $('#timesm').toggle();
-    $('#naa').css("height","80px");
-  })
-})
   // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/
 
 var items = $(".list-wrapper .list-item");
@@ -2134,45 +2201,51 @@ var items = $(".list-wrapper .list-item");
   
 </script>
 <script>
-      $('#myUL li').css("display", "none");
-            $('#myUL li').css("display", "none");
+$('#myUL li').css("display", "none");
+$('#myUL li a').css("display", "none");
 
-        $('#myUL').css("display", "none");
+$('#myUL').css("display", "none");
 
-  function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
+function myFunction() {
+var input, filter, ul, li, a, i, txtValue;
 
 
 
-    input = document.getElementById("myInput");
-    if(input.value){
-      $('#myUL').css("display", "");
-      $('#myUL li').css("display", "");
+input = document.getElementById("myInput");
+if (input.value) {
+$('#myUL').css("display", "");
+$('#myUL li').css("display", "");
+$('#myUL li a').css("display", "");
 
-    }else{
-      $('#myUL').css("display", "none");
 
-    }
-    $('.pira').click(function(){
-            $('#myUL li').css("display", "none");
+} else {
+$('#myUL li').css("display", "none");
+$('#myUL li a').css("display", "none");
 
-    })
-    filter = input.value.toUpperCase();
-    
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
+$('#myUL').css("display", "none");
 
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
-    }
+}
+$('body').click(function () {
+$('#myUL li').css("display", "none");
+
+})
+$('.pira').click(function () {
+$('#myUL li').css("display", "none");
+
+})
+filter = input.value.toUpperCase();
+
+ul = document.getElementById("myUL");
+li = ul.getElementsByTagName("li");
+for (i = 0; i < li.length; i++) { a=li[i].getElementsByTagName("a")[0]; txtValue=a.textContent || a.innerText; if
+  (txtValue.toUpperCase().indexOf(filter)> -1) {
+  li[i].style.display = "";
+  } else {
+  li[i].style.display = "none";
   }
-</script>
+  }
+  }
+  </script>
 
 </div>
 
