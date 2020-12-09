@@ -85,6 +85,7 @@
     html {
       overflow-x: hidden;
       background: #f0f0f0;
+      cursor: text !important;
     }
 /* #myInput {
   background-image: url('/css/searchicon.png');
@@ -573,6 +574,7 @@
     }
 .tcut{
    max-width: 380px !important; 
+   cursor: text !important;
 
     }
     .social-button--github::after {
@@ -1087,6 +1089,7 @@ padding:10px 25px !important;
       }
 
       #email {
+        margin-top: 3% !important;
         font-size: 15px;
         width: 95vw !important;
       }
@@ -2075,12 +2078,12 @@ padding:10px 25px !important;
                       <div class="image-border-radius margin-m-bottom">
                         <div class="margin">
                           <div class="s-12 m-12 l-4 margin-m-bottom">
-                            <a class="image-hover-zoom" href="/"><img src="<%= news[4 % (news.length)].coverImage  %>" alt=""></a>
+                            <a class="image-hover-zoom" href="/"><img src="<%= articles[4 % (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="s-12 m-12 l-8 margin-m-bottom">
-                            <h3><a class="text-dark text-primary-hover" href="/"><%= news[4 % (news.length)].title %></a></h3>
-                            <p class="pcut" ><%= news[4 % (news.length)].shortDescription %></p>
-                            <a class="text-more-info text-primary-hover" style="margin-bottom: 10px !important;" href="/<%= art[4 % (news.length)].mainHeading %>/<%= art[5 % (news.length)].subHeading %>/<%= art[5 % (news.length)]._id %>">Read more</a>
+                            <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[4 % (articles.length)].title %></a></h3>
+                            <p class="pcut" ><%= articles[4 % (articles.length)].shortDescription %></p>
+                            <a class="text-more-info text-primary-hover" style="margin-bottom: 10px !important;" href="/<%= articles[4 % (articles.length)].mainHeading %>/<%= articles[5 % (articles.length)].subHeading %>/<%= articles[5 % (news.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -2089,12 +2092,12 @@ padding:10px 25px !important;
                       <div class="image-border-radius">
                         <div class="margin">
                           <div class="s-12 m-12 l-4 margin-m-bottom">
-                            <a class="image-hover-zoom" href="/"><img src="<%= news[5 % (news.length)].coverImage  %>" alt=""></a>
+                            <a class="image-hover-zoom" href="/"><img src="<%= articles[5 % (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="s-12 m-12 l-8">
-                            <h3><a class="text-dark text-primary-hover" href="/"><%= news[5 % (news.length)].title %></a></h3>
-                            <p class="pcut" ><%= news[5 % (news.length)].shortDescription %></p>
-                            <a class="text-more-info text-primary-hover" style="margin-bottom: 10px !important;"  href="/<%= art[5 % (news.length)].mainHeading %>/<%= art[5 % (news.length)].subHeading %>/<%= art[5 % (news.length)]._id %>">Read more</a>
+                            <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[5 % (articles.length)].title %></a></h3>
+                            <p class="pcut" ><%= articles[5 % (articles.length)].shortDescription %></p>
+                            <a class="text-more-info text-primary-hover" style="margin-bottom: 10px !important;"  href="/<%= articles[5 % (articles.length)].mainHeading %>/<%= articles[5 % (articles.length)].subHeading %>/<%= articles[5 % (articles.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -2107,12 +2110,12 @@ padding:10px 25px !important;
                       <div class="image-border-radius margin-m-bottom">
                         <div class="margin">
                           <div class="s-12 m-12 l-4 margin-m-bottom">
-                            <a class="image-hover-zoom" href="/"><img src="<%= news[6 % (news.length)].coverImage  %>" alt=""></a>
+                            <a class="image-hover-zoom" href="/"><img src="<%= articles[6 % (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="s-12 m-12 l-8 margin-m-bottom">
-                            <h3><a class="text-dark text-primary-hover" href="/"><%= news[6 % (news.length)].title %></a></h3>
-                            <p class="pcut" ><%= news[6 % (news.length)].shortDescription %></p>
-                            <a class="text-more-info text-primary-hover" href="/<%= art[6 % (news.length)].mainHeading %>/<%= art[5 % (news.length)].subHeading %>/<%= art[5 % (news.length)]._id %>">Read more</a>
+                            <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[6 % (articles.length)].title %></a></h3>
+                            <p class="pcut" ><%= articles[6 % (articles.length)].shortDescription %></p>
+                            <a class="text-more-info text-primary-hover" href="/<%= articles[6 % (articles.length)].mainHeading %>/<%= articles[5 % (articles.length)].subHeading %>/<%= articles[5 % (articles.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -2121,12 +2124,12 @@ padding:10px 25px !important;
                       <div class="image-border-radius">
                         <div class="margin">
                           <div class="s-12 m-12 l-4 margin-m-bottom">
-                            <a class="image-hover-zoom" href="/"><img src="<%= news[7 % (news.length)].coverImage  %>" alt=""></a>
+                            <a class="image-hover-zoom" href="/"><img src="<%= articles[7 % (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="s-12 m-12 l-8">
-                            <h3><a class="text-dark text-primary-hover" href="/"><%= news[7 % (news.length)].title %></a></h3>
-                            <p class="pcut" ><%= news[7 % (news.length)].shortDescription %></p>
-                            <a class="text-more-info text-primary-hover" href="/<%= art[7 % (news.length)].mainHeading %>/<%= art[5 % (news.length)].subHeading %>/<%= art[5 % (news.length)]._id %>">Read more</a>
+                            <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[7 % (articles.length)].title %></a></h3>
+                            <p class="pcut" ><%= articles[7 % (articles.length)].shortDescription %></p>
+                            <a class="text-more-info text-primary-hover" href="/<%= articles[7 % (articles.length)].mainHeading %>/<%= articles[5 % (articles.length)].subHeading %>/<%= articles[5 % (articles.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -2156,7 +2159,7 @@ padding:10px 25px !important;
                         <a class="image-hover-zoom" href="/"><img src="<%= art.coverImage  %>"  alt=""></a>
                       </div>
                       <div class="s-12 m-12 l-8 margin-m-bottom">
-                        <h3><a class="text-dark text-primary-hover pcut" style="font-size: 16px; text-align: justify;width: 98%;"  href="/"><%= art.title    %></a></h3>
+                        <h3><a class="text-dark text-primary-hover pcut tcut" style="font-size: 16px; text-align: justify;width: 98%;"  href="/"><%= art.title    %></a></h3>
                         <a class=" text-primary-hover" href="/<%= art.mainHeading %>/<%= art.subHeading %>/<%= art._id %>">Read more </a>
                       </div>
                     </div>
