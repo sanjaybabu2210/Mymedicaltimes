@@ -1562,12 +1562,21 @@ font-size: 0.9rem !important;
 
 
         <script>
-              $('body').ready(function () {
-                    $('#secure').click(function () {
+               var entered = 0;
+                $('#secure').keypress(function (event) {
+                    var keycode = (event.keyCode ? event.keyCode : event.which);
+                    if (keycode == '13') {
+                        entered = 1;
+                    }
+                });
+
+                $('#secure').click(function () {
+                    if (entered == 0) {
+                        $('#timesm').toggle();
                         $('#naa').css("height", "80px");
 
-                        $('#timesm').toggle();
-                    })
+                    }
+                    // $('#naa').css("background-color", "green !important");
                 })
         </script>
 

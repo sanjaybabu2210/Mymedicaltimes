@@ -2171,12 +2171,19 @@ padding:10px 25px !important;
 <script type="text/javascript">
   $('#home').addClass('active');
 
-
-
+  var entered = 0;
+  $('#secure').keypress(function (event) {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode == '13') {
+      entered = 1;
+    }
+  });
 
     $('#secure').click(function () {
+        if(entered == 0){
+          $('#timesm').toggle();
 
-      $('#timesm').toggle();
+        }
       // $('#naa').css("background-color", "green !important");
     })
 
@@ -2219,20 +2226,27 @@ $('#myUL').css("display", "none");
   function myFunction2() {
     var input, filter, ul, li, a, i, txtValue;
 
-
+    $('#secure').keypress(function (event) {
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if (keycode == '13') {
+        $('#timesm').css("display","none");
+      }
+    });
 
     input = document.getElementById("myInput2");
     if (input.value) {
       $('#myUL').css("display", "");
       $('#myUL li').css("display", "");
       $('#myUL li a').css("display", "");
-
+      $('#timesm').hide();
 
     } else {
       $('#myUL li').css("display", "none");
       $('#myUL li a').css("display", "none");
 
       $('#myUL').css("display", "none");
+            $('#timesm').show();
+
 
     }
     $('body').click(function () {

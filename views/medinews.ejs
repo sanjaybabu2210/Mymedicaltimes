@@ -2087,13 +2087,32 @@
 
 
     <script>
-    $('body').ready(function () {
-        $('#secure').click(function () {
 
+
+    var entered = 0;
+    $('#secure').keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            entered = 1;
+        }
+    });
+
+    $('#secure').click(function () {
+        if (entered == 0) {
             $('#timesm').toggle();
             $('#naa').css("height", "80px");
-        })
+
+        }
+        // $('#naa').css("background-color", "green !important");
     })
+
+    // $('body').ready(function () {
+    //     $('#secure').click(function () {
+
+    //         $('#timesm').toggle();
+    //         $('#naa').css("height", "80px");
+    //     })
+    // })
         $('nav ul li').click(function () {
             $(this).addClass("active").siblings().removeClass("active");
 
