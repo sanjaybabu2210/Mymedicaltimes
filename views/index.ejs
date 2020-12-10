@@ -31,6 +31,9 @@
       #wrap {
         margin-left: 15%;
       }
+      #ar-section{
+        margin-top:-10% !important;
+      }
     }
   </style>
   <link rel="stylesheet" href="css/components.css">
@@ -153,11 +156,10 @@
     }
     .pcut{
 
-   max-width: 380px; 
-   height:55px;
-  overflow: hidden;
-  text-overflow: ellipsis !important; 
-
+  display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   overflow: hidden;
     }
     
     nav {
@@ -287,10 +289,11 @@
       text-decoration: none !important;
       height: 50px;
       margin: auto;
-      margin-top: 10% !important;
-            margin-bottom: 23% !important;
+      margin-top: 9% !important;
+            margin-bottom: 30% !important;
 
       font-size: 20px;
+      position: relative;
     }
     .text-more-info:hover{
             transition: 0.8s;
@@ -304,7 +307,7 @@
     }
     .margin-m-bottom{
       max-height: 400px;
-      margin-top:3%;
+      margin-top:5%;
     }
     nav ul li.active a {
       text-decoration: none;
@@ -573,7 +576,8 @@
       color: red;
     }
 .tcut{
-   max-width: 380px !important; 
+  min-width: 100%;
+   max-width: 380px ; 
    cursor: text !important;
 
     }
@@ -702,15 +706,16 @@
       }
         .pcut{
 
-   width: 330px !important; 
-   height: 55px;
-  overflow: hidden;
-  text-align:justify;
-  text-overflow: ellipsis !important; 
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   overflow: hidden;
 
     }
     .tcut{
-   width: 330px !important; 
+      width: 100%;
+
+   max-width: 330px !important; 
    font-size: 16px !important;
 
     }
@@ -727,9 +732,9 @@
       text-decoration: none !important;
       height: 50px;
       margin: auto;
-      margin-top: 12% !important;
+      margin-top: 2% !important;
             margin-bottom: 14% !important;
-
+      position: relative;
       font-size: 20px;
     }
       #userm:hover {
@@ -839,6 +844,7 @@
     }
     .margin-bottom{
       max-height: 200px;
+      min-height: 200px;
       width: 100%;
       border-radius: 5px;
       size: cover;
@@ -1041,7 +1047,7 @@ padding:10px 25px !important;
 
         font-size: 23px !important;
         color: whitesmoke;
-        margin-top: -20% !important;
+        margin-top: -10% !important;
                                                 margin-bottom: 10% !important;
 
       }
@@ -1152,7 +1158,7 @@ padding:10px 25px !important;
 
 }
 #pisa{
-    margin-left: -30% !important;
+    margin-left: 0% !important;
 }
 
 #mt{
@@ -1902,11 +1908,11 @@ padding:10px 25px !important;
             <div class="line">
               <h3 id="rec"
                 style="height: 50px;width: 100%;color: snow;
-                background-color: #002B5C !important;margin-top: -4%;margin-bottom:3%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
+                background-color: #002B5C !important;position:relative;margin-top:-10%;margin-bottom:3%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
                 Recent Medical News</h3>
         
-              <div class="margin">
-                <div class="s-12 m-12 l-4 margin-m-bottom">
+              <div class="margin row">
+                <div class="s-12 m-12 l-4 col-sm-12 col-md-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[0% (news.length)].coverImage  %>" alt="something">
                                     <div style="height:100px;">
 
@@ -1915,7 +1921,7 @@ padding:10px 25px !important;
                   </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[0 % (news.length)].mainHeading %>/<%= art[0% (news.length)].subHeading %>/<%= art[0 % (news.length)]._id %>">Read more</a>
                 </div>
-                <div class="s-12 m-12 l-4 margin-m-bottom">
+                <div class="s-12 m-12 l-4 col-sm-12 col-md-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[1 % (news.length)].coverImage  %>" alt="">
                   <div style="height:100px;">
                   
@@ -1924,7 +1930,7 @@ padding:10px 25px !important;
                   </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[1 % (news.length)].mainHeading %>/<%= art[1 % (news.length)].subHeading %>/<%= art[1 % (news.length)]._id %>">Read more</a>
                 </div>
-                <div class="s-12 m-12 l-4 margin-m-bottom">
+                <div class="s-12 m-12 l-4 col-sm-12 col-md-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[2 % (news.length)].coverImage  %>" alt="">
                                     <div style="height:100px;">
 
@@ -1935,7 +1941,7 @@ padding:10px 25px !important;
                 </div>
               <!-- </div>
               <div class="margin" style="margin-top:4%;"> -->
-                <div class="s-12 m-12 l-4 margin-m-bottom" >
+                <div class="s-12 m-12 l-4 col-sm-12 col-md-4 margin-m-bottom" >
                   <img class="margin-bottom" src="<%= news[3 % (news.length)].coverImage  %>" alt="">
                                     <div style="height:100px;">
 
@@ -1944,7 +1950,7 @@ padding:10px 25px !important;
                   </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[3 % (news.length)].mainHeading %>/<%= art[3 % (news.length)].subHeading %>/<%= art[3 % (news.length)]._id %>">Read more</a>
                 </div>
-                <div class="s-12 m-12 l-4 margin-m-bottom">
+                <div class="s-12 m-12 l-4 col-sm-12 col-md-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[4 % (news.length)].coverImage  %>" alt="">
                                     <div style="height:100px;">
 
@@ -1953,7 +1959,7 @@ padding:10px 25px !important;
                   </div>
                   <a class="text-more-info text-primary-hover" href="/<%= art[4 % (news.length)].mainHeading %>/<%= art[4 % (news.length)].subHeading %>/<%= art[4 % (news.length)]._id %>">Read more</a>
                 </div>
-                <div class="s-12 m-12 l-4 margin-m-bottom">
+                <div class="s-12 m-12 l-4 col-sm-12 col-md-4 margin-m-bottom">
                   <img class="margin-bottom" src="<%= news[5 % (news.length)].coverImage  %>" alt="">
                                     <div style="height:100px;">
 
@@ -1973,7 +1979,7 @@ padding:10px 25px !important;
         
           <!-- Section 4 -->
         
-          <section class="section background-white" style="margin-top:-10%;background-color: #f0f0f0 !important;">
+          <section class="section background-white" id="ar-section" style="margin-top:30%;background-color: #f0f0f0 !important;">
             <div class="line">
               <h3 id="kic"
                 style="height: 50px;color: snow;width: 100%;background-color: #002B5C !important;margin-top: -4%;margin-bottom:3%;padding: 5px 20px;font-weight: bold;border-radius: 5px;">
@@ -1992,7 +1998,7 @@ padding:10px 25px !important;
                       <div class="s-12 m-12 l-8 margin-m-bottom">
                         <div style="height: 200px !important;">
                         <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[0].title %></a></h3>
-                        <p class="pcu "><%= articles[0].shortDescription %></p>
+                        <p class="pcut "><%= articles[0].shortDescription %></p>
                         </div>
                         <a class="text-more-info text-primary-hover" href="/<%= articles[0].mainHeading %>/<%= articles[0].subHeading %>/<%= art[0]._id %>">Read more</a>
                       </div>
@@ -2074,7 +2080,7 @@ padding:10px 25px !important;
               <div class="carousel-default owl-carousel ">
                 <div class="item" style="margin-top: 4% !important;"> 
                   <div class="margin" >
-                    <div class="s-12 m-12 l-6" style="margin-top:-2%; height: 350px ;">
+                    <div class="s-12 m-12 l-6" style="margin-top:-4%; height: 350px ;">
                       <div class="image-border-radius margin-m-bottom" style="height: 350px ;">
                         <div class="margin">
                           <div class="s-12 m-12 l-4 margin-m-bottom">
@@ -2112,7 +2118,7 @@ padding:10px 25px !important;
                 </div>
                 <div class="item" style="margin-top: 4% !important;">
                   <div class="margin">
-                    <div class="s-12 m-12 l-6" style="margin-top:-2%; height: 350px ;">
+                    <div class="s-12 m-12 l-6" style="margin-top:-4%; height: 350px ;">
                       <div class="image-border-radius margin-m-bottom " style="height: 350px ;">
                         <div class="margin">
                           <div class="s-12 m-12 l-4 margin-m-bottom">
