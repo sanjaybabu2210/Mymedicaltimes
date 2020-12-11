@@ -437,6 +437,7 @@
 .social-button--github {
   color: red;
 }
+
 .social-button--github::after {
   background: red;
 }
@@ -702,25 +703,74 @@
         /* -----------------------newly added----------------------------------------------- */
 
 
-        #filter {
-            display: none;
-        } 
+      
 
  
 
     @media only screen and (min-width: 990px) {
             .sidebar {
-            position: scroll;
-            max-width: 310px !important;
-            left: 0;
-            background: #1b1b1b;
-
             height: 100%;
-            margin: 0px;
-
+                width: 0;
+                max-width: 320px !important;
+                position: fixed;
+                z-index: 90;
+                top: 0;
+                left: -30px;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
 
         }
-    
+        .center{
+            margin-left: -15% !important;
+        }
+        #filter{
+            display: none;
+        }
+    #mySidenav a {
+  position: absolute;
+  margin-top:70px;
+  left: -115px;
+  transition: 0.3s;
+  height: 50px;
+  padding: 15px;
+  width: 190px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 10px;
+}
+#about {
+  top: 25px;background-color: #7fcec5;
+background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+}
+
+#blog {
+  top: 75px;background-color: #7fcec5;
+  left: 40px;
+background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+}
+
+#projects {
+  top: 125px;background-color: #7fcec5;
+background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+}
+
+#contact {
+  top: 220px;background-color: #7fcec5;
+background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+}
+.icc{
+ width:35px;height:35px;
+}
+.icc:hover{
+ opacity:0.6;
+}
            #mt{
   margin-top: -10% !important;
   margin-left: 10% !important;
@@ -735,7 +785,7 @@
      .mview{
             display:none;
         }
-        #sidenav{
+        .siderich{
                 height: 110%;
                 margin-top: -8px;
                 margin-bottom: -55px;
@@ -752,7 +802,7 @@
             margin-top:-10% !important;
         }
         #main{
-            margin-left: 10%;
+            margin-left: 0%;
         }
         #buts{
             margin-left: -6% !important;
@@ -784,21 +834,13 @@
                 margin-left:  -20% !important;
                 
             }
-        /* .m-view{
-            display: none;
-        } */
-
-       /* #mobi{
-           margin-left: 30% !important;
-       }
- footer{
-                text-align: center !important;
-            } */
+        
     }
     #icon-all{
         width: 70vw !important;
         margin: 5px auto;
         text-align: center;
+
     }
     .btn-group {
                 position: relative;
@@ -957,6 +999,8 @@ font-size: 0.9rem !important;
 
         /* -------------------------------------newly added-------------------------------------------- */
     </style>
+
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
@@ -1060,9 +1104,18 @@ font-size: 0.9rem !important;
             <button style="width: 50px;height: 50px;border-radius: 50%;background-color:black" onclick="openNav()"><i
                     class="fas fa-bars" style="color:snow"></i></button>
         </div>
+<div class="col-lg-3 col-md-5 col-sm-5 col-5 des " id="mhi">
+    <div id="mySidenav" class="sidenav" style="z-index: 100;">
+        <a href="/home" id="about" style="padding-left:40px;z-index: 100;font-size: 15px;">Go to Home <i
+                class="fas fa-home" style="margin-left:10px;float: right;"></i></a>
+        <a id="blog" href="/writemedicalnews" class="coll" style="padding-left:40px;z-index: 100;font-size: 15px;">Write
+            Article <i class="fas fa-eye" style="margin-left:10px;float: right; "></i></a>
+        <a href="#" onclick="opener()" id="projects" style="padding-left:40px;z-index: 100;font-size: 15px;">Sidebar<i
+                class="fas fa-bars" style="margin-left:20px;float: right;"></i></a>
+    </div>
+</div>
 
-
-        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10 sider" id="sidenav" style="overflow-x: hidden;max-width: 340px;">
+        <nav class=" sidebar col-lg-3 col-md-4 col-sm-8 col-xs-12 col-10 sider " id="sidenav" style="overflow-x: hidden;max-width: 340px;">
             <a href="javascript:void(0)" class="closebtn" id="dclose" onclick="closeNav()"
                 style="width: 500px;height: 50px;position: absolute;top: -5px;right: 5px;font-size: 50px;color:white;margin-bottom:30px;">&times;</a>
             <!-- <div class="text"> My Medical Times </div> -->

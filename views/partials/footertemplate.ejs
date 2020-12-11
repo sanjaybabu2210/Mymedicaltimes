@@ -194,6 +194,18 @@
 
     
   // --------------------new ------------------------
+
+  function opener(){
+    		$('#mhi').css("display", "none");
+        $('.major').removeClass("center");
+        $('#mc').css("max-width","200px !important");
+    $('#sidenav').addClass("siderich");
+  }
+  function closer() {
+    $('#mhi').css("display", "");
+
+      $('#sidenav').remove("siderich");
+    }
   function openNav() {
     document.getElementById("sidenav").style.width = "75vw";
     document.getElementById("sidenav").style.left = "0px";
@@ -201,10 +213,9 @@
     // document.getElementById("main").style.marginLeft = "300px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     $('#main').css({ "filter": "blur(8px)" });
-    // $('#main').css({"opacity":"0.3"});
+    $('#main').css({"opacity":"0.3"});
     $('#sidenav').css({ "opacity": "1" });
-
-    // document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
   function closeNav() {
