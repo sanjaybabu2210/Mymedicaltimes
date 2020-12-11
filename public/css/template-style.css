@@ -953,8 +953,14 @@ a.button.button-dark-stroke:hover,
 }
 
 /* Containers */
+
+@media screen and (min-width: 990px) {
+  .section {
+    padding: 8rem 1.25rem !important;
+  }
+}
 .section {
-  padding: 6rem 1.25rem;
+  padding: 0rem 1.25rem;
 }
 .section-small-padding {
   padding: 2.5rem 1.25rem;
