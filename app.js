@@ -848,14 +848,30 @@ app.get("/:heading/:subHeading",function(req, res) { ////just for knowing the id
     subHeading = subHeading.charAt(0).toUpperCase() + subHeading.slice(1);
     console.log(heading);
     console.log(subHeading);
-   article.find({mainHeading:heading,subHeading:subHeading},function(err, found) {
-       if(err)
-       console.log(err);
-        else{
-            //console.log(found);
-            res.render("showSubCategories.ejs",{art:found});
+
+   
+  article.aggregate([{$sort:{createdAt:-1}},{
+        $match: {
+            mainHeading:heading , 
+            subHeading: subHeading
         }
-   });
+    }],function(err, art) {
+        if(err)
+        console.log(err);
+        else{
+           // console.log(art);
+           res.render("showSubCategories.ejs",{art:art});
+        }
+    });
+
+//    article.find({mainHeading:heading,subHeading:subHeading},function(err, found) {
+//        if(err)
+//        console.log(err);
+//         else{
+//             //console.log(found);
+//             res.render("showSubCategories.ejs",{art:found});
+//         }
+//    });
 });
 
 app.get("/seeArticles",function(req, res) {

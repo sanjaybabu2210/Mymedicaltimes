@@ -326,11 +326,11 @@
 <div class="alert alert-success container" style="margin-top:0px;"><%=success%></div>
 <% } %>
 
-<h2 style="text-align:center;margin-top:2%;margin-left: 5%;"><b>View Article Details</b></h2>
+<h2 style="margin-top:4%;text-align: center;margin-left: 37%;"><b>View Article Details</b></h2>
 
-<table
+<table class="list-wrapper"
     style="margin:5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:2%;margin-bottom:45%;overflow: auto;display:inline-block;background-color: transparent;">
-    <tr>
+    <thead >
         <th>Articl Title</th>
         <th>Main Heading</th>
         <th>Sub Heading</th>
@@ -340,9 +340,9 @@
         <th>Edit </th>
         <th>Delete</th>
 
-    </tr>
+    </thead>
     <% use.forEach(function(u){ %>
-    <tr>
+    <tr >
         <td><%= u.title %> </td>
         <td><%= u.mainHeading %> </td>
         <td><%= u.subHeading %> </td>
@@ -362,10 +362,51 @@
 
     </tr>
     <% }) %>
-
+<div id="pagination-container" style="text-align: center;margin-left: -15% !important;">
+    <!-- <div class="simple-pagination">
+        <ul>
+            <li>
+                <a href="#" id="previ"> &laquo;</a>
+            </li>
+            <li id="page1">
+                <a href="/maindisease1" style="background-color:rosybrown !important; color: black;"> 1</a>
+            </li>
+            <li>
+                <a href="/maindisease2" id="page2"> 2</a>
+            </li>
+            <li>
+                <a href="/maindisease3" id="page3"> 3</a>
+            </li>
+            <li>
+                <a href="#" id="nexti"> &raquo;</a>
+            </li>
+        </ul>
+    </div> -->
+</div>
 </table>
 
+<script>
+var items = $(".list-wrapper tr");
+var numItems = items.length;
+var perPage = 14;
 
+items.slice(perPage).hide();
+
+$('#pagination-container').pagination({
+items: numItems,
+itemsOnPage: perPage,
+prevText: "&laquo;",
+nextText: "&raquo;",
+onPageClick: function (pageNumber) {
+var showFrom = perPage * (pageNumber - 1);
+var showTo = showFrom + perPage;
+items.hide().slice(showFrom, showTo).show();
+}
+});
+
+
+
+</script>
 <div style="position: relative;bottom: 0px; width: 100%;margin-top:100vh;">
     <%- include('partials/footertemplate.ejs'); -%>
 

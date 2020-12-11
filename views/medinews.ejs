@@ -219,7 +219,38 @@
             border-bottom: 2px solid white;
             cursor: text;
         }
+    .simple-pagination ul {
+            margin: 0 0 20px;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
 
+        .simple-pagination li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .simple-pagination li a,
+        .simple-pagination li span {
+            color: #666;
+            padding: 5px 10px;
+            text-decoration: none;
+            border: 1px solid #EEE;
+            background-color: #FFF;
+            box-shadow: 0px 0px 10px 0px #EEE;
+        }
+
+        .simple-pagination .current {
+            color: #FFF;
+            background-color: #FF7182;
+            border-color: #FF7182;
+        }
+
+        .simple-pagination .prev.current,
+        .simple-pagination .next.current {
+            background: #e04e60;
+        }
         .pura {
             height: 60px;
             width: 63px;
@@ -827,6 +858,38 @@
       text-decoration: none;
       margin: 10px 5px;
     } */
+.simple-pagination ul {
+            margin: 0 0 20px;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        .simple-pagination li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .simple-pagination li a,
+        .simple-pagination li span {
+            color: #666;
+            padding: 5px 10px;
+            text-decoration: none;
+            border: 1px solid #EEE;
+            background-color: #FFF;
+            box-shadow: 0px 0px 10px 0px #EEE;
+        }
+
+        .simple-pagination .current {
+            color: #FFF;
+            background-color: #FF7182;
+            border-color: #FF7182;
+        }
+
+        .simple-pagination .prev.current,
+        .simple-pagination .next.current {
+            background: #e04e60;
+        }
 
         .fa-facebook {
             background: #3B5998;
@@ -2027,15 +2090,15 @@
                    return val.subHeading == "news";
                 })
                 %>
-                <section class="section background-white"
+                <section class="section background-white "
                     style="background-color: white !important; width: 100vw !important; ">
 
                     <div class="line">
 
 
-                        <div class="margin row" style=" margin-top: -10% !important; position:relative">
+                        <div class="margin row list-wrapper" style=" margin-top: -10% !important; position:relative;overflow: visible;">
                         <%   newse.forEach(function(news){ %>
-                            <div class="s-12 m-12 l-4 col-sm-12 col-md-4  col-lg-3 margin-m-bottom newa">
+                            <div class="s-12 m-12 l-4 col-sm-12 col-md-4  col-lg-3 margin-m-bottom newa list-item">
                                 <img class="margin-bottom" src="<%= news.coverImage  %>"
                                     alt="something">
                                 <div style="height:160px;" id="vali">
@@ -2052,9 +2115,11 @@
                           
                         </div>
                     </div>
+                    <div id="pagination-container" style="text-align: center;margin-left: -15% !important;margin-top:5%;">
+                    
+                    </div>
                 </section>
 
-           
                 <!-- FOOTER -->
             </main>
         </div>
@@ -2080,31 +2145,23 @@
 
 
 
+var items = $(".list-wrapper .newa");
+    var numItems = items.length;
+    var perPage = 14;
 
-            $('#list-example').linkfilter({
-                input: '#input-example'
-            })
+    items.slice(perPage).hide();
 
-
-            // jQuery Plugin: http://flaviusmatis.github.io/simplePagination.js/
-
-            var items = $(".list-wrapper .list-item");
-            var numItems = items.length;
-            var perPage = 14;
-
-            items.slice(perPage).hide();
-
-            $('#pagination-container').pagination({
-                items: numItems,
-                itemsOnPage: perPage,
-                prevText: "&laquo;",
-                nextText: "&raquo;",
-                onPageClick: function (pageNumber) {
-                    var showFrom = perPage * (pageNumber - 1);
-                    var showTo = showFrom + perPage;
-                    items.hide().slice(showFrom, showTo).show();
-                }
-            });
+    $('#pagination-container').pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+        }
+    });
 
 
 
