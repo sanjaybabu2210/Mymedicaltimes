@@ -222,8 +222,8 @@
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     $('#main').css({ "filter": "blur(8px)" });
     $('#main').css({"opacity":"0.3"});
-    // $('#sidenav').css({ "opacity": "1" });
-    document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
+    $('#sidenav').css({ "opacity": "1" });
+    // document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
   function closeNav() {
@@ -233,8 +233,9 @@
     $('#filter').show();
     $('button a').css({ "font-size": "12px" });
     $('#main').css({ "filter": "blur(0px)" });
+    $('#main').css({ "opacity": "1" });
 
-    $('#sidenav').css({ "opacity": "1" });
+    // $('#sidenav').css({ "opacity": "0" });
 
     document.body.style.backgroundColor = "whitesmoke";
     // $('#main').css({ "margin-left": "10%" });
@@ -259,7 +260,7 @@
             src="https://i.ibb.co/vx5zDFF/picc.jpg" alt="logo"
             style="width:45px;height:45px;border-radius:80px; display: inline;"> My Medical Times</h5>
         <div>
-          <a href="#"  style="color:#ffffff; margin-top: 10% !important;"><i class="fas fa-envelope fa-sm"></i>
+          <a href="#"  style="color:#ffffff; margin-top: 10% !important; font-size: 15px;"><i class="fas fa-envelope fa-sm"></i>
             mymedicaltimes@gmail.com </a>
         
         </div>
