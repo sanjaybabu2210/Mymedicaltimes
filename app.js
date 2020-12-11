@@ -859,14 +859,16 @@ app.get("/:heading/:subHeading",function(req, res) { ////just for knowing the id
 });
 
 app.get("/seeArticles",function(req, res) {
-    article.find({},function(err, found) {
-       if(err)
-       console.log(err);
+
+     article.aggregate([{$sort:{createdAt:-1}}],function(err, art) {
+        if(err)
+        console.log(err);
         else{
-            //console.log(found);
-            res.render("viewArticles.ejs",{use:found});
+           // console.log(art);
+           res.render("viewArticles.ejs",{use:art});
         }
-   });
+    });
+
 });
 
 
