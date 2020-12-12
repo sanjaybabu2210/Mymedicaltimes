@@ -238,20 +238,26 @@
 
 
     $('#main').click(function(e){
-        closeNav();
+    if(opener){
+      closeNav();
+
+    }
       
 
     });
 
      $('.major').click(function (e) {
-        closeNav();
+        if (opener) {
+         closeNav();
 
+       }
 
       });
    $('.naimum').click(function (e) {
-      closeNav();
+      if (opener) {
+       closeNav();
 
-
+     }
     });
 
   
