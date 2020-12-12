@@ -229,15 +229,30 @@
     $('#main').css({ "filter": "blur(8px)" });
     $('#main').css({"opacity":"0.3"});
     $('#sidenav').css({ "opacity": "1" });
-    // document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
 
 
-    $('body,html').click(function (e) {
-        closeNav();
-      });
 
+    $('#main').click(function(e){
+        closeNav();
+      
+
+    });
+
+     $('.major').click(function (e) {
+        closeNav();
+
+
+      });
+   $('.naimum').click(function (e) {
+      closeNav();
+
+
+    });
+
+  
 
 
   function closeNav() {
@@ -252,8 +267,10 @@
 
     // $('#sidenav').css({ "opacity": "0" });
 
-    document.body.style.backgroundColor = "whitesmoke";
+    document.body.style.backgroundColor = "white";
     // $('#main').css({ "margin-left": "10%" });
+        document.html.style.backgroundColor = "rgba(0,0,0,1)";
+
 
   }
   $('nav ul li').click(function () {
