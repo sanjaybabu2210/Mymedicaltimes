@@ -12,9 +12,8 @@
  <h5 style="text-align:center;padding-top:10px;text-align: justify;"><%= art.shortDescription %></h5>
  
  <a href="/<%= art.mainHeading %>/<%= art.subHeading %>" style="float:right;text-decoration:underline;padding-top:15px">Go Back</a>
- <p style="font-size:17px;margin-top:80px"><%- art.description %></p>
+ <p style="font-size:17px;margin-top:80px" id="pp"><%- art.description %></p>
  <h6 style="float:left;padding-top:15px">Written By: <%= art.author%></h6>
- 
 	
 </div>
 <!-- <div class="col-lg-1 col-md-10  col-sm-11 kula kila" style="overflow-x:hidden !important; max-width:97vw !important;margin-left:10px;background:whitesmoke;padding-top:20px;margin-top: 10px;">
@@ -42,7 +41,9 @@ var items = $(".list-wrapper .list-item");
             items.hide().slice(showFrom, showTo).show();
         }
     });
-  
+    var des = art.description;
+  $('#pp').text= des;
+
 </script>
 
 
