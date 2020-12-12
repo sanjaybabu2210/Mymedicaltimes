@@ -28,7 +28,9 @@
   background-repeat: repeat-x;
   background-position: center top;
 }
-
+#filter{
+  margin-top:2% !important;
+}
 header {
   position: relative;
   width: 100% !important;
@@ -245,7 +247,7 @@ html {
 
 
 
-<div class="col-lg-9 col-md-11 col-sm-10 major2 major center" id="main">
+<div class="col-lg-9 col-md-11 col-sm-10 major2 major center" id="main" style="min-height: 100vh;">
  <% art.forEach(function(art){   %>
 
 <div class="app" style="border-radius: 8px;box-shadow: 2px 15px 16px black; max-width: 90%;margin:6% 4%">
@@ -307,7 +309,9 @@ html {
 var items = $("#main .app");
     var numItems = items.length;
     var perPage = 15;
-
+  if(numItems == 0){
+    $('#pagination-container').hide();
+  }
     items.slice(perPage).hide();
 
     $('#pagination-container').pagination({

@@ -109,7 +109,9 @@
             list-style-type: none;
 
         }
-
+#filter{
+  margin-top:2% !important;
+}
         #myUL li a {
             border: 1px solid #ddd;
             margin-top: -1px;
@@ -813,7 +815,7 @@
                 text-decoration: none !important;
                 height: 50px;
                 margin: auto;
-                margin-top: -20% !important;
+                margin-top: -18% !important;
                 margin-bottom: 14% !important;
                 position: relative;
                 font-size: 20px;
@@ -2081,7 +2083,7 @@
         </style>
 
         <div class="col-lg-10 col-md-10 col-sm-12 " style="width: 100%;">
-            <main role="main" style="background-color: white !important;">
+            <main role="main" >
                 <!-- Main Carousel -->
 
 
@@ -2092,14 +2094,14 @@
                 })
                 %>
                 <section class="section background-white "
-                    style="background-color: white !important; width: 100vw !important; ">
+                    style="width: 100vw !important; ">
 
                     <div class="line">
 
 
                         <div class="margin row list-wrapper" style=" margin-top: -10% !important; position:relative;overflow: visible;">
                         <%   newse.forEach(function(news){ %>
-                            <div class="s-12 m-12 l-4 col-sm-12 col-md-4  col-lg-3 margin-m-bottom newa list-item">
+                            <div class="s-12 m-12 l-4 col-sm-12 col-md-4  col-lg-3 margin-m-bottom newa " >
                                 <img class="margin-bottom" src="<%= news.coverImage  %>"
                                     alt="something">
                                 <div style="height:160px;" id="vali">

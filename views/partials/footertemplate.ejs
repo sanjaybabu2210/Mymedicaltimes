@@ -215,10 +215,15 @@
 
       $('#sidenav').remove("siderich");
     }
+
+    var opener = 0;
   function openNav() {
     document.getElementById("sidenav").style.width = "75vw";
     document.getElementById("sidenav").style.left = "0px";
     $('#filter').hide();
+    opener = 1;
+            console.log("hi ", opener);
+
     // document.getElementById("main").style.marginLeft = "300px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     $('#main').css({ "filter": "blur(8px)" });
@@ -227,10 +232,19 @@
     // document.html.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
+
+
+    $('body,html').click(function (e) {
+        closeNav();
+      });
+
+
+
   function closeNav() {
     document.getElementById("sidenav").style.width = "0";
     // document.getElementById("main").style.marginLeft = "0";
     document.getElementById("sidenav").style.left = "-30px";
+    opener = 0;
     $('#filter').show();
     $('button a').css({ "font-size": "12px" });
     $('#main').css({ "filter": "blur(0px)" });
