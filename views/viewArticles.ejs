@@ -281,29 +281,33 @@
     table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
-        width: 85%;
+        width: 90vw !important;
     }
 
     td {
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
+          min-width: 12.5vw !important;
+        background: #ffffff;
     }
 
     th {
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
-        width: 15%;
+        min-width: 12.5vw !important;
         background: #ffffff;
     }
 
     tr:nth-child(even) {
         background-color: #f1f1f1;
+        width: 100% !important;
     }
 
     tr:nth-child(odd) {
         background-color: #ffffff;
+        width: 100% !important;
     }
 
     @media screen and (min-width: 800px) {
@@ -362,29 +366,12 @@
 
     </tr>
     <% }) %>
-<div id="pagination-container" style="text-align: center;margin-left: -15% !important;">
-    <!-- <div class="simple-pagination">
-        <ul>
-            <li>
-                <a href="#" id="previ"> &laquo;</a>
-            </li>
-            <li id="page1">
-                <a href="/maindisease1" style="background-color:rosybrown !important; color: black;"> 1</a>
-            </li>
-            <li>
-                <a href="/maindisease2" id="page2"> 2</a>
-            </li>
-            <li>
-                <a href="/maindisease3" id="page3"> 3</a>
-            </li>
-            <li>
-                <a href="#" id="nexti"> &raquo;</a>
-            </li>
-        </ul>
-    </div> -->
-</div>
-</table>
 
+</table>
+<div id="pagination-container" style="text-align: center;position: relative; margin:10px auto;margin-top: -30%;">
+
+
+</div>
 <script>
 var items = $(".list-wrapper tr");
 var numItems = items.length;
