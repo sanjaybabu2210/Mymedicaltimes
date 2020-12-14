@@ -16,7 +16,6 @@ var Application=require("./models/application");
 // var Disease=require("./models/disease");
 // var medicalnews=require("./models/medicalnews");
 
-
 var multer = require('multer');
 
 var storage = multer.diskStorage({

@@ -162,7 +162,14 @@ footer{
     
     
     <hr><label for="body" style="margin-top:7px"><b>Article Body:</b></label>
-    <div class="form-group" style="margin-top:10px;"><textarea type="text" id="editor" placeholder="Body" name="description" required class="form-control ckeditor" required ></textarea></div>
+    <div class="form-group" style="margin-top:10px;">
+      
+      
+      <textarea type="text" id="editor" placeholder="Body" name="description" required class="form-control ckeditor" required >
+
+
+
+      </textarea></div>
     <div class="form-group"><input type="text" id="author" placeholder="Author Name" name="author" required class="form-control" style="margin-top:2px;"></div>
     
     <button class="btn btn-info bld" style="margin-top:40px;margin-left:42%;width:30%" onclick="myFunction()">Submit</button>
@@ -177,7 +184,9 @@ footer{
 <script type="text/javascript">
 CKEDITOR.replace( 'description',
 {
+"extraPlugins" : 'imagebrowser',
 height: '300px',
+"imageBrowser_listUrl": "/files"
 } );
 CKEDITOR.config.format_h1 = { element: 'h4' };
 
