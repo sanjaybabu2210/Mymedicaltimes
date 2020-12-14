@@ -317,6 +317,8 @@ app.get("/writearticle",isLoggedIn,function(req,res){
    }
 });
 
+
+
 app.get("/writemedicalnews",isLoggedIn,function(req,res){
     // if(req.user.writenews=='true')
    res.render("writemedicalnews.ejs");
