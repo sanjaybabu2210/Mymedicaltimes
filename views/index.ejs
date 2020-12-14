@@ -2048,19 +2048,19 @@ margin-top: -45% !important;                                        margin-botto
                   <div class="image-border-radiusus margin-m-bottom" style="width: 100% !important;text-align: justify;overflow: hidden; margin-bottom: 0px !important;">
                     <div class="margin row">
                       <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
-                        <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img src="<%= articles[0].coverImage  %>" alt=""></a>
+                        <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img src="<%= articles[0 % (articles.length)].coverImage  %>" alt=""></a>
                       </div>
                       <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
                         <div style="height: 200px !important;">
-                        <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[0].title %></a></h3>
-                        <p class="pcut "><%= articles[0].shortDescription %></p>
+                        <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[0% (articles.length)].title %></a></h3>
+                        <p class="pcut "><%= articles[0% (articles.length)].shortDescription %></p>
                                                 
 
 
                         </div>
                         <a class="text-more-info text-primary-hover"
                           style="  display: block;position: relative;margin-bottom: 5%;"
-                          href="/<%= articles[0].mainHeading %>/<%= articles[0].subHeading %>/<%= articles[0]._id %>">Read more</a>
+                          href="/<%= articles[0% (articles.length)].mainHeading %>/<%= articles[0% (articles.length)].subHeading %>/<%= articles[0% (articles.length)]._id %>">Read more</a>
                       </div>
                     </div>
                   </div>
@@ -2071,18 +2071,18 @@ margin-top: -45% !important;                                        margin-botto
                             <div class="margin row">
                               <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
                                 <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
-                                    src="<%= articles[1].coverImage  %>" alt=""></a>
+                                    src="<%= articles[1% (articles.length)].coverImage  %>" alt=""></a>
                               </div>
                               <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
                                 <div style="height: 200px !important;">
-                                  <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[1].title %></a></h3>
-                                  <p class="pcut "><%= articles[1].shortDescription %></p>
+                                  <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[1% (articles.length)].title %></a></h3>
+                                  <p class="pcut "><%= articles[1% (articles.length)].shortDescription %></p>
                         
                         
                         
                                 </div>
                                 <a class="text-more-info text-primary-hover" style="  display: block;position: relative;margin-bottom: 5%;"
-                                  href="/<%= articles[1].mainHeading %>/<%= articles[1].subHeading %>/<%= articles[1]._id %>">Read more</a>
+                                  href="/<%= articles[1% (articles.length)].mainHeading %>/<%= articles[1% (articles.length)].subHeading %>/<%= articles[1% (articles.length)]._id %>">Read more</a>
                               </div>
                             </div>
                           </div>
@@ -2099,18 +2099,18 @@ margin-top: -45% !important;                                        margin-botto
     <div class="margin row">
       <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
         <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
-            src="<%= articles[2].coverImage  %>" alt=""></a>
+            src="<%= articles[2% (articles.length)].coverImage  %>" alt=""></a>
       </div>
       <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
         <div style="height: 200px !important;">
-          <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[2].title %></a></h3>
-          <p class="pcut "><%= articles[2].shortDescription %></p>
+          <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[2% (articles.length)].title %></a></h3>
+          <p class="pcut "><%= articles[2% (articles.length)].shortDescription %></p>
 
 
 
         </div>
         <a class="text-more-info text-primary-hover" style="  display: block;position: relative;margin-bottom: 5%;"
-          href="/<%= articles[2].mainHeading %>/<%= articles[2].subHeading %>/<%= articles[2]._id %>">Read more</a>
+          href="/<%= articles[2% (articles.length)].mainHeading %>/<%= articles[2% (articles.length)].subHeading %>/<%= articles[2% (articles.length)]._id %>">Read more</a>
       </div>
     </div>
   </div>
@@ -2121,18 +2121,18 @@ margin-top: -45% !important;                                        margin-botto
       <div class="margin row">
         <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
           <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
-              src="<%= articles[3].coverImage  %>" alt=""></a>
+              src="<%= articles[3% (articles.length)].coverImage  %>" alt=""></a>
         </div>
         <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
           <div style="height: 200px !important;">
-            <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[3].title %></a></h3>
-            <p class="pcut "><%= articles[3].shortDescription %></p>
+            <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[3% (articles.length)].title %></a></h3>
+            <p class="pcut "><%= articles[3% (articles.length)].shortDescription %></p>
   
   
   
           </div>
           <a class="text-more-info text-primary-hover" style="  display: block;position: relative;margin-bottom: 5%;"
-            href="/<%= articles[3].mainHeading %>/<%= articles[3].subHeading %>/<%= articles[3]._id %>">Read more</a>
+            href="/<%= articles[3% (articles.length)].mainHeading %>/<%= articles[3% (articles.length)].subHeading %>/<%= articles[3% (articles.length)]._id %>">Read more</a>
         </div>
       </div>
     </div>
@@ -2154,18 +2154,18 @@ margin-top: -45% !important;                                        margin-botto
                         <div class="margin row">
                           <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
                             <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
-                                src="<%= articles[4].coverImage  %>" alt=""></a>
+                                src="<%= articles[4% (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
                             <div style="height: 200px !important;">
-                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[4].title %></a></h3>
-                              <p class="pcut "><%= articles[4].shortDescription %></p>
+                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[4% (articles.length)].title %></a></h3>
+                              <p class="pcut "><%= articles[4% (articles.length)].shortDescription %></p>
                     
                     
                     
                             </div>
                             <a class="text-more-info text-primary-hover" style="  display: block;position: relative;margin-bottom: 5%;"
-                              href="/<%= articles[4].mainHeading %>/<%= articles[4].subHeading %>/<%= articles[4]._id %>">Read more</a>
+                              href="/<%= articles[4% (articles.length)].mainHeading %>/<%= articles[4% (articles.length)].subHeading %>/<%= articles[4% (articles.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -2176,18 +2176,18 @@ margin-top: -45% !important;                                        margin-botto
                         <div class="margin row">
                           <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
                             <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
-                                src="<%= articles[5].coverImage  %>" alt=""></a>
+                                src="<%= articles[5% (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
                             <div style="height: 200px !important;">
-                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[5].title %></a></h3>
-                              <p class="pcut "><%= articles[5].shortDescription %></p>
+                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[5% (articles.length)].title %></a></h3>
+                              <p class="pcut "><%= articles[5% (articles.length)].shortDescription %></p>
                     
                     
                     
                             </div>
                             <a class="text-more-info text-primary-hover" style="  display: block;position: relative;margin-bottom: 5%;"
-                              href="/<%= articles[5].mainHeading %>/<%= articles[5].subHeading %>/<%= articles[5]._id %>">Read more</a>
+                              href="/<%= articles[5% (articles.length)].mainHeading %>/<%= articles[5% (articles.length)].subHeading %>/<%= articles[5% (articles.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -2202,18 +2202,18 @@ margin-top: -45% !important;                                        margin-botto
                         <div class="margin row">
                           <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
                             <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
-                                src="<%= articles[6].coverImage  %>" alt=""></a>
+                                src="<%= articles[6% (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
                             <div style="height: 200px !important;">
-                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[6].title %></a></h3>
-                              <p class="pcut "><%= articles[6].shortDescription %></p>
+                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[6% (articles.length)].title %></a></h3>
+                              <p class="pcut "><%= articles[6% (articles.length)].shortDescription %></p>
                     
                     
                     
                             </div>
                             <a class="text-more-info text-primary-hover" style="  display: block;position: relative;margin-bottom: 5%;"
-                              href="/<%= articles[6].mainHeading %>/<%= articles[6].subHeading %>/<%= articles[6]._id %>">Read more</a>
+                              href="/<%= articles[6% (articles.length)].mainHeading %>/<%= articles[6% (articles.length)].subHeading %>/<%= articles[6% (articles.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
@@ -2224,18 +2224,18 @@ margin-top: -45% !important;                                        margin-botto
                         <div class="margin row">
                           <div class="col-sm-4 col-md-4 col-lg-4  margin-m-bottom">
                             <a class="image-hover-zoom" style="max-height: 140px;height:140px;border-radius: 10px;" href="/"><img
-                                src="<%= articles[7].coverImage  %>" alt=""></a>
+                                src="<%= articles[7% (articles.length)].coverImage  %>" alt=""></a>
                           </div>
                           <div class="col-sm-8 col-md-8 col-lg-8 " style="height: 300px !important;">
                             <div style="height: 200px !important;">
-                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[7].title %></a></h3>
-                              <p class="pcut "><%= articles[7].shortDescription %></p>
+                              <h3><a class="text-dark text-primary-hover tcut" href="/"><%= articles[7% (articles.length)].title %></a></h3>
+                              <p class="pcut "><%= articles[7% (articles.length)].shortDescription %></p>
                     
                     
                     
                             </div>
                             <a class="text-more-info text-primary-hover" style="  display: block;position: relative;margin-bottom: 5%;"
-                              href="/<%= articles[7].mainHeading %>/<%= articles[7].subHeading %>/<%= articles[7]._id %>">Read more</a>
+                              href="/<%= articles[7% (articles.length)].mainHeading %>/<%= articles[7% (articles.length)].subHeading %>/<%= articles[7% (articles.length)]._id %>">Read more</a>
                           </div>
                         </div>
                       </div>
