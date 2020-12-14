@@ -2,28 +2,13 @@
 
 
 <script>
-    function opener() {
-        $('#mhi').css("display", "none");
-        $('.major').removeClass("center");
-        $('.major').removeClass("center2");
-        // $('.major').addClass("center3");
-
-        $('.major').removeClass("col-lg-9");
-
-        $('.major').addClass("col-lg-7");
-        $('.major2').css("margin-left", "10%")
-
-
-        $('#mc').css("max-width", "200px !important");
-        $('#sidenav').addClass("siderich");
-      }
+   
   
   $(document).ready(function(){
     // $('#navbarSupportedContent ul li').click(function () {
     //   $(this).addClass("active").siblings().removeClass("active");
     //   $()
     // });
-     
     $('.navbar-toggler').click(function(){
         $('#filter').toggle();
     })
@@ -210,20 +195,37 @@
     
   // --------------------new ------------------------
 
+  function opener(){
+    		$('#mhi').css("display", "none");
+        $('.major').removeClass("center");
+                $('.major').removeClass("center2");
+    // $('.major').addClass("center3");
 
+                $('.major').removeClass("col-lg-9");
+
+                $('.major').addClass("col-lg-7");
+                                $('.major2').css("margin-left","10%")
+
+
+        $('#mc').css("max-width","200px !important");
+    $('#sidenav').addClass("siderich");
+  }
   function closer() {
     $('#mhi').css("display", "");
 
       $('#sidenav').remove("siderich");
     }
 
-    var opener = 0;
+
+
+
+    var opening = 0;
   function openNav() {
     document.getElementById("sidenav").style.width = "75vw";
     document.getElementById("sidenav").style.left = "0px";
     $('#filter').hide();
-    opener = 1;
-            console.log("hi ", opener);
+    opening = 1;
+            console.log("hi ", opening);
 
     // document.getElementById("main").style.marginLeft = "300px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
@@ -239,7 +241,7 @@
 
 
     $('#main').click(function(e){
-    if(opener){
+    if(opening){
       closeNav();
 
     }
@@ -248,14 +250,14 @@
     });
 
      $('.major').click(function (e) {
-        if (opener) {
+        if (opening) {
          closeNav();
 
        }
 
       });
    $('.naimum').click(function (e) {
-      if (opener) {
+      if (opening) {
        closeNav();
 
      }
@@ -268,7 +270,7 @@
     document.getElementById("sidenav").style.width = "0";
     // document.getElementById("main").style.marginLeft = "0";
     document.getElementById("sidenav").style.left = "-30px";
-    opener = 0;
+    opening = 0;
     $('#filter').show();
     $('button a').css({ "font-size": "12px" });
     $('#main').css({ "filter": "blur(0px)" });
