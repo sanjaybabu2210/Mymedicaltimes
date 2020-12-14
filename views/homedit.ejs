@@ -1,0 +1,412 @@
+<%- include('partials/header.ejs'); -%>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+            background-color: white;
+
+        }
+
+        #mhi {
+            display: none;
+        }
+
+        /* .sidebar{
+	position: scroll;
+	width: 350px;
+	left: 0;
+	background: #1b1b1b;
+	height: 100%;
+	margin: 0px;
+
+
+} */
+
+        nav ul {
+            /* background : #1b1b1b; */
+            height: 100%;
+            width: 100%;
+            list-style: none;
+
+        }
+
+        nav ul li {
+            line-height: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+        nav ul li a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding-left: 40px;
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            border-left: 3px solid transparent;
+        }
+
+        nav ul li.active a {
+            color: cyan;
+            background: #1e1e1e;
+            border-left-color: cyan;
+
+        }
+
+        nav ul ul {
+            position: static;
+            display: none;
+        }
+
+        nav ul .feat-show.show {
+            display: block;
+        }
+
+        nav ul .an-show.show2 {
+            display: block;
+        }
+
+        nav ul .ant-show.show3 {
+            display: block;
+        }
+
+        nav ul .bi-show.show4 {
+            display: block;
+        }
+
+        nav ul .bio-show.show5 {
+            display: block;
+        }
+
+        nav ul .bip-show.show6 {
+            display: block;
+        }
+
+        nav ul .co-show.show7 {
+            display: block;
+        }
+
+        nav ul .den-show.show8 {
+            display: block;
+        }
+
+        nav ul .med-show.show9 {
+            display: block;
+        }
+
+        nav ul .mib-show.show10 {
+            display: block;
+        }
+
+        nav ul .mir-show.show11 {
+            display: block;
+        }
+
+        nav ul .oc-show.show12 {
+            display: block;
+        }
+
+        nav ul .pat-show.show13 {
+            display: block;
+        }
+
+        nav ul .pha-show.show14 {
+            display: block;
+        }
+
+        nav ul .phm-show.show15 {
+            display: block;
+        }
+
+        nav ul .phs-show.show16 {
+            display: block;
+        }
+
+        nav ul .phsi-show.show17 {
+            display: block;
+        }
+
+        nav ul .psy-show.show18 {
+            display: block;
+        }
+
+        nav ul .sur-show.show19 {
+            display: block;
+        }
+
+        nav ul .the-show.show20 {
+            display: block;
+        }
+
+        nav ul .yg-show.show21 {
+            display: block;
+        }
+
+        nav ul .ve-show.show22 {
+            display: block;
+        }
+
+        nav ul ul li {
+            line-height: 42px;
+            border-bottom: none;
+        }
+
+        nav ul ul li a {
+            font-size: 17px;
+            color: #e6e6e6;
+            padding-left: 80px;
+        }
+
+        nav ul li.active ul li a {
+            color: #e6e6e6;
+            background: #1b1b1b;
+            border-left-color: transparent;
+
+        }
+
+        nav ul ul li a:hover {
+            color: cyan !important;
+            background: 1e1e1e !important;
+        }
+
+        nav ul li a span {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 22px;
+            transition: transform 0.4s;
+        }
+
+        nav ul li a span.rotate {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+
+        footer {
+            background: #1c2331
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu a::after {
+            transform: rotate(-90deg);
+            position: relative;
+            right: 3px;
+            top: 40%;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu,
+        .dropdown-submenu:focus .dropdown-menu {
+            display: flex;
+            flex-direction: column;
+            position: scroll !important;
+            margin-top: -30px;
+            left: 100%;
+        }
+
+        @media (max-width: 992px) {
+            .dropdown-menu {
+                width: 50%;
+            }
+
+            .dropdown-menu .dropdown-submenu {
+                width: auto;
+            }
+        }
+
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px 10px;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+            animation: fadein 0.5s, fadeout 0.5s 4.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        .icc {
+            width: 35px;
+            height: 35px;
+        }
+
+        .icc:hover {
+            opacity: 0.6;
+        }
+
+        @media screen and (min-width: 800px) {
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <% if(error.length>0){%>
+        <div class="alert alert-danger container" style="margin:3% auto;text-align: center;max-width: 80%;">
+            <%=error%>
+        </div>
+        <% }if(success.length>0){%>
+            <div class="alert alert-success container" style="margin:3% auto;text-align: center;max-width: 80%;">
+                <%=success%>
+            </div>
+            <% } %>
+
+
+
+                <div class="container naimum" style="margin-top:6%;margin-bottom:8%;border-radius:25px;">
+
+                    <div class="row">
+                        <div class="col-lg-2">
+
+                        </div>
+                        <div class="col-lg-9 jumbotron" style="margin:2% 5%;max-width: 90%;">
+
+                            <form action="/homedata/update" method="post" >
+                                <h3><b>Home page modify</b></h3>
+
+                                <label for="title" style="margin-top:27px"><b>Visitors Count:</b></label>
+                                <div class="form-group"><input type="text"  name="visitors"
+                                         class="form-control" style="margin-top:10px;" id="title" value="<%= data[0].visitors %>"
+                                        required></div>
+                                <br>
+
+                                <label for="shortDescription" style="margin-top:27px"><b>Users Count
+                                        </b></label>
+                                <div class="form-group"><input type="text" placeholder="200"
+                                        name="users" required class="form-control"
+                                        style="margin-top:10px;" id="shortDescription" value="<%= data[0].users %>" required ></div>
+
+
+                                <hr><label for="body" style="margin-top:7px"><b>Team Members</b></label>
+                                <div class="form-group" style="margin-top:10px;"><input type="text" id="body"
+                                        placeholder="Members count" value="<%= data[0].member %>" name="members" required class="form-control"
+                                        required></div>
+                                <label for="author" style="margin-top:27px"><b>Review count</b></label>
+                                <div class="form-group"><input type="text" placeholder="No of Reviews" name="reviews"
+                                        required class="form-control" value="<%= data[0].review %>" style="margin-top:10px" id="author"></div>
+                              
+                                <button class="btn btn-success bld"
+                                    style="margin-top:40px;margin-left:42%;width:30%">Save</button>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+              
+
+              
+                <%- include('partials/footertemplate.ejs'); -%>
+
+                    </body>
+
+                    </html>

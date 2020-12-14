@@ -1,36 +1,83 @@
 <%- include('partials/header.ejs'); -%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+<style>
 
+#main{
+  text-align: justify !important;
+    padding: 10px 30px !important;
+
+}
+p{
+  justify-content: justify;
+}
+#textt{
+  text-align: justify !important;
+}
+.dcard{
+  min-width:20%;
+  min-height: 180px;
+  transition: 0.7s;
+  margin: 10px 2%;
+  box-shadow: 3px 4px 8px black;
+  border-radius: 8px;
+  color: whitesmoke;
+  background-color: darkslategray;
+}
+.dcard:hover{
+    background-color: rgb(196,49,50);
+    transform: scale(1.1,1.1);
+    color: yellow;
+}
+.dcard h1{
+  border-bottom: 2px solid pink;
+  padding: 10px 5px;
+  margin-bottom: 30px;
+}
+</style>
 
 <div class="col-lg-9 col-md-7 col-sm-10 major2 major center" id="main">
 <h2> <center>About Us<center> </h2>
 <hr>
-<p><center> World's first content hub for all Medical Student.</center></p>
-<h3><center>Founder</center></h3>
-<img src="pff.jpg" class="rounded-circle mx-auto d-block" alt="center" width="200" height="200">
-<h4 class = "my-3"><center>Rajmani Singh</center></h4>
-<p><center>An Avid Medical Reader</center></p>
-<br>
-<h3><center>Major Contributors</center></h3>
+<p ckass="textt">My Medical Times is committed to giving Medical subjects Knowledge, Health-related articles, Latest Medical News and
+permits Experts to share the information in their Domain.
+
+Our Mission is to spread clinical mindfulness among basic people and give the most complete and exhaustive every day
+news identified with Medical sciences.
+</p>
+<h5>About the Organisation</h5>
+<p ckass="textt">My Medical Times is completely claimed and Funded by Rajmani Singh. The site was established in July 2020 by Rajmani
+Singh. Right now, we are working with very limited Team Members.</p>
+<h5>
+  Why I began My Medical Times?
+</h5>
+
+<p ckass="textt">During COVID-19 Pandemic one day I read an article where it was referenced that " People are not passing due to corona,
+they are passing because of Heart failures, Depression ,etc. ,because they thought that they are infected with corona
+and soon they will die. "That day I figured it's my essential obligation to spread clinical attention to each nook and
+corner of the world so that individuals will get alarmed with the Pandemics and some other sicknesses. They should be
+medically and medicinally mindful of all the impending and make themselves intellectually fit to battle any sort of
+Pestilence.</p>
 <br>
 
-<div class = "container">
- <div class="row">
-  <div class = "col-lg-3 col-md-3 col-sm-3 col-12" >
-   <img src = "https://res.cloudinary.com/duozkjp1p/image/upload/v1603559618/user_cnzywr.jpg" class = "img-fluid rounded-circle img-thumbnail" width ="100" height = "100">
-   <p> Name: </p>
+
+<div class = "container mx-auto" style="align-items: center;justify-content: space-around;">
+ <div class="row mx-auto" style="text-align: center;justify-content: space-around;">
+  <div class = "col-lg-2 col-sm-6 col-12 dcard" >
+    <h1 class="count" data-value="1000" id="n1"><%= data[0].visitors %></h1>
+    <h5>Visitors per day</h5>
   </div>
-  <div class = "col-lg-3 col-md-3 col-sm-3 col-12">
-   <img src = "https://res.cloudinary.com/duozkjp1p/image/upload/v1603559618/user_cnzywr.jpg" class = "img-fluid rounded-circle img-thumbnail" width ="100" height = "100">
-   <p> Name: </p>
+  <div class = "col-lg-2 col-sm-6 col-12 dcard">
+  <h1 class="count" data-value="<%= data[0].member %>" id="n1"><%= data[0].member %></h1>
+  <h5>Team Members</h5>
   </div>
-  <div class = "col-lg-3 col-md-3 col-sm-3 col-12">
-   <img src = "https://res.cloudinary.com/duozkjp1p/image/upload/v1603559618/user_cnzywr.jpg" class = "img-fluid rounded-circle img-thumbnail" width ="100" height = "100">
-   <p> Name: </p>
+  <div class = "col-lg-2 col-sm-6 col-12 dcard" >
+    <h1 class="count" data-value="<%= data[0].users %>" id="n1"><%= data[0].users %></h1>
+    <h5>Registered Users</h5>
   </div>
-  <div class = "col-lg-3 col-md-3 col-sm-3 col-12">
-   <img src = "https://res.cloudinary.com/duozkjp1p/image/upload/v1603559618/user_cnzywr.jpg" class = "img-fluid rounded-circle img-thumbnail" width ="100" height = "100">
-   <p> Name: </p>
+  <div class = "col-lg-2  col-sm-6 col-12 dcard">
+    <h1 class="count" data-value="<%= data[0].review %>" id="n1"><%= data[0].review %></h1>
+    <h5>Positive Reviews Received</h5>
   </div>
   
  </div>
@@ -56,15 +103,35 @@
     
     
 </div>
+    <script>
+
+      $(document).ready(function () {
+
+          $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+              Counter: $(this).text()
+            }, {
+              duration: 4000,
+              easing: 'swing',
+              step: function (now) {
+                $(this).text(Math.ceil(now) + '+');
+              }
+            });
+          });
+
+
+
+        })
+
+    </script>
     
     
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
     <br>
     <br>
     <%- include('partials/footertemplate.ejs'); -%>

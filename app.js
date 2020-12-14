@@ -11,6 +11,8 @@ var	methodOverride = require("method-override");
 var intern=require("./models/intern");
 var review=require("./models/review");
 var article=require("./models/article");
+var home=require("./models/home");
+
 var Application=require("./models/application");
 
 // var Disease=require("./models/disease");
@@ -117,6 +119,34 @@ app.get("/",function(req,res){
    res.redirect("/home");
     
 });
+
+
+app.post("/homedata/update",function(req, res) {
+    var visitors=req.body.visitors;
+    var members=req.body.members;
+    var reviews=req.body.reviews;
+    var users=req.body.users;
+    console.log(users);
+    home.find({},function(err,foundUser)
+    {
+        if(err)
+        console.log(err);
+        else{
+            foundUser[0].users = users
+            foundUser[0].visitors= visitors
+            foundUser[0].review=reviews;
+            foundUser[0].member=members;
+                        console.log(foundUser);
+
+            foundUser[0].save(function(){
+ req.flash("success","Details Updated Successfully");
+            res.redirect("/homedata/edit");
+            });
+           
+        }
+    });
+});
+
 app.post('/application/:id', upload.fields([{
   name: 'photo', maxCount: 1
 }, {
@@ -507,7 +537,66 @@ app.put("/profilenav/update",function(req, res) {
         }
     });
 });
+// app.post("/homedata/update",function(req, res) {
 
+
+//     console.log(req.body);
+//     var visitors=req.body.visitors;
+//     var members=req.body.members;
+//     var reviews=req.body.reviews;
+//     var users=req.body.users;
+//     home.find({},function(err,foundUser)
+//     {
+//         if(err)
+//         console.log(err);
+//         else{
+//             //console.log(foundUser);
+//             foundUser.users = users
+//             foundUser.visitors= visitors
+//             foundUser.review=reviews;
+//             foundUser.member=members;
+//                         console.log(foundUser);
+
+//  home.save(function(){
+
+// req.flash("success","Details Updated Successfully");
+//             res.redirect("/homedata/edit");
+
+//  })
+            
+//         }
+//     });
+// });
+
+
+app.get("/homedata/edit",function(req, res) {
+   
+//         var users = "0";
+//         var visitors = "100";
+//         var members = "10";
+//         var reviews = "13";
+//     	 var news = { users: users, member : members, review: reviews,visitors: visitors};
+//     home.create(news,function(err, newss) {
+//        if(err)
+//        console.log(err);
+//        else{
+//            req.flash("success","Medical News Submitted Successfully, Thank You for your Contribuion");
+//            console.log(newss);
+//            res.redirect("/admin");
+//        }
+//    });
+
+    home.find({},function(err, found) {
+       if(err)
+       console.log(err);
+        else{
+            console.log(found);
+            res.render("homedit.ejs",{data:found});
+        }
+   });
+        
+   
+});
 app.post("/register",function(req,res)
 {
     var newUser=new User({username:req.body.username});
@@ -577,7 +666,15 @@ app.get("/t&c",function(req,res){
 });
 
 app.get("/aboutus",function(req,res){
-   res.render("about_us.ejs");
+
+    home.find({},function(err, found) {
+       if(err)
+       console.log(err);
+        else{
+            console.log(found);
+            res.render("about_us.ejs",{data:found});
+        }
+   });
 });
 
 

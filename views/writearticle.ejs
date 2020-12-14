@@ -162,7 +162,7 @@ footer{
     
     
     <hr><label for="body" style="margin-top:7px"><b>Article Body:</b></label>
-    <div class="form-group" style="margin-top:10px;"><textarea type="text" id="editor" placeholder="Body" name="description" required class="form-control ckeditor " required ></textarea></div>
+    <div class="form-group" style="margin-top:10px;"><textarea type="text" id="body" placeholder="Body" name="description" required class="form-control ckeditor" required ></textarea></div>
     <div class="form-group"><input type="text" id="author" placeholder="Author Name" name="author" required class="form-control" style="margin-top:2px;"></div>
     
     <button class="btn btn-info bld" style="margin-top:40px;margin-left:42%;width:30%" onclick="myFunction()">Submit</button>
@@ -173,9 +173,9 @@ footer{
 </div>
 
 </div>
-<!-- <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> -->
+<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 <script type="text/javascript">
-CKEDITOR.replace( 'editor',
+CKEDITOR.replace( 'description',
 {
 height: '300px',
 } );
@@ -184,8 +184,107 @@ CKEDITOR.config.format_h1 = { element: 'h4' };
 </script>
 
 <div id="snackbar">Article Submitted</div>
- 
-     <script>
+  <script src="../build/ckeditor.js"></script>
+  <script>ClassicEditor
+      .create(document.querySelector('.editor'), {
+
+        toolbar: {
+          items: [
+            'heading',
+            '|',
+            'bold',
+            'italic',
+            'link',
+            'bulletedList',
+            'numberedList',
+            '|',
+            'indent',
+            'outdent',
+            '|',
+            'imageUpload',
+            'blockQuote',
+            'insertTable',
+            'mediaEmbed',
+            'undo',
+            'redo'
+          ]
+        },
+        language: 'en',
+        image: {
+          toolbar: [
+            'imageTextAlternative',
+            'imageStyle:full',
+            'imageStyle:side'
+          ]
+        },
+        table: {
+          contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells',
+            'tableProperties'
+          ]
+        },
+        licenseKey: '',
+
+      })
+      .then(editor => {
+        window.editor = editor;
+
+
+
+
+
+
+
+
+      })
+      .catch(error => {
+        console.error('Oops, something went wrong!');
+        console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
+        console.warn('Build id: 4ymbdp5uev8p-8o65j7c6blw0');
+        console.error(error);
+      });
+  </script>
+<script>
+      const fileBlocks = document.querySelectorAll('.file-block')
+        const buttons = document.querySelectorAll('.btn-select-file')
+
+          ;[...buttons].forEach(function (btn) {
+            btn.onclick = function () {
+              btn.parentElement.querySelector('input[type="file"]').click()
+            }
+          })
+
+          ;[...fileBlocks].forEach(function (block) {
+            block.querySelector('input[type="file"]').onchange = function () {
+              const filename = this.files[0].name
+
+              block.querySelector('.btn-select-file').textContent = 'File selected: ' + filename
+            }
+          })
+        $(document).ready(function () {
+
+          var readURL = function (input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                $('.profile-pic').attr('src', e.target.result);
+              }
+
+              reader.readAsDataURL(input.files[0]);
+            }
+          }
+
+          $(".file-upload").on('change', function () {
+            readURL(this);
+          });
+
+          $(".upload-button").on('click', function () {
+            $(".file-upload").click();
+          });
+        });
 function myFunction() {
   var x = document.getElementById("snackbar");
   x.className = "show";
