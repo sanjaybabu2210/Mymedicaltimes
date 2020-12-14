@@ -15,9 +15,22 @@
     }
     body {
         background-color: #ffe9ec;
-        min-height: 140vh;
+        /* min-height: 100vh; */
     }
+@media screen and (max-width: 900px){
 
+    .row{
+        max-height:480vh !important;
+    }
+}
+
+
+    /* .row{
+        max-height:320vh;
+    } */
+footer{
+    margin-top:-360vh !important;
+}
     .sidebar .text {
         color: white;
         font-size: 25px;
@@ -387,10 +400,17 @@ nextText: "&raquo;",
 onPageClick: function (pageNumber) {
 var showFrom = perPage * (pageNumber - 1);
 var showTo = showFrom + perPage;
+if(cookie.get('showFrom')){
+    showFrom = cookie.get('showFrom');
+}
+
+showTo  = showFrom + perPage;
+    cookie.set('showFrom', showFrom);
+    document.cookie = showFrom;
+
 items.hide().slice(showFrom, showTo).show();
 }
 });
-
 
 
 </script>
