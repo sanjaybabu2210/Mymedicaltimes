@@ -376,7 +376,7 @@ app.get("/seeMedicalNews/:id",function(req,res){
      
 });
 
-app.post("/writearticle",upload.single('cover'),function(req,res){
+app.post("/writearticle",isLoggedIn,upload.single('cover'),function(req,res){
      cloudinary.uploader.upload(req.file.path, function(result) {
 
     	var image = result.secure_url;
