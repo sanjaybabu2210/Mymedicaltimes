@@ -13,10 +13,10 @@
  * (1) https://ckeditor.com/cke4/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) https://ckeditor.com/cke4/builder/f0b9e2df8c5c9de443e3fefed26e993a
+ * (2) https://ckeditor.com/cke4/builder/4bb3fb68d44491aada66352bc7107ff3
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) https://ckeditor.com/cke4/builder/download/f0b9e2df8c5c9de443e3fefed26e993a
+ * (3) https://ckeditor.com/cke4/builder/download/4bb3fb68d44491aada66352bc7107ff3
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -54,8 +54,10 @@ var CKBUILDER_CONFIG = {
 		'tests'
 	],
 	plugins : {
+		'SimpleImage' : 1,
 		'a11yhelp' : 1,
 		'about' : 1,
+		'autocorrect' : 1,
 		'basicstyles' : 1,
 		'bidi' : 1,
 		'blockquote' : 1,
@@ -84,7 +86,6 @@ var CKBUILDER_CONFIG = {
 		'iframe' : 1,
 		'image' : 1,
 		'image2' : 1,
-		'imagebrowser' : 1,
 		'indentblock' : 1,
 		'indentlist' : 1,
 		'justify' : 1,
@@ -96,7 +97,6 @@ var CKBUILDER_CONFIG = {
 		'maximize' : 1,
 		'newpage' : 1,
 		'pagebreak' : 1,
-		'pasteUploadImage' : 1,
 		'pastefromgdocs' : 1,
 		'pastefromword' : 1,
 		'pastetext' : 1,
@@ -110,15 +110,12 @@ var CKBUILDER_CONFIG = {
 		'selectall' : 1,
 		'showblocks' : 1,
 		'showborders' : 1,
-		'simple-image-browser' : 1,
 		'smiley' : 1,
 		'sourcearea' : 1,
 		'specialchar' : 1,
 		'stylescombo' : 1,
 		'tab' : 1,
 		'table' : 1,
-		'tableresize' : 1,
-		'tableresizerowandcolumn' : 1,
 		'tableselection' : 1,
 		'tabletools' : 1,
 		'templates' : 1,
